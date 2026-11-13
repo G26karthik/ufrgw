@@ -20,9 +20,11 @@ def diff_ids(a, b):
 
 
 if __name__ == "__main__":
-    out = ROOT / "subs" / "sc_final.csv"
+    import sys
+    inp, name = (sys.argv[1:3] + ["subs/v3_final.csv", "sc_final"][len(sys.argv[1:3]):])[:2]
+    out = ROOT / "subs" / f"{name}.csv"
     assert not out.exists(), f"{out} exists; never overwrite"
-    base = pl.read_csv(ROOT / "subs" / "v3_final.csv")
+    base = pl.read_csv(ROOT / inp)
     tx = load_all()
     cell = RS.segments(tx).filter(~c("is_test") & c("n").is_between(4, 8))
     assert cell.height > 300 and (cell["y"] == LABELS.index("merchant_collusion")).sum() == 0, "RS train cell must hold 0 collusion"
@@ -30,8 +32,9 @@ if __name__ == "__main__":
     rs, fcb = RS.apply(base, tx), FCB.apply(base, tx)
     d_rs, d_fc = diff_ids(base, rs), diff_ids(base, fcb)
     assert len(d_rs) == 3 and len(d_fc) == 5 and not (d_rs & d_fc), "rule sets must be 3 / 5 rows and disjoint"
-    for name, d in (("sc_collusion", d_rs), ("sc_fc", d_fc)):  # reproduce the class agents' candidate subs
-        assert d == diff_ids(base, pl.read_csv(ROOT / "subs" / f"{name}.csv")), name
+    for ref, d in (("sc_collusion", d_rs), ("sc_fc", d_fc)):  # reproduce the class agents' candidate subs (when present)
+        if (ROOT / "subs" / f"{ref}.csv").exists():
+            assert d == diff_ids(base, pl.read_csv(ROOT / "subs" / f"{ref}.csv")), ref
 
     new = FCB.apply(RS.apply(base, tx), tx)
     assert diff_ids(base, new) == d_rs | d_fc

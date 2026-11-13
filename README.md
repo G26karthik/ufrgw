@@ -28,29 +28,30 @@ Put the competition files in `upi-fraud-rings/`: `train.csv`, `test.csv`, `accou
 # options: -Tag NAME (default repro) -Threads N (default 10) -SkipPrep
 ```
 
-Outputs are named after `-Tag`, so a run never overwrites the reference uploads. At the end of steps 5, 6 and 11 the script
-compares each output byte-for-byte with `subs/h6_ppq.csv`, `subs/ts_judge_h6.csv` and `subs/final1.csv` and prints
-`byte-identical` or `DIFFERS`.
+Outputs are named after `-Tag`, so a run never overwrites the reference uploads. After steps 5, 6, 7a, 7b, 10 and 11 the
+script compares the output byte-for-byte with its reference (`h6_ppq`, `ts_judge_h6`, `art_zonemax`, `art_acct`,
+`ts_judge_c2s6`, `final1` in `work/subs/`) and prints `byte-identical` or `DIFFERS`. A reference that is missing is
+skipped; git keeps only the three uploads.
 
 The script runs these steps from `work/`, with `PYTHONUTF8=1` and `POLARS_MAX_THREADS=8`:
 
 | step | command | output | time* |
 |---|---|---|---|
 | 1 | `python prep.py` | raw CSV -> `data/*.parquet` | <1 min |
-| 2-3 | `python make_matrix.py feats_cache/matrix_repro.parquet` | module caches `feats_cache/<module>[__dm\|__dm2].parquet`, then the 1,824,642 x 194 matrix | ~50 s |
+| 2-3 | `python make_matrix.py feats_cache/matrix_repro.parquet` | module caches `feats_cache/<module>[__dm\|__dm2].parquet`, then the 1,824,642 x 194 matrix | ~1.5 min |
 | 4a | `python train.py --modules flow,burst,takeover,scam,ring,pairs --matrix feats_cache/matrix_repro.parquet --relabel C --rounds 150 --seeds 6 --threads 10 --tag repro --mode val` | `oof/repro*` (OOF probs, biases) | ~6 min |
 | 4b | the same command with `--mode full` | `preds/repro_test.npy`, `subs/repro.csv` | ~4 min |
 | 5 | `python postproc.py repro --qr-null` | `subs/repro_ppq.csv` (= upload #1) | ~1 min |
-| 6 | `python ts_judge_post.py repro` | `subs/ts_judge_repro.csv` (= upload #3) | ~1 min |
-| 7a | `python ts_judge_post.py repro --mv --out art_zonemax_repro` | `subs/art_zonemax_repro.csv` | ~1 min |
+| 6 | `python ts_judge_post.py repro` | `subs/ts_judge_repro.csv` (= upload #3) | ~2 min |
+| 7a | `python ts_judge_post.py repro --mv --out art_zonemax_repro` | `subs/art_zonemax_repro.csv` | ~2 min |
 | 7b | `python art_acct_post.py repro art_acct_repro` | `subs/art_acct_repro.csv` | ~1.5 min |
 | 8 | `python make_matrix.py feats_cache/matrix_repro_c2.parquet --core2` | `feats_cache/core2.parquet`, the c2s6 matrix (194 cols) | ~1.5 min |
-| 9a/9b | step 4a/4b with `--modules flow,burst,takeover,scam,ring,pairs,core2 --matrix feats_cache/matrix_repro_c2.parquet --tag repro_c2` | `oof/repro_c2*`, `preds/repro_c2_test.npy` | ~10 min |
-| 10 | `python ts_judge_post.py repro_c2` | `subs/ts_judge_repro_c2.csv` | ~1 min |
+| 9a/9b | step 4a/4b with `--modules flow,burst,takeover,scam,ring,pairs,core2 --matrix feats_cache/matrix_repro_c2.parquet --tag repro_c2` | `oof/repro_c2*`, `preds/repro_c2_test.npy` | ~10-17 min |
+| 10 | `python ts_judge_post.py repro_c2` | `subs/ts_judge_repro_c2.csv` | ~2 min |
 | 11 | `python combine.py ts_judge_repro_c2 repro_final1 ts_judge_repro:art_acct_repro ts_judge_repro:art_zonemax_repro` | `subs/repro_final1.csv` (= upload #4) | <10 s |
 
-\*Measured on a 12-thread desktop CPU with 32 GB RAM; peak RAM is under 10 GB. No GPU is used. The whole chain takes
-about 30 min on an idle machine.
+\*Measured on a 12-thread desktop CPU with 32 GB RAM; peak RAM is under 10 GB. No GPU is used. The whole chain should take
+about 40 min on an idle machine; this is an estimate, not timed. The one timed run, on 13 Nov, took 73 min with other heavy jobs on the same CPU (step 4a alone took 32 min).
 
 Step 4b reads the biases and round count that step 4a saved under the same `--tag`, so run 4a first.
 Set `$env:UPI_CACHE` to a folder to build the module caches there instead of in `work/feats_cache`.
@@ -88,7 +89,13 @@ tuned on Aug and scored on Sep, after the post-rules (`oos.py` decodes before po
 Verified on 13 Nov: `run_all.ps1` with fresh caches (`UPI_CACHE`, `--force`) rebuilt a matrix equal to the original in all 194 columns. It also gave OOF probs, test probs, `repro.csv` and `repro_ppq.csv` byte-identical to `h6`.
 A second check ran `.\run_all.ps1` with no options in a clean copy that holds only the files a git clone would have, plus the raw CSVs.
 Every output was again byte-identical to `h6`, and `oos.py repro` gave the same numbers.
-The result does not depend on the thread count: 1-seed validation runs with `--threads 4` and `--threads 10` gave bit-identical OOF probs.
+Verified on 13 Nov for the full chain: `$env:UPI_CACHE="feats_cache_r"; .
+un_all.ps1 -Tag r_repro -SkipPrep` built all
+module caches from scratch. The core2 matrix equals the one behind c2s6 in all 194 columns. These outputs are
+byte-identical to the originals: OOF and test probs of h6 and c2s6, `r_repro_ppq.csv` = `h6_ppq.csv`,
+`ts_judge_r_repro.csv` = `ts_judge_h6.csv`, `art_zonemax`, `art_acct`, `ts_judge_c2s6` and
+`r_repro_final1.csv` = `final1.csv`.
+The result does not depend on the thread count: 1-seed validation runs with `--threads 4` and `--threads 10` gave bit-identical OOF probs, and c2s6 (3 threads) and its rebuild (10 threads) have identical OOF probs.
 
 ## Approach
 
@@ -160,6 +167,8 @@ OOS Aug->Sep .4848 vs .4841. The decoded test labels differ from h6 on 15 rows.
     rows as legit or mule, never velocity. `--mv` fixes most of this.
 - Every row on a zone device then takes the zone's type. On test, zones plus the bait rule change 299 rows: about 200 legit -> zone type and
   73 ATO -> sim. Gain: Sep .4855 -> .5096 (cleaned .4979 -> .5224, OOS .4841 -> .5082). Public LB: .5081 -> .5443.
+- The zone, bait and receiver rules read only columns of test.csv, but the zone rule exploits how the generator numbers
+  devices, so the organisers may call it a leak. Upload #1 (`h6_ppq.csv`) is the result without any of these rules.
 - `--mv` (art_zonemax) also pools mule and velocity predictions as evidence. h6 never decodes velocity-zone rows as
   velocity, which otherwise drags the mule|velocity edge. This changes 1 test row.
 

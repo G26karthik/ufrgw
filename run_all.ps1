@@ -57,4 +57,8 @@ try {
     Step "11 transplant the two h6-based rules" @("combine.py", "ts_judge_$c2", "${Tag}_final1",
         "ts_judge_${Tag}:art_acct_$Tag", "ts_judge_${Tag}:art_zonemax_$Tag")
     Same "${Tag}_final1.csv" "final1.csv"
+    Step "12 v3 rules (QRN merchant-QR, pair-restricted zone propagation)" @("v3_rules.py", "subs/ts_judge_$Tag.csv", "${Tag}_v3_final")
+    Same "${Tag}_v3_final.csv" "v3_final.csv"
+    Step "13 class-sweep rules (RS segment refund, FCB ph|qr edge)" @("sc_final.py", "subs/${Tag}_v3_final.csv", "${Tag}_sc_final")
+    Same "${Tag}_sc_final.csv" "sc_final.csv"
 } finally { Pop-Location }

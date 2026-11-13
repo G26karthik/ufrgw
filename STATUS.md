@@ -1,4 +1,15 @@
-# UPI Fraud Rings — status
+# UPI Fraud Rings
+
+## >>> RESUME HERE (13 Nov ~21:30 IST) <<<
+Best public: subs/v3_final.csv 0.5476 (#3). Leaders .5488 / .5485. Upload #7 subs/sc_final.csv sent, score pending (expected about +.0006).
+Uploads today: 7 of 10 used; the counter resets at midnight IST. Deadline 15 Nov 10:00 IST.
+Pipeline: run_all.ps1 reproduces h6_ppq -> ts_judge_h6 -> final1 -> v3_final -> sc_final byte-identically from raw CSVs (verified in a clean room through final1; steps 12-13 verified in place). Repo PRIVATE: github.com/G26karthik/upi-fraud-rings-gradient-wars. Tags up3/up5/up6/up7. Make it public at 09:45 15 Nov (command below).
+What works: (1) device-id zone override (generator artefact); (2) Oct-only blanked QR mismatch cells -> qr_swap; (3) small structural rules on small classes (each beat its Sep estimate on the LB: 16 rows +.0016, 12 rows +.0017).
+Null (do not retry): stacking, pseudo-labels, smoothing, augmentation, OvR, bagging beyond 6 seeds, priors, boundary, zclean, ip/app, id artefacts other than devices, camouflage hunts.
+Running: big-class dives wf_80d2f9be-d2c (phishing/qr/mule/velocity/layering -> subs/bc_final.csv on top of sc_final); last structural retrains wf_2c589d43-8a1 (stamp, halves-linkage).
+Next: when they finish, gate, combine on top of the best sub, extend run_all, commit+tag, send to the user. Then one Fable 5.2 advisor review (after the user runs /compact).
+
+ — status
 
 Competition: ML Gradient Wars 2026 (hack4hack). Round 13 Nov 10:00 IST -> 15 Nov 10:00 IST. Metric macro-F1 over 12 labels.
 Limits: 10 uploads/day, final = best public upload scored on private 70%. Must submit code repo before close.
