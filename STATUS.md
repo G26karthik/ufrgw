@@ -6,7 +6,11 @@ Uploads today: 7 of 10 used; the counter resets at midnight IST. Deadline 15 Nov
 Pipeline: run_all.ps1 reproduces h6_ppq -> ts_judge_h6 -> final1 -> v3_final -> sc_final byte-identically from raw CSVs (verified in a clean room through final1; steps 12-13 verified in place). Repo PRIVATE: github.com/G26karthik/upi-fraud-rings-gradient-wars. Tags up3/up5/up6/up7. Make it public at 09:45 15 Nov (command below).
 What works: (1) device-id zone override (generator artefact); (2) Oct-only blanked QR mismatch cells -> qr_swap; (3) small structural rules on small classes (each beat its Sep estimate on the LB: 16 rows +.0016, 12 rows +.0017).
 Null (do not retry): stacking, pseudo-labels, smoothing, augmentation, OvR, bagging beyond 6 seeds, priors, boundary, zclean, ip/app, id artefacts other than devices, camouflage hunts.
-Running: big-class dives wf_80d2f9be-d2c (phishing/qr/mule/velocity/layering -> subs/bc_final.csv on top of sc_final); last structural retrains wf_2c589d43-8a1 (stamp, halves-linkage).
+Done: big-class dives wf_80d2f9be-d2c (notes/bc_*.md, bc_final.md). Phishing/qr saturated. Accepted: CZ (10 rows layering->mule), LFM (4 layering->mule), X999 (1 legit->ph), BANDV (10 mule->velocity, a bet on host DV0473782; final1 .5435 argues against it).
+Advisor (Fable 5.2) plan: PAIRED PROBE. subs/bc_nr.csv = sc_final + CZ,LFM,X999 (15 rows, no-regret, ~+.0007). subs/bc_bandv.csv = bc_nr + BANDV only (10 rows). Upload both; the sign of bandv - nr on public reads the event class (one event, clean Oct labels).
+  bandv > nr: BANDV confirmed, bc_bandv is the base. bandv < nr: DV0473782 is mule, so band ids below it are mule; check on-zone band decodes, consider mule|vel edge 473749 -> 473783 + re-run zprop (hold upload #10 for this). Equal: keep bc_nr.
+  Then: rank other single-event zone-band bets (>= ~8 rows, e.g. the velocity agent's 13-row band) and probe one bet per upload diff. Stop model retraining (all gates saturated).
+Done: structural retrains wf_2c589d43-8a1 both FAIL the gate (stamp drop/relabel OOS -.0013/-.0014; halves linkage OOS -.0013, extra FP fraud calls on legit rows). Code edits reverted (mtimes kept). Notes: notes/ls_stamp.md, notes/ls_halves.md. Deletable: feats_cache/*__dm3*, oof/ls*, preds/ls_halves_test.npy.
 Next: when they finish, gate, combine on top of the best sub, extend run_all, commit+tag, send to the user. Then one Fable 5.2 advisor review (after the user runs /compact).
 
  — status

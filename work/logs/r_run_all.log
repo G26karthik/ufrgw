@@ -190,3 +190,253 @@ shape: (12, 2)
    119 s
    subs/ts_judge_r_repro.csv == subs/ts_judge_h6.csv (byte-identical)
 == 7a art_zonemax (mule/velocity pooled zone DP)
+edges train [423000, 423657, 424155, 424628, 425040, 426773, 427170, 427854, 428065, 428207, 428306, 428455]
+      test  [473632, 473747, 473834, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+Sep r_repro base      noisy 0.4855 cleaned 0.4979  per-class cleaned [0.987, 0.445, 0.551, 0.541, 0.409, 0.396, 0.445, 0.49, 0.517, 0.38, 0.403, 0.41]
+Sep r_repro zone+bait noisy 0.5100 cleaned 0.5227  per-class cleaned [0.988, 0.465, 0.568, 0.553, 0.499, 0.442, 0.467, 0.507, 0.532, 0.399, 0.421, 0.434]
+OOS Aug->Sep r_repro: base 0.4841  zone+bait 0.5086
+Sep zone rows/agree: mule_a 101/0.97  veloci 1125/1.00  layeri 72/1.00  sim_sw 154/1.00  accoun 377/1.00  phishi 81/0.97  qr_swa 73/1.00  refund 28/1.00  fake_c 27/0.60  loan_a 15/1.00  mercha 24/1.00
+Oct zone rows/agree: mule_a 78/0.82  veloci 298/0.99  layeri 40/1.00  sim_sw 92/1.00  accoun 190/1.00  phishi 36/1.00  qr_swa 46/0.89  refund 22/1.00  fake_c 12/0.33  loan_a 7/1.00  mercha 12/0.50
+test rows changed vs r_repro decode: 300
+shape: (20, 3)
+┌──────────────────┬────────────────────┬─────┐
+│ from             ┆ to                 ┆ len │
+│ ---              ┆ ---                ┆ --- │
+│ str              ┆ str                ┆ u32 │
+╞══════════════════╪════════════════════╪═════╡
+│ account_takeover ┆ sim_swap           ┆ 73  │
+│ legit            ┆ mule_account       ┆ 56  │
+│ legit            ┆ qr_swap            ┆ 27  │
+│ legit            ┆ velocity_bot       ┆ 26  │
+│ legit            ┆ layering_chain     ┆ 21  │
+│ …                ┆ …                  ┆ …   │
+│ phishing_collect ┆ fake_cashback      ┆ 2   │
+│ fake_cashback    ┆ qr_swap            ┆ 2   │
+│ fake_cashback    ┆ phishing_collect   ┆ 2   │
+│ layering_chain   ┆ velocity_bot       ┆ 1   │
+│ qr_swap          ┆ merchant_collusion ┆ 1   │
+└──────────────────┴────────────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\art_zonemax_r_repro.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256632 │
+│ mule_account       ┆ 789    │
+│ layering_chain     ┆ 574    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 501    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 273    │
+│ account_takeover   ┆ 235    │
+│ fake_cashback      ┆ 200    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 85     │
+└────────────────────┴────────┘
+   108 s
+== 7b art_acct (velocity receiver propagation)
+judge                    Sep noisy 0.5096 cleaned 0.5224 OOS 0.5082
+art_acct                 Sep noisy 0.5104 cleaned 0.5232 OOS 0.5090
+test rows changed vs subs/ts_judge_r_repro.csv: 13
+shape: (2, 3)
+┌────────────────┬──────────────┬─────┐
+│ from           ┆ to           ┆ len │
+│ ---            ┆ ---          ┆ --- │
+│ str            ┆ str          ┆ u32 │
+╞════════════════╪══════════════╪═════╡
+│ mule_account   ┆ velocity_bot ┆ 10  │
+│ layering_chain ┆ velocity_bot ┆ 3   │
+└────────────────┴──────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\art_acct_r_repro.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256632 │
+│ mule_account       ┆ 780    │
+│ layering_chain     ┆ 571    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 501    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 273    │
+│ account_takeover   ┆ 235    │
+│ fake_cashback      ┆ 200    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 85     │
+└────────────────────┴────────┘
+   94 s
+== 8 core2 matrix
+flow (1824642, 47)
+burst (1824642, 89)
+takeover (1824642, 122)
+scam (1824642, 148)
+ring (1824642, 183)
+written feats_cache_r\matrix_r_repro_c2.parquet (1824642, 194)
+   83 s
+== 9a train val, core2
+tag=r_repro_c2 modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs', 'core2'] n_feats=190 rows=1824642
+  fold0 seed0: best_iter=150 (36s)
+  fold0 seed1: best_iter=150 (38s)
+  fold0 seed2: best_iter=150 (36s)
+  fold0 seed3: best_iter=150 (38s)
+  fold0 seed4: best_iter=150 (37s)
+  fold0 seed5: best_iter=150 (34s)
+fold0 fit[7]->val8: macro argmax=0.4702
+  legit                argmax=0.987
+  mule_account         argmax=0.379
+  velocity_bot         argmax=0.455
+  layering_chain       argmax=0.537
+  sim_swap             argmax=0.371
+  account_takeover     argmax=0.353
+  phishing_collect     argmax=0.445
+  qr_swap              argmax=0.494
+  refund_abuse         argmax=0.517
+  fake_cashback        argmax=0.321
+  loan_app_extortion   argmax=0.381
+  merchant_collusion   argmax=0.403
+  fold1 seed0: best_iter=150 (54s)
+  fold1 seed1: best_iter=150 (49s)
+  fold1 seed2: best_iter=150 (48s)
+  fold1 seed3: best_iter=150 (46s)
+  fold1 seed4: best_iter=150 (39s)
+  fold1 seed5: best_iter=150 (45s)
+fold1 fit[7, 8]->val9: macro argmax=0.4817
+  legit                argmax=0.987
+  mule_account         argmax=0.402
+  velocity_bot         argmax=0.493
+  layering_chain       argmax=0.531
+  sim_swap             argmax=0.392
+  account_takeover     argmax=0.384
+  phishing_collect     argmax=0.445
+  qr_swap              argmax=0.488
+  refund_abuse         argmax=0.518
+  fake_cashback        argmax=0.348
+  loan_app_extortion   argmax=0.395
+  merchant_collusion   argmax=0.399
+POOLED OOF (bias tuned on pooled): macro argmax=0.4760 biased=0.4800
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.391 biased=0.393
+  velocity_bot         argmax=0.474 biased=0.474
+  layering_chain       argmax=0.534 biased=0.535
+  sim_swap             argmax=0.381 biased=0.387
+  account_takeover     argmax=0.368 biased=0.367
+  phishing_collect     argmax=0.445 biased=0.452
+  qr_swap              argmax=0.491 biased=0.493
+  refund_abuse         argmax=0.517 biased=0.517
+  fake_cashback        argmax=0.335 biased=0.360
+  loan_app_extortion   argmax=0.388 biased=0.391
+  merchant_collusion   argmax=0.401 biased=0.403
+fold0 w/ pooled bias: macro argmax=0.4702 biased=0.4744
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.379 biased=0.383
+  velocity_bot         argmax=0.455 biased=0.455
+  layering_chain       argmax=0.537 biased=0.537
+  sim_swap             argmax=0.371 biased=0.377
+  account_takeover     argmax=0.353 biased=0.352
+  phishing_collect     argmax=0.445 biased=0.457
+  qr_swap              argmax=0.494 biased=0.495
+  refund_abuse         argmax=0.517 biased=0.516
+  fake_cashback        argmax=0.321 biased=0.343
+  loan_app_extortion   argmax=0.381 biased=0.384
+  merchant_collusion   argmax=0.403 biased=0.405
+fold1 w/ pooled bias: macro argmax=0.4817 biased=0.4856
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.402 biased=0.404
+  velocity_bot         argmax=0.493 biased=0.493
+  layering_chain       argmax=0.531 biased=0.532
+  sim_swap             argmax=0.392 biased=0.398
+  account_takeover     argmax=0.384 biased=0.384
+  phishing_collect     argmax=0.445 biased=0.446
+  qr_swap              argmax=0.488 biased=0.490
+  refund_abuse         argmax=0.518 biased=0.518
+  fake_cashback        argmax=0.348 biased=0.375
+  loan_app_extortion   argmax=0.395 biased=0.398
+  merchant_collusion   argmax=0.399 biased=0.402
+done 551s
+   554 s
+== 9b train full, core2
+tag=r_repro_c2 modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs', 'core2'] n_feats=190 rows=1824642
+  full seed0: rounds=165 (57s)
+  full seed1: rounds=165 (62s)
+  full seed2: rounds=165 (70s)
+  full seed3: rounds=165 (68s)
+  full seed4: rounds=165 (101s)
+  full seed5: rounds=165 (71s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\r_repro_c2.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256890 │
+│ mule_account       ┆ 729    │
+│ layering_chain     ┆ 562    │
+│ phishing_collect   ┆ 476    │
+│ qr_swap            ┆ 451    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 262    │
+│ fake_cashback      ┆ 193    │
+│ loan_app_extortion ┆ 99     │
+│ merchant_collusion ┆ 74     │
+└────────────────────┴────────┘
+done 434s
+   437 s
+== 10 zones + bait on the core2 model
+edges train [423000, 423707, 424155, 424628, 425040, 426772, 427169, 427853, 428065, 428207, 428306, 428455]
+      test  [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+Sep r_repro_c2 base      noisy 0.4859 cleaned 0.4984  per-class cleaned [0.987, 0.444, 0.551, 0.542, 0.409, 0.396, 0.446, 0.49, 0.521, 0.38, 0.404, 0.41]
+Sep r_repro_c2 zone+bait noisy 0.5101 cleaned 0.5228  per-class cleaned [0.988, 0.463, 0.565, 0.554, 0.499, 0.442, 0.467, 0.507, 0.536, 0.399, 0.422, 0.434]
+OOS Aug->Sep r_repro_c2: base 0.4848  zone+bait 0.5091
+Sep zone rows/agree: mule_a 111/0.97  veloci 1115/1.00  layeri 72/1.00  sim_sw 154/1.00  accoun 377/1.00  phishi 81/0.97  qr_swa 73/1.00  refund 28/1.00  fake_c 27/0.60  loan_a 15/1.00  mercha 24/1.00
+Oct zone rows/agree: mule_a 79/0.83  veloci 297/0.99  layeri 40/1.00  sim_sw 92/1.00  accoun 190/1.00  phishi 36/1.00  qr_swa 46/0.89  refund 22/1.00  fake_c 12/0.33  loan_a 7/1.00  mercha 12/0.50
+test rows changed vs r_repro_c2 decode: 297
+shape: (20, 3)
+┌──────────────────┬────────────────────┬─────┐
+│ from             ┆ to                 ┆ len │
+│ ---              ┆ ---                ┆ --- │
+│ str              ┆ str                ┆ u32 │
+╞══════════════════╪════════════════════╪═════╡
+│ account_takeover ┆ sim_swap           ┆ 73  │
+│ legit            ┆ mule_account       ┆ 56  │
+│ legit            ┆ qr_swap            ┆ 27  │
+│ legit            ┆ velocity_bot       ┆ 26  │
+│ legit            ┆ phishing_collect   ┆ 21  │
+│ …                ┆ …                  ┆ …   │
+│ sim_swap         ┆ account_takeover   ┆ 1   │
+│ qr_swap          ┆ merchant_collusion ┆ 1   │
+│ mule_account     ┆ velocity_bot       ┆ 1   │
+│ layering_chain   ┆ velocity_bot       ┆ 1   │
+│ fake_cashback    ┆ phishing_collect   ┆ 1   │
+└──────────────────┴────────────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\ts_judge_r_repro_c2.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256636 │
+│ mule_account       ┆ 788    │
+│ layering_chain     ┆ 578    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 496    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 272    │
+│ account_takeover   ┆ 235    │
+│ fake_cashback      ┆ 201    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 85     │
+└────────────────────┴────────┘
+   117 s
+== 11 transplant the two h6-based rules
+art_acct_r_repro: 13 rows from ts_judge_r_repro
+art_zonemax_r_repro: 1 rows from ts_judge_r_repro
+wrote subs/r_repro_final1.csv; rows changed vs ts_judge_r_repro_c2: 14
+   1 s
+   subs/r_repro_final1.csv == subs/final1.csv (byte-identical)

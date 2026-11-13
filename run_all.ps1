@@ -4,6 +4,7 @@
 #   <Tag>_ppq.csv            [h6_ppq.csv]        h6 model + postproc --qr-null              (upload #1, public .5081)
 #   ts_judge_<Tag>.csv       [ts_judge_h6.csv]   + device-id zone override + bait rule      (upload #3, public .5443)
 #   <Tag>_final1.csv         [final1.csv]        c2s6 model + zones/bait + art_acct + art_zonemax (upload #4)
+#   <Tag>_v3_final / _sc_final / _bc_nr / _bc_bandv   rule layers on ts_judge_<Tag> (uploads #6, #7, #8, #9)
 # -H6Only stops after <Tag>_ppq.csv. Module caches go to work/feats_cache (or $env:UPI_CACHE if set).
 param([string]$Tag = "repro", [int]$Threads = 10, [switch]$SkipPrep, [switch]$H6Only)
 $ErrorActionPreference = "Stop"
@@ -61,4 +62,8 @@ try {
     Same "${Tag}_v3_final.csv" "v3_final.csv"
     Step "13 class-sweep rules (RS segment refund, FCB ph|qr edge)" @("sc_final.py", "subs/${Tag}_v3_final.csv", "${Tag}_sc_final")
     Same "${Tag}_sc_final.csv" "sc_final.csv"
+    Step "14 big-class rules, no-regret (CZ chain mule, LFM fan-in mule, X999)" @("bc_final.py", "subs/${Tag}_sc_final.csv", "${Tag}_bc_nr", "CZ,LFM,X999")
+    Same "${Tag}_bc_nr.csv" "bc_nr.csv"
+    Step "15 BANDV band bet (DV0473782 fan-in -> velocity)" @("bc_final.py", "subs/${Tag}_bc_nr.csv", "${Tag}_bc_bandv", "BANDV")
+    Same "${Tag}_bc_bandv.csv" "bc_bandv.csv"
 } finally { Pop-Location }

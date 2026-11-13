@@ -14,10 +14,12 @@ b6/b8 fan-in hosts, b7 zone volume, b9 rule + bursts, b10 EV). Rule: `work/bc_ru
 | own device, model | 1 | velocity |
 - No pool row is decoded anything else. Pool devices never send P2P (train 0/3341, test 0/269).
 - Device or sender sessions with >=5 rows (gap 600 s) on non-pool devices: 0 in train and in test. Bursts exist only on the pool.
+  Positive control (b11): with the pool included, the same code finds 84 train and 7 test device sessions, all on the pool.
+  Sender links hurt (art_acct). There are 0 multi-device merchant bursts (adapt.md). Sender and merchant sides are closed.
 - Train velocity labels per month: own device about 1,700 (camouflage), pool 800-1,100, velocity zone 41-60.
 
 ## (b) Oct structure
-- **p_vel tail (b4): null.** 305 test rows have p_vel >= .05 and are not decoded velocity. All are decoded mule (fan-in rows).
+- **p_vel tail (b4): null.** 305 test rows have p_vel >= .05 and are not decoded velocity. 303 are decoded mule and 2 layering (fan-in rows).
   On Sep, the same bins hold 0/167 velocity for p_vel >= .1, and .098 for [.05, .1). Break-even precision is about .2.
 - **Receiver link (b5, = art_acct / zprop R1): all 13 test hits come from 2 band devices, 473749 and 473782.**
   The pool contributes 0 (it never sends P2P), and the velocity core contributes 0 (0 hosts among 17 devices).
@@ -45,7 +47,11 @@ This does not depend on the mule|vel cut. Both zones are on the same side of the
 - Train, label-only, label-fit zones: the layering share of linked rows (y in mule/vel/lay) is .5% / .8% / .3% (Jul/Aug/Sep; n 418/392/323).
   This is asserted in `bc_rules_velocity.check_train`.
 - Judge-decoded layering hits: Aug 8 (cleaned 6 mule, 1 vel, 1 legit) and Sep 4 (4 mule). 0 are layering.
-  The window was chosen on Aug (48 h: 8 hits; 24 h: 2) and checked on Sep (4/4).
+  The 48 h window is zprop R1's window, chosen on Aug. 24 h gives 3 test rows (Aug 2/2, Sep 4/4).
+- **Event level (b11):** 6 train events, 5 mule-zone-hosted and 1 velocity-zone-hosted.
+  Two are layering-plurality decoded: 5/8 rows (truly 7/8 mule) and 3/7 rows (truly 6/6 mule). None is truly layering.
+  Decode-free support: fan-in majority = host zone type in 103/103 mule and 8/8 velocity cases (v3_zprop).
+  Test: ONE event (receiver AC291816, host 473749, 7 linked rows, 4 decoded layering). The gain is all-or-nothing.
 - Test: 4 rows layering -> mule, all from the 473749-hosted fan-in. Its mule-core-hosted rows are already decoded mule (0 layering hits).
 - Target choice, by EV per class (b10; Oct per-row value from Sep cleaned prec/rec):
 
@@ -54,7 +60,13 @@ This does not depend on the mule|vel cut. Both zones are on the same side of the
   | -> mule | +.0001 | +.00017 | +.00023 |
   | -> velocity | +.00035 | +.00023 | +.00012 |
 
-  Mule is positive under both band resolutions (no-regret). Fan-in hosts are mule 103 : velocity 8 in train. Velocity would be a bet on the cut.
+  Mule is positive under both band resolutions (no-regret). If the rows are truly layering, each costs about .000083 and each non-layering row gains about .00004.
+  Break-even is P(layering) of about .3. The train bound is 0 of 6 events.
+  If the band is velocity, the mule target is worth only about +.000014 per row (layering FP removed), so the thin velocity-side evidence costs little.
+  Host row 473749 deliberately stays velocity (zone override) while its fan-in goes to mule. This is a hedge across the cut. Fan-in hosts are mule 103 : velocity 8 in train. Velocity would be a bet on the cut.
 - Expected gain: about +.0001 to +.0002 macro (mule/layering, not velocity). Probably 1-2 rows are public, so the LB will not show it.
+
+Collisions: the 4 ids (TX63afe92f, TXa4dee0c2, TX200b82bf, TXe6d162e4) are the rows that unguarded R1 sends to velocity, and 3 are in art_acct.
+A combiner needs a precedence rule. Mule and layering class agents may touch them too.
 
 Per-row macro values on test (b10): mule +TP .000043 / FP .000013; velocity +TP .000078 / FP .000015; layering +TP .000070 / FP .000027.
