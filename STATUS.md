@@ -87,8 +87,8 @@ PRIVATE: https://github.com/G26karthik/upi-fraud-rings-gradient-wars (master; ta
 |---|---|---|---|
 | 1 | subs/h6_ppq.csv | **0.5081** | #2 on LB; leader .5470. Matches val (cleaned proxy .498), so camouflage IS fraud in test |
 LB 13 Nov evening: Granuki .5488, #2 .5485, us .5443 (#3). Idea panel wf_b21c6afe-c91 running (boundary / prior / ovr / zclean / bag + judge -> subs/panel_best.csv). Repro packaging wf_40660de5-217 running.
-| 6 (sent) | subs/v3_final.csv | ? | qrm + QRN rule (4 rows legit->qr) + zone-prop on ambiguous pairs (4 sim->ATO, 4 lay->mule); work/v3_rules.py. Sep +.0005 noisy, +.0005 OOS |
-| 5 | subs/ts_judge_h6_qrm.csv | **0.5459** (best) | ts_judge_h6 + 16 Oct merchant-QR null-mismatch non-integer rows -> qr_swap (0 such rows in train; fresh-eyes #1). Expected +.0004-.0008 |
+| 6 | subs/v3_final.csv | **0.5476** (best) | qrm + QRN rule (4 rows legit->qr) + zone-prop on ambiguous pairs (4 sim->ATO, 4 lay->mule); work/v3_rules.py. Sep +.0005 noisy, +.0005 OOS |
+| 5 | subs/ts_judge_h6_qrm.csv | 0.5459 | ts_judge_h6 + 16 Oct merchant-QR null-mismatch non-integer rows -> qr_swap (0 such rows in train; fresh-eyes #1). Expected +.0004-.0008 |
 | 4 | subs/final1.csv | 0.5435 | ts_judge_c2s6 (c2s6 probs + zones + bait; Sep .5101/.5228/OOS .5091) + art_acct (13 rows) + art_zonemax (1 row) via combine.py. 26 rows differ from ts_judge_h6 |
 | 3 | subs/ts_judge_h6.csv | **0.5443** | h6 + device-ID zone override (299 rows). +.036 vs h6 (Sep predicted +.024). Leader .5470. 7 uploads left on 13 Nov |
 | 2 | subs/h6_d+3.0.csv | 0.4946 | diagnostic: all fraud biases +3 (+682 fraud preds). LB -.0135 vs Sep-predicted -.017: val decoding is right, do not shift the threshold. The LB tracks Sep val. |
