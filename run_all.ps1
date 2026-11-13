@@ -69,4 +69,6 @@ try {
     Same "${Tag}_bc_bandv.csv" "bc_bandv.csv"
     Step "16 EDGEFIX (3 zone-edge rows)" @("probe_rules.py", "EDGEFIX", "subs/${Tag}_bc_bandv.csv")
     Same "probe_edgefix_${Tag}_bc_bandv.csv" "probe_edgefix_bc_bandv.csv"
+    # 17 dd_final (pool-bait + stamp, 13 rows legit -> phishing): work/dd_rules_pool.py, dd_rules_stamp.py, dd_final.py read fixed
+    # subs/ paths (probe_edgefix_bc_bandv.csv); reproduce via: python dd_rules_pool.py; python dd_rules_stamp.py; python dd_final.py
 } finally { Pop-Location }
