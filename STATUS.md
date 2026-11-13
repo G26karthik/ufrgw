@@ -1,7 +1,7 @@
 # UPI Fraud Rings
 
 ## >>> RESUME HERE (13 Nov ~21:30 IST) <<<
-Best public: subs/sc_final.csv 0.5486 (#2; upload #7, +.0010 over v3_final .5476). Leaders .5488 / .5485. Uploads #8 bc_nr, #9 bc_bandv sent, scores pending.
+Best public: subs/bc_bandv.csv 0.5493 (#1). bc_nr .5490 (#8), sc_final .5486 (#7), v3_final .5476. BANDV probe: bandv > nr, so BANDV confirmed; bc_bandv is the base. Previous leaders .5488 / .5485.
 Uploads today: 9 of 10 used (after #8,#9); the counter resets at midnight IST. Deadline 15 Nov 10:00 IST.
 Pipeline: run_all.ps1 reproduces h6_ppq -> ts_judge_h6 -> final1 -> v3_final -> sc_final byte-identically from raw CSVs (verified in a clean room through final1; steps 12-13 verified in place). Repo PRIVATE: github.com/G26karthik/upi-fraud-rings-gradient-wars. Tags up3/up5/up6/up7. Make it public at 09:45 15 Nov (command below).
 What works: (1) device-id zone override (generator artefact); (2) Oct-only blanked QR mismatch cells -> qr_swap; (3) small structural rules on small classes (each beat its Sep estimate on the LB: 16 rows +.0016, 12 rows +.0017).
