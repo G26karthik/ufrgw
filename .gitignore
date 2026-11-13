@@ -18,3 +18,4 @@ work/subs/*
 work/scratch_*/
 !work/subs/ts_judge_h6_qrm.csv
 !work/subs/v3_final.csv
+!work/subs/sc_final.csv
