@@ -1,4 +1,5 @@
 ## 14 Nov uploads: #1 dd_final .5505 (BEST, #1); #2 probe_hl_ac015935_dd_final .5499 -> mule (keep); #3 probe_hl_ac279075_dd_final .5495 -> mule (keep). Next (all on dd_final, disjoint, each read vs .5505): probe_hl_ac298085 (20r), ac072953 (18r), ac253951 (17r), ac205092 (16r) _dd_final.csv; probe_rules.py now builds any HL_<acct> generically (all mule rows the account receives/sends; reproduces the hand lists). Winners (> .5505) get unioned into one final file and uploaded. Remaining candidates: scratch_probe/p12_hostless.log.
+Running (14 Nov ~03:00): pool-push wf_d74b2cc8-227 (task wckjbc6mz): 4 Fable lenses (tmpl: pool x every template; swap: pools for type swaps + HL velocity ranking; expand: iterate pools / label-free account markers; feat: pool features in model, measure only) -> skeptic -> judge -> subs/pp_final.csv on dd_final. HOLD the 4 HL probes until ~20:00; uploads go to pp results first.
 
 # UPI Fraud Rings
 
