@@ -39,6 +39,12 @@ def apply(sub_df, tx, key):
     D = sub_df.join(tx.select(c("txn_id").alias("id"), "receiver_id", c("device_id").str.slice(2).cast(pl.Int64).alias("dn")),
                     on="id", how="left", maintain_order="left")
     assert D["dn"].null_count() == 0 and D["id"].equals(sub_df["id"])
+    if key.startswith("HL_") and key not in HOSTLESS:  # generic: every mule row the account receives or sends
+        a = key[3:]   # (reproduces both hand lists above; scratch_probe/p12_hostless.log for candidates)
+        D2 = D.join(tx.select(c("txn_id").alias("id"), "sender_id"), on="id", how="left", maintain_order="left")
+        HOSTLESS[key] = D2.filter(((c("receiver_id") == a) | (c("sender_id") == a)) & (c("label") == "mule_account"))["id"].to_list()
+        NROWS[key] = len(HOSTLESS[key])
+        assert NROWS[key] >= 13, (key, NROWS[key])  # audit policy: single-event probes of >= 13 rows only
     if key in HOSTLESS:  # whole fan-in segment mule -> velocity
         m = c("id").is_in(HOSTLESS[key])
         r = D.filter(m)

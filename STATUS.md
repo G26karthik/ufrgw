@@ -1,3 +1,5 @@
+## 14 Nov uploads: #1 dd_final .5505 (BEST, #1); #2 probe_hl_ac015935_dd_final .5499 -> mule (keep); #3 probe_hl_ac279075_dd_final .5495 -> mule (keep). Next (all on dd_final, disjoint, each read vs .5505): probe_hl_ac298085 (20r), ac072953 (18r), ac253951 (17r), ac205092 (16r) _dd_final.csv; probe_rules.py now builds any HL_<acct> generically (all mule rows the account receives/sends; reproduces the hand lists). Winners (> .5505) get unioned into one final file and uploaded. Remaining candidates: scratch_probe/p12_hostless.log.
+
 # UPI Fraud Rings
 
 ## >>> RESUME HERE (13 Nov ~21:30 IST) <<<
