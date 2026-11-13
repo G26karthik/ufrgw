@@ -76,12 +76,19 @@ Phase 2 conclusions: event smoothing gives no gain. 63% of fraud rows are camouf
 ## Code repo
 PRIVATE: https://github.com/G26karthik/upi-fraud-rings-gradient-wars (master; tag up3-0.5443 = commit with ts_judge_h6.csv). Commit and tag at every upload. Keep it private until 15 Nov 10:00 IST. The Submission-tab link must be accessible to organizers: make it public right before the deadline or invite them. Not done yet. At 09:45 IST 15 Nov run: gh repo edit G26karthik/upi-fraud-rings-gradient-wars --visibility public --accept-visibility-change-consequences (a scheduled task was blocked by the permission classifier).
 
+## 13 Nov 19:50 IST running
+- Idea panel wf_b21c6afe-c91 DONE: all 5 NULL (boundary <=3 test rows; prior worse; ovr = same ranking as multiclass; zclean worse; bag: 12 seeds = 6, blends null). Model-level levers exhausted. Seed-set noise on OOS is about .0005.
+- Repro builder wf_40660de5-217 (run_all for final chain; NOTE the qrm rule is only an inline override so far and must go into code)
+- Deep v3 DONE (cells: QRN rule, 4 rows; zprop: 8 rows; dpocc rejected). Earlier plan was: cells (generalises the Oct-only-cell win), dpocc (zone DP occupancy), zprop (zone propagation on ambiguous pairs) -> v3_final.csv + work/v3_rules.py
+- Queued: stamp-cleanup retrain (fresh_judge #3) once CPU frees. After all finish: build the end-to-end combined candidate, tell the user it is safe to /compact, then one Fable 5.2 advisor review.
+
 ## UPLOADS LOG
 | # | file | public | note |
 |---|---|---|---|
 | 1 | subs/h6_ppq.csv | **0.5081** | #2 on LB; leader .5470. Matches val (cleaned proxy .498), so camouflage IS fraud in test |
 LB 13 Nov evening: Granuki .5488, #2 .5485, us .5443 (#3). Idea panel wf_b21c6afe-c91 running (boundary / prior / ovr / zclean / bag + judge -> subs/panel_best.csv). Repro packaging wf_40660de5-217 running.
-| 5 (sent) | subs/ts_judge_h6_qrm.csv | ? | ts_judge_h6 + 16 Oct merchant-QR null-mismatch non-integer rows -> qr_swap (0 such rows in train; fresh-eyes #1). Expected +.0004-.0008 |
+| 6 (sent) | subs/v3_final.csv | ? | qrm + QRN rule (4 rows legit->qr) + zone-prop on ambiguous pairs (4 sim->ATO, 4 lay->mule); work/v3_rules.py. Sep +.0005 noisy, +.0005 OOS |
+| 5 | subs/ts_judge_h6_qrm.csv | **0.5459** (best) | ts_judge_h6 + 16 Oct merchant-QR null-mismatch non-integer rows -> qr_swap (0 such rows in train; fresh-eyes #1). Expected +.0004-.0008 |
 | 4 | subs/final1.csv | 0.5435 | ts_judge_c2s6 (c2s6 probs + zones + bait; Sep .5101/.5228/OOS .5091) + art_acct (13 rows) + art_zonemax (1 row) via combine.py. 26 rows differ from ts_judge_h6 |
 | 3 | subs/ts_judge_h6.csv | **0.5443** | h6 + device-ID zone override (299 rows). +.036 vs h6 (Sep predicted +.024). Leader .5470. 7 uploads left on 13 Nov |
 | 2 | subs/h6_d+3.0.csv | 0.4946 | diagnostic: all fraud biases +3 (+682 fraud preds). LB -.0135 vs Sep-predicted -.017: val decoding is right, do not shift the threshold. The LB tracks Sep val. |
@@ -132,3 +139,7 @@ One command: `run_all.ps1` (README.md), work/make_matrix.py builds matrix_m5dm2_
 - Clean-test estimate (a4.py), h6 Sep: cleaned .4979. World B (archetype swaps are train-only noise) gives .5279. B plus singleton-flip credit gives ~.547, the same as the leader. Public-LB sampling sd is .010. Row order carries no leak (AUC .5002).
 - density.halves splits multi-day/chained events: refund episodes 54% (rs_n), loan 28% (s4_np_int_eve), layering chains 11% (a5.py). `feats/core2.py` = full-density copies of those 28 cols. matrix_core2swap replaces their dm copies. Test features are unchanged (0-11 rows differ).
 - c2s6 (6 seeds) vs h6, every metric: pooled .4801/.4793, Sep .4859/.4855, cSep .4984/.4979, OOS .4848/.4841, cOOS .4972/.4964 (P(d<=0)=.05). 3-seed c2swap vs h3: +.0013 pooled, +.0004 cOOS. Sub: subs/c2s6_ppq.csv. It differs from h6_ppq on 15 test rows, so LB-neutral. Keep h6_ppq as the first upload.
+
+## Reproduction of final1 (13 Nov ~20:00 IST)
+`run_all.ps1` now runs the whole chain (default; `-H6Only` stops at h6_ppq): h6 -> ts_judge -> art_zonemax (`ts_judge_post.py --mv`) -> art_acct -> core2 matrix (`make_matrix.py --core2`) -> c2 train -> ts_judge -> `combine.py` -> `<Tag>_final1.csv`. No pipeline script imports from `scratch_*`.
+Verified with `UPI_CACHE=feats_cache_r`, `-Tag r_repro -SkipPrep` (73 min on a loaded CPU): h6/c2s6 OOF and test probs, h6_ppq, ts_judge_h6, art_zonemax, art_acct, ts_judge_c2s6 and final1 are all byte-identical. README updated (steps, numbers, Approach: zones/bait/acct). `work/feats_cache_r` (~0.6 GB) and the `r_*` files in subs/oof/preds can be deleted.
