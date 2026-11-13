@@ -22,3 +22,5 @@ work/scratch_*/
 !work/subs/bc_nr.csv
 !work/subs/bc_bandv.csv
 !work/subs/probe_edgefix_bc_bandv.csv
+!work/subs/probe_hl_ac015935_probe_edgefix_bc_bandv.csv
+!work/subs/probe_hl_ac279075_probe_edgefix_bc_bandv.csv

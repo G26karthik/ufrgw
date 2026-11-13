@@ -5,6 +5,7 @@
 #   ts_judge_<Tag>.csv       [ts_judge_h6.csv]   + device-id zone override + bait rule      (upload #3, public .5443)
 #   <Tag>_final1.csv         [final1.csv]        c2s6 model + zones/bait + art_acct + art_zonemax (upload #4)
 #   <Tag>_v3_final / _sc_final / _bc_nr / _bc_bandv   rule layers on ts_judge_<Tag> (uploads #6, #7, #8, #9)
+#   probe_edgefix_<Tag>_bc_bandv.csv  [probe_edgefix_bc_bandv.csv]  + 3 zone-edge rows (upload #10, public .5500)
 # -H6Only stops after <Tag>_ppq.csv. Module caches go to work/feats_cache (or $env:UPI_CACHE if set).
 param([string]$Tag = "repro", [int]$Threads = 10, [switch]$SkipPrep, [switch]$H6Only)
 $ErrorActionPreference = "Stop"
@@ -66,4 +67,6 @@ try {
     Same "${Tag}_bc_nr.csv" "bc_nr.csv"
     Step "15 BANDV band bet (DV0473782 fan-in -> velocity)" @("bc_final.py", "subs/${Tag}_bc_nr.csv", "${Tag}_bc_bandv", "BANDV")
     Same "${Tag}_bc_bandv.csv" "bc_bandv.csv"
+    Step "16 EDGEFIX (3 zone-edge rows)" @("probe_rules.py", "EDGEFIX", "subs/${Tag}_bc_bandv.csv")
+    Same "probe_edgefix_${Tag}_bc_bandv.csv" "probe_edgefix_bc_bandv.csv"
 } finally { Pop-Location }

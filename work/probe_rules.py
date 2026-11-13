@@ -24,10 +24,12 @@ BETS = {  # key: ({device id: (from, to)} or ((lo, hi), from, to))
 HOSTLESS = {
     "HL_AC015935": ["TX1be92637", "TX418a73f5", "TX7c43fc8b", "TX57871ef4", "TXcb924df8", "TX071f1a4b", "TXd31be239",
                     "TX769aeae2", "TX9bef437d", "TX37340d51", "TX28f5b09b", "TX0012b626", "TX9c1128bf", "TX4145b368",
-                    "TX844b0014", "TX2dc14976", "TXd02a715f", "TX216c2fcd", "TX30eb9c1c"],
+                    "TX844b0014", "TX2dc14976", "TXd02a715f", "TX216c2fcd", "TX30eb9c1c",
+                    "TX79154343", "TXd3a27ba9", "TX63158e21"],  # + the receiver's 3 forward rows (audit wf_80d672e9-6ec)
     "HL_AC279075": ["TX4af8df28", "TXafa22a45", "TX76a89608", "TX953ceab8", "TX677e44f3", "TX2ff4212c", "TX756031c8",
                     "TXdd934a40", "TXb5a8a8ec", "TX3064cdbe", "TXbace7b07", "TX2d309cdb", "TX2c785c72", "TXbd83f088",
-                    "TX4e0dfcbb", "TX79803c16", "TX9ee358f1", "TXf7c5eaef"],
+                    "TX4e0dfcbb", "TX79803c16", "TX9ee358f1", "TXf7c5eaef",
+                    "TXf4ab64e0", "TX78533590", "TX873c0b2e"],  # + the receiver's 3 forward rows
 }
 NROWS = {"MULEBAND": 11, "EDGEFIX": 3} | {k: len(v) for k, v in HOSTLESS.items()}
 
@@ -40,7 +42,7 @@ def apply(sub_df, tx, key):
     if key in HOSTLESS:  # whole fan-in segment mule -> velocity
         m = c("id").is_in(HOSTLESS[key])
         r = D.filter(m)
-        assert r.height == len(HOSTLESS[key]) and (r["label"] == "mule_account").all() and r["receiver_id"].n_unique() == 1, key
+        assert r.height == len(HOSTLESS[key]) and (r["label"] == "mule_account").all(), (key, r["label"].value_counts().rows())
         out = D.select("id", pl.when(m).then(pl.lit("velocity_bot")).otherwise(c("label")).alias("label"))
         assert (out["label"] != sub_df["label"]).sum() == NROWS[key], key
         return out

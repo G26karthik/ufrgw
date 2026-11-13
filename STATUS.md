@@ -2,7 +2,12 @@
 
 ## >>> RESUME HERE (13 Nov ~21:30 IST) <<<
 Best public: subs/probe_edgefix_bc_bandv.csv 0.5500 (#1, upload #10, +.0007 over bc_bandv .5493). Final = best PUBLIC upload scored on private, so only upload files we accept as final.
-Earlier: bc_bandv 0.5493. bc_nr .5490 (#8), sc_final .5486 (#7), v3_final .5476. BANDV probe: bandv > nr, so BANDV confirmed; bc_bandv is the base. Previous leaders .5488 / .5485.
+Earlier: bc_bandv 0.5493.
+AUDIT (wf_80d672e9-6ec, notes/audit_generalization.md): all 6 layers KEEP, no skeptic refuted. About 95% of the gain over h6_ppq comes from train/structure evidence checked out of time; the LB touched about 30 rows (qrm gate, BANDV sign, EDGEFIX). Expected private gain vs h6_ppq about +.042 (+.032 to +.050). probe_edgefix_bc_bandv stays final.
+UPLOAD POLICY 14 Nov: only single fan-in-event probes of >=13 rows, one event per file, built on the current best; keep one only if public > .5500, then rebuild the next on the winner.
+  Ready: subs/probe_hl_ac015935_probe_edgefix_bc_bandv.csv (22 rows), subs/probe_hl_ac279075_probe_edgefix_bc_bandv.csv (21 rows; rebuild on the winner if the first wins). P(win) about .14 each. Next: other p12 hostless segments, n 13-25 (n >= 20 last).
+  NEVER: V49, SIMATO, VELLAY, RS revert, bundles, stale-base files (subs/probe_hl_*_bc_bandv.csv are stale), anything chosen by public score (retrain/blend/bias/edge re-tune). Leaving slots unused is fine.
+run_all.ps1 step 16 (EDGEFIX) added; checked byte-identical in place on a copy of bc_bandv. bc_nr .5490 (#8), sc_final .5486 (#7), v3_final .5476. BANDV probe: bandv > nr, so BANDV confirmed; bc_bandv is the base. Previous leaders .5488 / .5485.
 Uploads today: 10 of 10 used (#10 = subs/probe_edgefix_bc_bandv.csv: bc_bandv + 3 zone-edge rows, EV +.00016; keep as base unless public drops). Next probes tomorrow: notes/probe_bets.md (HL_AC015935 19 rows, HL_AC279075 18 rows; P~.14, probe-only); the counter resets at midnight IST. Deadline 15 Nov 10:00 IST.
 Pipeline: run_all.ps1 reproduces h6_ppq -> ts_judge_h6 -> final1 -> v3_final -> sc_final byte-identically from raw CSVs (verified in a clean room through final1; steps 12-13 verified in place). Repo PRIVATE: github.com/G26karthik/upi-fraud-rings-gradient-wars. Tags up3/up5/up6/up7. Make it public at 09:45 15 Nov (command below).
 What works: (1) device-id zone override (generator artefact); (2) Oct-only blanked QR mismatch cells -> qr_swap; (3) small structural rules on small classes (each beat its Sep estimate on the LB: 16 rows +.0016, 12 rows +.0017).
