@@ -16,3 +16,4 @@ work/subs/*
 !work/subs/final1.csv
 # exploration scripts and their outputs
 work/scratch_*/
+!work/subs/ts_judge_h6_qrm.csv

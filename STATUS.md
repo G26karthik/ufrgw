@@ -73,11 +73,15 @@ tun_best .4711 mean (Aug->Sep .4787) > bl_1_1 .4700 > xgbC .4694. Same-feature b
 
 Phase 2 conclusions: event smoothing gives no gain. 63% of fraud rows are camouflage (AUC 0.50 vs legit) and cannot be caught. Only one Oct adaptation was found: QR mismatch blanked, handled by the --qr-null post-rule. Oct velocity events are 1/3 of Sep, so do not raise the velocity bias. Relabel C (sim/ATO archetype) is the only label fix that helps. Relabel A, B, D and E are neutral or worse.
 
+## Code repo
+PRIVATE: https://github.com/G26karthik/upi-fraud-rings-gradient-wars (master; tag up3-0.5443 = commit with ts_judge_h6.csv). Commit and tag at every upload. Keep it private until 15 Nov 10:00 IST. The Submission-tab link must be accessible to organizers: make it public right before the deadline or invite them. Not done yet. At 09:45 IST 15 Nov run: gh repo edit G26karthik/upi-fraud-rings-gradient-wars --visibility public --accept-visibility-change-consequences (a scheduled task was blocked by the permission classifier).
+
 ## UPLOADS LOG
 | # | file | public | note |
 |---|---|---|---|
 | 1 | subs/h6_ppq.csv | **0.5081** | #2 on LB; leader .5470. Matches val (cleaned proxy .498), so camouflage IS fraud in test |
 LB 13 Nov evening: Granuki .5488, #2 .5485, us .5443 (#3). Idea panel wf_b21c6afe-c91 running (boundary / prior / ovr / zclean / bag + judge -> subs/panel_best.csv). Repro packaging wf_40660de5-217 running.
+| 5 (sent) | subs/ts_judge_h6_qrm.csv | ? | ts_judge_h6 + 16 Oct merchant-QR null-mismatch non-integer rows -> qr_swap (0 such rows in train; fresh-eyes #1). Expected +.0004-.0008 |
 | 4 | subs/final1.csv | 0.5435 | ts_judge_c2s6 (c2s6 probs + zones + bait; Sep .5101/.5228/OOS .5091) + art_acct (13 rows) + art_zonemax (1 row) via combine.py. 26 rows differ from ts_judge_h6 |
 | 3 | subs/ts_judge_h6.csv | **0.5443** | h6 + device-ID zone override (299 rows). +.036 vs h6 (Sep predicted +.024). Leader .5470. 7 uploads left on 13 Nov |
 | 2 | subs/h6_d+3.0.csv | 0.4946 | diagnostic: all fraud biases +3 (+682 fraud preds). LB -.0135 vs Sep-predicted -.017: val decoding is right, do not shift the threshold. The LB tracks Sep val. |

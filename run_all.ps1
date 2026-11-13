@@ -46,11 +46,14 @@ try {
     Step "6 device-id zones + bait rule" @("ts_judge_post.py", $Tag)
     Same "ts_judge_$Tag.csv" "ts_judge_h6.csv"
     Step "7a art_zonemax (mule/velocity pooled zone DP)" @("ts_judge_post.py", $Tag, "--mv", "--out", "art_zonemax_$Tag")
+    Same "art_zonemax_$Tag.csv" "art_zonemax.csv"
     Step "7b art_acct (velocity receiver propagation)" @("art_acct_post.py", $Tag, "art_acct_$Tag")
+    Same "art_acct_$Tag.csv" "art_acct.csv"
     Step "8 core2 matrix" @("make_matrix.py", (Join-Path $cache "matrix_$c2.parquet"), "--core2")
     Step "9a train val, core2" ($train2 + @("--mode", "val"))
     Step "9b train full, core2" ($train2 + @("--mode", "full"))
     Step "10 zones + bait on the core2 model" @("ts_judge_post.py", $c2)
+    Same "ts_judge_$c2.csv" "ts_judge_c2s6.csv"
     Step "11 transplant the two h6-based rules" @("combine.py", "ts_judge_$c2", "${Tag}_final1",
         "ts_judge_${Tag}:art_acct_$Tag", "ts_judge_${Tag}:art_zonemax_$Tag")
     Same "${Tag}_final1.csv" "final1.csv"

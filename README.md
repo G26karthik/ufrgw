@@ -1,7 +1,7 @@
 # UPI Fraud Rings (ML Gradient Wars 2026): solution
 
 This repo labels every October transaction with one of 12 classes (legit plus 11 fraud types). The metric is macro-F1.
-One command rebuilds every upload from the raw CSVs:
+One command rebuilds uploads #1, #3 and #4 from the raw CSVs (#2 was a threshold diagnostic, not rebuilt):
 
 | upload | file | public LB | what it is |
 |---|---|---|---|
@@ -40,9 +40,17 @@ The script runs these steps from `work/`, with `PYTHONUTF8=1` and `POLARS_MAX_TH
 | 2-3 | `python make_matrix.py feats_cache/matrix_repro.parquet` | module caches `feats_cache/<module>[__dm\|__dm2].parquet`, then the 1,824,642 x 194 matrix | ~50 s |
 | 4a | `python train.py --modules flow,burst,takeover,scam,ring,pairs --matrix feats_cache/matrix_repro.parquet --relabel C --rounds 150 --seeds 6 --threads 10 --tag repro --mode val` | `oof/repro*` (OOF probs, biases) | ~6 min |
 | 4b | the same command with `--mode full` | `preds/repro_test.npy`, `subs/repro.csv` | ~4 min |
-| 5 | `python postproc.py repro --qr-null` | `subs/repro_ppq.csv` | ~1 min |
+| 5 | `python postproc.py repro --qr-null` | `subs/repro_ppq.csv` (= upload #1) | ~1 min |
+| 6 | `python ts_judge_post.py repro` | `subs/ts_judge_repro.csv` (= upload #3) | ~1 min |
+| 7a | `python ts_judge_post.py repro --mv --out art_zonemax_repro` | `subs/art_zonemax_repro.csv` | ~1 min |
+| 7b | `python art_acct_post.py repro art_acct_repro` | `subs/art_acct_repro.csv` | ~1.5 min |
+| 8 | `python make_matrix.py feats_cache/matrix_repro_c2.parquet --core2` | `feats_cache/core2.parquet`, the c2s6 matrix (194 cols) | ~1.5 min |
+| 9a/9b | step 4a/4b with `--modules flow,burst,takeover,scam,ring,pairs,core2 --matrix feats_cache/matrix_repro_c2.parquet --tag repro_c2` | `oof/repro_c2*`, `preds/repro_c2_test.npy` | ~10 min |
+| 10 | `python ts_judge_post.py repro_c2` | `subs/ts_judge_repro_c2.csv` | ~1 min |
+| 11 | `python combine.py ts_judge_repro_c2 repro_final1 ts_judge_repro:art_acct_repro ts_judge_repro:art_zonemax_repro` | `subs/repro_final1.csv` (= upload #4) | <10 s |
 
-\*Measured on a 12-thread desktop CPU with 32 GB RAM; peak RAM is under 10 GB. No GPU is used.
+\*Measured on a 12-thread desktop CPU with 32 GB RAM; peak RAM is under 10 GB. No GPU is used. The whole chain takes
+about 30 min on an idle machine.
 
 Step 4b reads the biases and round count that step 4a saved under the same `--tag`, so run 4a first.
 Set `$env:UPI_CACHE` to a folder to build the module caches there instead of in `work/feats_cache`.
@@ -63,6 +71,20 @@ The noisy labels are the given ones. The cleaned labels come from `clean_labels.
 The out-of-sample decode (`python oos.py TAG`) tunes the bias on one fold and scores it on the other.
 It gives Aug->Sep .4837, Sep->Aug .4724 and mean .4780.
 The submission has 260,582 rows: 256,843 legit and 3,739 fraud.
+
+The later steps print Sep scores after the post-rules. These use the bias tuned on the pooled OOF, and OOS is the bias
+tuned on Aug and scored on Sep, after the post-rules (`oos.py` decodes before postproc and gives .4837 for h6).
+
+| step | output | Sep noisy | Sep cleaned | OOS Aug->Sep | test rows changed |
+|---|---|---|---|---|---|
+| 5 | repro_ppq (h6) | .4855 | .4979 | .4841 | |
+| 6 | ts_judge_repro (zones + bait) | .5096 | .5224 | .5082 | 299 vs step 5 |
+| 7a | art_zonemax_repro | .5100 | .5227 | .5086 | 1 vs step 6 |
+| 7b | art_acct_repro | .5104 | .5232 | .5090 | 13 vs step 6 |
+| 9 | repro_c2 (c2s6) + postproc, pooled .4801 | .4859 | .4984 | .4848 | |
+| 10 | ts_judge_repro_c2 | .5101 | .5228 | .5091 | 297 vs c2s6 decode |
+| 11 | repro_final1 | not scored as a whole | | | 14 vs step 10, 26 vs step 6 |
+
 Verified on 13 Nov: `run_all.ps1` with fresh caches (`UPI_CACHE`, `--force`) rebuilt a matrix equal to the original in all 194 columns. It also gave OOF probs, test probs, `repro.csv` and `repro_ppq.csv` byte-identical to `h6`.
 A second check ran `.\run_all.ps1` with no options in a clean copy that holds only the files a git clone would have, plus the raw CSVs.
 Every output was again byte-identical to `h6`, and `oos.py repro` gave the same numbers.
@@ -133,7 +155,9 @@ OOS Aug->Sep .4848 vs .4841. The decoded test labels differ from h6 on 15 rows.
     predictions are pooled.
   - A multi-row device is only allowed in the takeover zones.
   - It runs on the OOF predictions for train ids and on the test predictions for October ids.
-  - On Sep it recovers the label-fit edges within 1-2 ids.
+  - In a test-like run on Sep devices and Sep predictions only, it recovers the label-fit edges within 1-2 ids. On the
+    pooled Aug+Sep OOF it puts the mule|velocity edge 49 ids late (423707 vs 423658), because h6 decodes velocity-zone
+    rows as legit or mule, never velocity. `--mv` fixes most of this.
 - Every row on a zone device then takes the zone's type. On test, zones plus the bait rule change 299 rows: about 200 legit -> zone type and
   73 ATO -> sim. Gain: Sep .4855 -> .5096 (cleaned .4979 -> .5224, OOS .4841 -> .5082). Public LB: .5081 -> .5443.
 - `--mv` (art_zonemax) also pools mule and velocity predictions as evidence. h6 never decodes velocity-zone rows as
