@@ -1,0 +1,23 @@
+raw : pooled=0.4791 sep=0.4851 | cleaned pooled=0.4914 sep=0.4976  bias=[0.0, 0.4000000059604645, 0.699999988079071, 0.6000000238418579, 0.8999999761581421, 0.6000000238418579, 0.800000011920929, 0.30000001192092896, 0.30000001192092896, 1.5, 1.5, 0.8999999761581421]
+post: pooled=0.4793 sep=0.4855 | cleaned pooled=0.4916 sep=0.4979  bias=[0.0, 0.4000000059604645, 0.699999988079071, 0.6000000238418579, 0.8999999761581421, 0.6000000238418579, 0.800000011920929, 0.30000001192092896, 0.30000001192092896, 1.5, 1.5, 0.8999999761581421]
+test rows whose label changes vs raw probs (post bias): 66
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\h6_ppq.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256843 │
+│ mule_account       ┆ 731    │
+│ layering_chain     ┆ 558    │
+│ qr_swap            ┆ 494    │
+│ phishing_collect   ┆ 480    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 270    │
+│ refund_abuse       ┆ 263    │
+│ fake_cashback      ┆ 193    │
+│ loan_app_extortion ┆ 99     │
+│ merchant_collusion ┆ 74     │
+└────────────────────┴────────┘
+h6           Aug->Sep 0.4837  Sep->Aug 0.4724  mean 0.4780

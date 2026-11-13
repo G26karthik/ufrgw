@@ -1,0 +1,31 @@
+judge                    Sep noisy 0.5096 cleaned 0.5224 OOS 0.5082
+art_acct                 Sep noisy 0.5104 cleaned 0.5232 OOS 0.5090
+test rows changed vs subs/ts_judge_h6.csv: 13
+shape: (2, 3)
+┌────────────────┬──────────────┬─────┐
+│ from           ┆ to           ┆ len │
+│ ---            ┆ ---          ┆ --- │
+│ str            ┆ str          ┆ u32 │
+╞════════════════╪══════════════╪═════╡
+│ mule_account   ┆ velocity_bot ┆ 10  │
+│ layering_chain ┆ velocity_bot ┆ 3   │
+└────────────────┴──────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\r_art_acct.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256632 │
+│ mule_account       ┆ 780    │
+│ layering_chain     ┆ 571    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 501    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 273    │
+│ account_takeover   ┆ 235    │
+│ fake_cashback      ┆ 200    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 85     │
+└────────────────────┴────────┘

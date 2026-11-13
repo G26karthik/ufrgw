@@ -1,0 +1,15 @@
+== 2-3 features + matrix
+flow (1824642, 47)
+burst (1824642, 89)
+takeover (1824642, 122)
+scam (1824642, 148)
+ring (1824642, 183)
+written feats_cache_r\matrix_r_repro.parquet (1824642, 194)
+   82 s
+== 4a train val (temporal CV, bias tuning)
+tag=r_repro modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=190 rows=1824642
+  fold0 seed0: best_iter=150 (29s)
+  fold0 seed1: best_iter=150 (36s)
+  fold0 seed2: best_iter=150 (40s)
+  fold0 seed3: best_iter=150 (62s)
+  fold0 seed4: best_iter=150 (285s)

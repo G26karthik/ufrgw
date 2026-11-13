@@ -1,0 +1,24 @@
+tag=m5dm modules=['flow', 'burst', 'takeover', 'scam', 'ring'] n_feats=182 rows=1824642
+  full seed0: rounds=31 (6s)
+  full seed1: rounds=31 (6s)
+  full seed2: rounds=31 (6s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\m5dm.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256916 │
+│ mule_account       ┆ 733    │
+│ layering_chain     ┆ 536    │
+│ phishing_collect   ┆ 463    │
+│ qr_swap            ┆ 463    │
+│ …                  ┆ …      │
+│ sim_swap           ┆ 257    │
+│ refund_abuse       ┆ 208    │
+│ fake_cashback      ┆ 197    │
+│ merchant_collusion ┆ 124    │
+│ loan_app_extortion ┆ 103    │
+└────────────────────┴────────┘
+done 21s

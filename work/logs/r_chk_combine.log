@@ -1,0 +1,6 @@
+art_acct: 13 rows from ts_judge_h6
+art_zonemax: 1 rows from ts_judge_h6
+wrote subs/r_final1.csv; rows changed vs r_ts_judge_c2s6: 14
+r_art_acct: 13 rows from ts_judge_h6
+r_art_zonemax: 1 rows from ts_judge_h6
+wrote subs/r_final1b.csv; rows changed vs r_ts_judge_c2s6: 14

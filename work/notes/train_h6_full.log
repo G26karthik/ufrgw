@@ -1,0 +1,27 @@
+tag=h6 modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=190 rows=1824642
+  full seed0: rounds=165 (37s)
+  full seed1: rounds=165 (37s)
+  full seed2: rounds=165 (37s)
+  full seed3: rounds=165 (37s)
+  full seed4: rounds=165 (39s)
+  full seed5: rounds=165 (39s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\h6.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256908 │
+│ mule_account       ┆ 731    │
+│ layering_chain     ┆ 558    │
+│ phishing_collect   ┆ 480    │
+│ qr_swap            ┆ 429    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 270    │
+│ refund_abuse       ┆ 263    │
+│ fake_cashback      ┆ 193    │
+│ loan_app_extortion ┆ 99     │
+│ merchant_collusion ┆ 74     │
+└────────────────────┴────────┘
+done 229s

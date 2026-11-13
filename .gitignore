@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+# raw competition data and everything derived from it
+upi-fraud-rings/
+work/data/
+work/feats_cache*/
+work/oof/
+work/preds/
+work/catboost_info/
+*.parquet
+*.npy
+# submissions: keep only the best upload (reference for the reproduction)
+work/subs/*
+!work/subs/h6_ppq.csv
+!work/subs/ts_judge_h6.csv
+!work/subs/final1.csv
+# exploration scripts and their outputs
+work/scratch_*/

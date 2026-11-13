@@ -1,0 +1,22 @@
+tag=base modules=[] n_feats=31 rows=1824642
+  full seed0: rounds=42 (6s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\base.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 257082 │
+│ mule_account       ┆ 644    │
+│ layering_chain     ┆ 416    │
+│ merchant_collusion ┆ 370    │
+│ phishing_collect   ┆ 359    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ sim_swap           ┆ 269    │
+│ account_takeover   ┆ 267    │
+│ qr_swap            ┆ 172    │
+│ loan_app_extortion ┆ 97     │
+└────────────────────┴────────┘
+done 8s

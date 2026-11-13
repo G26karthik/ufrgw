@@ -1,0 +1,27 @@
+tag=c2s6 modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs', 'core2'] n_feats=190 rows=1824642
+  full seed0: rounds=165 (110s)
+  full seed1: rounds=165 (98s)
+  full seed2: rounds=165 (101s)
+  full seed3: rounds=165 (157s)
+  full seed4: rounds=165 (167s)
+  full seed5: rounds=165 (194s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\c2s6.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256890 │
+│ mule_account       ┆ 729    │
+│ layering_chain     ┆ 562    │
+│ phishing_collect   ┆ 476    │
+│ qr_swap            ┆ 451    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 262    │
+│ fake_cashback      ┆ 193    │
+│ loan_app_extortion ┆ 99     │
+│ merchant_collusion ┆ 74     │
+└────────────────────┴────────┘
+done 835s

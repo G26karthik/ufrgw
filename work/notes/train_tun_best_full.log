@@ -1,0 +1,24 @@
+tag=tun_best modules=['flow', 'burst', 'takeover', 'scam', 'ring'] n_feats=182 rows=1824642
+  full seed0: rounds=165 (59s)
+  full seed1: rounds=165 (60s)
+  full seed2: rounds=165 (60s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\tun_best.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256945 │
+│ mule_account       ┆ 726    │
+│ layering_chain     ┆ 563    │
+│ phishing_collect   ┆ 476    │
+│ qr_swap            ┆ 396    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 208    │
+│ fake_cashback      ┆ 191    │
+│ merchant_collusion ┆ 132    │
+│ loan_app_extortion ┆ 98     │
+└────────────────────┴────────┘
+done 183s

@@ -1,0 +1,24 @@
+tag=ts_comb modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=196 rows=1824642
+  full seed0: rounds=165 (153s)
+  full seed1: rounds=165 (208s)
+  full seed2: rounds=165 (190s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\ts_comb.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256766 │
+│ mule_account       ┆ 782    │
+│ layering_chain     ┆ 583    │
+│ phishing_collect   ┆ 553    │
+│ qr_swap            ┆ 396    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 296    │
+│ refund_abuse       ┆ 275    │
+│ fake_cashback      ┆ 143    │
+│ loan_app_extortion ┆ 104    │
+│ merchant_collusion ┆ 84     │
+└────────────────────┴────────┘
+done 561s

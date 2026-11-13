@@ -1,0 +1,24 @@
+tag=hCE modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=190 rows=1824642
+  full seed0: rounds=165 (39s)
+  full seed1: rounds=165 (47s)
+  full seed2: rounds=165 (39s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\hCE.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 257155 │
+│ mule_account       ┆ 785    │
+│ phishing_collect   ┆ 492    │
+│ layering_chain     ┆ 430    │
+│ sim_swap           ┆ 290    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 195    │
+│ fake_cashback      ┆ 185    │
+│ merchant_collusion ┆ 114    │
+│ loan_app_extortion ┆ 98     │
+└────────────────────┴────────┘
+done 128s

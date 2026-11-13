@@ -1,0 +1,73 @@
+tag=ts_comb modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=196 rows=1824642
+  fold0 seed0: best_iter=150 (44s)
+  fold0 seed1: best_iter=150 (78s)
+  fold0 seed2: best_iter=150 (49s)
+fold0 fit[7]->val8: macro argmax=0.4872
+  legit                argmax=0.987
+  mule_account         argmax=0.400
+  velocity_bot         argmax=0.478
+  layering_chain       argmax=0.553
+  sim_swap             argmax=0.391
+  account_takeover     argmax=0.373
+  phishing_collect     argmax=0.475
+  qr_swap              argmax=0.514
+  refund_abuse         argmax=0.520
+  fake_cashback        argmax=0.365
+  loan_app_extortion   argmax=0.369
+  merchant_collusion   argmax=0.421
+  fold1 seed0: best_iter=150 (72s)
+  fold1 seed1: best_iter=150 (92s)
+  fold1 seed2: best_iter=150 (69s)
+fold1 fit[7, 8]->val9: macro argmax=0.4976
+  legit                argmax=0.987
+  mule_account         argmax=0.424
+  velocity_bot         argmax=0.509
+  layering_chain       argmax=0.543
+  sim_swap             argmax=0.410
+  account_takeover     argmax=0.401
+  phishing_collect     argmax=0.471
+  qr_swap              argmax=0.504
+  refund_abuse         argmax=0.530
+  fake_cashback        argmax=0.369
+  loan_app_extortion   argmax=0.401
+  merchant_collusion   argmax=0.422
+POOLED OOF (bias tuned on pooled): macro argmax=0.4924 biased=0.4957
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.412 biased=0.412
+  velocity_bot         argmax=0.494 biased=0.495
+  layering_chain       argmax=0.548 biased=0.549
+  sim_swap             argmax=0.400 biased=0.403
+  account_takeover     argmax=0.387 biased=0.387
+  phishing_collect     argmax=0.473 biased=0.485
+  qr_swap              argmax=0.509 biased=0.510
+  refund_abuse         argmax=0.525 biased=0.527
+  fake_cashback        argmax=0.367 biased=0.367
+  loan_app_extortion   argmax=0.385 biased=0.403
+  merchant_collusion   argmax=0.422 biased=0.424
+fold0 w/ pooled bias: macro argmax=0.4872 biased=0.4914
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.400 biased=0.400
+  velocity_bot         argmax=0.478 biased=0.478
+  layering_chain       argmax=0.553 biased=0.555
+  sim_swap             argmax=0.391 biased=0.396
+  account_takeover     argmax=0.373 biased=0.373
+  phishing_collect     argmax=0.475 biased=0.488
+  qr_swap              argmax=0.514 biased=0.515
+  refund_abuse         argmax=0.520 biased=0.522
+  fake_cashback        argmax=0.365 biased=0.367
+  loan_app_extortion   argmax=0.369 biased=0.393
+  merchant_collusion   argmax=0.421 biased=0.423
+fold1 w/ pooled bias: macro argmax=0.4976 biased=0.5001
+  legit                argmax=0.987 biased=0.987
+  mule_account         argmax=0.424 biased=0.424
+  velocity_bot         argmax=0.509 biased=0.511
+  layering_chain       argmax=0.543 biased=0.543
+  sim_swap             argmax=0.410 biased=0.410
+  account_takeover     argmax=0.401 biased=0.402
+  phishing_collect     argmax=0.471 biased=0.482
+  qr_swap              argmax=0.504 biased=0.505
+  refund_abuse         argmax=0.530 biased=0.532
+  fake_cashback        argmax=0.369 biased=0.367
+  loan_app_extortion   argmax=0.401 biased=0.413
+  merchant_collusion   argmax=0.422 biased=0.424
+done 471s

@@ -1,0 +1,24 @@
+tag=confusion_pairsfd modules=['flow', 'burst', 'takeover', 'scam', 'ring', 'pairs'] n_feats=190 rows=1824642
+  full seed0: rounds=165 (168s)
+  full seed1: rounds=165 (179s)
+  full seed2: rounds=165 (184s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\confusion_pairsfd.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256903 │
+│ mule_account       ┆ 736    │
+│ layering_chain     ┆ 553    │
+│ phishing_collect   ┆ 482    │
+│ qr_swap            ┆ 434    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 266    │
+│ fake_cashback      ┆ 192    │
+│ loan_app_extortion ┆ 101    │
+│ merchant_collusion ┆ 71     │
+└────────────────────┴────────┘
+done 540s

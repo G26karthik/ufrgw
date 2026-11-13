@@ -1,0 +1,15 @@
+modules=['flow', 'burst', 'takeover', 'scam', 'ring'] n_feats=186 secs=122
+  legit                argmaxF1=0.987 tunedF1=0.987
+  mule_account         argmaxF1=0.365 tunedF1=0.382
+  velocity_bot         argmaxF1=0.443 tunedF1=0.447
+  layering_chain       argmaxF1=0.487 tunedF1=0.496
+  sim_swap             argmaxF1=0.338 tunedF1=0.362
+  account_takeover     argmaxF1=0.287 tunedF1=0.270
+  phishing_collect     argmaxF1=0.443 tunedF1=0.456
+  qr_swap              argmaxF1=0.477 tunedF1=0.483
+  refund_abuse         argmaxF1=0.482 tunedF1=0.499
+  fake_cashback        argmaxF1=0.342 tunedF1=0.352
+  loan_app_extortion   argmaxF1=0.380 tunedF1=0.385
+  merchant_collusion   argmaxF1=0.364 tunedF1=0.370
+MACRO argmax=0.4495 tuned=0.4574
+top gain: burst__dev_c60=242923, burst__dev_c300=233671, flow__chain_size=213949, flow__chain_cspan=201957, hour=191986, flow__hop_ng=187310, takeover__sess_sim_med_log=181126, burst__p2p_int_in1d=166534, ring__rcv_nsnd=156840, sim_age_hours=139626, ring__seg_excess=122350, burst__ds_min_gap=119229, takeover__sess_drain=116313, scam__rev_pair=114043, scam__und_relgap=102755, burst__rs_small_frac=95700, takeover__sess_drain_ratio=87211, burst__ss_min_gap=85065, balance_before=79056, takeover__sess_share_mean=77974, sender_account_age_days=77108, takeover__arch_sim=76570, amount=76008, minute_of_day=75277, amt_share_bal=71683, qr_vpa_mismatch=68609, mer_age_days=60207, burst__mer_int_burst=59232, flow__sin_amt_ratio24=58069, snd_bank_code=55024

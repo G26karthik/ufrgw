@@ -1,0 +1,24 @@
+tag=xgbC modules=['flow', 'burst', 'takeover', 'scam', 'ring'] n_feats=182 rows=1824642
+  full seed0: rounds=660 (219s)
+  full seed1: rounds=660 (252s)
+  full seed2: rounds=660 (242s)
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\xgbC.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256926 │
+│ mule_account       ┆ 732    │
+│ layering_chain     ┆ 558    │
+│ phishing_collect   ┆ 529    │
+│ qr_swap            ┆ 403    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 207    │
+│ fake_cashback      ┆ 150    │
+│ merchant_collusion ┆ 131    │
+│ loan_app_extortion ┆ 102    │
+└────────────────────┴────────┘
+done 718s

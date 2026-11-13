@@ -1,0 +1,45 @@
+edges train [423000, 423707, 424155, 424628, 425040, 426772, 427169, 427853, 428065, 428207, 428306, 428455]
+      test  [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+Sep c2s6 base      noisy 0.4859 cleaned 0.4984  per-class cleaned [0.987, 0.444, 0.551, 0.542, 0.409, 0.396, 0.446, 0.49, 0.521, 0.38, 0.404, 0.41]
+Sep c2s6 zone+bait noisy 0.5101 cleaned 0.5228  per-class cleaned [0.988, 0.463, 0.565, 0.554, 0.499, 0.442, 0.467, 0.507, 0.536, 0.399, 0.422, 0.434]
+OOS Aug->Sep c2s6: base 0.4848  zone+bait 0.5091
+Sep zone rows/agree: mule_a 111/0.97  veloci 1115/1.00  layeri 72/1.00  sim_sw 154/1.00  accoun 377/1.00  phishi 81/0.97  qr_swa 73/1.00  refund 28/1.00  fake_c 27/0.60  loan_a 15/1.00  mercha 24/1.00
+Oct zone rows/agree: mule_a 79/0.83  veloci 297/0.99  layeri 40/1.00  sim_sw 92/1.00  accoun 190/1.00  phishi 36/1.00  qr_swa 46/0.89  refund 22/1.00  fake_c 12/0.33  loan_a 7/1.00  mercha 12/0.50
+test rows changed vs c2s6 decode: 297
+shape: (20, 3)
+┌──────────────────┬────────────────────┬─────┐
+│ from             ┆ to                 ┆ len │
+│ ---              ┆ ---                ┆ --- │
+│ str              ┆ str                ┆ u32 │
+╞══════════════════╪════════════════════╪═════╡
+│ account_takeover ┆ sim_swap           ┆ 73  │
+│ legit            ┆ mule_account       ┆ 56  │
+│ legit            ┆ qr_swap            ┆ 27  │
+│ legit            ┆ velocity_bot       ┆ 26  │
+│ legit            ┆ layering_chain     ┆ 21  │
+│ …                ┆ …                  ┆ …   │
+│ fake_cashback    ┆ phishing_collect   ┆ 1   │
+│ sim_swap         ┆ account_takeover   ┆ 1   │
+│ qr_swap          ┆ merchant_collusion ┆ 1   │
+│ mule_account     ┆ velocity_bot       ┆ 1   │
+│ layering_chain   ┆ velocity_bot       ┆ 1   │
+└──────────────────┴────────────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\r_ts_judge_c2s6.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256636 │
+│ mule_account       ┆ 788    │
+│ layering_chain     ┆ 578    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 496    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 272    │
+│ account_takeover   ┆ 235    │
+│ fake_cashback      ┆ 201    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 85     │
+└────────────────────┴────────┘
