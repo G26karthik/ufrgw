@@ -89,8 +89,20 @@ the rule's own criteria would send it back to phishing_collect. It stays legit h
   break-even at 46% right.
 
 ## September (descriptive, read after the selection)
-See the end of this note once `scratch_mix/sep_D.log` and `sep_N.log` are in. September has been inspected many times;
-intervals do not correct for that.
+September has been inspected many times; the intervals (5%..95%, paired event bootstrap) do not correct for that.
+Change after the decoder against the reference; row counts are after the decoder.
+
+| mixture | D (shipped versions; ref h6 .5090) | rows changed / corrected / newly wrong | N (N-trained versions; ref C .5070) | rows changed / corrected / newly wrong |
+|---|---|---|---|---|
+| anchor .50 | -.0010 (-.0017..-.0003) | 54 / 19 / 29 | +.0008 (+.0001..+.0015) | 66 / 36 / 27 |
+| anchor .65 | -.0000 (-.0006..+.0006) | 49 / 22 / 22 | +.0004 (-.0003..+.0013) | 46 / 30 / 12 |
+| anchor .80 (chosen) | +.0001 (-.0004..+.0007) | 35 / 15 / 17 | +.0005 (-.0001..+.0012) | 41 / 20 / 17 |
+
+- D, chosen mixture: no detected difference (3 missed fraud rows recovered, 10 new legit rows called fraud).
+- D, anchor .50: measurably worse on this reading (refund_abuse -.011 F1).
+- N: positive for all three, interval above zero only at anchor .50. These are the N-trained versions and not the
+  shipped file. N and D disagree in direction at anchor .50, as in the earlier single-source tests.
+- Logs: `scratch_mix/sep_D.log`, `diff_D.log`, `sep_N.log`, `diff_N.log`.
 
 ## Uncertainty
 - August D gives no detected difference. The file is an exploratory probe of whether a broader model family mix moves
