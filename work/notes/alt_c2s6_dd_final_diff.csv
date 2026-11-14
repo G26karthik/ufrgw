@@ -1,0 +1,13 @@
+id,dd_final,alt_c2s6_dd_final,base_before_rules,h6_before_rules
+TX1d444be7,phishing_collect,legit,legit,phishing_collect
+TX96e28c86,phishing_collect,fake_cashback,fake_cashback,phishing_collect
+TX7755c193,mule_account,layering_chain,layering_chain,mule_account
+TX78dc5f40,mule_account,layering_chain,layering_chain,mule_account
+TX6a3ada77,phishing_collect,legit,legit,phishing_collect
+TXf0208897,phishing_collect,fake_cashback,fake_cashback,phishing_collect
+TXffb4ef65,velocity_bot,mule_account,mule_account,velocity_bot
+TX9cba4eb3,phishing_collect,legit,legit,phishing_collect
+TXb05075a8,refund_abuse,legit,legit,refund_abuse
+TX10754001,phishing_collect,legit,legit,phishing_collect
+TXf591f8e7,legit,layering_chain,layering_chain,legit
+TX1bb042e8,fake_cashback,phishing_collect,phishing_collect,fake_cashback

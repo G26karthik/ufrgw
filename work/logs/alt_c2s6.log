@@ -1,0 +1,30 @@
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train: odd flagged 0 | pool-sender tiny rows (month, n, legit share) [(7, 179, 0.11173184357541899), (8, 153, 0.1503267973856209), (9, 119, 0.13445378151260504)] | phishing share of fraud rows cell A 0.965 cell B 0.838
+F size 4880
+self-check: driver on ts_judge_h6 == subs/dd_final.csv (byte-identical)
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train: odd flagged 0 | pool-sender tiny rows (month, n, legit share) [(7, 179, 0.11173184357541899), (8, 153, 0.1503267973856209), (9, 119, 0.13445378151260504)] | phishing share of fraud rows cell A 0.965 cell B 0.838
+F size 4876
+v3       h6 base  28 rows | this base  28 rows | same rows and targets: True | only here: [] | only h6: []
+RS       h6 base   3 rows | this base   3 rows | same rows and targets: True | only here: [] | only h6: []
+FCB      h6 base   5 rows | this base   5 rows | same rows and targets: True | only here: [] | only h6: []
+CZ       h6 base  10 rows | this base  10 rows | same rows and targets: True | only here: [] | only h6: []
+LFM      h6 base   4 rows | this base   5 rows | same rows and targets: False | only here: ['TX2927ddfc'] | only h6: []
+X999     h6 base   1 rows | this base   1 rows | same rows and targets: True | only here: [] | only h6: []
+BANDV    h6 base  10 rows | this base  10 rows | same rows and targets: True | only here: [] | only h6: []
+EDGEFIX  h6 base   3 rows | this base   3 rows | same rows and targets: True | only here: [] | only h6: []
+DD       h6 base  13 rows | this base  13 rows | same rows and targets: True | only here: [] | only h6: []
+rows that differ from dd_final: 12 [('phishing_collect', 'legit', 4), ('mule_account', 'layering_chain', 2), ('phishing_collect', 'fake_cashback', 2), ('legit', 'layering_chain', 1), ('velocity_bot', 'mule_account', 1), ('fake_cashback', 'phishing_collect', 1), ('refund_abuse', 'legit', 1)]
+wrote C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\alt_c2s6_dd_final.csv sha256 b7c293e54611dbb2a36e5a32e798f770f3e164e8b842a95051929285fe44345e

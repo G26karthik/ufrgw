@@ -1,0 +1,121 @@
+== 1 determinism
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train: odd flagged 0 | pool-sender tiny rows (month, n, legit share) [(7, 179, 0.11173184357541899), (8, 153, 0.1503267973856209), (9, 119, 0.13445378151260504)] | phishing share of fraud rows cell A 0.965 cell B 0.838
+F size 4876
+driver on subs/ts_judge_r_repro_c2.csv == subs/alt_c2s6_dd_final.csv: True
+
+== 2 rows where the models differ before the later rules, and the layer (if any) that changed them in the c2s6 chain
+shape: (13, 7)
+┌────────────┬──────────────────┬──────────────────┬───────┬──────────────────┬──────────────────┬────────────┐
+│ id         ┆ h6_before_rules  ┆ c2_before_rules  ┆ layer ┆ dd_final         ┆ alt              ┆ same_final │
+│ ---        ┆ ---              ┆ ---              ┆ ---   ┆ ---              ┆ ---              ┆ ---        │
+│ str        ┆ str              ┆ str              ┆ str   ┆ str              ┆ str              ┆ bool       │
+╞════════════╪══════════════════╪══════════════════╪═══════╪══════════════════╪══════════════════╪════════════╡
+│ TX1d444be7 ┆ phishing_collect ┆ legit            ┆ null  ┆ phishing_collect ┆ legit            ┆ false      │
+│ TX2927ddfc ┆ mule_account     ┆ layering_chain   ┆ LFM   ┆ mule_account     ┆ mule_account     ┆ true       │
+│ TX96e28c86 ┆ phishing_collect ┆ fake_cashback    ┆ null  ┆ phishing_collect ┆ fake_cashback    ┆ false      │
+│ TX7755c193 ┆ mule_account     ┆ layering_chain   ┆ null  ┆ mule_account     ┆ layering_chain   ┆ false      │
+│ TX78dc5f40 ┆ mule_account     ┆ layering_chain   ┆ null  ┆ mule_account     ┆ layering_chain   ┆ false      │
+│ TX6a3ada77 ┆ phishing_collect ┆ legit            ┆ null  ┆ phishing_collect ┆ legit            ┆ false      │
+│ TXf0208897 ┆ phishing_collect ┆ fake_cashback    ┆ null  ┆ phishing_collect ┆ fake_cashback    ┆ false      │
+│ TXffb4ef65 ┆ velocity_bot     ┆ mule_account     ┆ null  ┆ velocity_bot     ┆ mule_account     ┆ false      │
+│ TX9cba4eb3 ┆ phishing_collect ┆ legit            ┆ null  ┆ phishing_collect ┆ legit            ┆ false      │
+│ TXb05075a8 ┆ refund_abuse     ┆ legit            ┆ null  ┆ refund_abuse     ┆ legit            ┆ false      │
+│ TX10754001 ┆ phishing_collect ┆ legit            ┆ null  ┆ phishing_collect ┆ legit            ┆ false      │
+│ TXf591f8e7 ┆ legit            ┆ layering_chain   ┆ null  ┆ legit            ┆ layering_chain   ┆ false      │
+│ TX1bb042e8 ┆ fake_cashback    ┆ phishing_collect ┆ null  ┆ fake_cashback    ┆ phishing_collect ┆ false      │
+└────────────┴──────────────────┴──────────────────┴───────┴──────────────────┴──────────────────┴────────────┘
+final differing rows touched by any layer in the c2s6 chain: 0 | differing rows: 12
+
+== 3a raw model probabilities (before bias and rules) of the dd_final label and of the alternative label
+shape: (12, 12)
+┌────────────┬──────────────────┬──────────────────┬──────────┬───────────┬──────────┬───────────┬───────────┬─────────────┬───────────┬─────────┬──────────┐
+│ id         ┆ dd_final         ┆ alt              ┆ h6 p(dd) ┆ h6 p(alt) ┆ c2 p(dd) ┆ c2 p(alt) ┆ sender_id ┆ receiver_id ┆ device_id ┆ amount  ┆ txn_type │
+│ ---        ┆ ---              ┆ ---              ┆ ---      ┆ ---       ┆ ---      ┆ ---       ┆ ---       ┆ ---         ┆ ---       ┆ ---     ┆ ---      │
+│ str        ┆ str              ┆ str              ┆ f64      ┆ f64       ┆ f64      ┆ f64       ┆ str       ┆ str         ┆ str       ┆ f64     ┆ str      │
+╞════════════╪══════════════════╪══════════════════╪══════════╪═══════════╪══════════╪═══════════╪═══════════╪═════════════╪═══════════╪═════════╪══════════╡
+│ TXf0208897 ┆ phishing_collect ┆ fake_cashback    ┆ 0.534    ┆ 0.251     ┆ 0.512    ┆ 0.273     ┆ AC028527  ┆ AC283228    ┆ DV0028527 ┆ 10.0    ┆ PAY      │
+│ TXffb4ef65 ┆ velocity_bot     ┆ mule_account     ┆ 0.346    ┆ 0.448     ┆ 0.334    ┆ 0.476     ┆ AC127019  ┆ AC083650    ┆ DV0127019 ┆ 920.0   ┆ PAY      │
+│ TX6a3ada77 ┆ phishing_collect ┆ legit            ┆ 0.32     ┆ 0.616     ┆ 0.212    ┆ 0.709     ┆ AC100984  ┆ AC217988    ┆ DV0100984 ┆ 1980.0  ┆ COLLECT  │
+│ TX10754001 ┆ phishing_collect ┆ legit            ┆ 0.362    ┆ 0.574     ┆ 0.271    ┆ 0.639     ┆ AC359155  ┆ AC115735    ┆ DV0359155 ┆ 1970.0  ┆ COLLECT  │
+│ TX1bb042e8 ┆ fake_cashback    ┆ phishing_collect ┆ 0.336    ┆ 0.595     ┆ 0.308    ┆ 0.627     ┆ AC392442  ┆ AC178725    ┆ DV0392442 ┆ 18133.0 ┆ PAY      │
+│ TX96e28c86 ┆ phishing_collect ┆ fake_cashback    ┆ 0.595    ┆ 0.291     ┆ 0.53     ┆ 0.361     ┆ AC193584  ┆ AC231534    ┆ DV0193584 ┆ 2.0     ┆ PAY      │
+│ TX1d444be7 ┆ phishing_collect ┆ legit            ┆ 0.31     ┆ 0.658     ┆ 0.293    ┆ 0.67      ┆ AC363008  ┆ AC387642    ┆ DV0363008 ┆ 10.0    ┆ PAY      │
+│ TX9cba4eb3 ┆ phishing_collect ┆ legit            ┆ 0.353    ┆ 0.571     ┆ 0.261    ┆ 0.649     ┆ AC122701  ┆ AC349038    ┆ DV0122701 ┆ 1980.0  ┆ COLLECT  │
+│ TX7755c193 ┆ mule_account     ┆ layering_chain   ┆ 0.417    ┆ 0.325     ┆ 0.311    ┆ 0.411     ┆ AC192601  ┆ AC392297    ┆ DV0192601 ┆ 1070.0  ┆ PAY      │
+│ TX78dc5f40 ┆ mule_account     ┆ layering_chain   ┆ 0.404    ┆ 0.324     ┆ 0.3      ┆ 0.442     ┆ AC148532  ┆ AC392297    ┆ DV0148532 ┆ 1890.0  ┆ PAY      │
+│ TXf591f8e7 ┆ legit            ┆ layering_chain   ┆ 0.741    ┆ 0.226     ┆ 0.618    ┆ 0.338     ┆ AC039015  ┆ AC151804    ┆ DV0039015 ┆ 320.0   ┆ PAY      │
+│ TXb05075a8 ┆ refund_abuse     ┆ legit            ┆ 0.71     ┆ 0.273     ┆ 0.468    ┆ 0.491     ┆ AC379340  ┆ MR028817    ┆ DV0379340 ┆ 2752.42 ┆ REFUND   │
+└────────────┴──────────────────┴──────────────────┴──────────┴───────────┴──────────┴───────────┴───────────┴─────────────┴───────────┴─────────┴──────────┘
+
+== 3b other test rows sharing an entity with each differing row: label counts in dd_final (identical in the alternative unless listed)
+TXf0208897 phishing_collect->fake_cashback | receiver_id AC283228: 1 other rows, non-legit in dd_final {'phishing_collect': 1} | of them also changed: []
+TXf0208897 phishing_collect->fake_cashback | sender_id AC028527: 8 other rows, non-legit in dd_final {'phishing_collect': 1, 'refund_abuse': 6, 'qr_swap': 1} | of them also changed: []
+TXf0208897 phishing_collect->fake_cashback | device_id DV0028527: 6 other rows, non-legit in dd_final {'refund_abuse': 6} | of them also changed: []
+TXf0208897 phishing_collect->fake_cashback | (rows listed above only where a neighbour is non-legit)
+TXffb4ef65 velocity_bot->mule_account | receiver_id AC083650: 23 other rows, non-legit in dd_final {'mule_account': 21} | of them also changed: []
+TXffb4ef65 velocity_bot->mule_account | (rows listed above only where a neighbour is non-legit)
+TX6a3ada77 phishing_collect->legit | (rows listed above only where a neighbour is non-legit)
+TX10754001 phishing_collect->legit | (rows listed above only where a neighbour is non-legit)
+TX1bb042e8 fake_cashback->phishing_collect | receiver_id AC178725: 2 other rows, non-legit in dd_final {'phishing_collect': 1} | of them also changed: []
+TX1bb042e8 fake_cashback->phishing_collect | sender_id AC392442: 2 other rows, non-legit in dd_final {'phishing_collect': 1} | of them also changed: []
+TX1bb042e8 fake_cashback->phishing_collect | (rows listed above only where a neighbour is non-legit)
+TX96e28c86 phishing_collect->fake_cashback | receiver_id AC231534: 2 other rows, non-legit in dd_final {'fake_cashback': 1} | of them also changed: []
+TX96e28c86 phishing_collect->fake_cashback | sender_id AC193584: 1 other rows, non-legit in dd_final {'fake_cashback': 1} | of them also changed: []
+TX96e28c86 phishing_collect->fake_cashback | (rows listed above only where a neighbour is non-legit)
+TX1d444be7 phishing_collect->legit | (rows listed above only where a neighbour is non-legit)
+TX9cba4eb3 phishing_collect->legit | (rows listed above only where a neighbour is non-legit)
+TX7755c193 mule_account->layering_chain | receiver_id AC392297: 13 other rows, non-legit in dd_final {'mule_account': 1, 'layering_chain': 5} | of them also changed: ['TX78dc5f40']
+TX7755c193 mule_account->layering_chain | (rows listed above only where a neighbour is non-legit)
+TX78dc5f40 mule_account->layering_chain | receiver_id AC392297: 13 other rows, non-legit in dd_final {'mule_account': 1, 'layering_chain': 5} | of them also changed: ['TX7755c193']
+TX78dc5f40 mule_account->layering_chain | (rows listed above only where a neighbour is non-legit)
+TXf591f8e7 legit->layering_chain | receiver_id AC151804: 6 other rows, non-legit in dd_final {'layering_chain': 3} | of them also changed: []
+TXf591f8e7 legit->layering_chain | (rows listed above only where a neighbour is non-legit)
+TXb05075a8 refund_abuse->legit | receiver_id MR028817: 1 other rows, non-legit in dd_final {'refund_abuse': 1} | of them also changed: []
+TXb05075a8 refund_abuse->legit | sender_id AC379340: 3 other rows, non-legit in dd_final {'refund_abuse': 2} | of them also changed: []
+TXb05075a8 refund_abuse->legit | device_id DV0379340: 3 other rows, non-legit in dd_final {'refund_abuse': 2} | of them also changed: []
+TXb05075a8 refund_abuse->legit | (rows listed above only where a neighbour is non-legit)
+
+== 4 discarded transplant rows (final1 != ts_judge_c2s6)
+14 rows | alternative == dd_final on 14 | alternative == final1 on 8 | dd_final == final1 on 8
+shape: (3, 5)
+┌─────────────────┬──────────────┬──────────────┬──────────────┬─────┐
+│ c2_before_rules ┆ final1       ┆ dd_final     ┆ alt          ┆ len │
+│ ---             ┆ ---          ┆ ---          ┆ ---          ┆ --- │
+│ str             ┆ str          ┆ str          ┆ str          ┆ u32 │
+╞═════════════════╪══════════════╪══════════════╪══════════════╪═════╡
+│ mule_account    ┆ velocity_bot ┆ velocity_bot ┆ velocity_bot ┆ 8   │
+│ layering_chain  ┆ velocity_bot ┆ mule_account ┆ mule_account ┆ 4   │
+│ mule_account    ┆ velocity_bot ┆ mule_account ┆ mule_account ┆ 2   │
+└─────────────────┴──────────────┴──────────────┴──────────────┴─────┘
+
+== 5 September, benchmark D, after decoder: rows where c2s6 and h6 disagree, by transition
+shape: (13, 7)
+┌──────────────────┬────────────────────┬──────┬──────────┬──────────┬────────────┬─────────────────┐
+│ h6               ┆ c2s6               ┆ rows ┆ c2_right ┆ h6_right ┆ both_wrong ┆ in_october_diff │
+│ ---              ┆ ---                ┆ ---  ┆ ---      ┆ ---      ┆ ---        ┆ ---             │
+│ str              ┆ str                ┆ u32  ┆ u32      ┆ u32      ┆ u32        ┆ bool            │
+╞══════════════════╪════════════════════╪══════╪══════════╪══════════╪════════════╪═════════════════╡
+│ legit            ┆ layering_chain     ┆ 47   ┆ 15       ┆ 29       ┆ 3          ┆ true            │
+│ legit            ┆ refund_abuse       ┆ 17   ┆ 6        ┆ 11       ┆ 0          ┆ false           │
+│ phishing_collect ┆ legit              ┆ 8    ┆ 6        ┆ 2        ┆ 0          ┆ true            │
+│ fake_cashback    ┆ phishing_collect   ┆ 8    ┆ 3        ┆ 1        ┆ 4          ┆ true            │
+│ legit            ┆ loan_app_extortion ┆ 5    ┆ 3        ┆ 2        ┆ 0          ┆ false           │
+│ legit            ┆ phishing_collect   ┆ 3    ┆ 2        ┆ 1        ┆ 0          ┆ false           │
+│ qr_swap          ┆ legit              ┆ 3    ┆ 3        ┆ 0        ┆ 0          ┆ false           │
+│ mule_account     ┆ layering_chain     ┆ 3    ┆ 0        ┆ 2        ┆ 1          ┆ true            │
+│ refund_abuse     ┆ qr_swap            ┆ 2    ┆ 0        ┆ 2        ┆ 0          ┆ false           │
+│ phishing_collect ┆ loan_app_extortion ┆ 1    ┆ 1        ┆ 0        ┆ 0          ┆ false           │
+│ legit            ┆ mule_account       ┆ 1    ┆ 1        ┆ 0        ┆ 0          ┆ false           │
+│ refund_abuse     ┆ legit              ┆ 1    ┆ 0        ┆ 1        ┆ 0          ┆ true            │
+│ legit            ┆ sim_swap           ┆ 1    ┆ 1        ┆ 0        ┆ 0          ┆ false           │
+└──────────────────┴────────────────────┴──────┴──────────┴──────────┴────────────┴─────────────────┘
+transitions present in October: rows 67 c2s6 right 24 h6 right 35 both wrong 8
+per-class F1 change on September (c2s6 - h6): mule_a -0.000 veloci +0.000 layeri +0.001 sim_sw +0.001 accoun +0.000 phishi +0.002 qr_swa +0.000 refund -0.001 fake_c +0.001 loan_a +0.006 mercha +0.000 | macro 0.0008
+September F1 of h6 by class (break-even precision for an added row = F1/2): mule_a 0.42 veloci 0.50 layeri 0.54 sim_sw 0.48 accoun 0.43 phishi 0.47 qr_swa 0.51 refund 0.53 fake_c 0.39 loan_a 0.41 mercha 0.42
