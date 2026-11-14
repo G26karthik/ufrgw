@@ -17,6 +17,9 @@ from common import ROOT, LABELS
 
 BASE_PUBLIC = 0.5505
 PREC = 0.93
+# share of decoded rows that carry the decoded class, h6 OOF Aug+Sep among fraud-labelled rows (scratch_me/conf.py)
+PREC_C = {"sim_swap": 0.72, "account_takeover": 0.72, "fake_cashback": 0.69, "mule_account": 0.86, "layering_chain": 0.86,
+          "phishing_collect": 0.87}
 CAMO = {"mule_account": 1893, "velocity_bot": 893, "layering_chain": 821, "sim_swap": 429, "account_takeover": 500,
         "phishing_collect": 643, "qr_swap": 1071, "refund_abuse": 321, "fake_cashback": 429, "loan_app_extortion": 179,
         "merchant_collusion": 357}  # scratch_fe/judge/j4.py
@@ -28,7 +31,7 @@ def state(base_counts, m):
     s = {}
     for k in LABELS[1:]:
         p = base_counts.get(k, 0)
-        tp = PREC * p
+        tp = PREC_C.get(k, PREC) * p
         n = tp + m * CAMO[k]
         if k in KNOWN_F1:  # F1 = 2TP/(P+N)  ->  N
             n = 2 * tp / KNOWN_F1[k] - p
