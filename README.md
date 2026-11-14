@@ -193,7 +193,7 @@ copies the rows each rule changed (vs ts_judge_h6) onto ts_judge_c2s6, and asser
 final1 differs from ts_judge_c2s6 on 14 rows and from ts_judge_h6 on 26 rows.
 
 **What did not work.**
-- *Camouflage ceiling:* 63% of fraud rows cannot be found with this data. Multi-hop graph features, node embeddings, sender sequences and balance continuity all score AUC of about 0.50 on them. Even with every other row classified perfectly, cleaned Sep macro-F1 tops out near 0.57.
+- *Camouflage rows:* 63% of fraud-labelled rows were not found by any representation we tested. Multi-hop graph features, node embeddings, sender sequences and balance continuity all score AUC of about 0.50 on them. This is negative evidence about those representations, not a proof that the rows cannot be found. In the scenario where every other row is classified perfectly and these rows stay legit, cleaned Sep macro-F1 is about 0.57; that is a conditional figure, not an upper bound (`work/notes/gap_reset.md`).
 - *Stacking:* a second stage on entity-aggregated stage-1 probabilities gave no gain.
 - *Pseudo-labelling on October:* no gain.
 - *Event smoothing:* averaging probabilities over device, sender or pair segments gave at most +0.0007. It was dropped.

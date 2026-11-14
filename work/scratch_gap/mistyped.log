@@ -1,0 +1,5 @@
+mistyped rows 732 | pairs with >= 30 rows: [(124, 'velocity_bot', 'mule_account'), (105, 'account_takeover', 'sim_swap'), (100, 'mule_account', 'layering_chain'), (71, 'phishing_collect', 'fake_cashback'), (65, 'fake_cashback', 'phishing_collect')]
+other pairs: 86 pairs, 267 rows, mean 3.1 rows per pair (110 possible pairs)
+fraud-labelled rows predicted fraud: 7065, typed as labelled 6333; 4% random-type noise would give about 283 mistyped rows
+oracle fix of look-alike pairs (>= 30 rows): rows 465, macro 0.5070 -> 0.5390 (+0.0320)
+oracle fix of all other mistyped rows: rows 267, macro 0.5070 -> 0.5321 (+0.0251)

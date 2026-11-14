@@ -5,7 +5,7 @@ usage (cwd=work): python validate_sub.py CAND.csv [BASE=subs/dd_final.csv]
   2. diff vs base by (from, to) class.
   3. estimated public score change under a per-class truth model, for a range of precisions of the changed rows
      (share of changed rows whose true label is the new label; the rest are assumed to be truly the old label).
-Truth model (full test, public = same ratios): class c has P_c predicted rows in the base, TP_c = PREC * P_c of them
+Truth model (a conditional scenario, not known test truth; full test, public = same ratios): class c has P_c predicted rows in the base, TP_c = PREC * P_c of them
 right, and H_c hidden rows we call legit (camouflage). H_c = M * CAMO_c, with M fitted so the base scores BASE_PUBLIC.
 KNOWN_F1 overrides a class with its measured public F1 (knockout probe: F1 = 12 * score drop).
 shortcut: one precision for all classes and row-independent truth; good to about +-.01 on large edits, sign and
@@ -17,9 +17,12 @@ from common import ROOT, LABELS
 
 BASE_PUBLIC = 0.5505
 PREC = 0.93
-# share of decoded rows that carry the decoded class, h6 OOF Aug+Sep among fraud-labelled rows (scratch_me/conf.py)
-PREC_C = {"sim_swap": 0.72, "account_takeover": 0.72, "fake_cashback": 0.69, "mule_account": 0.86, "layering_chain": 0.86,
-          "phishing_collect": 0.87}
+# share of decoded rows that carry the decoded class among fraud-labelled rows: final decode (zones + bait rule) on the
+# label-hidden Sep benchmark (scratch_gap/compartments.py). Train labels carry about 4% random wrong types, so on the clean
+# test labels the true precision is higher. This is a scenario input, not test truth.
+PREC_C = {"sim_swap": 0.78, "account_takeover": 0.97, "fake_cashback": 0.75, "mule_account": 0.87, "layering_chain": 0.875,
+          "phishing_collect": 0.87, "velocity_bot": 0.97, "qr_swap": 0.95, "refund_abuse": 0.94, "loan_app_extortion": 0.97,
+          "merchant_collusion": 0.94}
 CAMO = {"mule_account": 1893, "velocity_bot": 893, "layering_chain": 821, "sim_swap": 429, "account_takeover": 500,
         "phishing_collect": 643, "qr_swap": 1071, "refund_abuse": 321, "fake_cashback": 429, "loan_app_extortion": 179,
         "merchant_collusion": 357}  # scratch_fe/judge/j4.py

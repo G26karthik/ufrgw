@@ -1,0 +1,26 @@
+benchmark N, final decode of the current recipe: macro 0.5070; fraud-labelled rows 18661, predicted fraud 8074
+  mistyped (fraud label, other fraud class predicted)                    rows    732  oracle fix of this compartment alone: 0.5640 (+0.0570)
+  missed, with class signature (fraud label, predicted legit, support)   rows    745  oracle fix of this compartment alone: 0.5366 (+0.0296)
+  missed, no class signature (fraud label, predicted legit, no support)  rows  10851  oracle fix of this compartment alone: 0.9208 (+0.4138)
+  legit label, fraud predicted                                           rows   1009  oracle fix of this compartment alone: 0.5235 (+0.0165)
+type precision of the final decode among fraud-labelled rows (share of predicted-k fraud rows labelled k):
+  mule_ 0.871 veloc 0.966 layer 0.875 sim_s 0.780 accou 0.969 phish 0.869 qr_sw 0.951 refun 0.941 fake_ 0.749 loan_ 0.968 merch 0.938
+shape: (12, 3)
+┌────────────────────┬──────────────────┬─────┐
+│ label              ┆ predicted        ┆ len │
+│ ---                ┆ ---              ┆ --- │
+│ str                ┆ str              ┆ u32 │
+╞════════════════════╪══════════════════╪═════╡
+│ velocity_bot       ┆ mule_account     ┆ 124 │
+│ account_takeover   ┆ sim_swap         ┆ 105 │
+│ mule_account       ┆ layering_chain   ┆ 100 │
+│ phishing_collect   ┆ fake_cashback    ┆ 71  │
+│ fake_cashback      ┆ phishing_collect ┆ 65  │
+│ …                  ┆ …                ┆ …   │
+│ merchant_collusion ┆ qr_swap          ┆ 14  │
+│ qr_swap            ┆ refund_abuse     ┆ 8   │
+│ fake_cashback      ┆ layering_chain   ┆ 7   │
+│ merchant_collusion ┆ velocity_bot     ┆ 7   │
+│ qr_swap            ┆ sim_swap         ┆ 6   │
+└────────────────────┴──────────────────┴─────┘
+missed rows with a class signature, by label: {'qr_swap': 584, 'phishing_collect': 63, 'merchant_collusion': 43, 'account_takeover': 22, 'sim_swap': 19, 'refund_abuse': 10, 'mule_account': 3, 'fake_cashback': 1}

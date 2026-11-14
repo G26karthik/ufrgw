@@ -1,0 +1,26 @@
+benchmark D, final decode of the current recipe: macro 0.5078; fraud-labelled rows 18661, predicted fraud 7919
+  mistyped (fraud label, other fraud class predicted)                    rows    734  oracle fix of this compartment alone: 0.5658 (+0.0579)
+  missed, with class signature (fraud label, predicted legit, support)   rows    769  oracle fix of this compartment alone: 0.5385 (+0.0306)
+  missed, no class signature (fraud label, predicted legit, no support)  rows  10857  oracle fix of this compartment alone: 0.9234 (+0.4156)
+  legit label, fraud predicted                                           rows    884  oracle fix of this compartment alone: 0.5217 (+0.0139)
+type precision of the final decode among fraud-labelled rows (share of predicted-k fraud rows labelled k):
+  mule_ 0.871 veloc 0.966 layer 0.877 sim_s 0.783 accou 0.971 phish 0.867 qr_sw 0.947 refun 0.947 fake_ 0.728 loan_ 0.967 merch 0.937
+shape: (12, 3)
+┌────────────────────┬──────────────────┬─────┐
+│ label              ┆ predicted        ┆ len │
+│ ---                ┆ ---              ┆ --- │
+│ str                ┆ str              ┆ u32 │
+╞════════════════════╪══════════════════╪═════╡
+│ velocity_bot       ┆ mule_account     ┆ 124 │
+│ account_takeover   ┆ sim_swap         ┆ 104 │
+│ mule_account       ┆ layering_chain   ┆ 96  │
+│ phishing_collect   ┆ fake_cashback    ┆ 78  │
+│ fake_cashback      ┆ phishing_collect ┆ 65  │
+│ …                  ┆ …                ┆ …   │
+│ merchant_collusion ┆ qr_swap          ┆ 14  │
+│ sim_swap           ┆ phishing_collect ┆ 7   │
+│ fake_cashback      ┆ layering_chain   ┆ 7   │
+│ merchant_collusion ┆ velocity_bot     ┆ 7   │
+│ qr_swap            ┆ sim_swap         ┆ 6   │
+└────────────────────┴──────────────────┴─────┘
+missed rows with a class signature, by label: {'qr_swap': 587, 'phishing_collect': 64, 'merchant_collusion': 34, 'account_takeover': 25, 'sim_swap': 24, 'layering_chain': 15, 'refund_abuse': 12, 'loan_app_extortion': 3, 'fake_cashback': 3, 'mule_account': 2}

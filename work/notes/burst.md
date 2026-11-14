@@ -19,7 +19,7 @@ Scratch scripts: `work/scratch_burst/`.
   - No shared sender, device or receiver with the bursts, and no closeness in time to them.
   - Entity overlap with other fraud is the same as for legit rows.
   - They differ only slightly: integer amounts 31% vs 26% for legit, night share 4.9% vs 3.2%, slightly larger amounts.
-  - They cannot be found with features. This sets the class F1 ceiling at about 0.5 on noisy Sep.
+  - The features tested here do not find them. If they stay unfound, class F1 on noisy Sep stays near 0.5 (a scenario, not a bound).
 
 ### refund_abuse (3305 train rows)
 - Only 950 rows are REFUND rows. In each event, one sender files 3-8 REFUNDs (a few have up to 15) over about 4-9 days (median span 7 d).
@@ -30,13 +30,13 @@ Scratch scripts: `work/scratch_burst/`.
 - Legit refunders mostly have 1 refund. Legit senders with 3 or more refunds spread them over 10-110 days, to 3 different merchants, with small amounts.
 - The other 2355 rows (70%) are non-REFUND singletons that look like legit. Their sender overlaps with abuser senders in only 0.7% of rows, and they have no link in time.
   - The one oddity is amount % 100 == 0: 16.5% vs 2.4% for legit. That is a row feature and the base `cents` already uses it.
-  - These rows cannot be found with features.
+  - The features tested here do not find these rows.
 - In Oct, abusers spread refunds over more merchants: the ratio of pair_ref14d≥5 to pair_ref14d≥2 is 0.52 in Oct vs 0.67 in Sep. So counts per sender are more robust than counts per pair.
 
 ### General finding, likely true for all types
 Each fraud label seems to be about 1/3 detectable "event" rows and about 2/3 camouflage rows drawn like legit.
 The ratio is 1757:902 for VB in Sep and 745:330 for RA.
-So the per-class F1 ceiling on noisy validation is about 0.5, which matches the organiser's note that "0.50 is not expected".
+So per-class F1 on noisy validation stays near 0.5 while these rows are unfound, which matches the organiser's note that "0.50 is not expected".
 
 ## DRIFT (important for everyone)
 - Oct (test) has about 8.4k rows per day vs about 17k per day in Jul-Sep. Volume is half, distinct senders are 148k vs 215k per month, and fraud event counts are also about half.
@@ -77,7 +77,7 @@ legit 0.987, mule 0.377, velocity 0.459, layering 0.478, sim_swap 0.332, ATO 0.3
 The per-class numbers move by about ±0.03 between runs for small changes, so this eval is noisy. Merchant_collusion is the least stable.
 
 Where the remaining Sep loss for VB and RA comes from:
-- The camouflage singletons, which cannot be found.
+- The camouflage singletons, which no tested feature finds.
 - The 13% of burst rows and the 15% of abuser REFUND rows labelled legit. The model correctly predicts these as fraud, but they count as false positives on noisy Sep. On clean test they should count as true positives.
 
 ## Ideas not done

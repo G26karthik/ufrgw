@@ -1,0 +1,32 @@
+
+[P: type precision of the final decode on the label-hidden Sep benchmark] fitted base 0.5505; implied fraud rows in test 9956; true rows of each class that we do not call that class: 6412
+  class F1 now / break-even precision for added rows (F1/2): mule_ 0.46/0.23 veloc 0.37/0.19 layer 0.57/0.28 sim_s 0.57/0.28 accou 0.53/0.26 phish 0.60/0.30 qr_sw 0.53/0.27 refun 0.65/0.33 fake_ 0.43/0.21 loan_ 0.57/0.29 merch 0.34/0.17
+  every current fraud prediction right, no new row found: 0.6075 (+0.0570)
+  precision 1.00  +0.0833: 14% of missed rows = 898 correct, 898 flagged | +0.0417: 7% of missed rows = 434 correct, 434 flagged | +0.0208: 3% of missed rows = 214 correct, 214 flagged
+  precision 0.75  +0.0833: 16% of missed rows = 1044 correct, 1392 flagged | +0.0417: 8% of missed rows = 496 correct, 661 flagged | +0.0208: 4% of missed rows = 242 correct, 322 flagged
+  precision 0.50  +0.0833: 24% of missed rows = 1547 correct, 3094 flagged | +0.0417: 11% of missed rows = 691 correct, 1382 flagged | +0.0208: 5% of missed rows = 328 correct, 656 flagged
+  precision 0.35  +0.0833: 66% of missed rows = 4236 correct, 12104 flagged | +0.0417: 22% of missed rows = 1422 correct, 4062 flagged | +0.0208: 10% of missed rows = 610 correct, 1741 flagged
+
+[A: type precision of the model decode before zones (Aug+Sep OOF)] fitted base 0.5505; implied fraud rows in test 9249; true rows of each class that we do not call that class: 5844
+  class F1 now / break-even precision for added rows (F1/2): mule_ 0.48/0.24 veloc 0.37/0.19 layer 0.58/0.29 sim_s 0.56/0.28 accou 0.44/0.22 phish 0.63/0.31 qr_sw 0.55/0.27 refun 0.67/0.33 fake_ 0.42/0.21 loan_ 0.58/0.29 merch 0.34/0.17
+  every current fraud prediction right, no new row found: 0.6366 (+0.0861)
+  precision 1.00  +0.0833: 14% of missed rows = 847 correct, 847 flagged | +0.0417: 7% of missed rows = 409 correct, 409 flagged | +0.0208: 3% of missed rows = 201 correct, 201 flagged
+  precision 0.75  +0.0833: 17% of missed rows = 983 correct, 1311 flagged | +0.0417: 8% of missed rows = 467 correct, 622 flagged | +0.0208: 4% of missed rows = 228 correct, 303 flagged
+  precision 0.50  +0.0833: 25% of missed rows = 1453 correct, 2906 flagged | +0.0417: 11% of missed rows = 649 correct, 1297 flagged | +0.0208: 5% of missed rows = 308 correct, 615 flagged
+  precision 0.35  +0.0833: 67% of missed rows = 3938 correct, 11253 flagged | +0.0417: 23% of missed rows = 1321 correct, 3775 flagged | +0.0208: 10% of missed rows = 566 correct, 1618 flagged
+
+[B: every class 10 points less precise than A] fitted base 0.5505; implied fraud rows in test 7656; true rows of each class that we do not call that class: 4650
+  class F1 now / break-even precision for added rows (F1/2): mule_ 0.49/0.24 veloc 0.37/0.19 layer 0.58/0.29 sim_s 0.54/0.27 accou 0.44/0.22 phish 0.62/0.31 qr_sw 0.56/0.28 refun 0.67/0.33 fake_ 0.42/0.21 loan_ 0.59/0.29 merch 0.34/0.17
+  every current fraud prediction right, no new row found: 0.7116 (+0.1611)
+  precision 1.00  +0.0833: 16% of missed rows = 742 correct, 742 flagged | +0.0417: 8% of missed rows = 358 correct, 358 flagged | +0.0208: 4% of missed rows = 176 correct, 176 flagged
+  precision 0.75  +0.0833: 19% of missed rows = 860 correct, 1147 flagged | +0.0417: 9% of missed rows = 408 correct, 544 flagged | +0.0208: 4% of missed rows = 199 correct, 265 flagged
+  precision 0.50  +0.0833: 27% of missed rows = 1270 correct, 2540 flagged | +0.0417: 12% of missed rows = 566 correct, 1132 flagged | +0.0208: 6% of missed rows = 268 correct, 536 flagged
+  precision 0.35  +0.0833: 74% of missed rows = 3423 correct, 9780 flagged | +0.0417: 25% of missed rows = 1145 correct, 3271 flagged | +0.0208: 11% of missed rows = 490 correct, 1399 flagged
+
+[C: all classes at precision 0.70] fitted base 0.5505; implied fraud rows in test 6884; true rows of each class that we do not call that class: 4095
+  class F1 now / break-even precision for added rows (F1/2): mule_ 0.48/0.24 veloc 0.37/0.19 layer 0.57/0.28 sim_s 0.61/0.30 accou 0.50/0.25 phish 0.60/0.30 qr_sw 0.51/0.26 refun 0.61/0.30 fake_ 0.50/0.25 loan_ 0.54/0.27 merch 0.34/0.17
+  every current fraud prediction right, no new row found: 0.7511 (+0.2006)
+  precision 1.00  +0.0833: 17% of missed rows = 692 correct, 692 flagged | +0.0417: 8% of missed rows = 334 correct, 334 flagged | +0.0208: 4% of missed rows = 164 correct, 164 flagged
+  precision 0.75  +0.0833: 20% of missed rows = 803 correct, 1071 flagged | +0.0417: 9% of missed rows = 381 correct, 508 flagged | +0.0208: 5% of missed rows = 186 correct, 248 flagged
+  precision 0.50  +0.0833: 29% of missed rows = 1189 correct, 2378 flagged | +0.0417: 13% of missed rows = 530 correct, 1060 flagged | +0.0208: 6% of missed rows = 251 correct, 502 flagged
+  precision 0.35  +0.0833: 79% of missed rows = 3234 correct, 9241 flagged | +0.0417: 26% of missed rows = 1082 correct, 3092 flagged | +0.0208: 11% of missed rows = 463 correct, 1322 flagged

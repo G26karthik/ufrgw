@@ -1,0 +1,19 @@
+fold0 world rows 1053917 fit 527065 held scored 526852 (38s)
+  RAW: fit target differs from supplied label on 0 rows, dropped 0
+  RAW held 8: macro argmax 0.4646 (106s)
+  C: fit target differs from supplied label on 278 rows, dropped 0
+  C held 8: macro argmax 0.4680 (175s)
+  AC: fit target differs from supplied label on 684 rows, dropped 0
+  AC held 8: macro argmax 0.4681 (243s)
+  CE: fit target differs from supplied label on 12774 rows, dropped 12496
+  CE held 8: macro argmax 0.4427 (292s)
+held-label permutation check: features identical (190 columns, 1564060 rows)
+fold1 world rows 1564060 fit 1053917 held scored 509996 (123s)
+  RAW: fit target differs from supplied label on 0 rows, dropped 0
+  RAW held 9: macro argmax 0.4774 (214s)
+  C: fit target differs from supplied label on 549 rows, dropped 0
+  C held 9: macro argmax 0.4794 (304s)
+  AC: fit target differs from supplied label on 1309 rows, dropped 0
+  AC held 9: macro argmax 0.4782 (395s)
+  CE: fit target differs from supplied label on 25797 rows, dropped 25248
+  CE held 9: macro argmax 0.4568 (466s)

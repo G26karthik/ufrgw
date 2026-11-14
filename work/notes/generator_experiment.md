@@ -53,9 +53,13 @@ What it establishes:
 - The generator arms do not beat the plain recipe or the weighting control. Pass rule (+0.002 over A and over the best B) not met.
 - Failure type: no gain over weighting. Generated events move rows between fake_cashback and phishing
   (phishing decoded fake_cashback 78 -> 62, fake_cashback decoded phishing 70 -> 76 for C1) with no net gain.
-- Volume is not the limit at full data size: fake_cashback F1 is 0.343 with one fit month and 0.375 with two (`h6`, pooled bias).
+- fake_cashback F1 is 0.343 with one fit month and 0.375 with two (`h6`, pooled bias). The fit months differ, so this is not a clean volume test and does not show a plateau.
   The swap with phishing is decided by the generator's own label choice for look-alike events, which no extra copies can resolve.
-- For any fixed pair of submissions, the public and private changes share the same mean; a public gain is not extra evidence beyond it.
+- The split shares are conditional on these September predictions; they are not a probability of a private-leaderboard gain in October.
+- C05 and BR are worse than A with bootstrap intervals entirely below zero. B05, B1 and C1 have intervals that include zero.
+- Limits of this test: it is constrained resampling, not the original generator. Generated-row features were rebuilt in a world that
+  contains the generated events of all months, while real rows kept their original features, so the two are not from one consistent world.
+  The result rejects these two augmentation arms. It does not show that no reconstruction of the generator can help.
 
 ## Mechanism 2: October legit amounts are x1.17
 
