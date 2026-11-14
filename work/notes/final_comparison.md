@@ -33,7 +33,7 @@ Outcome: no supported candidate. `subs/dd_final.csv` is unchanged (SHA-256 `8e04
 | A | same | D | +.0003 | -.0006 (-.0014..+.0003) | 51 / 16 / 26 | not reproduced -> no detected difference |
 | A | 1023 bins on every feature | N seeds 0,1 | +.0006 | +.0009 (+.0001..+.0017) | 54 / 30 / 18 | first reading |
 | A | same | N seeds 2,3 | +.0007 | +.0016 (+.0008..+.0024) | 50 / 27 / 16 | |
-| A | same | D | -.0007 | -.0011 (-.0019..-.0003) | 58 / 19 / 30 | measurably worse on D |
+| A | same | D | -.0007 | -.0011 (-.0019..-.0003) | 58 / 19 / 30 | measurably worse on D (one seed pair) |
 | A | exact-value features (5 raw columns) | N seeds 0,1 | +.0002 | +.0020 (+.0006..+.0031) | 145 / 63 / 63 | first reading |
 | A | same | N seeds 2,3 | -.0015 | -.0015 (-.0035..+.0001) | 108 / 30 / 61 | |
 | A | same | D | +.0003 | -.0005 (-.0027..+.0015) | 162 / 66 / 81 | not reproduced -> no detected difference |
@@ -53,10 +53,12 @@ Tests 1 to 3: `scratch_stack/PROGRESS.md`. Tests 4 and 5: `notes/ledger.md` sect
   (3,192 rows).
 - Rule declared at 22:13 before the confirmations: supported only if September is positive with the interval above zero
   in both confirmations (N seeds 2,3 and D seeds 0,1) and August is not negative in either.
-- 1023 bins on row-level columns: N seeds 2,3 passes September, August -.0003; D fails. Zero of two.
+- 1023 bins on row-level columns: September is positive on N with both seed pairs. It misses the rule on N only through
+  an August change of -.0003, far inside the .010 spread between August halves. D is what fails. Zero of two.
 - 1023 bins on every feature: N seeds 2,3 passes both months; D is below zero with the whole interval. One of two. By the
   letter of the rule this is "promising but unconfirmed", but the production pipeline uses the D feature matrix, where
-  the arm is measurably worse. It is not a candidate.
+  the arm is measurably worse. D was run with one seed pair (0,1); the interval covers September event sampling, not
+  seeds. It is not a candidate.
 - Exact-value features: the first +.0020 reverses to -.0015 with seeds 2,3. Zero of two.
 - Missed fraud recovered (after decoder): N seeds 0,1: 10 / 10 / 33; N seeds 2,3: 15 / 9 / 4; D: 2 / 3 / 11.
 
@@ -66,6 +68,8 @@ Tests 1 to 3: `scratch_stack/PROGRESS.md`. Tests 4 and 5: `notes/ledger.md` sect
   context bag, ensemble size 1, prior-corrected. Full August and September rows were scored (615 rows per second).
 - Alone it reaches .4966 on August after the decoder (C .4978) and loses .0042 on September: 263 rows newly wrong against
   91 corrected, 132 new legit rows called fraud. mule_account -.017.
+- Second context bag (seed 1), August only, development side check: alone .4958, two-bag mean .4965, two-bag blend
+  .4986. No gain over one bag (.4966 and .4986). It has no September score.
 - Limits: one context bag, ensemble 1, categorical codes entered as ordinal numbers, no fine-tuning. Context size
   was set by time (about 31 minutes for both months at 40k context rows). This result does not cover a fine-tuned or larger-context run.
 
@@ -82,5 +86,7 @@ Tests 1 to 3: `scratch_stack/PROGRESS.md`. Tests 4 and 5: `notes/ledger.md` sect
 
 ## Not covered
 - Benchmark D versions of B and C. A multi-source blend. A second TabICLv2 context bag on September.
+- The binning and exact-value models were scored alone only, never as 35% blend sources.
+- Benchmark D has one seed pair for experiment A.
 - The generic rule layers (+.0016 on September) and the test-only rules were not re-applied on top of each variant.
 - Benchmark N does not reproduce October's lower density; D is the closer match to production.

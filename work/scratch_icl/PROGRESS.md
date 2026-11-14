@@ -36,7 +36,7 @@ Chunking check (same rows in a 10k call and in a larger call): max abs diff 0.00
 | 1,000 / 10,000 context, ensemble 4 | 417 | 0.18127 | 0.2643 |
 
 - Context size helps more per second than the package ensemble (40k ensemble 1 beats 20k ensemble 4 at 1.6x the speed).
-- Running (job started 21:54): `icl.py full 2500 20000 1 20000 ICLs0 0`, then the same with context seed 1 (`ICLs1`).
+- Running (job started 21:53): `icl.py full 2500 20000 1 20000 ICLs0 0`, then the same with context seed 1 (`ICLs1`).
   Candidates, fixed now: `iICL2` = mean of the two context bags if the second finishes by 22:50, else `iICLs0`;
   and the blend 0.65 C + 0.35 of that. C August reference (aug_dec): before 0.4696, after decoder 0.4978.
 
@@ -49,12 +49,12 @@ Bag 0 August inference: 526,852 rows in 857 s (615 rows/s), 38,257 context rows,
 | iICLs0b35 (0.65 C + 0.35 TabICL) | 0.4704 (0.4611, 0.4796) | 0.4986 (0.4913, 0.5059) |
 
 ## Freeze (22:13, before any September score)
-Bag 1 cannot finish both months by 22:50 (bag 0 needs about 31 min for both), so by the rule above the frozen candidates are
+Bag 1 cannot finish both months by 22:50 (bag 0 measured: 857 s August + 1,456 s September = 38.5 min), so by the rule above the frozen candidates are
 `iICLs0` and `iICLs0b35`. September is scored once: `bench_eval.py N C,iICLs0,iICLs0b35 _icl`.
 Bag 1 August only is left running as a development-only side check of a second context bag; its September fold is stopped.
 
 ## September, scored once (22:40) - `scratch_icl/bench_eval.log`, `scratch_icl/diff.log`, `scratch_gap/dec_N_icl.npz`
-Bag 0 September inference: 509,996 rows in 1,456 s (350 rows/s; `aug_dec.py` shared the CPU), 44,390 context rows
+Bag 0 September inference: 509,996 rows in 1,456 s (350 rows/s against 615 for August; cause of the slowdown not established), 44,390 context rows
 (20,000 legit; fraud 2500 x 7 classes, then 2156, 1699, 1338, 1697).
 Intervals: paired event bootstrap, 5%..95%, vs C.
 | variant | before decoder | after decoder | change before | change after | rows changed (after) | corrected | newly wrong |
@@ -65,3 +65,27 @@ Intervals: paired event bootstrap, 5%..95%, vs C.
 
 Largest per-class F1 moves after the decoder: alone mule_account -0.017, phishing_collect -0.009, refund_abuse -0.008,
 fake_cashback +0.008; blend fake_cashback +0.010, phishing_collect -0.003, others within 0.002.
+
+## Side check, August only (23:00): second context bag (seed 1) - `scratch_icl/aug_dec_bag2.log`
+Bag 1 August: 1,462 s (360 rows/s). Its September fold was stopped; no September file exists for bag 1 or the two-bag mean.
+| variant | before decoder | after decoder |
+|---|---|---|
+| iICLs1 (bag 1 alone) | 0.4677 | 0.4958 |
+| iICL2 (mean of bags 0 and 1) | 0.4685 | 0.4965 |
+| iICL2b35 (0.65 C + 0.35 iICL2) | 0.4704 | 0.4986 |
+A second context bag adds nothing on August (0.4965 vs 0.4966 alone; blend 0.4986 both). Bags differ in argmax on 260 August rows.
+
+## Status: done
+- Model alone: measurably worse than LightGBM on September (-0.0042, interval below zero), -0.0012 on August.
+- Blend 0.65 C + 0.35 model: +0.0008 August, +0.0007 September after the decoder; interval includes zero.
+- `subs/dd_final.csv` unchanged. Nothing uploaded. No production script edited.
+- Files written to `scratch_gap`: `PN_iICLs0{,b35}_{aug,sep}.npy`, `PN_iICLs1{,b35}_aug.npy`, `PN_iICL2{,b35}_aug.npy`, `dec_N_icl.npz`.
+- Limits: one context sample per fold (August model: 3.9% of July legit rows, 73% to 100% of each fraud class; September model: 2.0% of legit, 36% to 100% of each fraud class), package ensemble 1,
+  categorical codes as ordinal floats, 12 classes through the many-class fallback, blend weight not tuned, September reused.
+- Full-row model is `n_estimators=1` (package ensemble 4 was tested only on the August subset at 20k context; the second
+  context bag only on August). Intervals are 5%..95% (90%), 200 event resamples.
+- The context / ensemble choice used an August subset that contains every August fraud row, so the August scores are not
+  independent of that choice. August halves disagree in sign for the blend after the decoder (0.4913 vs C 0.4920; 0.5059 vs 0.5036).
+- Output for a row varied with call size in the 20k-context subset runs (max 0.0455 and 0.0348); 0.0000 in the 40k / 20k-chunk check.
+- `iICLs1*` and `iICL2*` exist for August only: `bench_eval.py` fails on those names.
+- Verdict: model alone measurably worse; blend no detected difference.
