@@ -1,0 +1,6 @@
+before decoder                         h6 0.4837 c2s6 0.4845 (+0.0008, boot -0.0000..+0.0017) | rows differing 102: c2s6 right / h6 wrong 42, h6 right / c2s6 wrong 52, both wrong 8
+      per-class F1 change: mule_ -0.000 veloc +0.000 layer +0.001 sim_s +0.000 accou +0.000 phish +0.002 qr_sw +0.000 refun -0.001 fake_ +0.001 loan_ +0.007 merch +0.000
+after decoder                          h6 0.5090 c2s6 0.5098 (+0.0008, boot +0.0000..+0.0017) | rows differing 100: c2s6 right / h6 wrong 41, h6 right / c2s6 wrong 51, both wrong 8
+      per-class F1 change: mule_ -0.000 veloc +0.000 layer +0.001 sim_s +0.001 accou +0.000 phish +0.002 qr_sw +0.000 refun -0.001 fake_ +0.001 loan_ +0.006 merch +0.000
+after decoder + generic later layers   h6 0.5107 c2s6 0.5115 (+0.0008, boot +0.0001..+0.0017) | rows differing 98: c2s6 right / h6 wrong 40, h6 right / c2s6 wrong 51, both wrong 7
+      per-class F1 change: mule_ -0.000 veloc +0.000 layer +0.001 sim_s +0.001 accou +0.000 phish +0.001 qr_sw +0.000 refun -0.001 fake_ +0.001 loan_ +0.006 merch +0.000

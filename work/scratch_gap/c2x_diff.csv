@@ -1,0 +1,13 @@
+txn_id,h6_model,c2_model,dd_final,c2_chain,differs_before_rules
+TX1d444be7,phishing_collect,legit,phishing_collect,legit,true
+TX96e28c86,phishing_collect,fake_cashback,phishing_collect,fake_cashback,true
+TX7755c193,mule_account,layering_chain,mule_account,layering_chain,true
+TX78dc5f40,mule_account,layering_chain,mule_account,layering_chain,true
+TX6a3ada77,phishing_collect,legit,phishing_collect,legit,true
+TXf0208897,phishing_collect,fake_cashback,phishing_collect,fake_cashback,true
+TXffb4ef65,velocity_bot,mule_account,velocity_bot,mule_account,true
+TX9cba4eb3,phishing_collect,legit,phishing_collect,legit,true
+TXb05075a8,refund_abuse,legit,refund_abuse,legit,true
+TX10754001,phishing_collect,legit,phishing_collect,legit,true
+TXf591f8e7,legit,layering_chain,legit,layering_chain,true
+TX1bb042e8,fake_cashback,phishing_collect,fake_cashback,phishing_collect,true

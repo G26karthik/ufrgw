@@ -7,7 +7,7 @@ on top of the benchmark decode (bias, archetype forcing, zones, bait rule). Held
          and from the September decode (September is the pseudo-test month).
 Union = production order ZPROP -> CZ -> LFM -> DD, each layer applied to the decode left by the previous one.
 Not testable on September (test-only constants or zero train rows): QRN/qrm, RS, FCB, X999, BANDV, EDGEFIX, --qr-null.
-usage (cwd=work, PYTHONPATH=.): python scratch_gap/rules_sep.py N|D"""
+usage (cwd=work, PYTHONPATH=.): python scratch_gap/rules_sep.py N|D [DEC_SUFFIX VARIANT]"""
 import sys
 import numpy as np
 import polars as pl
@@ -19,7 +19,8 @@ from feats.ts_event import TR_EDGES
 from ts_judge_post import zones
 
 c = pl.col; K = T.K; B = sys.argv[1]
-z_ = np.load(f"scratch_gap/dec_{B}.npz"); y, q0, p1 = z_["y"], z_["C_q"], z_["C_p1"]
+SUF, VAR = (sys.argv[2] if len(sys.argv) > 2 else ""), (sys.argv[3] if len(sys.argv) > 3 else "C")  # decode file suffix and model variant
+z_ = np.load(f"scratch_gap/dec_{B}{SUF}.npz"); y, q0, p1 = z_["y"], z_[f"{VAR}_q"], z_[f"{VAR}_p1"]
 rows = pl.read_parquet(f"scratch_gap/{B}_sep_rows.parquet").select("txn_id", "dn")
 tx = load_all().filter(~c("is_test"))
 zid, _ = zones(rows, p1, TR_EDGES[0], TR_EDGES[-1])
@@ -67,4 +68,4 @@ print(f"rows hit by 2 or more layers: {int(multi.sum())}, of them with different
 u = q0
 for nm in ("ZPROP", "CZ", "LFM", "DD"): u = layer(nm, u)
 report("union, production order", u, q0)
-np.save(f"scratch_gap/rules_union_{B}.npy", u)
+np.save("scratch_gap/rules_union_" + B + ("" if VAR == "C" else "_" + VAR) + ".npy", u)

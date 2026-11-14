@@ -1,0 +1,55 @@
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+h6 chain reproduces dd_final: True
+v3 QRN+zprop   h6 base:  28 rows [('legit', 'qr_swap', 20), ('sim_swap', 'account_takeover', 4), ('layering_chain', 'mule_accoun | c2s6 base:  28 rows [('legit', 'qr_swap', 20), ('layering_chain', 'mule_account', 4), ('sim_swap', 'account_takeove | same row set: True
+RS             h6 base:   3 rows [('merchant_collusion', 'refund_abuse', 3)]                                                     | c2s6 base:   3 rows [('merchant_collusion', 'refund_abuse', 3)] | same row set: True
+FCB            h6 base:   5 rows [('qr_swap', 'phishing_collect', 5)]                                                            | c2s6 base:   5 rows [('qr_swap', 'phishing_collect', 5)] | same row set: True
+CZ             h6 base:  10 rows [('layering_chain', 'mule_account', 10)]                                                        | c2s6 base:  10 rows [('layering_chain', 'mule_account', 10)] | same row set: True
+LFM            h6 base:   4 rows [('layering_chain', 'mule_account', 4)]                                                         | c2s6 base:   5 rows [('layering_chain', 'mule_account', 5)] | same row set: False
+X999           h6 base:   1 rows [('legit', 'phishing_collect', 1)]                                                              | c2s6 base:   1 rows [('legit', 'phishing_collect', 1)] | same row set: True
+BANDV          h6 base:  10 rows [('mule_account', 'velocity_bot', 10)]                                                          | c2s6 base:  10 rows [('mule_account', 'velocity_bot', 10)] | same row set: True
+EDGEFIX        h6 base:   3 rows [('account_takeover', 'phishing_collect', 2), ('sim_swap', 'layering_chain', 1)]                | c2s6 base:   3 rows [('account_takeover', 'phishing_collect', 2), ('sim_swap', 'layering_chain', 1)] | same row set: True
+dd pool+stamp  h6 base:  13 rows [('legit', 'phishing_collect', 13)]                                                             | c2s6 base:  13 rows [('legit', 'phishing_collect', 13)] | same row set: True
+rows where the c2s6 model differs from h6 after zones+bait: 13; after all later layers: 12
+shape: (7, 4)
+┌──────────────────┬──────────────────┬──────────────────────┬─────┐
+│ dd_final         ┆ c2_chain         ┆ differs_before_rules ┆ len │
+│ ---              ┆ ---              ┆ ---                  ┆ --- │
+│ str              ┆ str              ┆ bool                 ┆ u32 │
+╞══════════════════╪══════════════════╪══════════════════════╪═════╡
+│ phishing_collect ┆ legit            ┆ true                 ┆ 4   │
+│ phishing_collect ┆ fake_cashback    ┆ true                 ┆ 2   │
+│ mule_account     ┆ layering_chain   ┆ true                 ┆ 2   │
+│ legit            ┆ layering_chain   ┆ true                 ┆ 1   │
+│ velocity_bot     ┆ mule_account     ┆ true                 ┆ 1   │
+│ fake_cashback    ┆ phishing_collect ┆ true                 ┆ 1   │
+│ refund_abuse     ┆ legit            ┆ true                 ┆ 1   │
+└──────────────────┴──────────────────┴──────────────────────┴─────┘
+shape: (12, 8)
+┌────────────┬──────────────────┬──────────────────┬──────────────────────┬───────────┬─────────────┬─────────┬──────────┐
+│ txn_id     ┆ dd_final         ┆ c2_chain         ┆ differs_before_rules ┆ sender_id ┆ receiver_id ┆ amount  ┆ txn_type │
+│ ---        ┆ ---              ┆ ---              ┆ ---                  ┆ ---       ┆ ---         ┆ ---     ┆ ---      │
+│ str        ┆ str              ┆ str              ┆ bool                 ┆ str       ┆ str         ┆ f64     ┆ str      │
+╞════════════╪══════════════════╪══════════════════╪══════════════════════╪═══════════╪═════════════╪═════════╪══════════╡
+│ TX1bb042e8 ┆ fake_cashback    ┆ phishing_collect ┆ true                 ┆ AC392442  ┆ AC178725    ┆ 18133.0 ┆ PAY      │
+│ TXf591f8e7 ┆ legit            ┆ layering_chain   ┆ true                 ┆ AC039015  ┆ AC151804    ┆ 320.0   ┆ PAY      │
+│ TX7755c193 ┆ mule_account     ┆ layering_chain   ┆ true                 ┆ AC192601  ┆ AC392297    ┆ 1070.0  ┆ PAY      │
+│ TX78dc5f40 ┆ mule_account     ┆ layering_chain   ┆ true                 ┆ AC148532  ┆ AC392297    ┆ 1890.0  ┆ PAY      │
+│ TX10754001 ┆ phishing_collect ┆ legit            ┆ true                 ┆ AC359155  ┆ AC115735    ┆ 1970.0  ┆ COLLECT  │
+│ TX6a3ada77 ┆ phishing_collect ┆ legit            ┆ true                 ┆ AC100984  ┆ AC217988    ┆ 1980.0  ┆ COLLECT  │
+│ TX96e28c86 ┆ phishing_collect ┆ fake_cashback    ┆ true                 ┆ AC193584  ┆ AC231534    ┆ 2.0     ┆ PAY      │
+│ TXf0208897 ┆ phishing_collect ┆ fake_cashback    ┆ true                 ┆ AC028527  ┆ AC283228    ┆ 10.0    ┆ PAY      │
+│ TX9cba4eb3 ┆ phishing_collect ┆ legit            ┆ true                 ┆ AC122701  ┆ AC349038    ┆ 1980.0  ┆ COLLECT  │
+│ TX1d444be7 ┆ phishing_collect ┆ legit            ┆ true                 ┆ AC363008  ┆ AC387642    ┆ 10.0    ┆ PAY      │
+│ TXb05075a8 ┆ refund_abuse     ┆ legit            ┆ true                 ┆ AC379340  ┆ MR028817    ┆ 2752.42 ┆ REFUND   │
+│ TXffb4ef65 ┆ velocity_bot     ┆ mule_account     ┆ true                 ┆ AC127019  ┆ AC083650    ┆ 920.0   ┆ PAY      │
+└────────────┴──────────────────┴──────────────────┴──────────────────────┴───────────┴─────────────┴─────────┴──────────┘
+label counts c2 chain minus dd_final: {'legit': 4, 'mule_account': -1, 'velocity_bot': -1, 'layering_chain': 3, 'phishing_collect': -5, 'refund_abuse': -1, 'fake_cashback': 1}

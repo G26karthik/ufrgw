@@ -138,3 +138,63 @@ once with the common decoder (`eval_D_ens.log`). Reference = `h6`, the productio
   recipe) or do not add up when combined (model variants and blends). No candidate CSV was built.
 - Limits: September has been reused many times; these are benchmark-D numbers; the test-only rule layers are not part of
   this comparison.
+
+## 6. Two follow-up checks (14 Nov, 20:30 to 20:45 IST)
+
+### 6a. c2s6 separated from the rest of final1
+
+October, model change only (`scratch_gap/c2x_chain.py`, `c2x_chain.log`, row ids in `c2x_diff.csv`). The later rule layers
+(v3, RS, FCB, CZ, LFM, X999, BANDV, EDGEFIX, dd) were run on `ts_judge_h6` and on `ts_judge_c2s6`.
+- The h6 run reproduces `dd_final.csv` exactly.
+- Every layer changes the same rows on both bases, except LFM, which changes 5 rows on c2s6 instead of 4.
+- The two models differ on 13 rows after zones + bait and on 12 rows after all layers. All 12 are model disagreements:
+
+| dd_final (h6) | c2s6 chain | rows |
+|---|---|---|
+| phishing_collect | legit | 4 |
+| phishing_collect | fake_cashback | 2 |
+| mule_account | layering_chain | 2 |
+| legit | layering_chain | 1 |
+| velocity_bot | mule_account | 1 |
+| fake_cashback | phishing_collect | 1 |
+| refund_abuse | legit | 1 |
+
+- These are the same 12 rows that were inside `final1`. `final1` also held 14 rule rows (8 later confirmed as BANDV, 5 at
+  AC291816, 1 edge row), so its public -.0008 does not isolate the model. No upload has measured the 12 rows alone.
+
+September, benchmark D only (`scratch_gap/c2_vs_h6.py`, `c2_vs_h6.log`). Benchmark N cannot test this swap: N builds every
+feature at full density, which is the whole content of the c2 change, so the two models are the same model there.
+
+| stage | h6 | c2s6 | change (bootstrap 5%..95%) | rows differing: c2s6 right / h6 right / both wrong |
+|---|---|---|---|---|
+| before decoder | .4837 | .4845 | +.0008 (-.0000..+.0017) | 42 / 52 / 8 |
+| after decoder | .5090 | .5098 | +.0008 (+.0000..+.0017) | 41 / 51 / 8 |
+| after decoder + four generic later layers | .5107 | .5115 | +.0008 (+.0001..+.0017) | 40 / 51 / 7 |
+
+- The +.0008 survives the decoder and the rule layers. It comes from loan_app_extortion (+.006 F1); every other class moves
+  by .002 or less. c2s6 gets fewer of the differing rows right than h6 (40 against 51).
+- August, after the decoder with out-of-sample bias (6b): c2s6 .5008, h6 .5002.
+- Status: small positive on both development months, carried by one class, D-only, never measured alone on the test month.
+  Not a basis for an upload by itself.
+
+### 6b. aug3btta and August scores after the decoder
+
+Earlier August figures used a bias tuned on all of August and no decoder. `scratch_gap/aug_dec.py` tunes the bias on one
+event-grouped half of August and scores the other half after forcing, zones and the bait rule (mean of the two halves;
+`aug_dec_D.log`). September for aug3btta and ls_halves: `eval_D_aug3.log`.
+
+| source | August, earlier (in-sample bias, no decoder) | August before decoder (split-half) | August after decoder (split-half) | September after decoder, change vs h6 |
+|---|---|---|---|---|
+| h6 | .4732 | .4717 | .5002 | |
+| c2s6 | .4744 | .4725 | .5008 | +.0008 (+.0000..+.0017) |
+| ls_halves | .4746 | .4713 | .5004 | -.0004 (-.0015..+.0009) |
+| aug3btta | .4750 | .4709 | .4996 | -.0017 (-.0038..+.0002) |
+| E_LGB | .4745 | .4717 | .5004 | +.0001 (-.0008..+.0011) |
+| E_ALL | .4742 | .4720 | .5004 | +.0005 (-.0011..+.0023) |
+| TabM ple | .4704 | .4680 | .4964 | -.0070 (-.0096..-.0048) |
+
+- aug3btta's August lead was produced by tuning the bias on the rows it was scored on. With an out-of-sample bias it is
+  below h6 before and after the decoder, and it is -.0017 on September.
+- After the decoder every LightGBM source and blend sits within .0006 of h6 on August. The two August halves differ by
+  about .010 for each source, so this ordering carries no weight.
+- These are further development checks on reused months, not fresh holdouts.
