@@ -83,3 +83,56 @@ Status (rule frozen before September: "supported" needs N seeds 0,1 and both con
   decoder): neutral. The legit-weight-1 arm and the 12-class rescaled arm had not been run before.
 - Not tested: other exponents, legit weight between 1 and 5, rounds or `lambda_l2` retuned under the new weights, the
   test-only rule layers on top, a production retrain.
+
+## B. Are the nine categorical columns handled as categories? (`scratch_cat/`)
+Step 1, what the fitted models do today:
+- Benchmark recipe (4 fitted boosters inspected): the nine `CAT_COLS` are ordered numbers. `pandas_categorical` is None,
+  every split on them is `<=`, they take 3.0% of total gain.
+- Production: the same, by code reading and matrix schema (`train.lgb_fit` passes a Float32 array with no categorical
+  declaration; `xgb_fit` and `models_gpu.cat_fit` declare nothing). No production booster was opened.
+
+Matched pairs (same rows, seeds, labels; August first, freeze, then September once). Changes are after the decoder.
+
+LightGBM, nine columns declared categorical (`cLGBcat`; all its splits on them are `==`, gain share 5.1%):
+
+| benchmark | variant | August | September (5%..95%) | rows changed / corrected / newly wrong | status |
+|---|---|---|---|---|---|
+| N (ref C) | alone | -.0003 | +.0003 (-.0005..+.0012) | 72 / 27 / 35 | no detected difference |
+| N | .65 ref + .35 arm | +.0009 | -.0002 (-.0008..+.0005) | 22 / 10 / 10 | no detected difference |
+| D (ref A_C) | alone | -.0003 | -.0005 (-.0023..+.0014) | 114 / 45 / 56 | no detected difference |
+| D | .65 ref + .35 arm | -.0008 | +.0010 (+.0002..+.0018) | 62 / 23 / 29 | no detected difference (August negative; N not reproduced) |
+
+CatBoost, categorical against numeric CatBoost directly (reference = the numeric arm):
+
+| pair | August | September (5%..95%) | status |
+|---|---|---|---|
+| N, GPU seed 0 | +.0014 | -.0005 (-.0020..+.0009) | no detected difference |
+| N, GPU seed 1 | +.0018 | +.0003 (-.0012..+.0019) | no detected difference |
+| N, CPU 250 iterations | -.0002 | -.0005 (-.0023..+.0018) | no detected difference |
+| N, blend against blend | -.0001 | -.0005 (-.0014..+.0005) | no detected difference |
+| D, GPU seed 0 | +.0028 | -.0013 (-.0028..+.0000) | no detected difference, borderline worse |
+| D, blend against blend | -.0011 | -.0027 (-.0051..-.0010) | measurably worse |
+
+CatBoost against the LightGBM reference:
+- Alone, every arm (numeric or categorical, GPU or CPU, N or D): measurably worse, -.0020 to -.0040.
+- .65 ref + .35 CatBoost: no detected difference in every reading (N numeric +.0006 (-.0008..+.0023); D numeric -.0000;
+  D categorical -.0027 (-.0054..+.0001)).
+
+Reading:
+- No arm is supported. The August advantage of categorical CatBoost (all three GPU pairs) did not carry to September.
+- Seed spread (numeric CatBoost .5049 against .5032) exceeds the categorical effect, and its sign flips across seeds.
+- The LightGBM arm is not a pure declaration change: LightGBM left the rarest level of four columns out of its category
+  list (0.7% to 1.0% of rows each). An arm that keeps those levels was not tested.
+- Not tested: LightGBM `cat_smooth`, `min_data_per_group`, `max_cat_to_onehot`; a subset of the nine columns; pure
+  one-hot CatBoost; D with a second seed. The nine columns have 2 to 30 levels and no held-only codes.
+- The numeric CatBoost arm here is not a reproduction of the earlier `PN_sCAT` (August .4945 against about .4972).
+
+## Summary of the three tests
+| assumption | result | status |
+|---|---|---|
+| A. model leans on the non-QR stamp | stamped rows stay detected with the stamp masked (.995 -> .991) | supported that they do not depend on the stamp alone; saturation claim not evaluated adequately |
+| B. categorical columns need categorical handling | LightGBM and CatBoost pairs, N and D | no detected difference; one D blend reading measurably worse |
+| C. legit rows carry too much training weight | legit weight 1; 12-class square-root weights | no detected difference alone; raw blend of the square-root arm promising but unconfirmed (N yes, D no; absent when the prior is matched) |
+
+None of the three produced a candidate. None shows that its direction cannot help: each tested one or two declared
+variants, on a September that has been reused many times.

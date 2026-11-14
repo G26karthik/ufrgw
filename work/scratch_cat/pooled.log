@@ -1,0 +1,33 @@
+N fold0 seed0 txn_type: level 5 not in the category list | fit rows (before legit downsample) 3592 of 527065, held rows 3708 of 526852
+N fold0 seed0 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+N fold0 seed0 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 5152 of 527065, held rows 5301 of 526852
+N fold0 seed0 mer_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+N fold0 seed1 txn_type: level 5 not in the category list | fit rows (before legit downsample) 3592 of 527065, held rows 3708 of 526852
+N fold0 seed1 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+N fold0 seed1 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 5152 of 527065, held rows 5301 of 526852
+N fold0 seed1 mer_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+N fold1 seed0 txn_type: level 5 not in the category list | fit rows (before legit downsample) 7300 of 1053917, held rows 3672 of 509996
+N fold1 seed0 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+N fold1 seed0 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 10453 of 1053917, held rows 5200 of 509996
+N fold1 seed0 mer_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+N fold1 seed1 txn_type: level 5 not in the category list | fit rows (before legit downsample) 7300 of 1053917, held rows 3672 of 509996
+N fold1 seed1 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+N fold1 seed1 mer_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+D fold0 seed0 txn_type: level 5 not in the category list | fit rows (before legit downsample) 3592 of 527065, held rows 3708 of 526852
+D fold0 seed0 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+D fold0 seed0 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 5152 of 527065, held rows 5301 of 526852
+D fold0 seed0 mer_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+D fold0 seed1 txn_type: level 5 not in the category list | fit rows (before legit downsample) 3592 of 527065, held rows 3708 of 526852
+D fold0 seed1 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+D fold0 seed1 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 5152 of 527065, held rows 5301 of 526852
+D fold0 seed1 mer_category: level 8 not in the category list | fit rows (before legit downsample) 4610 of 527065, held rows 4762 of 526852
+D fold1 seed0 txn_type: level 5 not in the category list | fit rows (before legit downsample) 7300 of 1053917, held rows 3672 of 509996
+D fold1 seed0 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+D fold1 seed0 snd_bank_code: level 26 not in the category list | fit rows (before legit downsample) 10453 of 1053917, held rows 5200 of 509996
+D fold1 seed0 mer_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+D fold1 seed1 txn_type: level 5 not in the category list | fit rows (before legit downsample) 7300 of 1053917, held rows 3672 of 509996
+D fold1 seed1 merchant_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+D fold1 seed1 mer_category: level 8 not in the category list | fit rows (before legit downsample) 9372 of 1053917, held rows 4445 of 509996
+N cLGBnum: boosters 4, nine-column splits mean 3319 of 54000, gain share mean 0.0296 (min 0.0236, max 0.0350), decision types on the nine columns ['<='], pandas_categorical None
+N cLGBcat: boosters 4, nine-column splits mean 6958 of 54000, gain share mean 0.0506 (min 0.0410, max 0.0585), decision types on the nine columns ['=='], pandas_categorical []
+D cLGBcat: boosters 4, nine-column splits mean 7088 of 54000, gain share mean 0.0506 (min 0.0414, max 0.0582), decision types on the nine columns ['=='], pandas_categorical []

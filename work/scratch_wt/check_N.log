@@ -1,0 +1,2 @@
+N wC vs C aug: shape (526852, 12) max abs diff 0.000e+00 identical True argmax differs on 0 rows
+N wC vs C sep: shape (509996, 12) max abs diff 0.000e+00 identical True argmax differs on 0 rows

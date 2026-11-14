@@ -1,0 +1,16 @@
+D wL1 aug: mean fraud probability REF 0.0371 arm raw 0.1196 prior-matched 0.0357
+wrote scratch_gap/PD_wL1b35_aug.npy
+wrote scratch_gap/PD_wL1p_aug.npy
+wrote scratch_gap/PD_wL1pb35_aug.npy
+D wSQ aug: mean fraud probability REF 0.0371 arm raw 0.2809 prior-matched 0.0340
+wrote scratch_gap/PD_wSQb35_aug.npy
+wrote scratch_gap/PD_wSQp_aug.npy
+wrote scratch_gap/PD_wSQpb35_aug.npy
+D wL1 sep: mean fraud probability REF 0.0370 arm raw 0.1207 prior-matched 0.0361
+wrote scratch_gap/PD_wL1b35_sep.npy
+wrote scratch_gap/PD_wL1p_sep.npy
+wrote scratch_gap/PD_wL1pb35_sep.npy
+D wSQ sep: mean fraud probability REF 0.0370 arm raw 0.2898 prior-matched 0.0351
+wrote scratch_gap/PD_wSQb35_sep.npy
+wrote scratch_gap/PD_wSQp_sep.npy
+wrote scratch_gap/PD_wSQpb35_sep.npy

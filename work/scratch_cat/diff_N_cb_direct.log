@@ -1,0 +1,8 @@
+cCBcat pre changed 160 corrected 66 newly wrong 71 missed fraud recovered 11 new legit called fraud 12 fake_c -0.015 mercha +0.010 phishi +0.004
+cCBcat q changed 146 corrected 61 newly wrong 62 missed fraud recovered 7 new legit called fraud 9 fake_c -0.011 mercha +0.010 phishi +0.003
+cCBcatCPU pre changed 183 corrected 87 newly wrong 79 missed fraud recovered 16 new legit called fraud 4 sim_sw -0.010 mule_a -0.009 phishi +0.008
+cCBcatCPU q changed 169 corrected 82 newly wrong 72 missed fraud recovered 16 new legit called fraud 4 mule_a -0.009 phishi +0.008 sim_sw -0.007
+cCBcats1 pre changed 155 corrected 78 newly wrong 57 missed fraud recovered 8 new legit called fraud 5 mule_a +0.009 veloci +0.003 phishi -0.003
+cCBcats1 q changed 148 corrected 73 newly wrong 56 missed fraud recovered 8 new legit called fraud 5 mule_a +0.009 veloci +0.003 phishi -0.002
+cBCBcat pre changed 96 corrected 42 newly wrong 43 missed fraud recovered 6 new legit called fraud 5 phishi -0.010 veloci +0.004 fake_c -0.003
+cBCBcat q changed 91 corrected 41 newly wrong 41 missed fraud recovered 5 new legit called fraud 4 phishi -0.009 veloci +0.004 fake_c -0.003

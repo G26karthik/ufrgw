@@ -1,0 +1,12 @@
+wL1b2 pre changed 155 corrected 60 newly wrong 71 missed fraud recovered 20 new legit called fraud 28 mercha +0.013 fake_c -0.010 phishi +0.009
+wL1b2 q changed 153 corrected 63 newly wrong 69 missed fraud recovered 20 new legit called fraud 27 mercha +0.012 phishi +0.009 fake_c -0.007
+wSQb2 pre changed 171 corrected 53 newly wrong 97 missed fraud recovered 23 new legit called fraud 60 mercha +0.013 veloci -0.008 fake_c +0.005
+wSQb2 q changed 170 corrected 55 newly wrong 95 missed fraud recovered 23 new legit called fraud 59 mercha +0.012 veloci -0.008 fake_c +0.005
+wL1b35b2 pre changed 58 corrected 28 newly wrong 20 missed fraud recovered 7 new legit called fraud 3 mercha +0.007 fake_c -0.005 loan_a -0.002
+wL1b35b2 q changed 59 corrected 31 newly wrong 19 missed fraud recovered 7 new legit called fraud 3 mercha +0.007 sim_sw +0.004 fake_c -0.003
+wSQb35b2 pre changed 73 corrected 35 newly wrong 26 missed fraud recovered 10 new legit called fraud 5 mercha +0.010 fake_c -0.003 phishi +0.002
+wSQb35b2 q changed 74 corrected 38 newly wrong 25 missed fraud recovered 10 new legit called fraud 5 mercha +0.010 sim_sw +0.004 phishi +0.002
+wL1pb35b2 pre changed 58 corrected 24 newly wrong 25 missed fraud recovered 2 new legit called fraud 1 fake_c -0.005 mercha -0.004 loan_a -0.002
+wL1pb35b2 q changed 59 corrected 27 newly wrong 24 missed fraud recovered 2 new legit called fraud 1 mercha -0.004 fake_c -0.003 sim_sw +0.003
+wSQpb35b2 pre changed 77 corrected 25 newly wrong 41 missed fraud recovered 4 new legit called fraud 5 veloci -0.007 mercha -0.004 accoun +0.003
+wSQpb35b2 q changed 72 corrected 24 newly wrong 38 missed fraud recovered 4 new legit called fraud 5 veloci -0.007 mercha -0.004 sim_sw +0.001

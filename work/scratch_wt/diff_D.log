@@ -1,0 +1,12 @@
+wL1 pre changed 166 corrected 55 newly wrong 98 missed fraud recovered 26 new legit called fraud 64 mercha -0.013 refund -0.007 phishi +0.004
+wL1 q changed 151 corrected 51 newly wrong 88 missed fraud recovered 24 new legit called fraud 57 mercha -0.012 refund -0.007 phishi +0.004
+wSQ pre changed 305 corrected 69 newly wrong 210 missed fraud recovered 47 new legit called fraud 190 mercha -0.004 accoun -0.004 layeri -0.003
+wSQ q changed 260 corrected 64 newly wrong 178 missed fraud recovered 42 new legit called fraud 160 mercha -0.004 layeri -0.003 fake_c +0.003
+wL1b35 pre changed 57 corrected 24 newly wrong 26 missed fraud recovered 12 new legit called fraud 16 fake_c +0.003 phishi +0.002 qr_swa +0.002
+wL1b35 q changed 53 corrected 22 newly wrong 24 missed fraud recovered 11 new legit called fraud 16 fake_c +0.004 phishi +0.002 qr_swa +0.001
+wSQb35 pre changed 77 corrected 29 newly wrong 39 missed fraud recovered 17 new legit called fraud 31 phishi +0.003 loan_a -0.002 fake_c +0.002
+wSQb35 q changed 71 corrected 26 newly wrong 37 missed fraud recovered 16 new legit called fraud 31 fake_c +0.003 phishi +0.003 loan_a -0.002
+wL1pb35 pre changed 44 corrected 19 newly wrong 19 missed fraud recovered 9 new legit called fraud 5 refund -0.004 fake_c +0.003 mercha -0.003
+wL1pb35 q changed 41 corrected 18 newly wrong 17 missed fraud recovered 8 new legit called fraud 5 fake_c +0.004 refund -0.003 mercha -0.003
+wSQpb35 pre changed 50 corrected 19 newly wrong 26 missed fraud recovered 5 new legit called fraud 10 layeri -0.003 phishi +0.002 loan_a -0.002
+wSQpb35 q changed 45 corrected 16 newly wrong 24 missed fraud recovered 4 new legit called fraud 10 fake_c +0.003 layeri -0.002 loan_a -0.002

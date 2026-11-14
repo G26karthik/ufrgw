@@ -1,0 +1,62 @@
+August-tuned bias (unmasked August): {'legit': 0.0, 'mule_a': 0.4000000059604645, 'veloci': -0.4000000059604645, 'layeri': 0.5, 'sim_sw': 1.399999976158142, 'accoun': 1.100000023841858, 'phishi': 0.8999999761581421, 'qr_swa': 0.8999999761581421, 'refund': -0.20000000298023224, 'fake_c': 1.2999999523162842, 'loan_a': 1.100000023841858, 'mercha': -0.10000000149011612}
+
+=== August (fold 0, bias from the other half): masked rows 2415 (fraud-labelled 2135, legit-labelled 280); before -> after masking ===
+fraud-labelled         n= 2135 | decoded non-legit 0.994 -> 0.990 | mean P(fraud) 0.906 -> 0.892 | P(fraud)>=.5 0.993 -> 0.984 | decoded = label 0.844 -> 0.839 | argmax non-legit 0.987 -> 0.979
+legit-labelled         n=  280 | decoded non-legit 0.989 -> 0.986 | mean P(fraud) 0.900 -> 0.884 | P(fraud)>=.5 0.986 -> 0.979 | decoded = label 0.011 -> 0.014 | argmax non-legit 0.982 -> 0.979
+  mule_account         n=  361 | decoded non-legit 0.992 -> 0.986 | mean P(fraud) 0.914 -> 0.900 | P(fraud)>=.5 0.997 -> 0.989 | decoded = label 0.850 -> 0.845 | argmax non-legit 0.989 -> 0.981
+  velocity_bot         n=  362 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.921 -> 0.919 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.854 -> 0.854 | argmax non-legit 1.000 -> 1.000
+  layering_chain       n=  342 | decoded non-legit 0.997 -> 0.997 | mean P(fraud) 0.913 -> 0.901 | P(fraud)>=.5 0.997 -> 0.994 | decoded = label 0.988 -> 0.988 | argmax non-legit 0.997 -> 0.994
+  sim_swap             n=  213 | decoded non-legit 0.991 -> 0.986 | mean P(fraud) 0.900 -> 0.885 | P(fraud)>=.5 0.986 -> 0.977 | decoded = label 0.714 -> 0.700 | argmax non-legit 0.977 -> 0.958
+  account_takeover     n=  164 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.924 -> 0.921 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.671 -> 0.671 | argmax non-legit 1.000 -> 1.000
+  phishing_collect     n=  286 | decoded non-legit 0.990 -> 0.972 | mean P(fraud) 0.859 -> 0.812 | P(fraud)>=.5 0.983 -> 0.937 | decoded = label 0.871 -> 0.850 | argmax non-legit 0.958 -> 0.937
+  qr_swap              n=   59 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.906 -> 0.897 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.814 -> 0.831 | argmax non-legit 1.000 -> 1.000
+  refund_abuse         n=  129 | decoded non-legit 0.984 -> 0.984 | mean P(fraud) 0.919 -> 0.919 | P(fraud)>=.5 0.984 -> 0.984 | decoded = label 0.922 -> 0.922 | argmax non-legit 0.984 -> 0.984
+  fake_cashback        n=   92 | decoded non-legit 0.989 -> 0.978 | mean P(fraud) 0.902 -> 0.874 | P(fraud)>=.5 0.989 -> 0.967 | decoded = label 0.739 -> 0.728 | argmax non-legit 0.967 -> 0.946
+  loan_app_extortion   n=   77 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.925 -> 0.920 | P(fraud)>=.5 0.987 -> 0.987 | decoded = label 0.753 -> 0.753 | argmax non-legit 0.987 -> 0.974
+  merchant_collusion   n=   50 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.893 -> 0.889 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.900 -> 0.900 | argmax non-legit 1.000 -> 1.000
+decoded type on masked fraud-labelled rows, before: legit 12 mule_a 370 veloci 312 layeri 392 sim_sw 205 accoun 169 phishi 290 qr_swa 56 refund 124 fake_c 97 loan_a 62 mercha 46
+decoded type on masked fraud-labelled rows, after : legit 21 mule_a 368 veloci 312 layeri 392 sim_sw 202 accoun 171 phishi 284 qr_swa 57 refund 123 fake_c 97 loan_a 62 mercha 46
+  decoded label changed on 13 rows: fraud->legit 9, legit->fraud 0, type->type 4; top: phishi->legit 5, mule_a->legit 2, sim_sw->accoun 2, phishi->fake_c 1, refund->qr_swa 1, fake_c->legit 1, sim_sw->legit 1
+decoded type on masked legit-labelled rows, before: legit 3 mule_a 45 veloci 48 layeri 49 sim_sw 18 accoun 23 phishi 45 qr_swa 4 refund 17 fake_c 13 loan_a 9 mercha 6
+decoded type on masked legit-labelled rows, after : legit 4 mule_a 45 veloci 48 layeri 49 sim_sw 18 accoun 23 phishi 43 qr_swa 4 refund 17 fake_c 14 loan_a 9 mercha 6
+  decoded label changed on 2 rows: fraud->legit 1, legit->fraud 0, type->type 1; top: phishi->legit 1, phishi->fake_c 1
+rows NOT masked: 524437; P changed on 0; decoded label changed on 0
+macro-F1 of the held month, bias only: original 0.4698, masked 0.4692 (counterfactual, not a score)
+natural: unstamped non-QR fraud-labelled n=11704 | decoded non-legit 0.328 / 0.328 | mean P(fraud) 0.312 / 0.312 | P(fraud)>=.5 0.326 / 0.326 | decoded = label 0.276 / 0.276 | argmax non-legit 0.324 / 0.324
+natural: unstamped non-QR legit-labelled n=325147 | decoded non-legit 0.002 / 0.002 | mean P(fraud) 0.025 / 0.025 | P(fraud)>=.5 0.002 / 0.002 | decoded = label 0.998 / 0.998 | argmax non-legit 0.002 / 0.002
+natural counts: non-QR rows 339266, stamped 2415, QR-null stamp rows 238 (fraud-labelled 213), fraud-labelled rows 19345, of them non-QR 13839
+
+=== September (fold 1, August bias): masked rows 2391 (fraud-labelled 2080, legit-labelled 311); before -> after masking ===
+fraud-labelled         n= 2080 | decoded non-legit 0.995 -> 0.991 | mean P(fraud) 0.905 -> 0.893 | P(fraud)>=.5 0.992 -> 0.989 | decoded = label 0.857 -> 0.854 | argmax non-legit 0.989 -> 0.983
+legit-labelled         n=  311 | decoded non-legit 0.990 -> 0.990 | mean P(fraud) 0.908 -> 0.895 | P(fraud)>=.5 0.994 -> 0.994 | decoded = label 0.010 -> 0.010 | argmax non-legit 0.990 -> 0.990
+  mule_account         n=  376 | decoded non-legit 0.992 -> 0.992 | mean P(fraud) 0.901 -> 0.892 | P(fraud)>=.5 0.992 -> 0.992 | decoded = label 0.872 -> 0.872 | argmax non-legit 0.992 -> 0.989
+  velocity_bot         n=  395 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.910 -> 0.910 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.873 -> 0.873 | argmax non-legit 1.000 -> 1.000
+  layering_chain       n=  295 | decoded non-legit 0.997 -> 0.997 | mean P(fraud) 0.924 -> 0.916 | P(fraud)>=.5 0.997 -> 0.997 | decoded = label 0.976 -> 0.976 | argmax non-legit 0.997 -> 0.997
+  sim_swap             n=  167 | decoded non-legit 1.000 -> 0.994 | mean P(fraud) 0.916 -> 0.908 | P(fraud)>=.5 0.988 -> 0.988 | decoded = label 0.754 -> 0.749 | argmax non-legit 0.982 -> 0.982
+  account_takeover     n=  170 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.913 -> 0.918 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.741 -> 0.747 | argmax non-legit 1.000 -> 1.000
+  phishing_collect     n=  258 | decoded non-legit 0.984 -> 0.957 | mean P(fraud) 0.862 -> 0.808 | P(fraud)>=.5 0.961 -> 0.942 | decoded = label 0.876 -> 0.857 | argmax non-legit 0.957 -> 0.922
+  qr_swap              n=   53 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.926 -> 0.921 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.811 -> 0.811 | argmax non-legit 1.000 -> 1.000
+  refund_abuse         n=  134 | decoded non-legit 0.993 -> 0.993 | mean P(fraud) 0.916 -> 0.913 | P(fraud)>=.5 0.993 -> 0.993 | decoded = label 0.963 -> 0.963 | argmax non-legit 0.993 -> 0.993
+  fake_cashback        n=  115 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.905 -> 0.876 | P(fraud)>=.5 1.000 -> 0.991 | decoded = label 0.661 -> 0.652 | argmax non-legit 0.983 -> 0.957
+  loan_app_extortion   n=   68 | decoded non-legit 1.000 -> 1.000 | mean P(fraud) 0.880 -> 0.870 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.779 -> 0.779 | argmax non-legit 1.000 -> 1.000
+  merchant_collusion   n=   49 | decoded non-legit 0.980 -> 0.980 | mean P(fraud) 0.918 -> 0.913 | P(fraud)>=.5 1.000 -> 1.000 | decoded = label 0.857 -> 0.857 | argmax non-legit 0.980 -> 0.980
+decoded type on masked fraud-labelled rows, before: legit 10 mule_a 380 veloci 361 layeri 339 sim_sw 168 accoun 164 phishi 274 qr_swa 46 refund 139 fake_c 100 loan_a 55 mercha 44
+decoded type on masked fraud-labelled rows, after : legit 18 mule_a 380 veloci 361 layeri 339 sim_sw 166 accoun 165 phishi 270 qr_swa 46 refund 139 fake_c 97 loan_a 55 mercha 44
+  decoded label changed on 11 rows: fraud->legit 8, legit->fraud 0, type->type 3; top: phishi->legit 6, fake_c->phishi 2, sim_sw->legit 1, sim_sw->accoun 1, fake_c->legit 1
+decoded type on masked legit-labelled rows, before: legit 3 mule_a 61 veloci 41 layeri 53 sim_sw 21 accoun 27 phishi 47 qr_swa 10 refund 19 fake_c 18 loan_a 5 mercha 6
+decoded type on masked legit-labelled rows, after : legit 3 mule_a 61 veloci 41 layeri 53 sim_sw 21 accoun 27 phishi 47 qr_swa 10 refund 19 fake_c 18 loan_a 5 mercha 6
+  decoded label changed on 0 rows: fraud->legit 0, legit->fraud 0, type->type 0; top: 
+rows NOT masked: 507605; P changed on 0; decoded label changed on 0
+macro-F1 of the held month, bias only: original 0.4815, masked 0.4813 (counterfactual, not a score)
+natural: unstamped non-QR fraud-labelled n=11324 | decoded non-legit 0.333 / 0.333 | mean P(fraud) 0.315 / 0.315 | P(fraud)>=.5 0.331 / 0.331 | decoded = label 0.290 / 0.290 | argmax non-legit 0.330 / 0.330
+natural: unstamped non-QR legit-labelled n=315825 | decoded non-legit 0.002 / 0.002 | mean P(fraud) 0.025 / 0.025 | P(fraud)>=.5 0.002 / 0.002 | decoded = label 0.998 / 0.998 | argmax non-legit 0.002 / 0.002
+natural counts: non-QR rows 329540, stamped 2391, QR-null stamp rows 210 (fraud-labelled 186), fraud-labelled rows 18661, of them non-QR 13404
+zone edges (orig): [423000, 423657, 424155, 424627, 425038, 426770, 427166, 427850, 428061, 428204, 428305, 428455]
+zone edges (mask): [423000, 423657, 424155, 424627, 425038, 426770, 427166, 427850, 428061, 428204, 428305, 428455]
+
+=== September after the full decoder (forcing, zones, bait); bias re-tuned on unmasked forced August ===
+masked fraud-labelled n=2080: decoded non-legit 0.995 -> 0.991; decoded = label 0.875 -> 0.872
+masked legit-labelled n=311: decoded non-legit 0.990 -> 0.990; decoded = label 0.010 -> 0.010
+rows NOT masked whose after-decoder label changed (zone edges moved): 0
+September macro-F1 after decoder: original 0.5070 (reference .5070), masked 0.5067 (counterfactual)
+September macro-F1 before decoder: original 0.4815 (reference .4815)

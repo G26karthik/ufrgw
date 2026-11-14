@@ -1,0 +1,47 @@
+INSPECT N_cLGBnum_f0_s0: pandas_categorical=None splits=54000 all decision types={'<=': 54000} nine columns: splits=3467 gain share=0.03039
+   receiver_type      {'min_value': 0, 'max_value': 2, 'values': []} splits=2 {'<=': 2} gain=0.00157
+   txn_type           {'min_value': 0, 'max_value': 5, 'values': []} splits=252 {'<=': 252} gain=0.0071
+   merchant_category  {'min_value': 0, 'max_value': 12, 'values': []} splits=524 {'<=': 524} gain=0.00547
+   app                {'min_value': 0, 'max_value': 4, 'values': []} splits=586 {'<=': 586} gain=0.00317
+   snd_kyc_level      {'min_value': 1, 'max_value': 2, 'values': []} splits=147 {'<=': 147} gain=0.00086
+   snd_os             {'min_value': 1, 'max_value': 2, 'values': []} splits=114 {'<=': 114} gain=0.00061
+   snd_bank_code      {'min_value': 0, 'max_value': 29, 'values': []} splits=1418 {'<=': 1418} gain=0.0081
+   rcv_kyc_level      {'min_value': 0, 'max_value': 2, 'values': []} splits=68 {'<=': 68} gain=0.00153
+   mer_category       {'min_value': 0, 'max_value': 12, 'values': []} splits=356 {'<=': 356} gain=0.00198
+cLGBnum N fold0 seed0: fit rows 121123 (168s)
+INSPECT N_cLGBnum_f0_s1: pandas_categorical=None splits=54000 all decision types={'<=': 54000} nine columns: splits=3410 gain share=0.03502
+   receiver_type      {'min_value': 0, 'max_value': 2, 'values': []} splits=7 {'<=': 7} gain=0.00172
+   txn_type           {'min_value': 0, 'max_value': 5, 'values': []} splits=251 {'<=': 251} gain=0.00949
+   merchant_category  {'min_value': 0, 'max_value': 12, 'values': []} splits=490 {'<=': 490} gain=0.00487
+   app                {'min_value': 0, 'max_value': 4, 'values': []} splits=597 {'<=': 597} gain=0.00346
+   snd_kyc_level      {'min_value': 1, 'max_value': 2, 'values': []} splits=160 {'<=': 160} gain=0.00087
+   snd_os             {'min_value': 1, 'max_value': 2, 'values': []} splits=119 {'<=': 119} gain=0.00071
+   snd_bank_code      {'min_value': 0, 'max_value': 29, 'values': []} splits=1366 {'<=': 1366} gain=0.00785
+   rcv_kyc_level      {'min_value': 0, 'max_value': 2, 'values': []} splits=64 {'<=': 64} gain=0.00213
+   mer_category       {'min_value': 0, 'max_value': 12, 'values': []} splits=356 {'<=': 356} gain=0.00392
+cLGBnum N fold0 seed1: fit rows 121189 (325s)
+cLGBnum N fold0 saved scratch_gap/PN_cLGBnum_aug.npy | max abs diff vs scratch_gap/PN_C_aug.npy: 0.000e+00, argmax rows differing 0
+INSPECT N_cLGBnum_f1_s0: pandas_categorical=None splits=54000 all decision types={'<=': 54000} nine columns: splits=3121 gain share=0.02952
+   receiver_type      {'min_value': 0, 'max_value': 2, 'values': []} splits=4 {'<=': 4} gain=0.00028
+   txn_type           {'min_value': 0, 'max_value': 5, 'values': []} splits=194 {'<=': 194} gain=0.01203
+   merchant_category  {'min_value': 0, 'max_value': 12, 'values': []} splits=443 {'<=': 443} gain=0.00603
+   app                {'min_value': 0, 'max_value': 4, 'values': []} splits=511 {'<=': 511} gain=0.00184
+   snd_kyc_level      {'min_value': 1, 'max_value': 2, 'values': []} splits=117 {'<=': 117} gain=0.0004
+   snd_os             {'min_value': 1, 'max_value': 2, 'values': []} splits=109 {'<=': 109} gain=0.00037
+   snd_bank_code      {'min_value': 0, 'max_value': 29, 'values': []} splits=1350 {'<=': 1350} gain=0.0053
+   rcv_kyc_level      {'min_value': 0, 'max_value': 2, 'values': []} splits=74 {'<=': 74} gain=0.0003
+   mer_category       {'min_value': 0, 'max_value': 12, 'values': []} splits=319 {'<=': 319} gain=0.00297
+cLGBnum N fold1 seed0: fit rows 241961 (288s)
+INSPECT N_cLGBnum_f1_s1: pandas_categorical=None splits=54000 all decision types={'<=': 54000} nine columns: splits=3279 gain share=0.02358
+   receiver_type      {'min_value': 0, 'max_value': 2, 'values': []} splits=6 {'<=': 6} gain=0.00026
+   txn_type           {'min_value': 0, 'max_value': 5, 'values': []} splits=245 {'<=': 245} gain=0.0059
+   merchant_category  {'min_value': 0, 'max_value': 12, 'values': []} splits=462 {'<=': 462} gain=0.00398
+   app                {'min_value': 0, 'max_value': 4, 'values': []} splits=544 {'<=': 544} gain=0.00196
+   snd_kyc_level      {'min_value': 1, 'max_value': 2, 'values': []} splits=118 {'<=': 118} gain=0.00042
+   snd_os             {'min_value': 1, 'max_value': 2, 'values': []} splits=126 {'<=': 126} gain=0.00053
+   snd_bank_code      {'min_value': 0, 'max_value': 29, 'values': []} splits=1361 {'<=': 1361} gain=0.00537
+   rcv_kyc_level      {'min_value': 0, 'max_value': 2, 'values': []} splits=79 {'<=': 79} gain=0.00204
+   mer_category       {'min_value': 0, 'max_value': 12, 'values': []} splits=338 {'<=': 338} gain=0.00312
+cLGBnum N fold1 seed1: fit rows 241925 (537s)
+cLGBnum N fold1 saved scratch_gap/PN_cLGBnum_sep.npy | max abs diff vs scratch_gap/PN_C_sep.npy: 0.000e+00, argmax rows differing 0
+cLGBnum N done

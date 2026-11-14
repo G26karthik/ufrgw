@@ -1,0 +1,10 @@
+fold0: masked rows 2415; columns that differ after the rebuild: {'qr_vpa_mismatch': 2415}; qr_vpa_mismatch differs exactly on the masked rows: True; masked value now NaN: True; all other 189 columns identical on all rows: True (43s)
+  seed 0: gain share of qr_vpa_mismatch 0.0170 (rank 13 of 190), scam__rcv_qr_mm1_frac_15d 0.0035, scam__rcv_qr_mmnull_15d 0.0040, scam__snd_qr_mmnull_15d 0.0002 (121s)
+  seed 1: gain share of qr_vpa_mismatch 0.0184 (rank 13 of 190), scam__rcv_qr_mm1_frac_15d 0.0035, scam__rcv_qr_mmnull_15d 0.0034, scam__snd_qr_mmnull_15d 0.0007 (236s)
+  self-check vs PN_C_aug.npy: max abs diff 0.00e+00, argmax differs on 0 rows of 526852
+  rows not masked with any change in P: 0; masked rows with a change: 2415 of 2415
+fold1: masked rows 2391; columns that differ after the rebuild: {'qr_vpa_mismatch': 2391}; qr_vpa_mismatch differs exactly on the masked rows: True; masked value now NaN: True; all other 189 columns identical on all rows: True (137s)
+  seed 0: gain share of qr_vpa_mismatch 0.0243 (rank 9 of 190), scam__rcv_qr_mm1_frac_15d 0.0023, scam__rcv_qr_mmnull_15d 0.0095, scam__snd_qr_mmnull_15d 0.0001 (443s)
+  seed 1: gain share of qr_vpa_mismatch 0.0315 (rank 8 of 190), scam__rcv_qr_mm1_frac_15d 0.0021, scam__rcv_qr_mmnull_15d 0.0058, scam__snd_qr_mmnull_15d 0.0002 (720s)
+  self-check vs PN_C_sep.npy: max abs diff 0.00e+00, argmax differs on 0 rows of 509996
+  rows not masked with any change in P: 0; masked rows with a change: 2391 of 2391

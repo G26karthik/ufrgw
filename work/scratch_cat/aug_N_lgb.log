@@ -1,0 +1,4 @@
+benchmark N, August rows 526852, halves 263556 / 263296
+C          August before decoder 0.4696 (0.4616, 0.4775) | after decoder 0.4978 (0.4920, 0.5036)
+cLGBcat    August before decoder 0.4693 (0.4610, 0.4776) | after decoder 0.4975 (0.4910, 0.5040)
+cBLGBcat   August before decoder 0.4709 (0.4636, 0.4783) | after decoder 0.4987 (0.4931, 0.5044)

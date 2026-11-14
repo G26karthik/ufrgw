@@ -1,0 +1,35 @@
+{
+ "params": {
+  "task_type": "GPU",
+  "iterations": 1000,
+  "depth": 8,
+  "learning_rate": 0.10000000149011612,
+  "l2_leaf_reg": 3,
+  "border_count": 128,
+  "boosting_type": "Plain",
+  "bootstrap_type": "Bayesian",
+  "one_hot_max_size": null,
+  "simple_ctr": null,
+  "combinations_ctr": null,
+  "max_ctr_complexity": null,
+  "ctr_target_border_count": null,
+  "counter_calc_method": null,
+  "ctr_leaf_count_limit": null,
+  "grow_policy": "SymmetricTree"
+ },
+ "cat_feature_indices": [],
+ "fit_rows": 121123,
+ "secs": 57,
+ "nine_cols_importance_pct": {
+  "receiver_type": 0.0,
+  "txn_type": 1.141,
+  "merchant_category": 0.822,
+  "app": 1.724,
+  "snd_kyc_level": 0.649,
+  "snd_os": 0.377,
+  "snd_bank_code": 5.429,
+  "rcv_kyc_level": 0.634,
+  "mer_category": 0.105
+ },
+ "nine_cols_importance_sum_pct": 10.881
+}

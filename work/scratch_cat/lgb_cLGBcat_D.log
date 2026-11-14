@@ -1,0 +1,47 @@
+INSPECT D_cLGBcat_f0_s0: pandas_categorical=[] splits=54000 all decision types={'<=': 47208, '==': 6792} nine columns: splits=6792 gain share=0.05819
+   receiver_type      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 2]} splits=2 {'==': 2} gain=0.00077
+   txn_type           {'min_value': -1, 'max_value': 4, 'values': [-1, 3, 4, 1, 0]} splits=176 {'==': 176} gain=0.00897
+   merchant_category  {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 9, 3, 2]} splits=1050 {'==': 1050} gain=0.00823
+   app                {'min_value': -1, 'max_value': 4, 'values': [-1, 0, 1, 2, 3, 4]} splits=482 {'==': 482} gain=0.00275
+   snd_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=133 {'==': 133} gain=0.00076
+   snd_os             {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=108 {'==': 108} gain=0.00058
+   snd_bank_code      {'min_value': -1, 'max_value': 29, 'values': [-1, 27, 7, 21, 2, 29, 13, 28, 12, 22, 6, 24, 16, 15, 0, 23, 11, 19, 4, 14, 25, 9, 18, 8, 1, 20, 3, 17, 5, 10]} splits=3750 {'==': 3750} gain=0.02886
+   rcv_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 1, 2]} splits=98 {'==': 98} gain=0.00123
+   mer_category       {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 9, 3, 2]} splits=993 {'==': 993} gain=0.00604
+cLGBcat D fold0 seed0: fit rows 121123 (83s)
+INSPECT D_cLGBcat_f0_s1: pandas_categorical=[] splits=54000 all decision types={'<=': 47186, '==': 6814} nine columns: splits=6814 gain share=0.05475
+   receiver_type      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 2]} splits=6 {'==': 6} gain=0.00229
+   txn_type           {'min_value': -1, 'max_value': 4, 'values': [-1, 3, 4, 1, 0]} splits=172 {'==': 172} gain=0.00362
+   merchant_category  {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 9, 3, 2]} splits=1147 {'==': 1147} gain=0.00881
+   app                {'min_value': -1, 'max_value': 4, 'values': [-1, 0, 1, 2, 3, 4]} splits=462 {'==': 462} gain=0.00282
+   snd_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=127 {'==': 127} gain=0.00073
+   snd_os             {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=119 {'==': 119} gain=0.00064
+   snd_bank_code      {'min_value': -1, 'max_value': 29, 'values': [-1, 27, 7, 21, 2, 29, 13, 28, 12, 22, 6, 24, 16, 15, 0, 23, 11, 19, 4, 14, 9, 25, 18, 8, 1, 20, 3, 5, 17, 10]} splits=3730 {'==': 3730} gain=0.02854
+   rcv_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 1, 2]} splits=108 {'==': 108} gain=0.00136
+   mer_category       {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 9, 3, 2]} splits=943 {'==': 943} gain=0.00594
+cLGBcat D fold0 seed1: fit rows 121189 (162s)
+cLGBcat D fold0 saved scratch_gap/PD_cLGBcat_aug.npy | max abs diff vs scratch_gap/PD_A_C_aug.npy: 4.259e-01, argmax rows differing 87
+INSPECT D_cLGBcat_f1_s0: pandas_categorical=[] splits=54000 all decision types={'<=': 46626, '==': 7374} nine columns: splits=7374 gain share=0.04816
+   receiver_type      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 2]} splits=6 {'==': 6} gain=0.00429
+   txn_type           {'min_value': -1, 'max_value': 4, 'values': [-1, 3, 4, 1, 0]} splits=172 {'==': 172} gain=0.0068
+   merchant_category  {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 10, 11, 6, 3, 9, 2]} splits=1159 {'==': 1159} gain=0.00662
+   app                {'min_value': -1, 'max_value': 4, 'values': [-1, 0, 1, 2, 3, 4]} splits=478 {'==': 478} gain=0.00188
+   snd_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=119 {'==': 119} gain=0.00043
+   snd_os             {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=129 {'==': 129} gain=0.00045
+   snd_bank_code      {'min_value': -1, 'max_value': 29, 'values': [-1, 27, 7, 21, 2, 29, 13, 28, 12, 22, 6, 24, 16, 15, 0, 23, 11, 19, 4, 14, 9, 25, 18, 8, 1, 20, 3, 17, 5, 10]} splits=4181 {'==': 4181} gain=0.02156
+   rcv_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 1, 2]} splits=120 {'==': 120} gain=0.00074
+   mer_category       {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 3, 9, 2]} splits=1010 {'==': 1010} gain=0.00539
+cLGBcat D fold1 seed0: fit rows 241961 (116s)
+INSPECT D_cLGBcat_f1_s1: pandas_categorical=[] splits=54000 all decision types={'<=': 46630, '==': 7370} nine columns: splits=7370 gain share=0.04144
+   receiver_type      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 2]} splits=6 {'==': 6} gain=0.00052
+   txn_type           {'min_value': -1, 'max_value': 4, 'values': [-1, 3, 4, 1, 0]} splits=187 {'==': 187} gain=0.0037
+   merchant_category  {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 3, 9, 2]} splits=1102 {'==': 1102} gain=0.00626
+   app                {'min_value': -1, 'max_value': 4, 'values': [-1, 0, 1, 2, 3, 4]} splits=469 {'==': 469} gain=0.00179
+   snd_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=122 {'==': 122} gain=0.00044
+   snd_os             {'min_value': -1, 'max_value': 2, 'values': [-1, 1, 2]} splits=127 {'==': 127} gain=0.00054
+   snd_bank_code      {'min_value': -1, 'max_value': 29, 'values': [-1, 27, 7, 21, 2, 29, 13, 28, 12, 22, 6, 24, 16, 15, 0, 23, 11, 19, 4, 14, 25, 9, 8, 18, 1, 20, 3, 17, 5, 10, 26]} splits=4270 {'==': 4270} gain=0.0218
+   rcv_kyc_level      {'min_value': -1, 'max_value': 2, 'values': [-1, 0, 1, 2]} splits=96 {'==': 96} gain=0.00247
+   mer_category       {'min_value': -1, 'max_value': 12, 'values': [-1, 0, 1, 7, 4, 5, 12, 11, 10, 6, 3, 9, 2]} splits=991 {'==': 991} gain=0.00392
+cLGBcat D fold1 seed1: fit rows 241925 (236s)
+cLGBcat D fold1 saved scratch_gap/PD_cLGBcat_sep.npy | max abs diff vs scratch_gap/PD_A_C_sep.npy: 2.231e-01, argmax rows differing 64
+cLGBcat D done

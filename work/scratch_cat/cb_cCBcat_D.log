@@ -1,0 +1,14 @@
+0:	learn: 1.5255884	total: 59.5ms	remaining: 59.5s
+250:	learn: 0.1671966	total: 10.7s	remaining: 31.9s
+500:	learn: 0.1625631	total: 21.5s	remaining: 21.4s
+750:	learn: 0.1590543	total: 32.2s	remaining: 10.7s
+999:	learn: 0.1553403	total: 43s	remaining: 0us
+cCBcat D fold0: {"params": {"task_type": "GPU", "iterations": 1000, "depth": 8, "learning_rate": 0.10000000149011612, "l2_leaf_reg": 3, "border_count": 128, "boosting_type": "Plain", "bootstrap_type": "Bayesian", "one_hot_max_size": 2, "simple_ctr": ["Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1", "FeatureFreq:CtrBorderCount=15:CtrBorderType=MinEntropy:Prior=0/1"], "combinations_ctr": ["Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1", "FeatureFreq:CtrBorderCount=15:CtrBorderType=Median:Prior=0/1"], "max_ctr_complexity": 4, "ctr_target_border_count": 1, "counter_calc_method": "SkipTest", "ctr_leaf_count_limit": null, "grow_policy": "SymmetricTree"}, "cat_feature_indices": [18, 19, 20, 21, 22, 23, 24, 25, 26], "fit_rows": 121123, "secs": 47, "nine_cols_importance_pct": {"receiver_type": 0.014, "txn_type": 1.046, "merchant_category": 0.47, "app": 1.684, "snd_kyc_level": 0.695, "snd_os": 0.382, "snd_bank_code": 0.354, "rcv_kyc_level": 1.0, "mer_category": 0.0}, "nine_cols_importance_sum_pct": 5.645}
+cCBcat Aug: macro argmax 0.4687 (LightGBM C 0.4666), log-loss 0.18093 (C 0.17940)
+0:	learn: 1.5253576	total: 241ms	remaining: 4m
+250:	learn: 0.1694245	total: 14.1s	remaining: 42s
+500:	learn: 0.1660388	total: 28.2s	remaining: 28.1s
+750:	learn: 0.1634815	total: 42.3s	remaining: 14s
+999:	learn: 0.1612454	total: 56.3s	remaining: 0us
+cCBcat D fold1: {"params": {"task_type": "GPU", "iterations": 1000, "depth": 8, "learning_rate": 0.10000000149011612, "l2_leaf_reg": 3, "border_count": 128, "boosting_type": "Plain", "bootstrap_type": "Bayesian", "one_hot_max_size": 2, "simple_ctr": ["Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1", "FeatureFreq:CtrBorderCount=15:CtrBorderType=MinEntropy:Prior=0/1"], "combinations_ctr": ["Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1", "FeatureFreq:CtrBorderCount=15:CtrBorderType=Median:Prior=0/1"], "max_ctr_complexity": 4, "ctr_target_border_count": 1, "counter_calc_method": "SkipTest", "ctr_leaf_count_limit": null, "grow_policy": "SymmetricTree"}, "cat_feature_indices": [18, 19, 20, 21, 22, 23, 24, 25, 26], "fit_rows": 241961, "secs": 61, "nine_cols_importance_pct": {"receiver_type": 0.0, "txn_type": 0.784, "merchant_category": 0.509, "app": 3.065, "snd_kyc_level": 0.862, "snd_os": 0.225, "snd_bank_code": 1.957, "rcv_kyc_level": 1.148, "mer_category": 0.0}, "nine_cols_importance_sum_pct": 8.55}
+cCBcat D done

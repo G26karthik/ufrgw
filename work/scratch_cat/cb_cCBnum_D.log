@@ -1,0 +1,14 @@
+0:	learn: 1.5255417	total: 49.4ms	remaining: 49.4s
+250:	learn: 0.1670949	total: 6.63s	remaining: 19.8s
+500:	learn: 0.1625539	total: 13.8s	remaining: 13.8s
+750:	learn: 0.1587801	total: 21.2s	remaining: 7.02s
+999:	learn: 0.1550606	total: 28.7s	remaining: 0us
+cCBnum D fold0: {"params": {"task_type": "GPU", "iterations": 1000, "depth": 8, "learning_rate": 0.10000000149011612, "l2_leaf_reg": 3, "border_count": 128, "boosting_type": "Plain", "bootstrap_type": "Bayesian", "one_hot_max_size": null, "simple_ctr": null, "combinations_ctr": null, "max_ctr_complexity": null, "ctr_target_border_count": null, "counter_calc_method": null, "ctr_leaf_count_limit": null, "grow_policy": "SymmetricTree"}, "cat_feature_indices": [], "fit_rows": 121123, "secs": 31, "nine_cols_importance_pct": {"receiver_type": 0.0, "txn_type": 0.704, "merchant_category": 1.187, "app": 1.552, "snd_kyc_level": 1.019, "snd_os": 0.128, "snd_bank_code": 5.194, "rcv_kyc_level": 0.34, "mer_category": 0.289}, "nine_cols_importance_sum_pct": 10.413}
+cCBnum Aug: macro argmax 0.4679 (LightGBM C 0.4666), log-loss 0.18110 (C 0.17940)
+0:	learn: 1.5253485	total: 60.9ms	remaining: 1m
+250:	learn: 0.1692002	total: 9.65s	remaining: 28.8s
+500:	learn: 0.1656061	total: 19.7s	remaining: 19.6s
+750:	learn: 0.1628456	total: 29.4s	remaining: 9.73s
+999:	learn: 0.1603125	total: 39s	remaining: 0us
+cCBnum D fold1: {"params": {"task_type": "GPU", "iterations": 1000, "depth": 8, "learning_rate": 0.10000000149011612, "l2_leaf_reg": 3, "border_count": 128, "boosting_type": "Plain", "bootstrap_type": "Bayesian", "one_hot_max_size": null, "simple_ctr": null, "combinations_ctr": null, "max_ctr_complexity": null, "ctr_target_border_count": null, "counter_calc_method": null, "ctr_leaf_count_limit": null, "grow_policy": "SymmetricTree"}, "cat_feature_indices": [], "fit_rows": 241961, "secs": 41, "nine_cols_importance_pct": {"receiver_type": 0.0, "txn_type": 0.623, "merchant_category": 1.107, "app": 2.124, "snd_kyc_level": 0.691, "snd_os": 0.419, "snd_bank_code": 5.123, "rcv_kyc_level": 0.399, "mer_category": 0.492}, "nine_cols_importance_sum_pct": 10.978}
+cCBnum D done

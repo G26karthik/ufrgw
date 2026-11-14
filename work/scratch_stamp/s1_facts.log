@@ -1,0 +1,118 @@
+[Float64] 1824642
+value counts of qr_vpa_mismatch by QR / receiver_type / is_test:
+shape: (23, 5)
+┌─────────┬───────┬───────────────┬─────────────────┬────────┐
+│ is_test ┆ qr    ┆ receiver_type ┆ qr_vpa_mismatch ┆ len    │
+│ ---     ┆ ---   ┆ ---           ┆ ---             ┆ ---    │
+│ bool    ┆ bool  ┆ str           ┆ f64             ┆ u32    │
+╞═════════╪═══════╪═══════════════╪═════════════════╪════════╡
+│ false   ┆ false ┆ MERCHANT      ┆ null            ┆ 438548 │
+│ false   ┆ false ┆ MERCHANT      ┆ 0.0             ┆ 2198   │
+│ false   ┆ false ┆ MERCHANT      ┆ 1.0             ┆ 8      │
+│ false   ┆ false ┆ P2P           ┆ null            ┆ 562552 │
+│ false   ┆ false ┆ P2P           ┆ 0.0             ┆ 5256   │
+│ false   ┆ false ┆ P2P           ┆ 1.0             ┆ 16     │
+│ false   ┆ true  ┆ MERCHANT      ┆ null            ┆ 678    │
+│ false   ┆ true  ┆ MERCHANT      ┆ 0.0             ┆ 550885 │
+│ false   ┆ true  ┆ MERCHANT      ┆ 1.0             ┆ 1720   │
+│ false   ┆ true  ┆ P2P           ┆ 0.0             ┆ 901    │
+│ false   ┆ true  ┆ P2P           ┆ 1.0             ┆ 1298   │
+│ true    ┆ false ┆ MERCHANT      ┆ null            ┆ 72712  │
+│ true    ┆ false ┆ MERCHANT      ┆ 0.0             ┆ 243    │
+│ true    ┆ false ┆ MERCHANT      ┆ 1.0             ┆ 1      │
+│ true    ┆ false ┆ P2P           ┆ null            ┆ 93833  │
+│ true    ┆ false ┆ P2P           ┆ 0.0             ┆ 886    │
+│ true    ┆ false ┆ P2P           ┆ 1.0             ┆ 4      │
+│ true    ┆ true  ┆ MERCHANT      ┆ null            ┆ 144    │
+│ true    ┆ true  ┆ MERCHANT      ┆ 0.0             ┆ 92177  │
+│ true    ┆ true  ┆ MERCHANT      ┆ 1.0             ┆ 263    │
+│ true    ┆ true  ┆ P2P           ┆ null            ┆ 140    │
+│ true    ┆ true  ┆ P2P           ┆ 0.0             ┆ 67     │
+│ true    ┆ true  ┆ P2P           ┆ 1.0             ┆ 112    │
+└─────────┴───────┴───────────────┴─────────────────┴────────┘
+train rows by month: non-QR rows, stamped non-QR, fraud-labelled share of stamped, QR-stamped
+shape: (4, 8)
+┌───────┬────────┬─────────────┬─────────────┬─────────────┬──────────┬────────────┬─────────────┐
+│ month ┆ nonqr  ┆ stamp_nonqr ┆ stamp_fraud ┆ stamp_legit ┆ stamp_qr ┆ fraud_rows ┆ fraud_nonqr │
+│ ---   ┆ ---    ┆ ---         ┆ ---         ┆ ---         ┆ ---      ┆ ---        ┆ ---         │
+│ i8    ┆ u32    ┆ u32         ┆ u32         ┆ u32         ┆ u32      ┆ u32        ┆ u32         │
+╞═══════╪════════╪═════════════╪═════════════╪═════════════╪══════════╪════════════╪═════════════╡
+│ 7     ┆ 339637 ┆ 2600        ┆ 2284        ┆ 316         ┆ 223      ┆ 19513      ┆ 14106       │
+│ 8     ┆ 339266 ┆ 2415        ┆ 2135        ┆ 280         ┆ 238      ┆ 19345      ┆ 13839       │
+│ 9     ┆ 329540 ┆ 2391        ┆ 2080        ┆ 311         ┆ 210      ┆ 18661      ┆ 13404       │
+│ 10    ┆ 135    ┆ 48          ┆ 41          ┆ 7           ┆ 7        ┆ 129        ┆ 117         │
+└───────┴────────┴─────────────┴─────────────┴─────────────┴──────────┴────────────┴─────────────┘
+stamped non-QR rows by month and label:
+shape: (24, 4)
+┌───────┬─────┬─────┬────────────────────┐
+│ month ┆ y   ┆ len ┆ label              │
+│ ---   ┆ --- ┆ --- ┆ ---                │
+│ i8    ┆ i8  ┆ u32 ┆ str                │
+╞═══════╪═════╪═════╪════════════════════╡
+│ 8     ┆ 0   ┆ 280 ┆ legit              │
+│ 8     ┆ 1   ┆ 361 ┆ mule_account       │
+│ 8     ┆ 2   ┆ 362 ┆ velocity_bot       │
+│ 8     ┆ 3   ┆ 342 ┆ layering_chain     │
+│ 8     ┆ 4   ┆ 213 ┆ sim_swap           │
+│ 8     ┆ 5   ┆ 164 ┆ account_takeover   │
+│ 8     ┆ 6   ┆ 286 ┆ phishing_collect   │
+│ 8     ┆ 7   ┆ 59  ┆ qr_swap            │
+│ 8     ┆ 8   ┆ 129 ┆ refund_abuse       │
+│ 8     ┆ 9   ┆ 92  ┆ fake_cashback      │
+│ 8     ┆ 10  ┆ 77  ┆ loan_app_extortion │
+│ 8     ┆ 11  ┆ 50  ┆ merchant_collusion │
+│ 9     ┆ 0   ┆ 311 ┆ legit              │
+│ 9     ┆ 1   ┆ 376 ┆ mule_account       │
+│ 9     ┆ 2   ┆ 395 ┆ velocity_bot       │
+│ 9     ┆ 3   ┆ 295 ┆ layering_chain     │
+│ 9     ┆ 4   ┆ 167 ┆ sim_swap           │
+│ 9     ┆ 5   ┆ 170 ┆ account_takeover   │
+│ 9     ┆ 6   ┆ 258 ┆ phishing_collect   │
+│ 9     ┆ 7   ┆ 53  ┆ qr_swap            │
+│ 9     ┆ 8   ┆ 134 ┆ refund_abuse       │
+│ 9     ┆ 9   ┆ 115 ┆ fake_cashback      │
+│ 9     ┆ 10  ┆ 68  ┆ loan_app_extortion │
+│ 9     ┆ 11  ┆ 49  ┆ merchant_collusion │
+└───────┴─────┴─────┴────────────────────┘
+fraud-labelled non-QR rows by class: stamped share (Aug, Sep)
+shape: (22, 5)
+┌───────┬─────┬──────┬─────────┬────────────────────┐
+│ month ┆ y   ┆ n    ┆ stamped ┆ label              │
+│ ---   ┆ --- ┆ ---  ┆ ---     ┆ ---                │
+│ i8    ┆ i8  ┆ u32  ┆ f64     ┆ str                │
+╞═══════╪═════╪══════╪═════════╪════════════════════╡
+│ 8     ┆ 1   ┆ 2598 ┆ 0.139   ┆ mule_account       │
+│ 8     ┆ 2   ┆ 2014 ┆ 0.18    ┆ velocity_bot       │
+│ 8     ┆ 3   ┆ 1814 ┆ 0.189   ┆ layering_chain     │
+│ 8     ┆ 4   ┆ 1086 ┆ 0.196   ┆ sim_swap           │
+│ 8     ┆ 5   ┆ 1027 ┆ 0.16    ┆ account_takeover   │
+│ 8     ┆ 6   ┆ 1700 ┆ 0.168   ┆ phishing_collect   │
+│ 8     ┆ 7   ┆ 1145 ┆ 0.052   ┆ qr_swap            │
+│ 8     ┆ 8   ┆ 817  ┆ 0.158   ┆ refund_abuse       │
+│ 8     ┆ 9   ┆ 597  ┆ 0.154   ┆ fake_cashback      │
+│ 8     ┆ 10  ┆ 502  ┆ 0.153   ┆ loan_app_extortion │
+│ 8     ┆ 11  ┆ 539  ┆ 0.093   ┆ merchant_collusion │
+│ 9     ┆ 1   ┆ 2503 ┆ 0.15    ┆ mule_account       │
+│ 9     ┆ 2   ┆ 2063 ┆ 0.191   ┆ velocity_bot       │
+│ 9     ┆ 3   ┆ 1721 ┆ 0.171   ┆ layering_chain     │
+│ 9     ┆ 4   ┆ 981  ┆ 0.17    ┆ sim_swap           │
+│ 9     ┆ 5   ┆ 986  ┆ 0.172   ┆ account_takeover   │
+│ 9     ┆ 6   ┆ 1651 ┆ 0.156   ┆ phishing_collect   │
+│ 9     ┆ 7   ┆ 1058 ┆ 0.05    ┆ qr_swap            │
+│ 9     ┆ 8   ┆ 806  ┆ 0.166   ┆ refund_abuse       │
+│ 9     ┆ 9   ┆ 643  ┆ 0.179   ┆ fake_cashback      │
+│ 9     ┆ 10  ┆ 465  ┆ 0.146   ┆ loan_app_extortion │
+│ 9     ┆ 11  ┆ 527  ┆ 0.093   ┆ merchant_collusion │
+└───────┴─────┴──────┴─────────┴────────────────────┘
+stamped non-QR rows by txn_type / receiver_type (train):
+shape: (4, 3)
+┌──────────┬───────────────┬──────┐
+│ txn_type ┆ receiver_type ┆ len  │
+│ ---      ┆ ---           ┆ ---  │
+│ str      ┆ str           ┆ u32  │
+╞══════════╪═══════════════╪══════╡
+│ PAY      ┆ P2P           ┆ 4415 │
+│ PAY      ┆ MERCHANT      ┆ 1821 │
+│ COLLECT  ┆ P2P           ┆ 841  │
+│ REFUND   ┆ MERCHANT      ┆ 377  │
+└──────────┴───────────────┴──────┘
