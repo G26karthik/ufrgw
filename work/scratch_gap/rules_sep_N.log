@@ -1,0 +1,7 @@
+benchmark N: decode before the later layers macro 0.5070
+ZPROP alone                rows changed    8 | corrected    5 | newly wrong    0 | wrong->wrong    3 | macro 0.5074 (+0.0004, boot +0.0000..+0.0010) | accoun +0.003 sim_sw +0.001 mule_a +0.000
+CZ alone                   rows changed    3 | corrected    2 | newly wrong    0 | wrong->wrong    1 | macro 0.5071 (+0.0001, boot +0.0000..+0.0002) | mule_a +0.001 layeri +0.000 legit +0.000
+LFM alone                  rows changed   28 | corrected   23 | newly wrong    1 | wrong->wrong    4 | macro 0.5079 (+0.0009, boot +0.0000..+0.0020) | veloci +0.007 mule_a +0.003 layeri +0.001
+DD alone                   rows changed   11 | corrected    7 | newly wrong    4 | wrong->wrong    0 | macro 0.5072 (+0.0002, boot +0.0001..+0.0005) | phishi +0.003 legit +0.000 mule_a +0.000
+rows hit by 2 or more layers: 1, of them with different outputs: 1
+union, production order    rows changed   49 | corrected   36 | newly wrong    5 | wrong->wrong    8 | macro 0.5086 (+0.0016, boot +0.0005..+0.0028) | veloci +0.007 mule_a +0.004 accoun +0.003

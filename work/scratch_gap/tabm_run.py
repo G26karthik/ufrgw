@@ -8,7 +8,7 @@ Configs: plain = TabM, 3 blocks x 512, dropout 0.1, k=32.  ple = same backbone w
   (48 quantile bins, d=16), the package default "tabm-mini" for embedded inputs.
 fold0 (fit Jul): early stopping on August (development) weighted log-loss, patience 5, max 40 epochs.
 fold1 (fit Jul+Aug): the epoch count chosen in fold0; September labels are never loaded here.
-usage (cwd=work, PYTHONPATH=.): python scratch_gap/tabm_run.py plain|ple SEED
+usage (cwd=work, PYTHONPATH=.): python scratch_gap/tabm_run.py plain|ple SEED [N|D]
   -> scratch_gap/PN_TABM<cfg><seed>_aug.npy, _sep.npy (mean of the k softmax outputs), tabm_<cfg><seed>.json"""
 import json, sys, time
 import numpy as np
@@ -21,6 +21,7 @@ from rtdl_num_embeddings import PiecewiseLinearEmbeddings, compute_bins
 from quick_eval import CAT_COLS, cat_dtypes
 
 CFG, SEED = sys.argv[1], int(sys.argv[2]); TAG = f"TABM{CFG}{SEED}"
+BM = sys.argv[3] if len(sys.argv) > 3 else "N"  # benchmark: N (label-hidden worlds) or D (production matrix, scratch_gap/d_data.py)
 K, LF, BS, LR, WD, MAXE, PAT = 12, 0.2, 1024, 2e-3, 3e-4, 40, 5
 META = ("txn_id", "month", "is_test", "y_fit"); dev = torch.device("cuda"); c = pl.col
 CH = 1024 if CFG == "ple" else 16384  # prediction chunk: the embedded input is copied k times (16384 rows overflowed the 8 GB card)
@@ -52,7 +53,7 @@ def predict(model, xn, xc):
 
 
 def run(fold, epochs=None, devset=None):
-    D = pl.read_parquet(f"scratch_gap/N_f{fold}.parquet"); feats = [k for k in D.columns if k not in META]
+    D = pl.read_parquet(f"scratch_gap/{BM}_f{fold}.parquet"); feats = [k for k in D.columns if k not in META]
     num = [k for k in feats if k not in CAT_COLS]; cards = [len(cat_dtypes()[k].categories) for k in CAT_COLS]
     rng = np.random.default_rng(SEED); torch.manual_seed(SEED)
     fit = D.filter(~c("is_test")); y = fit["y_fit"].to_numpy().astype(np.int64)
@@ -94,16 +95,16 @@ def run(fold, epochs=None, devset=None):
             break
     if best_state is not None:
         model.load_state_dict(best_state)
-    np.save(f"scratch_gap/PN_{TAG}_{'aug' if fold == 0 else 'sep'}.npy", predict(model, Hn, Hc))
+    np.save(f"scratch_gap/P{BM}_{TAG}_{'aug' if fold == 0 else 'sep'}.npy", predict(model, Hn, Hc))
     return best_ep, best
 
 
 if __name__ == "__main__":
-    rows = pl.read_parquet("scratch_gap/N_aug_rows.parquet")  # August = development: labels used for stopping only
+    rows = pl.read_parquet(f"scratch_gap/{BM}_aug_rows.parquet")  # August = development: labels used for stopping only
     ya = rows["y_true"].to_numpy().astype(np.int64); r = np.random.default_rng(0)
     idx = np.flatnonzero((ya != 0) | (r.random(len(ya)) < LF))
     ep, ll = run(0, devset=(idx, ya[idx], np.where(ya[idx] == 0, 1 / LF, 1.0)))
     print(f"{TAG}: fold0 best epoch {ep}, dev logloss {ll:.5f}", flush=True)
     run(1, epochs=ep)
-    json.dump(dict(tag=TAG, cfg=CFG, seed=SEED, epochs=ep, dev_logloss=ll, lr=LR, wd=WD, batch=BS), open(f"scratch_gap/tabm_{CFG}{SEED}.json", "w"))
+    json.dump(dict(tag=TAG, cfg=CFG, seed=SEED, epochs=ep, dev_logloss=ll, lr=LR, wd=WD, batch=BS), open(f"scratch_gap/tabm_{BM}_{CFG}{SEED}.json", "w"))
     print(f"{TAG}: done", flush=True)

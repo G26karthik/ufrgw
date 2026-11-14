@@ -1,0 +1,1 @@
+{"tag": "TABMple1", "cfg": "ple", "seed": 1, "epochs": 7, "dev_logloss": 0.17855131839005778, "lr": 0.002, "wd": 0.0003, "batch": 1024}

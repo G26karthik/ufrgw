@@ -1,0 +1,57 @@
+rows differing from ts_judge_h6: {'c2': 13, 'acct': 13, 'zmax': 1, 'final1': 26, 'v3': 28, 'dd': 77}
+final1 rows that differ from ts_judge_h6, by source and by what dd_final says:
+shape: (5, 3)
+┌─────────────┬─────────────────────────────────┬─────┐
+│ source      ┆ in_dd_final                     ┆ len │
+│ ---         ┆ ---                             ┆ --- │
+│ str         ┆ str                             ┆ u32 │
+╞═════════════╪═════════════════════════════════╪═════╡
+│ art_acct    ┆ same as final1 (reproduced)     ┆ 8   │
+│ art_acct    ┆ still ts_judge_h6 label (absen… ┆ 2   │
+│ art_acct    ┆ third label (conflict)          ┆ 3   │
+│ art_zonemax ┆ still ts_judge_h6 label (absen… ┆ 1   │
+│ core2 model ┆ still ts_judge_h6 label (absen… ┆ 12  │
+└─────────────┴─────────────────────────────────┴─────┘
+shape: (11, 5)
+┌─────────────┬──────────────────┬──────────────────┬──────────────────┬─────┐
+│ source      ┆ h6               ┆ final1           ┆ dd               ┆ len │
+│ ---         ┆ ---              ┆ ---              ┆ ---              ┆ --- │
+│ str         ┆ str              ┆ str              ┆ str              ┆ u32 │
+╞═════════════╪══════════════════╪══════════════════╪══════════════════╪═════╡
+│ art_acct    ┆ mule_account     ┆ velocity_bot     ┆ velocity_bot     ┆ 8   │
+│ art_acct    ┆ layering_chain   ┆ velocity_bot     ┆ mule_account     ┆ 3   │
+│ art_acct    ┆ mule_account     ┆ velocity_bot     ┆ mule_account     ┆ 2   │
+│ art_zonemax ┆ mule_account     ┆ velocity_bot     ┆ mule_account     ┆ 1   │
+│ core2 model ┆ phishing_collect ┆ legit            ┆ phishing_collect ┆ 4   │
+│ core2 model ┆ phishing_collect ┆ fake_cashback    ┆ phishing_collect ┆ 2   │
+│ core2 model ┆ mule_account     ┆ layering_chain   ┆ mule_account     ┆ 2   │
+│ core2 model ┆ legit            ┆ layering_chain   ┆ legit            ┆ 1   │
+│ core2 model ┆ fake_cashback    ┆ phishing_collect ┆ fake_cashback    ┆ 1   │
+│ core2 model ┆ velocity_bot     ┆ mule_account     ┆ velocity_bot     ┆ 1   │
+│ core2 model ┆ refund_abuse     ┆ legit            ┆ refund_abuse     ┆ 1   │
+└─────────────┴──────────────────┴──────────────────┴──────────────────┴─────┘
+shape: (18, 10)
+┌────────────┬─────────────┬──────────────────┬──────────────────┬───┬─────────────┬───────────┬─────────┬──────────┐
+│ txn_id     ┆ source      ┆ h6               ┆ final1           ┆ … ┆ receiver_id ┆ device_id ┆ amount  ┆ txn_type │
+│ ---        ┆ ---         ┆ ---              ┆ ---              ┆   ┆ ---         ┆ ---       ┆ ---     ┆ ---      │
+│ str        ┆ str         ┆ str              ┆ str              ┆   ┆ str         ┆ str       ┆ f64     ┆ str      │
+╞════════════╪═════════════╪══════════════════╪══════════════════╪═══╪═════════════╪═══════════╪═════════╪══════════╡
+│ TX63afe92f ┆ art_acct    ┆ layering_chain   ┆ velocity_bot     ┆ … ┆ AC291816    ┆ DV0313512 ┆ 840.0   ┆ PAY      │
+│ TXa4dee0c2 ┆ art_acct    ┆ layering_chain   ┆ velocity_bot     ┆ … ┆ AC291816    ┆ DV0320119 ┆ 1250.0  ┆ PAY      │
+│ TX2927ddfc ┆ art_acct    ┆ mule_account     ┆ velocity_bot     ┆ … ┆ AC291816    ┆ DV0070731 ┆ 3500.0  ┆ PAY      │
+│ TX200b82bf ┆ art_acct    ┆ layering_chain   ┆ velocity_bot     ┆ … ┆ AC291816    ┆ DV0407607 ┆ 3280.0  ┆ PAY      │
+│ TXe787a38e ┆ art_acct    ┆ mule_account     ┆ velocity_bot     ┆ … ┆ AC291816    ┆ DV0388417 ┆ 1150.0  ┆ PAY      │
+│ TX743a3724 ┆ art_zonemax ┆ mule_account     ┆ velocity_bot     ┆ … ┆ AC041870    ┆ DV0473748 ┆ 3790.0  ┆ PAY      │
+│ TXffb4ef65 ┆ core2 model ┆ velocity_bot     ┆ mule_account     ┆ … ┆ AC083650    ┆ DV0127019 ┆ 920.0   ┆ PAY      │
+│ TX10754001 ┆ core2 model ┆ phishing_collect ┆ legit            ┆ … ┆ AC115735    ┆ DV0359155 ┆ 1970.0  ┆ COLLECT  │
+│ TXf591f8e7 ┆ core2 model ┆ legit            ┆ layering_chain   ┆ … ┆ AC151804    ┆ DV0039015 ┆ 320.0   ┆ PAY      │
+│ TX1bb042e8 ┆ core2 model ┆ fake_cashback    ┆ phishing_collect ┆ … ┆ AC178725    ┆ DV0392442 ┆ 18133.0 ┆ PAY      │
+│ TX6a3ada77 ┆ core2 model ┆ phishing_collect ┆ legit            ┆ … ┆ AC217988    ┆ DV0100984 ┆ 1980.0  ┆ COLLECT  │
+│ TX96e28c86 ┆ core2 model ┆ phishing_collect ┆ fake_cashback    ┆ … ┆ AC231534    ┆ DV0193584 ┆ 2.0     ┆ PAY      │
+│ TXf0208897 ┆ core2 model ┆ phishing_collect ┆ fake_cashback    ┆ … ┆ AC283228    ┆ DV0028527 ┆ 10.0    ┆ PAY      │
+│ TX9cba4eb3 ┆ core2 model ┆ phishing_collect ┆ legit            ┆ … ┆ AC349038    ┆ DV0122701 ┆ 1980.0  ┆ COLLECT  │
+│ TX1d444be7 ┆ core2 model ┆ phishing_collect ┆ legit            ┆ … ┆ AC387642    ┆ DV0363008 ┆ 10.0    ┆ PAY      │
+│ TX7755c193 ┆ core2 model ┆ mule_account     ┆ layering_chain   ┆ … ┆ AC392297    ┆ DV0192601 ┆ 1070.0  ┆ PAY      │
+│ TX78dc5f40 ┆ core2 model ┆ mule_account     ┆ layering_chain   ┆ … ┆ AC392297    ┆ DV0148532 ┆ 1890.0  ┆ PAY      │
+│ TXb05075a8 ┆ core2 model ┆ refund_abuse     ┆ legit            ┆ … ┆ MR028817    ┆ DV0379340 ┆ 2752.42 ┆ REFUND   │
+└────────────┴─────────────┴──────────────────┴──────────────────┴───┴─────────────┴───────────┴─────────┴──────────┘

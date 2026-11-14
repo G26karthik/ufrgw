@@ -1,0 +1,14 @@
+h6         aug: rows 526852 argmax macro 0.4672
+h6         sep: rows 509996 argmax macro 0.4800
+c2s6       aug: rows 526852 argmax macro 0.4702
+c2s6       sep: rows 509996 argmax macro 0.4817
+ls_halves  aug: rows 526852 argmax macro 0.4706
+ls_halves  sep: rows 509996 argmax macro 0.4800
+aug3btta   aug: rows 526852 argmax macro 0.4697
+aug3btta   sep: rows 509996 argmax macro 0.4809
+xgbC       aug: rows 526852 argmax macro 0.4612
+xgbC       sep: rows 509996 argmax macro 0.4749
+gpu_cat    aug: rows 526852 argmax macro 0.4605
+gpu_cat    sep: rows 509996 argmax macro 0.4658
+written D fold 0 (1053917, 194)
+written D fold 1 (1563913, 194)
