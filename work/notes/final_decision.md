@@ -1,4 +1,4 @@
-# Final decision report (15 Nov 2026, 03:25 IST)
+# Final decision report (15 Nov 2026, 03:15 IST)
 
 ## Decision
 - `subs/dd_final.csv` stays the reference file (public .5505, SHA-256 `8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd`). Unchanged.
