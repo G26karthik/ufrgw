@@ -1,0 +1,14 @@
+--- before decoder: fraud-labelled rows 18661, C calls legit 11921
+kA    missed fraud now typed right 25 | missed fraud now flagged with a wrong type 3 | fraud rows C had right, now wrong 66 (now legit 32) | new legit rows called fraud 45 | legit rows no longer called fraud 20
+      recovered by class: mule_ 4 veloc 0 layer 2 sim_s 0 accou 0 phish 4 qr_sw 1 refun 5 fake_ 0 loan_ 0 merch 9
+      lost by class:      mule_ 8 veloc 0 layer 1 sim_s 4 accou 1 phish 40 qr_sw 8 refun 1 fake_ 3 loan_ 0 merch 0
+kBL   missed fraud now typed right 15 | missed fraud now flagged with a wrong type 0 | fraud rows C had right, now wrong 28 (now legit 5) | new legit rows called fraud 13 | legit rows no longer called fraud 7
+      recovered by class: mule_ 4 veloc 0 layer 3 sim_s 0 accou 0 phish 2 qr_sw 0 refun 4 fake_ 0 loan_ 0 merch 2
+      lost by class:      mule_ 0 veloc 0 layer 0 sim_s 0 accou 0 phish 26 qr_sw 2 refun 0 fake_ 0 loan_ 0 merch 0
+--- after decoder: fraud-labelled rows 18661, C calls legit 11596
+kA    missed fraud now typed right 26 | missed fraud now flagged with a wrong type 4 | fraud rows C had right, now wrong 64 (now legit 30) | new legit rows called fraud 48 | legit rows no longer called fraud 18
+      recovered by class: mule_ 4 veloc 0 layer 3 sim_s 0 accou 0 phish 4 qr_sw 1 refun 5 fake_ 0 loan_ 0 merch 9
+      lost by class:      mule_ 9 veloc 0 layer 1 sim_s 3 accou 0 phish 39 qr_sw 8 refun 1 fake_ 3 loan_ 0 merch 0
+kBL   missed fraud now typed right 15 | missed fraud now flagged with a wrong type 0 | fraud rows C had right, now wrong 29 (now legit 5) | new legit rows called fraud 13 | legit rows no longer called fraud 7
+      recovered by class: mule_ 4 veloc 0 layer 3 sim_s 0 accou 0 phish 2 qr_sw 0 refun 4 fake_ 0 loan_ 0 merch 2
+      lost by class:      mule_ 0 veloc 0 layer 0 sim_s 0 accou 1 phish 26 qr_sw 2 refun 0 fake_ 0 loan_ 0 merch 0

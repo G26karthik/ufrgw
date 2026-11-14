@@ -1,0 +1,6 @@
+August: rows 526852, fraud-labelled 19345, C calls legit 518920, of which fraud-labelled (missed) 12371
+AUC missed fraud vs legit among C-legit rows (higher = more fraud-like):
+  -kn_rmin_k1/k5/k15 (nearest fraud bank / legit bank): 0.503 0.505 0.505
+  kn_c0_k1/k5/k15 (distance to the legit bank): 0.509 0.509 0.508
+  -kn_r5_c<class>, that class's missed rows vs legit: mule_ 0.506 veloc 0.503 layer 0.500 sim_s 0.504 accou 0.504 phish 0.516 qr_sw 0.505 refun 0.502 fake_ 0.499 loan_ 0.496 merch 0.502
+  1 - P(legit): C 0.506 | kA 0.504

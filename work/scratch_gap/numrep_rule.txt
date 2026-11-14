@@ -1,0 +1,4 @@
+Declared 2026-11-14 22:13 IST before any confirmation run was read.
+First readings (N, seeds 0,1, September after decoder vs C): A_BSEL +.0011 (+.0001..+.0020), A_B1023 +.0009 (+.0001..+.0017), A_EXACT +.0020 (+.0006..+.0031); August after decoder +.0005, +.0006, +.0002.
+Confirmation runs: (1) benchmark N with seeds 2,3, reference A_C trained in the same harness with seeds 2,3; (2) benchmark D with seeds 0,1, reference A_C trained in the same harness.
+Rule: an arm is 'supported' only if its September after-decoder change is positive with the paired event-bootstrap 5%..95% interval above zero in BOTH confirmations and its August after-decoder change is >= 0 in both. One of two = 'promising but unconfirmed'. Neither = 'no detected difference'.

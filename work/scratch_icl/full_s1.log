@@ -1,0 +1,4 @@
+context 38257 rows, class counts [20000, 2500, 2500, 2325, 1409, 1437, 2280, 2421, 1041, 888, 678, 778]
+  20000/526852 rows 51s VRAM peak 3.9 GB (device used 5.6 GB)
+  220000/526852 rows 649s VRAM peak 3.9 GB (device used 5.6 GB)
+  420000/526852 rows 1177s VRAM peak 3.9 GB (device used 5.6 GB)

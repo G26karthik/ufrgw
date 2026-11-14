@@ -1,0 +1,3 @@
+seed 0: gain share of the 50 new columns 0.5212; new columns in the top 30: ['kn_rmin_k5', 'kn_r5_c3', 'kn_rmin_k15', 'kn_r5_c6', 'kn_r5_c7', 'kn_r5_c1', 'kn_r5_c8', 'kn_c7_k1', 'kn_r5_c4', 'kn_r5_c9', 'kn_rmin_k1']
+seed 1: gain share of the 50 new columns 0.4860; new columns in the top 30: ['kn_rmin_k5', 'kn_r5_c1', 'kn_r5_c6', 'kn_rmin_k15', 'kn_r5_c7', 'kn_r5_c3', 'kn_r5_c8', 'kn_r5_c4', 'kn_r5_c2', 'kn_rmin_k1']
+kA fold1 saved scratch_gap/PN_kA_sep.npy (331s); vs C: max abs probability difference 0.69683, argmax differs on 259 of 509996 rows

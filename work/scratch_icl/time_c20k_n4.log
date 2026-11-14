@@ -1,0 +1,10 @@
+context 20344 rows, class counts [10000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 888, 678, 778]
+  50000/10000 rows 58s VRAM peak 6.8 GB (device used 6.5 GB)
+  predicted 10000 rows in 58s (173 rows/s)
+  50000/49345 rows 118s VRAM peak 3.8 GB (device used 5.7 GB)
+  predicted 49345 rows in 118s (417 rows/s)
+chunking check on the first 10000 rows: max abs diff 0.0348, mean 0.000062, share of rows with a diff > 0.01 0.0054
+mean predicted share (weighted) vs fit prior: [0.968, 0.0057, 0.0042, 0.0038, 0.0023, 0.0023, 0.0037, 0.0042, 0.002, 0.0014, 0.0012, 0.0013] [0.963, 0.0065, 0.0054, 0.0044, 0.0027, 0.0027, 0.0043, 0.0046, 0.002, 0.0017, 0.0013, 0.0015]
+C              weighted log-loss 0.17974 | mean fraud-class AP 0.2666 | AP [0.233, 0.318, 0.385, 0.191, 0.178, 0.293, 0.338, 0.369, 0.233, 0.153, 0.244]
+ICL            weighted log-loss 0.18127 | mean fraud-class AP 0.2643 | AP [0.227, 0.321, 0.384, 0.178, 0.15, 0.29, 0.317, 0.364, 0.233, 0.179, 0.265]
+0.65C+0.35ICL  weighted log-loss 0.17913 | mean fraud-class AP 0.2666 | AP [0.231, 0.325, 0.385, 0.19, 0.173, 0.29, 0.332, 0.368, 0.233, 0.154, 0.251]

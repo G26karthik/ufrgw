@@ -1,0 +1,5 @@
+benchmark N, August rows 526852, halves 263556 / 263296
+A_Cb2      August before decoder 0.4711 (0.4647, 0.4776) | after decoder 0.4992 (0.4934, 0.5050)
+A_BSELb2   August before decoder 0.4697 (0.4621, 0.4773) | after decoder 0.4989 (0.4930, 0.5048)
+A_B1023b2  August before decoder 0.4722 (0.4656, 0.4789) | after decoder 0.4999 (0.4943, 0.5054)
+A_EXACTb2  August before decoder 0.4694 (0.4618, 0.4769) | after decoder 0.4977 (0.4916, 0.5038)

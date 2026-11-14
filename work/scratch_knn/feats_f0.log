@@ -1,0 +1,22 @@
+fold0: rows 1053917, fit 527065, held scored 526852, fit rows queried 202370, fraud fit rows without an event id 0
+missing share of CONT columns: {'flow__rin_n12h': 0.636, 'flow__sin_n24h': 0.636, 'flow__rout_n6h': 0.636}
+space (1053917, 43), legit bank size 101510 (9s)
+  fold 0: queries 20155 (14s)
+  fold 1: queries 20124 (18s)
+  fold 2: queries 20084 (22s)
+  fold 3: queries 20120 (26s)
+  fold 4: queries 20600 (31s)
+  fold 5: queries 20194 (35s)
+  fold 6: queries 20447 (39s)
+  fold 7: queries 20355 (44s)
+  fold 8: queries 20103 (48s)
+  fold 9: queries 20188 (53s)
+  held: queries 526852 (170s)
+bank sizes per class (legit, then fraud classes in T.LABELS order):
+  cross-fit min [101510, 3008, 2417, 2021, 1242, 1277, 2027, 2151, 916, 782, 592, 683] 
+  cross-fit max [101510, 3169, 2634, 2128, 1294, 1314, 2071, 2209, 954, 820, 622, 716] 
+  held (full)   [101510, 3422, 2834, 2325, 1409, 1437, 2280, 2421, 1041, 888, 678, 778]
+density check, median distance to the 5th neighbour, fit legit rows (cross-fit) vs held rows (full bank):
+  c0 1.645/1.655 c1 2.467/2.445 c2 2.546/2.523 c3 2.610/2.586 c4 2.762/2.738 c5 2.732/2.707 c6 2.600/2.578 c7 2.558/2.535 c8 2.847/2.820 c9 2.918/2.888 c10 2.971/2.939 c11 2.878/2.849
+own-class check, fit rows of class k: share with distance 0 to the 1st own-class neighbour: c0 0.000 c1 0.000 c2 0.000 c3 0.000 c4 0.000 c5 0.000 c6 0.000 c7 0.000 c8 0.000 c9 0.000 c10 0.000 c11 0.000
+fold0 written, 50 columns (174s)

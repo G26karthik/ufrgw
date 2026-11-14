@@ -1,0 +1,7 @@
+A_BSEL fold0 done (79s)
+A_BSEL fold1 done (110s)
+A_B1023 fold0 done (103s)
+A_B1023 fold1 done (323s)
+A_EXACT added ['xc_amount', 'xid_amount', 'xc_balance_before', 'xc_sim_age_hours', 'xid_sim_age_hours', 'xc_device_age_days', 'xid_device_age_days', 'xc_login_to_txn_sec'] | categories: {'xid_amount': 112, 'xid_sim_age_hours': 0, 'xid_device_age_days': 0}
+A_EXACT fold0 done (332s)
+A_EXACT fold1 done (308s)

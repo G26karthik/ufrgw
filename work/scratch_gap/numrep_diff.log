@@ -1,0 +1,6 @@
+A_BSEL pre changed 50 corrected 25 newly wrong 17 missed fraud recovered 10 fake_c +0.011 mercha +0.003 phishi -0.003
+A_BSEL q changed 51 corrected 25 newly wrong 18 missed fraud recovered 10 fake_c +0.010 mercha +0.003 phishi -0.003
+A_B1023 pre changed 55 corrected 30 newly wrong 19 missed fraud recovered 9 fake_c +0.008 phishi -0.003 refund +0.002
+A_B1023 q changed 54 corrected 30 newly wrong 18 missed fraud recovered 10 fake_c +0.007 phishi -0.003 refund +0.002
+A_EXACT pre changed 155 corrected 68 newly wrong 67 missed fraud recovered 33 fake_c +0.015 mercha +0.013 phishi -0.006
+A_EXACT q changed 145 corrected 63 newly wrong 63 missed fraud recovered 33 mercha +0.012 fake_c +0.011 phishi -0.006
