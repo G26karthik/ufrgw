@@ -1,0 +1,15 @@
+A [7] 8 seed 0
+A [7] 8 seed 1
+A [7, 8] 9 seed 0
+A [7, 8] 9 seed 1
+M [7] 8 seed 0
+M [7] 8 seed 1
+M [7, 8] 9 seed 0
+M [7, 8] 9 seed 1
+A real-fit, real Sep (reference)                     macro 0.4824 legit_fp   812 | mule_=0.401 veloc=0.484 layer=0.530 sim_s=0.396 accou=0.384 phish=0.448 qr_sw=0.488 refun=0.512 fake_=0.363 loan_=0.393 merch=0.402
+A real-fit, Oct-like Sep, bias from real Aug         macro 0.4781 legit_fp  1192 | mule_=0.401 veloc=0.484 layer=0.529 sim_s=0.396 accou=0.384 phish=0.401 qr_sw=0.488 refun=0.510 fake_=0.363 loan_=0.393 merch=0.401
+A real-fit, Oct-like Sep, bias from Oct-like Aug     macro 0.4803 legit_fp   915 | mule_=0.401 veloc=0.484 layer=0.529 sim_s=0.396 accou=0.384 phish=0.421 qr_sw=0.488 refun=0.510 fake_=0.374 loan_=0.389 merch=0.401
+M scaled-fit, Oct-like Sep, bias from Oct-like Aug   macro 0.4786 legit_fp   868 | mule_=0.394 veloc=0.484 layer=0.530 sim_s=0.392 accou=0.383 phish=0.454 qr_sw=0.486 refun=0.504 fake_=0.337 loan_=0.389 merch=0.400
+M scaled-fit, real Sep, bias from Oct-like Aug       macro 0.4221 legit_fp 89242 | mule_=0.029 veloc=0.484 layer=0.441 sim_s=0.390 accou=0.382 phish=0.348 qr_sw=0.484 refun=0.505 fake_=0.337 loan_=0.375 merch=0.400
+A real-fit, Oct-like Sep, bias from Oct-like Aug minus 'A real-fit, Oct-like Sep, bias from real Aug': full +0.0023 | event bootstrap 5%..95% +0.0013..+0.0031 | 30/70 splits: public +0.0023 sd 0.0008, private +0.0022 sd 0.0003, private gain in 100%
+M scaled-fit, Oct-like Sep, bias from Oct-like Aug minus 'A real-fit, Oct-like Sep, bias from real Aug': full +0.0005 | event bootstrap 5%..95% -0.0016..+0.0034 | 30/70 splits: public +0.0006 sd 0.0017, private +0.0005 sd 0.0007, private gain in 73%

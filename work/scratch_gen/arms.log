@@ -1,0 +1,36 @@
+A fit[7]->val8 seed0: rows 121123 (generated 0, src weight 1.0) 40s
+A fit[7]->val8 seed1: rows 121189 (generated 0, src weight 1.0) 37s
+A val8: macro argmax 0.4666 phishing 0.444 fake_cashback 0.322
+A fit[7, 8]->val9 seed0: rows 241961 (generated 0, src weight 1.0) 56s
+A fit[7, 8]->val9 seed1: rows 241925 (generated 0, src weight 1.0) 56s
+A val9: macro argmax 0.4791 phishing 0.441 fake_cashback 0.345
+C1 fit[7]->val8 seed0: rows 121653 (generated 530, src weight 1.0) 38s
+C1 fit[7]->val8 seed1: rows 121717 (generated 528, src weight 1.0) 35s
+C1 val8: macro argmax 0.4672 phishing 0.453 fake_cashback 0.325
+C1 fit[7, 8]->val9 seed0: rows 242953 (generated 992, src weight 1.0) 40s
+C1 fit[7, 8]->val9 seed1: rows 242918 (generated 993, src weight 1.0) 39s
+C1 val9: macro argmax 0.4797 phishing 0.447 fake_cashback 0.343
+B1 fit[7]->val8 seed0: rows 121123 (generated 0, src weight 2.0) 28s
+B1 fit[7]->val8 seed1: rows 121189 (generated 0, src weight 2.0) 32s
+B1 val8: macro argmax 0.4686 phishing 0.449 fake_cashback 0.335
+B1 fit[7, 8]->val9 seed0: rows 241961 (generated 0, src weight 2.0) 39s
+B1 fit[7, 8]->val9 seed1: rows 241925 (generated 0, src weight 2.0) 39s
+B1 val9: macro argmax 0.4789 phishing 0.442 fake_cashback 0.343
+BR fit[7]->val8 seed0: rows 121123 (generated 0, src weight 1.0) 25s
+BR fit[7]->val8 seed1: rows 121189 (generated 0, src weight 1.0) 25s
+BR val8: macro argmax 0.4697 phishing 0.458 fake_cashback 0.334
+BR fit[7, 8]->val9 seed0: rows 241961 (generated 0, src weight 1.0) 35s
+BR fit[7, 8]->val9 seed1: rows 241925 (generated 0, src weight 1.0) 34s
+BR val9: macro argmax 0.4772 phishing 0.444 fake_cashback 0.346
+C05 fit[7]->val8 seed0: rows 121421 (generated 298, src weight 1.0) 28s
+C05 fit[7]->val8 seed1: rows 121485 (generated 296, src weight 1.0) 28s
+C05 val8: macro argmax 0.4692 phishing 0.451 fake_cashback 0.339
+C05 fit[7, 8]->val9 seed0: rows 242478 (generated 517, src weight 1.0) 39s
+C05 fit[7, 8]->val9 seed1: rows 242437 (generated 512, src weight 1.0) 57s
+C05 val9: macro argmax 0.4790 phishing 0.445 fake_cashback 0.341
+B05 fit[7]->val8 seed0: rows 121123 (generated 0, src weight 1.5) 46s
+B05 fit[7]->val8 seed1: rows 121189 (generated 0, src weight 1.5) 44s
+B05 val8: macro argmax 0.4683 phishing 0.451 fake_cashback 0.329
+B05 fit[7, 8]->val9 seed0: rows 241961 (generated 0, src weight 1.5) 58s
+B05 fit[7, 8]->val9 seed1: rows 241925 (generated 0, src weight 1.5) 67s
+B05 val9: macro argmax 0.4791 phishing 0.442 fake_cashback 0.344

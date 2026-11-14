@@ -89,12 +89,12 @@ tuned on Aug and scored on Sep, after the post-rules (`oos.py` decodes before po
 Verified on 13 Nov: `run_all.ps1` with fresh caches (`UPI_CACHE`, `--force`) rebuilt a matrix equal to the original in all 194 columns. It also gave OOF probs, test probs, `repro.csv` and `repro_ppq.csv` byte-identical to `h6`.
 A second check ran `.\run_all.ps1` with no options in a clean copy that holds only the files a git clone would have, plus the raw CSVs.
 Every output was again byte-identical to `h6`, and `oos.py repro` gave the same numbers.
-Verified on 13 Nov for the full chain: `$env:UPI_CACHE="feats_cache_r"; .
-un_all.ps1 -Tag r_repro -SkipPrep` built all
+Verified on 13 Nov for the full chain: `$env:UPI_CACHE="feats_cache_r"; .\run_all.ps1 -Tag r_repro -SkipPrep` built all
 module caches from scratch. The core2 matrix equals the one behind c2s6 in all 194 columns. These outputs are
 byte-identical to the originals: OOF and test probs of h6 and c2s6, `r_repro_ppq.csv` = `h6_ppq.csv`,
 `ts_judge_r_repro.csv` = `ts_judge_h6.csv`, `art_zonemax`, `art_acct`, `ts_judge_c2s6` and
 `r_repro_final1.csv` = `final1.csv`.
+Verified on 14 Nov for all 17 steps from the raw CSVs: a `git archive` export of commit `330ad4c` in an empty directory (no caches, no parquet files), `.\run_all.ps1 -Tag repro -Threads 8`. Every checked output is byte-identical to its reference, including `repro_dd_final.csv` = `dd_final.csv` (SHA-256 `8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd`). Log: `work/logs/run_all_clean_14nov.log`. Run time 39 min on 8 threads, with other jobs on the machine.
 The result does not depend on the thread count: 1-seed validation runs with `--threads 4` and `--threads 10` gave bit-identical OOF probs, and c2s6 (3 threads) and its rebuild (10 threads) have identical OOF probs.
 
 ## Approach
