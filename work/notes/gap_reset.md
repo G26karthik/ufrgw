@@ -1,4 +1,4 @@
-# Gap reset: benchmark audit, candidate recheck, score budget (14 Nov 2026, 18:00 to 19:00 IST)
+# Gap reset: benchmark audit, candidate recheck, score budget (14 Nov 2026, 18:00 to 18:35 IST)
 
 Outcome: no improvement found under these tests. `subs/dd_final.csv` (public 0.5505, SHA-256 `8e04353d...29cd`) is unchanged.
 No upload, no publication, no change to the production pipeline. This is not a statement that a higher score is impossible.
