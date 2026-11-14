@@ -1,0 +1,31 @@
+source C    : Aug forced 0.4688 final 0.4963 halves [0.5024, 0.4902] | argmax differs from C on 0 rows
+source sXGB : Aug forced 0.4678 final 0.4958 halves [0.4985, 0.4931] | argmax differs from C on 211 rows
+source sCAT : Aug forced 0.4673 final 0.4957 halves [0.5015, 0.4899] | argmax differs from C on 291 rows
+source TABM : Aug forced 0.4661 final 0.4939 halves [0.4977, 0.49] | argmax differs from C on 304 rows
+source sTS  : Aug forced 0.4703 final 0.4982 halves [0.5039, 0.4925] | argmax differs from C on 233 rows
+source sSUB : Aug forced 0.4667 final 0.4944 halves [0.4991, 0.4898] | argmax differs from C on 270 rows
+greedy step 1: add sTS -> 0.4982 (current 0.4982)
+blend C+sXGB@0.35                     : Aug forced 0.4660 final 0.4940 halves [0.4971, 0.491] (vs C -0.0022)
+blend C+sXGB@0.5                      : Aug forced 0.4674 final 0.4951 halves [0.4983, 0.4918] (vs C -0.0012)
+blend C+sCAT@0.35                     : Aug forced 0.4694 final 0.4974 halves [0.5033, 0.4914] (vs C +0.0011)
+blend C+sCAT@0.5                      : Aug forced 0.4698 final 0.4976 halves [0.5033, 0.4919] (vs C +0.0013)
+blend C+TABM@0.35                     : Aug forced 0.4704 final 0.4979 halves [0.5039, 0.492] (vs C +0.0017)
+blend C+TABM@0.5                      : Aug forced 0.4704 final 0.4979 halves [0.5033, 0.4925] (vs C +0.0016)
+blend C+sTS@0.35                      : Aug forced 0.4696 final 0.4971 halves [0.5027, 0.4914] (vs C +0.0008)
+blend C+sTS@0.5                       : Aug forced 0.4690 final 0.4965 halves [0.5017, 0.4914] (vs C +0.0002)
+blend C+sSUB@0.35                     : Aug forced 0.4704 final 0.4977 halves [0.5033, 0.4922] (vs C +0.0015)
+blend C+sSUB@0.5                      : Aug forced 0.4697 final 0.4973 halves [0.502, 0.4927] (vs C +0.0010)
+blend GBDT3                           : Aug forced 0.4673 final 0.4950 halves [0.4979, 0.4921] (vs C -0.0013)
+blend ALL6                            : Aug forced 0.4692 final 0.4967 halves [0.5022, 0.4911] (vs C +0.0004)
+best simple blend on August: C+TABM@0.35 (('C', 0.65), ('TABM', 0.35))
+LR stacker C=0.0001: Aug forced 0.4673 final 0.4952 halves [0.4993, 0.4911] (vs C -0.0011)
+LR stacker C=0.001: Aug forced 0.4678 final 0.4957 halves [0.5002, 0.4913] (vs C -0.0006)
+LR stacker C=0.01: Aug forced 0.4668 final 0.4952 halves [0.4992, 0.4912] (vs C -0.0011)
+LR C chosen on August: 0.001
+LR without sXGB : Aug final 0.4960 halves [0.5009, 0.4911] -> contribution of sXGB -0.0003
+LR without sCAT : Aug final 0.4952 halves [0.4995, 0.491] -> contribution of sCAT +0.0005
+LR without TABM : Aug final 0.4950 halves [0.5001, 0.49] -> contribution of TABM +0.0007
+LR without sTS  : Aug final 0.4952 halves [0.4995, 0.4908] -> contribution of sTS +0.0006
+LR without sSUB : Aug final 0.4949 halves [0.4993, 0.4905] -> contribution of sSUB +0.0008
+tree stacker (4 leaves, 30 rounds, residual on C): Aug forced 0.4663 final 0.4940 halves [0.4997, 0.4883] (vs C -0.0023)
+done (489s)

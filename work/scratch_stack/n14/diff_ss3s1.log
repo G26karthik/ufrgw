@@ -1,0 +1,18 @@
+--- before decoder: C macro 0.4815, right fraud rows 5913, legit-labelled called fraud 971
+TABMple1  macro 0.4737 (-0.0079) | changed 303 | corrected 79 (fraud 57, legit 22) | new errors 178 (fraud 170, legit 8)
+          per-class F1 change: mule_ -0.005 veloc +0.000 layer -0.003 sim_s -0.010 accou -0.029 phish -0.018 qr_sw -0.002 refun -0.021 fake_ +0.001 loan_ -0.009 merch -0.001
+sTck1e12  macro 0.4766 (-0.0049) | changed 393 | corrected 119 (fraud 107, legit 12) | new errors 235 (fraud 92, legit 143)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer -0.000 sim_s -0.009 accou -0.005 phish +0.014 qr_sw -0.006 refun -0.013 fake_ -0.017 loan_ -0.003 merch -0.022
+sTB1ll    macro 0.4822 (+0.0007) | changed 96 | corrected 45 (fraud 34, legit 11) | new errors 40 (fraud 36, legit 4)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.001 sim_s +0.001 accou -0.002 phish -0.006 qr_sw -0.001 refun -0.005 fake_ +0.017 loan_ +0.000 merch +0.001
+sTB1e12   macro 0.4819 (+0.0004) | changed 172 | corrected 88 (fraud 78, legit 10) | new errors 58 (fraud 36, legit 22)
+          per-class F1 change: mule_ +0.003 veloc +0.000 layer +0.001 sim_s +0.000 accou -0.000 phish +0.018 qr_sw +0.000 refun +0.004 fake_ -0.023 loan_ +0.000 merch +0.001
+--- after decoder: C macro 0.5070, right fraud rows 6333, legit-labelled called fraud 1009
+TABMple1  macro 0.4991 (-0.0079) | changed 287 | corrected 73 (fraud 54, legit 19) | new errors 170 (fraud 163, legit 7)
+          per-class F1 change: mule_ -0.004 veloc +0.000 layer -0.003 sim_s -0.011 accou -0.031 phish -0.016 qr_sw -0.002 refun -0.020 fake_ +0.001 loan_ -0.008 merch -0.001
+sTck1e12  macro 0.5024 (-0.0046) | changed 377 | corrected 113 (fraud 102, legit 11) | new errors 228 (fraud 85, legit 143)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.000 sim_s -0.006 accou -0.008 phish +0.012 qr_sw -0.007 refun -0.012 fake_ -0.013 loan_ -0.003 merch -0.022
+sTB1ll    macro 0.5072 (+0.0002) | changed 92 | corrected 42 (fraud 31, legit 11) | new errors 39 (fraud 36, legit 3)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.001 sim_s +0.001 accou -0.002 phish -0.005 qr_sw -0.001 refun -0.005 fake_ +0.012 loan_ +0.000 merch +0.001
+sTB1e12   macro 0.5076 (+0.0006) | changed 165 | corrected 86 (fraud 77, legit 9) | new errors 55 (fraud 33, legit 22)
+          per-class F1 change: mule_ +0.003 veloc +0.000 layer +0.001 sim_s +0.001 accou -0.001 phish +0.017 qr_sw +0.000 refun +0.004 fake_ -0.020 loan_ +0.000 merch +0.001

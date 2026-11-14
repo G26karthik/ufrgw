@@ -1,0 +1,13 @@
+C            alone: Aug forced 0.4688 final 0.4963 halves [0.5024, 0.4902] log-loss 0.18007
+TABMple1     alone: Aug forced 0.4670 final 0.4949 halves [0.4983, 0.4915] log-loss 0.17917
+sTck1e6      alone: Aug forced 0.4656 final 0.4935 halves [0.4972, 0.4899] log-loss 0.18191
+sTck1e12     alone: Aug forced 0.4670 final 0.4952 halves [0.4988, 0.4916] log-loss 0.18051
+sTck1e20     alone: Aug forced 0.4658 final 0.4937 halves [0.4969, 0.4906] log-loss 0.18041
+sTck1e30     alone: Aug forced 0.4665 final 0.4943 halves [0.4979, 0.4907] log-loss 0.18197
+TABMple1     blend .35: Aug forced 0.4705 final 0.4980 halves [0.5038, 0.4922] log-loss 0.17917
+sTck1e6      blend .35: Aug forced 0.4705 final 0.4979 halves [0.5038, 0.492] log-loss 0.18191
+sTck1e12     blend .35: Aug forced 0.4704 final 0.4980 halves [0.5033, 0.4927] log-loss 0.18051
+sTck1e20     blend .35: Aug forced 0.4669 final 0.4947 halves [0.4975, 0.492] log-loss 0.18041
+sTck1e30     blend .35: Aug forced 0.4679 final 0.4955 halves [0.4982, 0.4928] log-loss 0.18197
+provenance: new epoch-6 vs existing TABMple1 August probabilities: mean abs diff 0.00170, argmax differs on 265 rows
+checkpoint chosen on August: 12

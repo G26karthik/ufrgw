@@ -1,0 +1,6 @@
+ts fold0 seed0: fit rows 121123 (37s)
+ts fold0 seed1: fit rows 121189 (74s)
+ts Aug: macro argmax 0.4655 (LightGBM C 0.4680), log-loss 0.18042 (C 0.18007)
+ts fold1 seed0: fit rows 241961 (83s)
+ts fold1 seed1: fit rows 241925 (161s)
+ts done

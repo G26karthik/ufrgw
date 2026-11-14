@@ -1,0 +1,6 @@
+lgb fold0 seed2: fit rows 120942 (50s)
+lgb fold0 seed3: fit rows 120610 (98s)
+lgb Aug: macro argmax 0.4672 (LightGBM C 0.4680), log-loss 0.18013 (C 0.18007)
+lgb fold1 seed2: fit rows 241215 (71s)
+lgb fold1 seed3: fit rows 241640 (142s)
+lgb done

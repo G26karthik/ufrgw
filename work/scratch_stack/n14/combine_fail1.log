@@ -1,0 +1,33 @@
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\externals\loky\process_executor.py", line 453, in _process_worker
+    call_item = call_queue.get(block=True, timeout=timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saita\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\multiprocessing\queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Can't get attribute 'ctx' on <module '__main__' (built-in)>
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\scratch_stack\n14\combine.py", line 89, in <module>
+    single = dict(zip(SRC, par(delayed(sc_blend)(((s, 1.0),)) for s in SRC)))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 2098, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 1704, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 1806, in _retrieve
+    self._raise_error_fast()
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 1885, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 780, in get_result
+    return self._return_or_raise()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\joblib\parallel.py", line 795, in _return_or_raise
+    raise self._result
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.

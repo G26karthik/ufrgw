@@ -1,0 +1,14 @@
+0:	learn: 1.5259249	total: 382ms	remaining: 6m 21s
+250:	learn: 0.1675520	total: 21.9s	remaining: 1m 5s
+500:	learn: 0.1629453	total: 34s	remaining: 33.9s
+750:	learn: 0.1587794	total: 46.2s	remaining: 15.3s
+999:	learn: 0.1547699	total: 58.4s	remaining: 0us
+cat fold0 seed0: fit rows 121123 (63s)
+cat Aug: macro argmax 0.4676 (LightGBM C 0.4680), log-loss 0.18200 (C 0.18007)
+0:	learn: 1.5260093	total: 48.5ms	remaining: 48.5s
+250:	learn: 0.1694043	total: 13.4s	remaining: 40.1s
+500:	learn: 0.1655891	total: 27.6s	remaining: 27.5s
+750:	learn: 0.1627229	total: 41.5s	remaining: 13.8s
+999:	learn: 0.1601758	total: 55.2s	remaining: 0us
+cat fold1 seed0: fit rows 241961 (59s)
+cat done

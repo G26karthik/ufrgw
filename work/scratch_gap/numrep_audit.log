@@ -1,0 +1,10 @@
+column                 distinct exact distinct f32 collapsed max abs err values n>=50 rows in them values n>=500 rows in them
+amount                         350514       350514         0    7.50e-03          356       261073           112       219434  (fit rows 1053917)
+balance_before                1206844      1206841         3    3.00e-02            7          739             0            0  (fit rows 1053917)
+sim_age_hours                  322304       322304         0    3.13e-03            0            0             0            0  (fit rows 1053917)
+device_age_days                 19759        19759         0    9.77e-05         5801       928356             0            0  (fit rows 1053917)
+login_to_txn_sec                 1330         1330         0    0.00e+00          420      1047145           207      1008086  (fit rows 1053917)
+log_amount             distinct in Float64 350514, after Float32 350487
+amt_share_bal          distinct in Float64 1816638, after Float32 1784590
+amount values with >= 500 fit rows and fraud-label share >= 0.5: []
+amount values with 50..499 fit rows and fraud-label share >= 0.5: 15 values, 3192 rows

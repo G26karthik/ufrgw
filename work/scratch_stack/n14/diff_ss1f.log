@@ -1,0 +1,6 @@
+--- before decoder: C macro 0.4815, right fraud rows 5913, legit-labelled called fraud 971
+sCTS4     macro 0.4835 (+0.0019) | changed 69 | corrected 34 (fraud 33, legit 1) | new errors 28 (fraud 9, legit 19)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.000 sim_s +0.000 accou +0.000 phish -0.001 qr_sw -0.001 refun +0.005 fake_ +0.006 loan_ +0.000 merch +0.011
+--- after decoder: C macro 0.5070, right fraud rows 6333, legit-labelled called fraud 1009
+sCTS4     macro 0.5087 (+0.0017) | changed 70 | corrected 34 (fraud 33, legit 1) | new errors 29 (fraud 10, legit 19)
+          per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.000 sim_s +0.000 accou -0.001 phish -0.001 qr_sw -0.001 refun +0.005 fake_ +0.005 loan_ +0.000 merch +0.011
