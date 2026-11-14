@@ -1,0 +1,51 @@
+ids, order, labels valid for ['dd_final', 'cmb50', 'cmb65', 'cmb80'] and their bases
+per-class counts before the later rules (ts_judge files):
+shape: (12, 5)
+┌────────────────────┬────────┬────────┬────────┬────────┐
+│ label              ┆ h6     ┆ cmb50  ┆ cmb65  ┆ cmb80  │
+│ ---                ┆ ---    ┆ ---    ┆ ---    ┆ ---    │
+│ str                ┆ i64    ┆ i64    ┆ i64    ┆ i64    │
+╞════════════════════╪════════╪════════╪════════╪════════╡
+│ legit              ┆ 256632 ┆ 256639 ┆ 256639 ┆ 256639 │
+│ mule_account       ┆ 790    ┆ 796    ┆ 796    ┆ 794    │
+│ velocity_bot       ┆ 298    ┆ 297    ┆ 297    ┆ 297    │
+│ layering_chain     ┆ 574    ┆ 568    ┆ 568    ┆ 570    │
+│ sim_swap           ┆ 369    ┆ 369    ┆ 369    ┆ 369    │
+│ account_takeover   ┆ 235    ┆ 235    ┆ 235    ┆ 232    │
+│ phishing_collect   ┆ 501    ┆ 491    ┆ 493    ┆ 492    │
+│ qr_swap            ┆ 522    ┆ 522    ┆ 522    ┆ 522    │
+│ refund_abuse       ┆ 273    ┆ 276    ┆ 276    ┆ 274    │
+│ fake_cashback      ┆ 200    ┆ 204    ┆ 201    ┆ 202    │
+│ loan_app_extortion ┆ 103    ┆ 103    ┆ 104    ┆ 107    │
+│ merchant_collusion ┆ 85     ┆ 82     ┆ 82     ┆ 84     │
+└────────────────────┴────────┴────────┴────────┴────────┘
+per-class counts of the final files:
+shape: (12, 5)
+┌────────────────────┬──────────┬────────┬────────┬────────┐
+│ label              ┆ dd_final ┆ cmb50  ┆ cmb65  ┆ cmb80  │
+│ ---                ┆ ---      ┆ ---    ┆ ---    ┆ ---    │
+│ str                ┆ i64      ┆ i64    ┆ i64    ┆ i64    │
+╞════════════════════╪══════════╪════════╪════════╪════════╡
+│ legit              ┆ 256598   ┆ 256605 ┆ 256605 ┆ 256605 │
+│ mule_account       ┆ 798      ┆ 802    ┆ 802    ┆ 800    │
+│ velocity_bot       ┆ 308      ┆ 307    ┆ 307    ┆ 307    │
+│ layering_chain     ┆ 557      ┆ 553    ┆ 553    ┆ 555    │
+│ sim_swap           ┆ 364      ┆ 364    ┆ 364    ┆ 364    │
+│ account_takeover   ┆ 237      ┆ 237    ┆ 237    ┆ 234    │
+│ phishing_collect   ┆ 522      ┆ 512    ┆ 514    ┆ 513    │
+│ qr_swap            ┆ 537      ┆ 537    ┆ 537    ┆ 537    │
+│ refund_abuse       ┆ 276      ┆ 276    ┆ 276    ┆ 276    │
+│ fake_cashback      ┆ 200      ┆ 204    ┆ 201    ┆ 202    │
+│ loan_app_extortion ┆ 103      ┆ 103    ┆ 104    ┆ 107    │
+│ merchant_collusion ┆ 82       ┆ 82     ┆ 82     ┆ 82     │
+└────────────────────┴──────────┴────────┴────────┴────────┘
+rows that differ dd_final vs cmb50: 15
+rows that differ dd_final vs cmb65: 15
+rows that differ dd_final vs cmb80: 15
+rows that differ cmb50 vs cmb65: 4
+rows that differ cmb50 vs cmb80: 8
+rows that differ cmb65 vs cmb80: 6
+cmb50_dd_final.csv sha256 4a291f8a029d429b9e584a1321f7d9767681607e983ff9ac8ffcdfd2ceb8e77d | non-legit rows 3977 | equals an existing file: no
+cmb65_dd_final.csv sha256 475f4b1b145490ac92808b39a4959cb376d834a2d0a6793c2227d7b75ffc1dff | non-legit rows 3977 | equals an existing file: no
+cmb80_dd_final.csv sha256 cff9925e5503b644bd16701916bea693d4942bf3c43b853a913fced4ea82c3e3 | non-legit rows 3977 | equals an existing file: no
+dd_final sha256 8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd

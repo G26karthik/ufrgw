@@ -1,0 +1,16 @@
+fold2: rows 1824642, fit 1564060, held 260582, fit rows queried 599935
+missing share of CONT columns: {'flow__rin_n12h': 0.636, 'flow__sin_n24h': 0.636, 'flow__rout_n6h': 0.636}
+space (1824642, 43), legit bank 301282 (15s)
+  fold 0: queries 60065 (89s)
+  fold 1: queries 59441 (151s)
+  fold 2: queries 59886 (223s)
+  fold 3: queries 60067 (285s)
+  fold 4: queries 60290 (354s)
+  fold 5: queries 59756 (410s)
+  fold 6: queries 60677 (479s)
+  fold 7: queries 60345 (548s)
+  fold 8: queries 59871 (609s)
+  fold 9: queries 59537 (676s)
+  held: queries 260582 (934s)
+median 5th-neighbour distance, fit legit rows vs held rows: c0 1.473/1.478 c1 2.172/2.146 c2 2.255/2.228 c3 2.302/2.275 c4 2.424/2.397 c5 2.420/2.391 c6 2.292/2.265 c7 2.258/2.237 c8 2.489/2.458 c9 2.534/2.504 c10 2.610/2.576 c11 2.503/2.472
+fold2 written (939s)

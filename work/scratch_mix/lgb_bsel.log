@@ -1,0 +1,3 @@
+bsel fold2 seed0: fit rows 358968 (331s)
+bsel fold2 seed1: fit rows 359029 (637s)
+saved scratch_gap/PD_xBSEL_oct.npy (260582, 12)

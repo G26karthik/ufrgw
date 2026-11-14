@@ -1,0 +1,104 @@
+D sources in the pool: ['c2s6', 'sTS4', 'TabM', 'kA', 'ICL', 'BSEL'] | dropped: [] | TabM epochs {0: 30, 1: 30}
+validation blend vs h6: argmax differs on 62 of 1036848 rows
+test blend vs h6: argmax differs on 6 of 260582 rows
+written cmb80 sources ['c2s6', 'sTS4', 'TabM', 'kA', 'ICL', 'BSEL']
+raw : pooled=0.4790 sep=0.4852 | cleaned pooled=0.4914 sep=0.4976  bias=[0.0, 0.20000000298023224, 0.5, 0.30000001192092896, 0.6000000238418579, 0.20000000298023224, 0.6000000238418579, 0.5, 0.6000000238418579, 1.2999999523162842, 1.7000000476837158, 1.2000000476837158]
+post: pooled=0.4792 sep=0.4856 | cleaned pooled=0.4916 sep=0.4980  bias=[0.0, 0.20000000298023224, 0.5, 0.30000001192092896, 0.6000000238418579, 0.20000000298023224, 0.6000000238418579, 0.5, 0.6000000238418579, 1.2999999523162842, 1.7000000476837158, 1.2000000476837158]
+test rows whose label changes vs raw probs (post bias): 49
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\cmb80_ppq.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256850 │
+│ mule_account       ┆ 735    │
+│ layering_chain     ┆ 554    │
+│ qr_swap            ┆ 494    │
+│ phishing_collect   ┆ 472    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 269    │
+│ refund_abuse       ┆ 264    │
+│ fake_cashback      ┆ 194    │
+│ loan_app_extortion ┆ 103    │
+│ merchant_collusion ┆ 73     │
+└────────────────────┴────────┘
+edges train [423000, 423707, 424155, 424628, 425040, 426773, 427170, 427854, 428065, 428207, 428306, 428455]
+      test  [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+Sep cmb80 base      noisy 0.4856 cleaned 0.4980  per-class cleaned [0.987, 0.445, 0.551, 0.541, 0.408, 0.396, 0.444, 0.49, 0.519, 0.379, 0.406, 0.41]
+Sep cmb80 zone+bait noisy 0.5098 cleaned 0.5225  per-class cleaned [0.988, 0.463, 0.565, 0.554, 0.498, 0.442, 0.466, 0.506, 0.534, 0.398, 0.424, 0.434]
+OOS Aug->Sep cmb80: base 0.4842  zone+bait 0.5084
+Sep zone rows/agree: mule_a 111/0.97  veloci 1115/1.00  layeri 72/1.00  sim_sw 154/1.00  accoun 377/1.00  phishi 81/0.97  qr_swa 73/1.00  refund 28/1.00  fake_c 27/0.60  loan_a 15/1.00  mercha 24/1.00
+Oct zone rows/agree: mule_a 79/0.83  veloci 297/0.99  layeri 40/1.00  sim_sw 92/1.00  accoun 190/1.00  phishi 36/1.00  qr_swa 46/0.89  refund 22/1.00  fake_c 12/0.33  loan_a 7/1.00  mercha 12/0.50
+test rows changed vs cmb80 decode: 298
+shape: (20, 3)
+┌──────────────────┬────────────────────┬─────┐
+│ from             ┆ to                 ┆ len │
+│ ---              ┆ ---                ┆ --- │
+│ str              ┆ str                ┆ u32 │
+╞══════════════════╪════════════════════╪═════╡
+│ account_takeover ┆ sim_swap           ┆ 73  │
+│ legit            ┆ mule_account       ┆ 56  │
+│ legit            ┆ qr_swap            ┆ 27  │
+│ legit            ┆ velocity_bot       ┆ 26  │
+│ legit            ┆ phishing_collect   ┆ 21  │
+│ …                ┆ …                  ┆ …   │
+│ phishing_collect ┆ fake_cashback      ┆ 2   │
+│ qr_swap          ┆ merchant_collusion ┆ 1   │
+│ fake_cashback    ┆ phishing_collect   ┆ 1   │
+│ mule_account     ┆ velocity_bot       ┆ 1   │
+│ layering_chain   ┆ velocity_bot       ┆ 1   │
+└──────────────────┴────────────────────┴─────┘
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\ts_judge_cmb80.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256639 │
+│ mule_account       ┆ 794    │
+│ layering_chain     ┆ 570    │
+│ qr_swap            ┆ 522    │
+│ phishing_collect   ┆ 492    │
+│ …                  ┆ …      │
+│ refund_abuse       ┆ 274    │
+│ account_takeover   ┆ 232    │
+│ fake_cashback      ┆ 202    │
+│ loan_app_extortion ┆ 107    │
+│ merchant_collusion ┆ 84     │
+└────────────────────┴────────┘
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train: odd flagged 0 | pool-sender tiny rows (month, n, legit share) [(7, 179, 0.11173184357541899), (8, 153, 0.1503267973856209), (9, 119, 0.13445378151260504)] | phishing share of fraud rows cell A 0.965 cell B 0.838
+F size 4880
+self-check: driver on ts_judge_h6 == subs/dd_final.csv (byte-identical)
+test edges [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+edges judge [473632, 473749, 473835, 473916, 473987, 474284, 474352, 474462, 474496, 474515, 474529, 474552] 
+edges bait  [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+train: odd flagged 0 | pool-sender tiny rows (month, n, legit share) [(7, 179, 0.11173184357541899), (8, 153, 0.1503267973856209), (9, 119, 0.13445378151260504)] | phishing share of fraud rows cell A 0.965 cell B 0.838
+F size 4876
+Traceback (most recent call last):
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\alt_c2.py", line 66, in <module>
+    base = pl.read_csv(ROOT / inp); new, log = chain(base, tx)
+                                               ^^^^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\alt_c2.py", line 49, in chain
+    s = step("DD", s, DD.apply(s, tx))
+                      ^^^^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\dd_rules_both.py", line 95, in apply
+    ids = rows(sub_df, tx)["txn_id"].implode()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\dd_rules_both.py", line 87, in rows
+    assert got == EXPECT[g], (g, sorted(got ^ EXPECT[g]))
+           ^^^^^^^^^^^^^^^^
+AssertionError: ('P_only', ['TX1647c469'])

@@ -1,0 +1,22 @@
+raw : pooled=0.4791 sep=0.4854 | cleaned pooled=0.4915 sep=0.4978  bias=[0.0, 0.30000001192092896, 0.699999988079071, 0.4000000059604645, 0.4000000059604645, 0.0, 0.800000011920929, 0.6000000238418579, 0.6000000238418579, 1.5, 1.5, 1.100000023841858]
+post: pooled=0.4793 sep=0.4857 | cleaned pooled=0.4917 sep=0.4982  bias=[0.0, 0.30000001192092896, 0.699999988079071, 0.4000000059604645, 0.4000000059604645, 0.0, 0.800000011920929, 0.6000000238418579, 0.6000000238418579, 1.5, 1.5, 1.100000023841858]
+test rows whose label changes vs raw probs (post bias): 48
+submission C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\subs\dry65_ppq.csv  rows=260582  label counts:
+shape: (12, 2)
+┌────────────────────┬────────┐
+│ label              ┆ count  │
+│ ---                ┆ ---    │
+│ str                ┆ u32    │
+╞════════════════════╪════════╡
+│ legit              ┆ 256846 │
+│ mule_account       ┆ 729    │
+│ layering_chain     ┆ 559    │
+│ qr_swap            ┆ 494    │
+│ phishing_collect   ┆ 477    │
+│ …                  ┆ …      │
+│ velocity_bot       ┆ 270    │
+│ refund_abuse       ┆ 266    │
+│ fake_cashback      ┆ 194    │
+│ loan_app_extortion ┆ 102    │
+│ merchant_collusion ┆ 71     │
+└────────────────────┴────────┘

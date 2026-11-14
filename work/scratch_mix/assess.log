@@ -1,0 +1,3 @@
+D sources in the pool: ['c2s6', 'sTS4', 'TabM', 'kA', 'ICL', 'BSEL'] | dropped: [] | TabM epochs {0: 30, 1: 30}
+aug D mixtures: 6 alternatives | N mixtures: ['sTS4', 'TabM', 'kA', 'ICL', 'BSEL']
+sep D mixtures: 6 alternatives | N mixtures: ['sTS4', 'TabM', 'kA', 'ICL', 'BSEL']

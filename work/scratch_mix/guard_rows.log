@@ -1,0 +1,4 @@
+ts_judge_h6 | selected 13 | selected, not expected: [] | expected, not selected: []
+ts_judge_cmb50 | selected 14 | selected, not expected: [('TX1647c469', True, False, 'AC114656', 10.0)] | expected, not selected: []
+ts_judge_cmb65 | selected 14 | selected, not expected: [('TX1647c469', True, False, 'AC114656', 10.0)] | expected, not selected: []
+ts_judge_cmb80 | selected 14 | selected, not expected: [('TX1647c469', True, False, 'AC114656', 10.0)] | expected, not selected: []
