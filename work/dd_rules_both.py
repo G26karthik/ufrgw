@@ -97,13 +97,16 @@ def apply(sub_df, tx):
 
 
 if __name__ == "__main__":
-    out = ROOT / "subs" / "dd_both.csv"
+    import sys  # optional: INP NAME (run_all.ps1 step 17 builds <Tag>_dd_final from probe_edgefix_<Tag>_bc_bandv)
+    inp, name = (sys.argv[1:3] + ["subs/probe_edgefix_bc_bandv.csv", "dd_both"][len(sys.argv[1:3]):])[:2]
+    out = ROOT / "subs" / f"{name}.csv"
     assert not out.exists(), f"{out} exists; never overwrite"
-    base = pl.read_csv(ROOT / "subs" / "probe_edgefix_bc_bandv.csv")
+    base = pl.read_csv(ROOT / inp)
     tx = load_all()
     new, h = apply(base, tx), rows(base, tx)
-    (ROOT / "scratch_dd" / "both").mkdir(parents=True, exist_ok=True)
-    h.sort("grp", "txn_id").select("txn_id", "in_P", "in_S", "in_B", "amount", "grp").write_csv(ROOT / "scratch_dd" / "both" / "rows.csv")
+    if name == "dd_both":
+        (ROOT / "scratch_dd" / "both").mkdir(parents=True, exist_ok=True)
+        h.sort("grp", "txn_id").select("txn_id", "in_P", "in_S", "in_B", "amount", "grp").write_csv(ROOT / "scratch_dd" / "both" / "rows.csv")
     ch = base.with_columns(new["label"].alias("to")).filter(c("label") != c("to"))
     want = set().union(*(EXPECT[g] for g in KEEP))
     print("rows changed:", ch.height, ch.group_by("label", "to").len().rows(), sorted(ch["id"].to_list()))
