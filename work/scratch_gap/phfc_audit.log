@@ -1,0 +1,12 @@
+Aug: rows called fake_cashback by the final decode 342 (labelled fc 210, phishing 81, legit 40); without zone device and labelled ph/fc: rows 261, events 134, phishing events 52
+Sep: rows called fake_cashback by the final decode 351 (labelled fc 227, phishing 71, legit 48); without zone device and labelled ph/fc: rows 270, events 141, phishing events 45
+event AUC Aug, grouped 5-fold OOF: 0.836 over 134 events
+event AUC Sep, model fit on Aug: 0.784 over 141 events
+August threshold search: base 0.4997; t=0.3: -0.0008 t=0.4: -0.0008 t=0.5: -0.0005 t=0.6: -0.0007 t=0.7: -0.0008 t=0.8: -0.0001
+Sep before: macro 0.5070 | fake_cashback P/R/F1 0.647/0.273/0.384 | phishing P/R/F1 0.748/0.348/0.475 | phishing rows called fake_cashback 71
+Sep, threshold picked on August (t=0.8): events flagged 32 of 141 (15 phishing events, precision 0.47); rows flipped 44: labelled phishing 21, fake_cashback 23, other 0
+    macro 0.5054 (-0.0016, event bootstrap 5%..95% -0.0030..-0.0002) | fake_cashback P/R/F1 0.664/0.245/0.359 | phishing P/R/F1 0.736/0.358/0.482
+Sep, cited threshold t=0.5: events flagged 60 of 141 (34 phishing events, precision 0.57); rows flipped 81: labelled phishing 48, fake_cashback 33, other 0
+    macro 0.5058 (-0.0012, event bootstrap 5%..95% -0.0031..+0.0005) | fake_cashback P/R/F1 0.719/0.233/0.352 | phishing P/R/F1 0.736/0.370/0.493
+top features (fit on Aug): [('e_n', 0.21), ('e_dur', 0.027), ('e_simmin', 0.001), ('e_sage', 0.0), ('dom', 0.0), ('device_age_days', 0.0)]
+flagged Sep events at 0.5: size / duration h / max amount / txn types: (1.5, 0.06847222222222223, 4366.5, 1.25) | all look events: (2.1560283687943262, 1.5697222222222222, 8609.0, 1.3617021276595744)

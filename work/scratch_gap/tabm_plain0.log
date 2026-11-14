@@ -1,0 +1,21 @@
+TABMplain0 fold0: fit rows 121123, numeric 241 (indicators 60, dropped 0), cat [3, 6, 13, 6, 3, 3, 31, 3, 13], k 32
+  epoch 1 train 0.3031 (6s) dev logloss 0.20899
+  epoch 2 train 0.2027 (5s) dev logloss 0.18886
+  epoch 3 train 0.1857 (5s) dev logloss 0.18222
+  epoch 4 train 0.1809 (5s) dev logloss 0.18285
+  epoch 5 train 0.1792 (5s) dev logloss 0.18033
+  epoch 6 train 0.1781 (5s) dev logloss 0.17962
+  epoch 7 train 0.1773 (5s) dev logloss 0.18053
+  epoch 8 train 0.1768 (5s) dev logloss 0.18010
+  epoch 9 train 0.1765 (5s) dev logloss 0.18033
+  epoch 10 train 0.1771 (5s) dev logloss 0.18068
+  epoch 11 train 0.1764 (6s) dev logloss 0.18006
+TABMplain0: fold0 best epoch 6, dev logloss 0.17962
+TABMplain0 fold1: fit rows 241961, numeric 241 (indicators 60, dropped 0), cat [3, 6, 13, 6, 3, 3, 31, 3, 13], k 32
+  epoch 1 train 0.2541 (11s)
+  epoch 2 train 0.1847 (10s)
+  epoch 3 train 0.1802 (11s)
+  epoch 4 train 0.1789 (11s)
+  epoch 5 train 0.1784 (11s)
+  epoch 6 train 0.1786 (11s)
+TABMplain0: done

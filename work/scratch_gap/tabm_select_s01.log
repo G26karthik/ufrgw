@@ -1,0 +1,10 @@
+August LightGBM  macro-F1 (August bias) 0.4725  log-loss 0.18007
+August plain     macro-F1 (August bias) 0.4664  log-loss 0.17892
+August ple       macro-F1 (August bias) 0.4691  log-loss 0.17868
+config chosen on August: ple
+August blend w=0.2: macro-F1 0.4728  log-loss 0.17922
+August blend w=0.35: macro-F1 0.4731  log-loss 0.17883
+August blend w=0.5: macro-F1 0.4727  log-loss 0.17858
+August blend w=0.65: macro-F1 0.4720  log-loss 0.17845
+August blend w=0.8: macro-F1 0.4715  log-loss 0.17845
+blend weight chosen on August: 0.35

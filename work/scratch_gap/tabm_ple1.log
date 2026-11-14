@@ -1,0 +1,481 @@
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 5-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 6-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 9-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 15-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 16-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 37-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 38-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 39-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 40-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 43-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 44-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 46-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 53-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 54-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 57-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 60-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 64-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 65-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 68-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 79-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 80-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 90-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 96-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 98-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 100-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 101-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 102-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 103-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 106-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 110-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 111-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 112-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 113-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 115-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 117-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 118-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 119-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 120-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 122-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 123-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 124-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 128-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 129-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 132-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 135-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 136-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 137-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 138-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 139-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 140-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 142-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 143-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 145-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 151-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 166-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 170-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 181-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 182-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 183-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 184-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 185-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 186-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 187-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 188-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 189-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 190-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 191-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 192-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 193-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 194-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 195-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 196-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 197-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 198-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 199-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 200-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 201-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 202-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 203-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 204-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 205-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 206-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 207-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 208-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 209-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 210-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 211-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 212-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 213-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 214-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 215-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 216-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 217-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 218-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 219-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 220-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 221-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 222-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 223-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 224-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 225-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 226-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 227-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 228-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 229-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 230-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 231-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 232-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 233-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 234-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 235-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 236-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 237-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 238-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 239-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 240-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+TABMple1 fold0: fit rows 121189, numeric 241 (indicators 60, dropped 0), cat [3, 6, 13, 6, 3, 3, 31, 3, 13], k 32
+  epoch 1 train 0.2966 (28s) dev logloss 0.20388
+  epoch 2 train 0.1966 (14s) dev logloss 0.18633
+  epoch 3 train 0.1842 (10s) dev logloss 0.18156
+  epoch 4 train 0.1805 (10s) dev logloss 0.18166
+  epoch 5 train 0.1794 (10s) dev logloss 0.17977
+  epoch 6 train 0.1779 (10s) dev logloss 0.18211
+  epoch 7 train 0.1782 (10s) dev logloss 0.17922
+  epoch 8 train 0.1767 (10s) dev logloss 0.18007
+  epoch 9 train 0.1767 (10s) dev logloss 0.18350
+  epoch 10 train 0.1763 (10s) dev logloss 0.17943
+  epoch 11 train 0.1766 (10s) dev logloss 0.17951
+  epoch 12 train 0.1760 (10s) dev logloss 0.18057
+TABMple1: fold0 best epoch 7, dev logloss 0.17922
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 5-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 6-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 9-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 15-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 16-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 37-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 38-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 39-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 40-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 43-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 44-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 46-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 53-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 54-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 57-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 60-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 65-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 68-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 79-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 80-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 90-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 96-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 98-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 101-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 102-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 103-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 106-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 110-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 111-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 112-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 113-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 115-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 117-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 118-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 119-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 120-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 122-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 123-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 124-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 129-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 132-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 135-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 136-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 137-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 138-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 139-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 140-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 142-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 143-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 145-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 151-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 166-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 170-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 181-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 182-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 183-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 184-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 185-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 186-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 187-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 188-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 189-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 190-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 191-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 192-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 193-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 194-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 195-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 196-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 197-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 198-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 199-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 200-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 201-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 202-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 203-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 204-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 205-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 206-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 207-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 208-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 209-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 210-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 211-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 212-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 213-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 214-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 215-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 216-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 217-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 218-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 219-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 220-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 221-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 222-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 223-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 224-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 225-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 226-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 227-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 228-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 229-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 230-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 231-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 232-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 233-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 234-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 235-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 236-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 237-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 238-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 239-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\.venv\Lib\site-packages\rtdl_num_embeddings.py:340: UserWarning: The 240-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler
+  warnings.warn(
+TABMple1 fold1: fit rows 241925, numeric 241 (indicators 60, dropped 0), cat [3, 6, 13, 6, 3, 3, 31, 3, 13], k 32
+  epoch 1 train 0.2466 (20s)
+  epoch 2 train 0.1842 (20s)
+  epoch 3 train 0.1799 (20s)
+  epoch 4 train 0.1786 (20s)
+  epoch 5 train 0.1780 (20s)
+  epoch 6 train 0.1772 (20s)
+  epoch 7 train 0.1773 (20s)
+TABMple1: done

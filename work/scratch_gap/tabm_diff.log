@@ -1,0 +1,10 @@
+--- before decoder: LightGBM macro 0.4815, right fraud rows 5913, predicted fraud 7711
+TABM  macro 0.4794 | rows decoded differently 248 | fraud rows right only in TABM 95 (of them LightGBM said legit 31, other class 64) | right only in LightGBM 81 | legit-labelled rows called fraud: LightGBM 971, TABM 974, only TABM 19 | oracle union 0.4878
+      per-class F1 change: mule_ +0.000 veloc +0.000 layer -0.000 sim_s -0.005 accou -0.005 phish +0.020 qr_sw -0.001 refun -0.004 fake_ -0.027 loan_ -0.007 merch +0.004
+BLEND macro 0.4817 | rows decoded differently 95 | fraud rows right only in BLEND 39 (of them LightGBM said legit 14, other class 25) | right only in LightGBM 23 | legit-labelled rows called fraud: LightGBM 971, BLEND 962, only BLEND 4 | oracle union 0.4839
+      per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.001 sim_s +0.000 accou +0.002 phish +0.007 qr_sw +0.000 refun +0.001 fake_ -0.011 loan_ -0.002 merch +0.001
+--- after decoder: LightGBM macro 0.5070, right fraud rows 6333, predicted fraud 8074
+TABM  macro 0.5049 | rows decoded differently 231 | fraud rows right only in TABM 88 (of them LightGBM said legit 30, other class 58) | right only in LightGBM 75 | legit-labelled rows called fraud: LightGBM 1009, TABM 1013, only TABM 19 | oracle union 0.5125
+      per-class F1 change: mule_ +0.000 veloc +0.000 layer +0.000 sim_s -0.005 accou -0.009 phish +0.019 qr_sw -0.001 refun -0.004 fake_ -0.022 loan_ -0.007 merch +0.004
+BLEND macro 0.5072 | rows decoded differently 91 | fraud rows right only in BLEND 37 (of them LightGBM said legit 14, other class 23) | right only in LightGBM 21 | legit-labelled rows called fraud: LightGBM 1009, BLEND 1000, only BLEND 4 | oracle union 0.5092
+      per-class F1 change: mule_ +0.002 veloc +0.000 layer +0.001 sim_s +0.000 accou +0.000 phish +0.008 qr_sw +0.000 refun +0.001 fake_ -0.009 loan_ -0.002 merch +0.001

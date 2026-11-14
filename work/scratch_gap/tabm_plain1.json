@@ -1,0 +1,1 @@
+{"tag": "TABMplain1", "cfg": "plain", "seed": 1, "epochs": 11, "dev_logloss": 0.17930948064213031, "lr": 0.002, "wd": 0.0003, "batch": 1024}

@@ -5,7 +5,7 @@ Steps 12-17 of run_all (test-only rule layers, about 300 test rows, +.006 public
 Scores: supplied Sep labels. `clean_final` = event-majority cleaned labels (not valid for AC: its target uses the same cleaning).
 `zone_ok` = share of Sep rows on a class-zone device (zone class from the Jul+Aug edges in feats/ts_event.py) whose
 prediction equals the zone class: a truth proxy that does not come from event cleaning.
-usage (cwd=work, PYTHONPATH=.): python scratch_gap/bench_eval.py N|D"""
+usage (cwd=work, PYTHONPATH=.): python scratch_gap/bench_eval.py N|D [VARIANT,VARIANT,... [DEC_SUFFIX]]"""
 import sys
 import numpy as np
 import polars as pl
@@ -15,7 +15,9 @@ from clean_labels import clean, fraud_events
 from feats.ts_event import TR_EDGES, zone_ids
 from ts_judge_post import zones, override
 
-c = pl.col; K = T.K; B = sys.argv[1]; VARS = ["C", "RAW", "AC", "CE"]
+c = pl.col; K = T.K; B = sys.argv[1]
+VARS = sys.argv[2].split(",") if len(sys.argv) > 2 else ["C", "RAW", "AC", "CE"]  # first = reference; optional 3rd arg = suffix of the dec file
+SUF = sys.argv[3] if len(sys.argv) > 3 else ""
 
 
 def f1w(y, p, w=None):
@@ -49,19 +51,19 @@ for v in VARS:
     out[v] = dict(pre=pre, p1=p1, q=q, edges=e)
 rows = []
 for v in VARS:
-    o, b = out[v], out["C"]
+    o, b = out[v], out[VARS[0]]
     d = lambda k: np.quantile([f1w(y, o[k], w).mean() - f1w(y, b[k], w).mean() for w in boot], [.05, .95]).round(4).tolist()
     rows.append(dict(variant=v, pre=round(f1w(y, o["pre"]).mean(), 4), forced=round(f1w(y, o["p1"]).mean(), 4), final=round(f1w(y, o["q"]).mean(), 4),
                      d_pre=round(f1w(y, o["pre"]).mean() - f1w(y, b["pre"]).mean(), 4), d_final=round(f1w(y, o["q"]).mean() - f1w(y, b["q"]).mean(), 4),
-                     boot_pre=str(d("pre")) if v != "C" else "", boot_final=str(d("q")) if v != "C" else "",
+                     boot_pre=str(d("pre")) if v != VARS[0] else "", boot_final=str(d("q")) if v != VARS[0] else "",
                      chg_pre=int((o["pre"] != b["pre"]).sum()), chg_final=int((o["q"] != b["q"]).sum()), overridden=int((o["q"] != o["pre"]).sum()),
                      clean_final=round(f1w(yc, o["q"]).mean(), 4), zone_ok_pre=round((o["pre"][zrow] == zt[zrow]).mean(), 3),
                      zone_ok_final=round((o["q"][zrow] == zt[zrow]).mean(), 3), legit_fp=int(((y == 0) & (o["q"] > 0)).sum())))
 pl.Config.set_tbl_cols(30); pl.Config.set_tbl_width_chars(260); pl.Config.set_tbl_rows(40); pl.Config.set_fmt_str_lengths(40)
 print(f"benchmark {B}: Sep rows {n}, fraud-labelled {int((y > 0).sum())}, rows on class-zone devices {int(zrow.sum())}")
 print(pl.DataFrame(rows))
-print("zone edges found on the Sep decode (C):", out["C"]["edges"], "| label-fit edges:", TR_EDGES)
+print("zone edges found on the Sep decode (reference):", out[VARS[0]]["edges"], "| label-fit edges:", TR_EDGES)
 for v in VARS:
     q = out[v]["q"]; tp = np.bincount(y[q == y], minlength=K); P_ = np.bincount(q, minlength=K); N_ = np.bincount(y, minlength=K)
     print(f"{v:4s} final P/R/F1: " + " ".join(f"{T.LABELS[k][:5]} {tp[k]/max(P_[k],1):.2f}/{tp[k]/N_[k]:.2f}/{2*tp[k]/(P_[k]+N_[k]):.3f}" for k in range(1, K)))
-np.savez(f"scratch_gap/dec_{B}.npz", y=y, yc=yc, **{f"{v}_{k}": out[v][k] for v in VARS for k in ("pre", "p1", "q")})
+np.savez(f"scratch_gap/dec_{B}{SUF}.npz", y=y, yc=yc, **{f"{v}_{k}": out[v][k] for v in VARS for k in ("pre", "p1", "q")})
