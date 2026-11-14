@@ -1,4 +1,4 @@
-# Alternative for review: c2s6 model under the dd_final rule chain (14 Nov 2026, 23:20 IST)
+# Alternative for review: c2s6 model under the dd_final rule chain (14 Nov 2026, 23:15 IST)
 
 Status: prepared for review. Not a validated improvement. Not uploaded. `subs/dd_final.csv` is unchanged
 (SHA-256 `8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd`).
@@ -38,7 +38,7 @@ cd work; python alt_c2.py subs/ts_judge_X_c2.csv X_alt_c2_dd_final     # PYTHONP
   rows, EDGEFIX row checks), the RS / FCB disjointness check, the clash check.
 - The fifth LFM row, `TX2927ddfc`: h6 decodes it mule_account, c2s6 decodes it layering_chain, LFM moves it to
   mule_account. The alternative therefore carries dd_final's label on it. This firing was not part of the original rule
-  review.
+  review. The row (sender AC070731, receiver AC291816) shares no sender, receiver or device with the 12 changed rows.
 
 ## Rule interactions
 | layer | rows changed, h6 base | rows changed, c2s6 base | same rows and targets |
@@ -71,15 +71,17 @@ sender, with their non-legit labels (identical in both files).
 | TX1d444be7 | phishing_collect | legit | .310 / .658 | .293 / .670 | none non-legit |
 | TXf0208897 | phishing_collect | fake_cashback | .534 / .251 | .512 / .273 | receiver: 1 phishing; sender: 6 refund, 1 qr, 1 phishing |
 | TX96e28c86 | phishing_collect | fake_cashback | .595 / .291 | .530 / .361 | receiver: 1 fake_cashback; sender: 1 fake_cashback |
-| TX7755c193 | mule_account | layering_chain | .417 / .325 | .311 / .411 | receiver AC392297: 5 layering, 1 mule (+ the next row) |
-| TX78dc5f40 | mule_account | layering_chain | .404 / .324 | .300 / .442 | receiver AC392297: 5 layering, 1 mule (+ the previous row) |
+| TX7755c193 | mule_account | layering_chain | .417 / .325 | .311 / .411 | receiver AC392297: 5 layering in the same burst; these two are its only mule rows |
+| TX78dc5f40 | mule_account | layering_chain | .404 / .324 | .300 / .442 | receiver AC392297: 5 layering in the same burst; these two are its only mule rows |
 | TXf591f8e7 | legit | layering_chain | .741 / .226 | .618 / .338 | receiver AC151804: 3 layering |
 | TXffb4ef65 | velocity_bot | mule_account | .346 / .448 | .334 / .476 | receiver AC083650: 21 mule |
 | TX1bb042e8 | fake_cashback | phishing_collect | .336 / .595 | .308 / .627 | receiver: 1 phishing; sender: 1 phishing |
 | TXb05075a8 | refund_abuse | legit | .710 / .273 | .468 / .491 | merchant: 1 refund; sender: 2 refund |
 
-- Every flip is a margin case: the two models' probabilities differ by .01 to .24 on these rows, and the label changes
-  because each model has its own tuned bias.
+- Every flip is a margin case: the two models' probabilities differ by .01 to .24 on these rows, near the decode
+  threshold. The models also carry different tuned biases (h6 / c2s6: mule .4 / .7, layering .6 / .8, refund .3 / .0;
+  phishing .8 and fake_cashback 1.5 in both), so some flips come from the bias and some from the probability shift.
+- No rule layer touches any row at AC392297 in either chain.
 - Neighbours: 6 flips agree with other rows of the same entity (both AC392297 rows, AC151804, AC083650, TX96e28c86,
   TX1bb042e8), 2 disagree (TXb05075a8, and TXf0208897 by its receiver), 4 have no non-legit neighbour. This is an
   observation on unlabelled rows. No row was kept or dropped on it; the alternative is the complete model swap.
@@ -104,8 +106,12 @@ sender, with their non-legit labels (identical in both files).
 | velocity_bot -> mule_account | 0 | | | | 1 |
 | all seven | 67 | 24 | 35 | 8 | 12 |
 
+- Weighted by October's mix, the September rates give about 3.7 rows right for c2s6 and 4.1 for h6 over the 9 October
+  rows that have a September analogue. Three rows have none. The pooled 24 against 35 is dominated by legit ->
+  layering_chain (47 rows), which is 1 of the 12 October rows.
 - Scenario from `validate_sub.py` (a truth model, not known test truth; whole test set): +.0011 if all 12 new labels are
-  right, -.0012 if none is, break-even at 53% right. The September rate on the same transition types is 24 of 67 (36%).
+  right, -.0012 if none is, break-even at 53% right. Its break-even assumes that a wrong new label means the old label
+  was right; in September 8 of the 67 rows were wrong under both models.
 
 ## Uncertainty
 - The supporting evidence is D only. D is a label-informed density stress test, and benchmark N cannot test this swap
@@ -113,13 +119,18 @@ sender, with their non-legit labels (identical in both files).
 - The +.0008 has a lower bound at zero, rests on one class, and September has been inspected many times. The interval
   covers September event sampling for one comparison and does not correct for that reuse.
 - The September gain and the October changes are in different classes. On the transition types that do occur in October,
-  September does not favour c2s6 (24 right against 35), on small counts (4 of 7 types have 0 to 3 September rows).
+  September gives no usable signal either way (about 3.7 against 4.1 rows of 9; 4 of 7 types have 0 to 3 September rows).
 - Public evidence: none for these 12 rows alone. `final1` held them together with 14 rule rows and scored -.0008 against
   `ts_judge_h6`.
 - Size: the whole-test effect is bounded near +-.0012. About 30% of rows are public, so roughly 4 of the 12 rows would
   move the public score. Ranking uses the best public upload, so an upload is not a free probe: a public score above
   .5505 on those few rows would make this file the one ranked on the private part, whatever the other rows do.
 
+## Not checked
+- The two-argument form of `alt_c2.py` (another tag's base file) was not run as written; the default form and the import
+  path on a second base copy were.
+- Which of the 12 rows fall in the public part is unknown.
+
 ## Reading
-No detected advantage for these 12 rows. The file is a faithful, reproducible model swap, ready if the reviewer wants it,
+No detected difference for these 12 rows: no usable evidence for or against. The file is a faithful, reproducible model swap, ready if the reviewer wants it,
 but the evidence above does not support replacing dd_final with it.
