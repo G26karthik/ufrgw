@@ -9,7 +9,11 @@
 - The platform ranks each team on its best public upload. If the exploratory file scores above .5505 on the public
   part, it becomes the file ranked on the private part.
 
-Public score of `cmb80_dd_final.csv`: not yet reported.
+Public scores reported by the user (both uploaded 15 Nov, 07:25 IST; one observation each, about 30% of test rows):
+- `cmb80_dd_final.csv`: .5484 (dd_final .5505, change -.0021).
+- `sq35_dd_final.csv`: .5494 (change -.0011).
+- `dd_final.csv` stays the best public upload and so the file ranked on the private part. No row change, selector
+  setting or further upload is derived from these two scores.
 
 ## How to read every number here
 - Benchmark N: labels hidden, features at full density. Benchmark D: the production density-matched matrix, a
