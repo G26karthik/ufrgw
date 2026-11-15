@@ -88,6 +88,14 @@ No candidate file came from Track 2.
   difference against a noise-column control; one positive N reading), QR-merchant cell threshold (measurably worse on N).
 - No candidate file. Not a ceiling claim: the untested items are listed in the note.
 
+## Direct LLM classification (`notes/llm_direct.md`, `scratch_llm/`)
+- Separate experiment through a paid API; not part of the ranked file and not built from it.
+- Sealed September pilot, 525 rows, reweighted macro-F1: `gpt-6-astra` .437 against the pipeline's .514;
+  Decisions API (`gpt-6-luna`) .250 against .506. Status: both measurably worse on the pilot.
+- LLM overrides on top of the pipeline (add fraud, change type, veto; six confidence thresholds): at most 1 row
+  corrected against 6 to 39 damaged. Status: not supported. No hybrid file.
+- Full LLM-only run over the 260,582 test rows: coverage, cost and file hash in `notes/llm_direct.md`. No upload.
+
 ## Earlier candidates still on file
 - `subs/alt_c2s6_dd_final.csv` (12 rows from dd_final): no detected difference, not uploaded (`notes/alt_c2s6.md`).
 - All evening tests of 14 Nov: `notes/final_comparison.md`.
