@@ -1,0 +1,6 @@
+benchmark N, August rows 526852, halves 263556 / 263296
+C4         August before decoder 0.4699 (0.4625, 0.4774) | after decoder 0.4985 (0.4928, 0.5042)
+GW10       August before decoder 0.4701 (0.4623, 0.4779) | after decoder 0.4987 (0.4927, 0.5048)
+GW20       August before decoder 0.4700 (0.4623, 0.4777) | after decoder 0.4988 (0.4926, 0.5049)
+GW35       August before decoder 0.4704 (0.4620, 0.4787) | after decoder 0.4990 (0.4926, 0.5054)
+GW50       August before decoder 0.4703 (0.4627, 0.4780) | after decoder 0.4987 (0.4928, 0.5046)

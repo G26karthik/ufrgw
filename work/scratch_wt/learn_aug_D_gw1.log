@@ -1,0 +1,6 @@
+benchmark D, August rows 526852, halves 263556 / 263296
+h6         August before decoder 0.4717 (0.4650, 0.4784) | after decoder 0.5002 (0.4952, 0.5052)
+GW10       August before decoder 0.4721 (0.4651, 0.4791) | after decoder 0.5006 (0.4953, 0.5059)
+GW20       August before decoder 0.4722 (0.4654, 0.4791) | after decoder 0.5007 (0.4955, 0.5059)
+GW35       August before decoder 0.4715 (0.4643, 0.4788) | after decoder 0.5007 (0.4949, 0.5065)
+GW50       August before decoder 0.4714 (0.4645, 0.4783) | after decoder 0.5000 (0.4948, 0.5052)

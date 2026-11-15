@@ -1,0 +1,4 @@
+benchmark D, August rows 526852, halves 263556 / 263296
+RGa        August before decoder 0.4711 (0.4645, 0.4777) | after decoder 0.4996 (0.4946, 0.5045)
+RGb        August before decoder 0.4711 (0.4645, 0.4777) | after decoder 0.5003 (0.4949, 0.5057)
+RGc        August before decoder 0.4709 (0.4642, 0.4777) | after decoder 0.5001 (0.4946, 0.5056)

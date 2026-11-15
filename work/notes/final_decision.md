@@ -68,6 +68,15 @@ No candidate file came from Track 2.
   grid and transfers to October (predicted non-legit ratio 1.0003 / 1.0031 / 1.0048 for August / September / October).
 - Reproduce: `bash scratch_wt/build_sq35.sh` (fits listed in its header).
 
+## Learned combination of h6 and wSQ6 (`notes/learned_blend.md`, rules in `scratch_wt/DECLARED_learn.md`)
+- Three selectors on saved predictions, event-grouped cross-fitting, chosen on August: global weight, regularised
+  class-specific weights, row gate on 10 label-free columns. None existed before.
+- August after the decoder: the fixed .35 blend is the highest global weight on D (.5007, shared with .20) and on N
+  (.4990). Class weights and the row gate are below it on both.
+- September: no selector beats the fixed blend. Class weights measurably worse on D; global .10 and the row gate
+  measurably worse than the fixed blend on N. Fixed blend on N with four seeds: +.0008 (+.0001..+.0015).
+- No additional file exported (declared rule not met). Public scores were not used.
+
 ## Earlier candidates still on file
 - `subs/alt_c2s6_dd_final.csv` (12 rows from dd_final): no detected difference, not uploaded (`notes/alt_c2s6.md`).
 - All evening tests of 14 Nov: `notes/final_comparison.md`.

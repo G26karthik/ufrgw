@@ -1,0 +1,10 @@
+benchmark D: August rows 526852, halves 263556 / 263296, September rows 509996, device cuda
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\scratch_wt\learn.py:51: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  l0 = float(loss())
+CSa lambda 0.0001: loss 1.325013 -> 1.216336 | weight [0.079, 0.204, 0.041, 0.151, 0.078, 0.071, 0.097, 0.118, 0.103, 0.092, 0.074, 0.055] | theta [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+CSb lambda 0.001: loss 1.325013 -> 1.216910 | weight [0.08, 0.103, 0.067, 0.09, 0.079, 0.078, 0.084, 0.087, 0.085, 0.082, 0.078, 0.073] | theta [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+CSc lambda 0.01: loss 1.325013 -> 1.217059 | weight [0.071, 0.073, 0.07, 0.072, 0.071, 0.071, 0.071, 0.072, 0.072, 0.071, 0.071, 0.07] | theta [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+GTa lambda 0.0001: loss 1.325013 -> 1.215498 | weight [0.05] | theta [-0.676, -0.81, 0.027, -0.054, 0.028, -0.015, -0.0, -0.047, 0.037, 0.032]
+GTb lambda 0.001: loss 1.325013 -> 1.216064 | weight [0.066] | theta [-0.377, -0.477, 0.009, -0.059, 0.031, -0.016, 0.008, -0.051, 0.028, 0.033]
+GTc lambda 0.01: loss 1.325013 -> 1.216819 | weight [0.073] | theta [-0.072, -0.096, 0.007, -0.015, 0.025, -0.011, 0.013, -0.044, 0.016, 0.023]
