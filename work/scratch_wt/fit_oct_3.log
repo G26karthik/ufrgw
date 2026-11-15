@@ -1,0 +1,4 @@
+oct wSQ seed3: rows 358543 | total weight baseline 1562123.0 arm 1562123.0 (155s)
+oct wSQ seed4: rows 358020 | total weight baseline 1559508.0 arm 1559508.0 (291s)
+oct wSQ seed5: rows 358980 | total weight baseline 1564308.0 arm 1564308.0 (413s)
+saved scratch_gap/PD_wSQo3_oct.npy (260582, 12)

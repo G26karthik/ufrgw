@@ -1,0 +1,38 @@
+ids, order, labels valid: ['ts_judge_h6', 'ts_judge_sq35', 'dd_final', 'sq35_dd_final', 'cmb80_dd_final']
+shape: (12, 6)
+┌────────────────────┬─────────────┬───────────────┬──────────┬───────────────┬────────────────┐
+│ label              ┆ ts_judge_h6 ┆ ts_judge_sq35 ┆ dd_final ┆ sq35_dd_final ┆ cmb80_dd_final │
+│ ---                ┆ ---         ┆ ---           ┆ ---      ┆ ---           ┆ ---            │
+│ str                ┆ i64         ┆ i64           ┆ i64      ┆ i64           ┆ i64            │
+╞════════════════════╪═════════════╪═══════════════╪══════════╪═══════════════╪════════════════╡
+│ legit              ┆ 256632      ┆ 256620        ┆ 256598   ┆ 256589        ┆ 256605         │
+│ mule_account       ┆ 790         ┆ 797           ┆ 798      ┆ 802           ┆ 800            │
+│ velocity_bot       ┆ 298         ┆ 297           ┆ 308      ┆ 307           ┆ 307            │
+│ layering_chain     ┆ 574         ┆ 568           ┆ 557      ┆ 554           ┆ 555            │
+│ sim_swap           ┆ 369         ┆ 369           ┆ 364      ┆ 364           ┆ 364            │
+│ account_takeover   ┆ 235         ┆ 235           ┆ 237      ┆ 237           ┆ 234            │
+│ phishing_collect   ┆ 501         ┆ 507           ┆ 522      ┆ 525           ┆ 513            │
+│ qr_swap            ┆ 522         ┆ 523           ┆ 537      ┆ 538           ┆ 537            │
+│ refund_abuse       ┆ 273         ┆ 276           ┆ 276      ┆ 276           ┆ 276            │
+│ fake_cashback      ┆ 200         ┆ 205           ┆ 200      ┆ 205           ┆ 202            │
+│ loan_app_extortion ┆ 103         ┆ 103           ┆ 103      ┆ 103           ┆ 107            │
+│ merchant_collusion ┆ 85          ┆ 82            ┆ 82       ┆ 82            ┆ 82             │
+└────────────────────┴─────────────┴───────────────┴──────────┴───────────────┴────────────────┘
+{'ts_judge_h6': 3950, 'ts_judge_sq35': 3962, 'dd_final': 3984, 'sq35_dd_final': 3993, 'cmb80_dd_final': 3977} non-legit rows
+rows that differ from dd_final: 18 | of these also changed in cmb80: 4 (same new label: 4)
+shape: (5, 3)
+┌──────────────────┬──────────────────┬─────┐
+│ dd_final         ┆ sq35             ┆ len │
+│ ---              ┆ ---              ┆ --- │
+│ str              ┆ str              ┆ u32 │
+╞══════════════════╪══════════════════╪═════╡
+│ legit            ┆ phishing_collect ┆ 8   │
+│ phishing_collect ┆ fake_cashback    ┆ 5   │
+│ layering_chain   ┆ mule_account     ┆ 3   │
+│ velocity_bot     ┆ mule_account     ┆ 1   │
+│ legit            ┆ qr_swap          ┆ 1   │
+└──────────────────┴──────────────────┴─────┘
+base (before the later rules) rows that differ from the h6 base: 27
+rule-layer rows that are also changed rows: 0 | layer file columns ['id', 'from', 'to', 'layer']
+sq35_dd_final.csv sha256 bacec5494db5d06f40f590187face753268521c50096a3f725f88a332664a9fe | equals an existing file: no
+dd_final sha256 8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd

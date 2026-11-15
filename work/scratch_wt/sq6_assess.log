@@ -1,0 +1,15 @@
+K2 per-class ratio (legit = 1): [1.0, 11.68, 12.74, 14.24, 17.71, 17.23, 14.12, 13.67, 19.72, 21.09, 22.99, 22.28]
+wrote scratch_gap/PD_wSQ6_aug.npy
+wrote scratch_gap/PD_SQ6b35_aug.npy
+wrote scratch_gap/PD_K1d05_aug.npy
+wrote scratch_gap/PD_K1d10_aug.npy
+wrote scratch_gap/PD_K1d15_aug.npy
+wrote scratch_gap/PD_K2_aug.npy
+aug: mean fraud probability h6 0.0371 | wSQ6 0.2811 | h6 shifted (K2 source) 0.2811 | candidate 0.1225 | K2 0.1225
+wrote scratch_gap/PD_wSQ6_sep.npy
+wrote scratch_gap/PD_SQ6b35_sep.npy
+wrote scratch_gap/PD_K1d05_sep.npy
+wrote scratch_gap/PD_K1d10_sep.npy
+wrote scratch_gap/PD_K1d15_sep.npy
+wrote scratch_gap/PD_K2_sep.npy
+sep: mean fraud probability h6 0.0370 | wSQ6 0.2902 | h6 shifted (K2 source) 0.2813 | candidate 0.1256 | K2 0.1225

@@ -1,0 +1,3 @@
+train label-only linked rows (n, layering share) per month: [(7, 418, 0.004784688995215311), (8, 392, 0.007653061224489796), (9, 323, 0.0030959752321981426)]
+test edges [473632, 473749, 473835, 473916, 473987, 474285, 474360, 474462, 474496, 474515, 474529, 474552]
+ts_judge_sq35 | selected 10 | selected, not expected: [] | expected, not selected: ['TX21726530', 'TX81feab4f', 'TXe1644fe3']

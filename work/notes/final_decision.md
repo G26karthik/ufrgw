@@ -1,4 +1,4 @@
-# Final decision report (15 Nov 2026, 03:15 IST)
+# Final decision report (15 Nov 2026, 03:15 IST; second exploratory candidate added 07:20 IST)
 
 ## Decision
 - `subs/dd_final.csv` stays the reference file (public .5505, SHA-256 `8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd`). Unchanged.
@@ -48,6 +48,21 @@ Public score of `cmb80_dd_final.csv`: not yet reported.
 | C. legit rows carry too much training weight | no detected difference alone; raw blend of the square-root arm promising but unconfirmed (N yes, D no) |
 
 No candidate file came from Track 2.
+
+## Second exploratory candidate (`notes/sq35_submission.md`, rules in `scratch_wt/DECLARED_sq35.md`)
+- `subs/sq35_dd_final.csv` (SHA-256 `bacec5494db5d06f40f590187face753268521c50096a3f725f88a332664a9fe`, 18 rows differ from
+  dd_final, 3,993 non-legit rows). Not uploaded; the user chooses.
+- Recipe: .65 h6 + .35 wSQ6 (the weight arm of Track 2 C, six seeds matched to h6, density-matched matrix), raw
+  probabilities blended before the decoder, every accepted rule layer.
+- Status: promising but unconfirmed. Above the reference in all eight readings: D six seeds August .5007 against .5002,
+  September +.0002 (-.0003..+.0009); D two seeds +.0006 / +.0004; N +.0007 / +.0016 and +.0001 / +.0013 (N-trained
+  versions, not shipped). Highest August D reading of any candidate this round.
+- Control: a scale-matched mixture of h6 with itself (no new model) gives August .5007 and September +.0003; candidate
+  minus control -.0001 (-.0009..+.0008). The gain is reproduced by the probability-scale change alone; the weighted
+  model is not shown to add information beyond it.
+- Rule chain: every rule row ends with its dd_final label; no rule touches the 18 changed rows. August bias inside the
+  grid and transfers to October (predicted non-legit ratio 1.0003 / 1.0031 / 1.0048 for August / September / October).
+- Reproduce: `bash scratch_wt/build_sq35.sh` (fits listed in its header).
 
 ## Earlier candidates still on file
 - `subs/alt_c2s6_dd_final.csv` (12 rows from dd_final): no detected difference, not uploaded (`notes/alt_c2s6.md`).

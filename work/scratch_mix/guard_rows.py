@@ -6,7 +6,7 @@ import dd_rules_both as DD
 from common import load_all, LABEL2ID as L
 
 c = pl.col; tx = load_all(); fr = DD.frame(tx); exp = set().union(*DD.EXPECT.values())
-for name in ("ts_judge_h6", "ts_judge_cmb50", "ts_judge_cmb65", "ts_judge_cmb80"):
+for name in __import__("sys").argv[1:] or ("ts_judge_h6", "ts_judge_cmb50", "ts_judge_cmb65", "ts_judge_cmb80"):  # optional args: other bases
     # the rule reads the label before its own layer = output of the EDGEFIX step; here: the chain up to EDGEFIX
     import alt_c2
     real = alt_c2.DD

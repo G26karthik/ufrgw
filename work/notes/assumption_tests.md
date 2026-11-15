@@ -79,6 +79,8 @@ Status (rule frozen before September: "supported" needs N seeds 0,1 and both con
 - wL1 alone, wSQ alone, raw blend of wL1, both prior-matched blends: no detected difference.
 - Raw blend .65 ref + .35 wSQ: promising but unconfirmed (both N seed pairs above zero, D not). Its gain is absent when
   the prior scale is matched.
+- Follow-up (15 Nov, 07:20 IST): the raw blend with six matched seeds was built into a candidate file and compared with
+  two no-new-model controls: `notes/sq35_submission.md`.
 - Equivalent history: `tuning.md` (d) tested `cw_pow .5` (fraud classes only, no rescale, single seed, before the
   decoder): neutral. The legit-weight-1 arm and the 12-class rescaled arm had not been run before.
 - Not tested: other exponents, legit weight between 1 and 5, rounds or `lambda_l2` retuned under the new weights, the
