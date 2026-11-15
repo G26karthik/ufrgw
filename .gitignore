@@ -34,3 +34,8 @@ work/scratch_*/
 !work/subs/probe_hl_ac298085_dd_final.csv
 !work/subs/probe_hl_ac015935_dd_final.csv
 !work/subs/probe_hl_ac279075_dd_final.csv
+
+# local API keys: never commit
+.env
+.env.*
+*.env.txt
