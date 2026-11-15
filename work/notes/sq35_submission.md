@@ -1,7 +1,7 @@
 # Second exploratory candidate: raw blend .65 h6 + .35 wSQ (15 Nov 2026, 07:20 IST)
 
 Status: promising but unconfirmed. Above the current model on every reading taken (August and September, N and D);
-no single interval excludes zero on D. Not uploaded; the user chooses. `subs/dd_final.csv` is unchanged
+no single interval excludes zero on D. A control without the weighted model gives the same gain (see Controls). Not uploaded; the user chooses. `subs/dd_final.csv` is unchanged
 (SHA-256 `8e04353d6f52fe86ab9e44b5dd33d7adec9ba26df36f566d0bcfd68d49d829cd`).
 
 | | file | SHA-256 | rows | non-legit rows |
@@ -27,8 +27,8 @@ Rules were written before any score of this recipe existed: `scratch_wt/DECLARED
 | N, seeds 0,1, reference C (earlier, N-trained, not shipped) | +.0007 | +.0016 (+.0006..+.0024) |
 | N, seeds 2,3 (earlier, N-trained, not shipped) | +.0001 | +.0013 (+.0001..+.0024) |
 
-- All eight readings are above the reference. August D .5007 is the highest August reading of any candidate this round
-  (first exploratory file: .5003).
+- Every reading is above its reference: the six earlier two-seed readings and the two six-seed D readings (the D seeds
+  0,1 row is contained in the six-seed row). August D: .5007 against h6 .5002 and the first exploratory file .5003.
 - Gate (declared): August D not more than .0010 below h6, September D interval not entirely below zero. Passed.
 - N and D are separate benchmarks. D is a label-informed density stress test, not independent ground truth. September
   has been inspected more than 40 times; the intervals cover event sampling for one comparison and not that reuse.
@@ -36,6 +36,8 @@ Rules were written before any score of this recipe existed: `scratch_wt/DECLARED
 ## September trade-offs (D, six seeds, after the decoder)
 - 47 rows change: 17 corrected, 23 newly wrong, 7 wrong before and after. 8 missed fraud rows recovered, 15 legit rows
   newly called fraud.
+- 17 of 47 changed rows became right (36%). The `validate_sub.py` break-even for the 18 October rows is 38% (below).
+  On that basis the expected public effect is about zero in either direction.
 - Per-class F1: loan_app_extortion +.0019, phishing_collect +.0011, mule_account +.0005, qr_swap +.0003;
   fake_cashback -.0004, layering_chain -.0003, refund_abuse -.0003; the other four within .0001.
   fake_cashback precision +.017, recall -.004. Table: `scratch_wt/sq6_table_D.log`.
@@ -57,9 +59,12 @@ was not built into a file.
 
 ## Build and checks (`bash scratch_wt/build_sq35.sh`, log `scratch_wt/build_sq35.log`, `check_sq35.log`)
 - Test blend against h6 before bias: argmax differs on 115 of 260,582 rows (validation: 213 of 1,036,848).
-- Tuned August bias inside the grid (h6 `[.4,-.7,.6,.7,.4,.9,.7,.5,1.6,1.2,1.1]`, candidate
-  `[.2,-1.2,0,.6,-.1,.2,.3,0,.6,.3,-.1]`).
-- The August bias transfers to October: predicted non-legit rows, candidate / h6 = 1.0003 (August), 1.0031 (September),
+- Production bias (`postproc.py`, the bias the file is built with): h6 `[0,.4,.7,.6,.9,.6,.8,.3,.3,1.5,1.5,.9]`,
+  candidate `[0,.2,.2,.1,.6,-.1,.4,.1,0,1.0,.6,.1]`, inside the grid (-4..6). Non-legit rows before the later rules
+  (`ts_judge` files): 3,962 against 3,950 for h6.
+- Transfer diagnostic (`sq6.py counts`: bias tuned on the August D rows only, raw decode, no forcing or zones; not the
+  production bias): h6 `[.4,-.7,.6,.7,.4,.9,.7,.5,1.6,1.2,1.1]`, candidate `[.2,-1.2,0,.6,-.1,.2,.3,0,.6,.3,-.1]`, inside the grid.
+- With that diagnostic bias the August tuning transfers to October: predicted non-legit rows, candidate / h6 = 1.0003 (August), 1.0031 (September),
   1.0048 (October). Largest per-class October ratios: refund_abuse 1.031, phishing_collect 1.015; merchant_collusion .959.
 - Zone edges on October identical to h6's (both edge sets).
 - `validate_sub.py`: format OK (`logs/validate_sq35.log`). Ids, order and labels valid. Equals no existing file in `subs/`.
@@ -78,7 +83,7 @@ was not built into a file.
 
 Pool-bait guard: `dd_rules_both.py` refused the base because three expected rows (`TX21726530`, `TX81feab4f`,
 `TXe1644fe3`) are not selected: the model already labels them phishing_collect, the rule's own target. The declared
-fallback applied the layer's 13 accepted rows; those three were already at the target. `scratch_mix/guard_rows.py
+fallback applied the layer's 13 accepted rows; 3 listed conflicts (those three rows), all already at the rule's target. `scratch_mix/guard_rows.py
 ts_judge_sq35`: 10 rows selected, none outside the expected list. No assertion was relaxed and no extra row fired.
 Every rule row ends with the same label as in dd_final. No rule layer touches any of the 18 changed rows.
 

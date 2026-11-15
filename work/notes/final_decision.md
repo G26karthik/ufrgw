@@ -56,7 +56,7 @@ No candidate file came from Track 2.
   probabilities blended before the decoder, every accepted rule layer.
 - Status: promising but unconfirmed. Above the reference in all eight readings: D six seeds August .5007 against .5002,
   September +.0002 (-.0003..+.0009); D two seeds +.0006 / +.0004; N +.0007 / +.0016 and +.0001 / +.0013 (N-trained
-  versions, not shipped). Highest August D reading of any candidate this round.
+  versions, not shipped). August D of the first exploratory file: .5003.
 - Control: a scale-matched mixture of h6 with itself (no new model) gives August .5007 and September +.0003; candidate
   minus control -.0001 (-.0009..+.0008). The gain is reproduced by the probability-scale change alone; the weighted
   model is not shown to add information beyond it.
