@@ -1,0 +1,166 @@
+
+=== benchmark N, August (out-of-half bias): rows 526852, fraud rows 19345, fraud events 15016; reference C ===
+reference C pre: macro-F1 0.4698 | missed fraud rows 12377 in 12271 events | legit called fraud 972
+reference C q: macro-F1 0.4980 | missed fraud rows 12014 in 11912 events | legit called fraud 1022
+reference C pre per half (aug_dec.py numbers): 0.4616, 0.4775
+reference C q per half (aug_dec.py numbers): 0.4920, 0.5036
+
+N aug vanull vs C [pre] macro-F1 0.4707 vs 0.4698 = +0.0008 (event bootstrap 5-95 %: +0.0000, +0.0017) | mean of halves 0.4704 vs 0.4696
+  rows changed 101 corrected 57 newly wrong 32 | missed fraud recovered 15 rows / 13 events (flagged any fraud class 20 / 17) | new false positives 7 rows / 7 events (false positives removed 22 / 21) | correct fraud damaged 25 rows / 25 events (to legit 11 / 11)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518912 |  0.976  0.998  0.987  518920 | +0.000 +0.000 +0.0000
+  mule_account            3448 |  0.734  0.256  0.380    1203 |  0.733  0.258  0.381    1213 | -0.001 +0.002 +0.0018
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.841  0.312  0.455     968 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.753  0.415  0.535    1275 |  0.755  0.416  0.537    1274 | +0.002 +0.001 +0.0013
+  sim_swap                1393 |  0.630  0.261  0.369     578 |  0.629  0.262  0.370     580 | -0.000 +0.001 +0.0006
+  account_takeover        1333 |  0.603  0.245  0.349     542 |  0.599  0.245  0.348     546 | -0.004 +0.000 -0.0007
+  phishing_collect        2254 |  0.742  0.331  0.457    1004 |  0.747  0.330  0.458     996 | +0.005 -0.000 +0.0005
+  qr_swap                 2489 |  0.813  0.354  0.494    1085 |  0.824  0.355  0.496    1073 | +0.011 +0.001 +0.0028
+  refund_abuse            1115 |  0.843  0.370  0.514     489 |  0.859  0.366  0.513     475 | +0.016 -0.004 -0.0005
+  fake_cashback            811 |  0.603  0.224  0.327     302 |  0.594  0.231  0.332     315 | -0.009 +0.006 +0.0051
+  loan_app_extortion       660 |  0.803  0.247  0.378     203 |  0.811  0.247  0.379     201 | +0.008 +0.000 +0.0009
+  merchant_collusion       919 |  0.818  0.259  0.393     291 |  0.814  0.258  0.392     291 | -0.003 -0.001 -0.0017
+
+N aug vanull vs C [q] macro-F1 0.4985 vs 0.4980 = +0.0005 (event bootstrap 5-95 %: -0.0002, +0.0012) | mean of halves 0.4983 vs 0.4978
+  rows changed 92 corrected 53 newly wrong 27 | missed fraud recovered 14 rows / 12 events (flagged any fraud class 19 / 17) | new false positives 4 rows / 4 events (false positives removed 22 / 21) | correct fraud damaged 23 rows / 23 events (to legit 10 / 10)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518499 |  0.977  0.998  0.987  518510 | +0.000 +0.000 +0.0000
+  mule_account            3448 |  0.737  0.274  0.399    1283 |  0.735  0.276  0.401    1293 | -0.001 +0.002 +0.0017
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.762  0.434  0.553    1317 |  0.763  0.434  0.554    1315 | +0.002 +0.000 +0.0009
+  sim_swap                1393 |  0.684  0.377  0.486     767 |  0.686  0.380  0.489     771 | +0.002 +0.003 +0.0028
+  account_takeover        1333 |  0.825  0.259  0.394     418 |  0.823  0.259  0.394     419 | -0.002 +0.000 -0.0002
+  phishing_collect        2254 |  0.751  0.348  0.476    1045 |  0.754  0.348  0.476    1040 | +0.003 -0.000 +0.0001
+  qr_swap                 2489 |  0.814  0.376  0.514    1149 |  0.824  0.376  0.517    1137 | +0.010 +0.001 +0.0028
+  refund_abuse            1115 |  0.841  0.385  0.528     510 |  0.857  0.381  0.528     496 | +0.016 -0.004 -0.0004
+  fake_cashback            811 |  0.632  0.248  0.356     318 |  0.618  0.249  0.355     327 | -0.014 +0.001 -0.0011
+  loan_app_extortion       660 |  0.811  0.261  0.394     212 |  0.819  0.261  0.395     210 | +0.008 +0.000 +0.0009
+  merchant_collusion       919 |  0.826  0.274  0.412     305 |  0.823  0.273  0.410     305 | -0.003 -0.001 -0.0016
+
+N aug A_Cb2 vs C [pre] macro-F1 0.4715 vs 0.4698 = +0.0016 (event bootstrap 5-95 %: +0.0002, +0.0031) | mean of halves 0.4711 vs 0.4696
+  rows changed 162 corrected 71 newly wrong 66 | missed fraud recovered 25 rows / 23 events (flagged any fraud class 34 / 30) | new false positives 22 rows / 22 events (false positives removed 17 / 17) | correct fraud damaged 44 rows / 33 events (to legit 23 / 12)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518912 |  0.976  0.998  0.987  518898 | +0.000 -0.000 +0.0000
+  mule_account            3448 |  0.734  0.256  0.380    1203 |  0.734  0.257  0.380    1206 | -0.000 +0.001 +0.0006
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.839  0.306  0.449     953 | -0.001 -0.005 -0.0059
+  layering_chain          2311 |  0.753  0.415  0.535    1275 |  0.748  0.417  0.535    1287 | -0.005 +0.001 -0.0001
+  sim_swap                1393 |  0.630  0.261  0.369     578 |  0.638  0.265  0.374     578 | +0.009 +0.004 +0.0051
+  account_takeover        1333 |  0.603  0.245  0.349     542 |  0.607  0.248  0.353     545 | +0.004 +0.003 +0.0037
+  phishing_collect        2254 |  0.742  0.331  0.457    1004 |  0.746  0.331  0.459    1000 | +0.004 +0.000 +0.0012
+  qr_swap                 2489 |  0.813  0.354  0.494    1085 |  0.829  0.352  0.494    1056 | +0.016 -0.003 +0.0001
+  refund_abuse            1115 |  0.843  0.370  0.514     489 |  0.833  0.370  0.513     496 | -0.010 +0.001 -0.0010
+  fake_cashback            811 |  0.603  0.224  0.327     302 |  0.580  0.245  0.345     343 | -0.022 +0.021 +0.0178
+  loan_app_extortion       660 |  0.803  0.247  0.378     203 |  0.811  0.247  0.379     201 | +0.008 +0.000 +0.0009
+  merchant_collusion       919 |  0.818  0.259  0.393     291 |  0.817  0.257  0.391     289 | -0.001 -0.002 -0.0027
+
+N aug A_Cb2 vs C [q] macro-F1 0.4995 vs 0.4980 = +0.0014 (event bootstrap 5-95 %: +0.0004, +0.0026) | mean of halves 0.4992 vs 0.4978
+  rows changed 134 corrected 63 newly wrong 48 | missed fraud recovered 24 rows / 21 events (flagged any fraud class 33 / 29) | new false positives 22 rows / 22 events (false positives removed 16 / 16) | correct fraud damaged 26 rows / 26 events (to legit 9 / 9)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518499 |  0.977  0.998  0.987  518470 | +0.000 -0.000 +0.0000
+  mule_account            3448 |  0.737  0.274  0.399    1283 |  0.736  0.274  0.400    1285 | -0.000 +0.000 +0.0003
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.762  0.434  0.553    1317 |  0.757  0.435  0.553    1327 | -0.004 +0.001 -0.0004
+  sim_swap                1393 |  0.684  0.377  0.486     767 |  0.691  0.383  0.493     771 | +0.007 +0.006 +0.0065
+  account_takeover        1333 |  0.825  0.259  0.394     418 |  0.829  0.262  0.398     421 | +0.004 +0.003 +0.0039
+  phishing_collect        2254 |  0.751  0.348  0.476    1045 |  0.751  0.350  0.477    1051 | -0.000 +0.002 +0.0016
+  qr_swap                 2489 |  0.814  0.376  0.514    1149 |  0.829  0.373  0.514    1120 | +0.015 -0.003 +0.0003
+  refund_abuse            1115 |  0.841  0.385  0.528     510 |  0.832  0.386  0.527     517 | -0.009 +0.001 -0.0010
+  fake_cashback            811 |  0.632  0.248  0.356     318 |  0.606  0.260  0.364     348 | -0.026 +0.012 +0.0080
+  loan_app_extortion       660 |  0.811  0.261  0.394     212 |  0.819  0.261  0.395     210 | +0.008 +0.000 +0.0009
+  merchant_collusion       919 |  0.826  0.274  0.412     305 |  0.825  0.272  0.409     303 | -0.001 -0.002 -0.0026
+
+N aug vac2f3 vs C [pre] macro-F1 0.4700 vs 0.4698 = +0.0002 (event bootstrap 5-95 %: -0.0001, +0.0005) | mean of halves 0.4698 vs 0.4696
+  rows changed 13 corrected 7 newly wrong 5 | missed fraud recovered 0 rows / 0 events (flagged any fraud class 0 / 0) | new false positives 3 rows / 3 events (false positives removed 2 / 2) | correct fraud damaged 2 rows / 2 events (to legit 1 / 1)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518912 |  0.976  0.998  0.987  518912 | -0.000 -0.000 -0.0000
+  mule_account            3448 |  0.734  0.256  0.380    1203 |  0.734  0.256  0.380    1203 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.841  0.312  0.455     968 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.753  0.415  0.535    1275 |  0.753  0.415  0.535    1275 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.630  0.261  0.369     578 |  0.630  0.261  0.369     578 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.603  0.245  0.349     542 |  0.603  0.245  0.349     542 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.742  0.331  0.457    1004 |  0.743  0.332  0.459    1008 | +0.001 +0.002 +0.0019
+  qr_swap                 2489 |  0.813  0.354  0.494    1085 |  0.816  0.354  0.493    1078 | +0.003 -0.001 -0.0002
+  refund_abuse            1115 |  0.843  0.370  0.514     489 |  0.841  0.370  0.513     490 | -0.002 +0.000 -0.0003
+  fake_cashback            811 |  0.603  0.224  0.327     302 |  0.603  0.224  0.327     302 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.803  0.247  0.378     203 |  0.803  0.247  0.378     203 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.818  0.259  0.393     291 |  0.816  0.260  0.394     293 | -0.002 +0.001 +0.0010
+
+N aug vac2f3 vs C [q] macro-F1 0.4982 vs 0.4980 = +0.0002 (event bootstrap 5-95 %: -0.0001, +0.0005) | mean of halves 0.4980 vs 0.4978
+  rows changed 13 corrected 7 newly wrong 5 | missed fraud recovered 0 rows / 0 events (flagged any fraud class 0 / 0) | new false positives 3 rows / 3 events (false positives removed 2 / 2) | correct fraud damaged 2 rows / 2 events (to legit 1 / 1)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518499 |  0.977  0.998  0.987  518499 | -0.000 -0.000 -0.0000
+  mule_account            3448 |  0.737  0.274  0.399    1283 |  0.737  0.274  0.399    1283 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.762  0.434  0.553    1317 |  0.762  0.434  0.553    1317 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.684  0.377  0.486     767 |  0.684  0.377  0.486     767 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.825  0.259  0.394     418 |  0.825  0.259  0.394     418 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.751  0.348  0.476    1045 |  0.752  0.350  0.478    1049 | +0.001 +0.002 +0.0018
+  qr_swap                 2489 |  0.814  0.376  0.514    1149 |  0.817  0.375  0.514    1142 | +0.003 -0.001 -0.0001
+  refund_abuse            1115 |  0.841  0.385  0.528     510 |  0.840  0.385  0.528     511 | -0.002 +0.000 -0.0003
+  fake_cashback            811 |  0.632  0.248  0.356     318 |  0.632  0.248  0.356     318 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.811  0.261  0.394     212 |  0.811  0.261  0.394     212 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.826  0.274  0.412     305 |  0.824  0.275  0.413     307 | -0.002 +0.001 +0.0010
+
+N aug vac2f10 vs C [pre] macro-F1 0.4700 vs 0.4698 = +0.0002 (event bootstrap 5-95 %: -0.0003, +0.0007) | mean of halves 0.4698 vs 0.4696
+  rows changed 56 corrected 22 newly wrong 32 | missed fraud recovered 10 rows / 10 events (flagged any fraud class 10 / 10) | new false positives 20 rows / 20 events (false positives removed 4 / 4) | correct fraud damaged 12 rows / 11 events (to legit 7 / 7)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518912 |  0.976  0.998  0.987  518894 | +0.000 -0.000 -0.0000
+  mule_account            3448 |  0.734  0.256  0.380    1203 |  0.734  0.256  0.380    1203 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.841  0.312  0.455     968 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.753  0.415  0.535    1275 |  0.753  0.415  0.535    1275 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.630  0.261  0.369     578 |  0.630  0.261  0.369     578 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.603  0.245  0.349     542 |  0.603  0.245  0.349     542 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.742  0.331  0.457    1004 |  0.743  0.333  0.460    1009 | +0.001 +0.002 +0.0024
+  qr_swap                 2489 |  0.813  0.354  0.494    1085 |  0.807  0.354  0.492    1090 | -0.006 -0.001 -0.0018
+  refund_abuse            1115 |  0.843  0.370  0.514     489 |  0.836  0.371  0.514     495 | -0.006 +0.002 +0.0006
+  fake_cashback            811 |  0.603  0.224  0.327     302 |  0.603  0.224  0.327     302 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.803  0.247  0.378     203 |  0.803  0.247  0.378     203 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.818  0.259  0.393     291 |  0.816  0.260  0.394     293 | -0.002 +0.001 +0.0010
+
+N aug vac2f10 vs C [q] macro-F1 0.4982 vs 0.4980 = +0.0002 (event bootstrap 5-95 %: -0.0003, +0.0007) | mean of halves 0.4979 vs 0.4978
+  rows changed 54 corrected 21 newly wrong 31 | missed fraud recovered 9 rows / 9 events (flagged any fraud class 9 / 9) | new false positives 20 rows / 20 events (false positives removed 4 / 4) | correct fraud damaged 11 rows / 10 events (to legit 5 / 5)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518499 |  0.977  0.998  0.987  518480 | +0.000 -0.000 -0.0000
+  mule_account            3448 |  0.737  0.274  0.399    1283 |  0.737  0.274  0.399    1283 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.762  0.434  0.553    1317 |  0.762  0.434  0.553    1317 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.684  0.377  0.486     767 |  0.684  0.377  0.486     767 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.825  0.259  0.394     418 |  0.825  0.259  0.394     418 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.751  0.348  0.476    1045 |  0.752  0.350  0.478    1051 | +0.000 +0.002 +0.0022
+  qr_swap                 2489 |  0.814  0.376  0.514    1149 |  0.808  0.375  0.512    1154 | -0.005 -0.001 -0.0018
+  refund_abuse            1115 |  0.841  0.385  0.528     510 |  0.835  0.387  0.529     516 | -0.006 +0.002 +0.0005
+  fake_cashback            811 |  0.632  0.248  0.356     318 |  0.632  0.248  0.356     318 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.811  0.261  0.394     212 |  0.811  0.261  0.394     212 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.826  0.274  0.412     305 |  0.824  0.275  0.413     307 | -0.002 +0.001 +0.0010
+
+N aug vac2f30 vs C [pre] macro-F1 0.4689 vs 0.4698 = -0.0010 (event bootstrap 5-95 %: -0.0016, -0.0003) | mean of halves 0.4686 vs 0.4696
+  rows changed 146 corrected 36 newly wrong 101 | missed fraud recovered 16 rows / 16 events (flagged any fraud class 17 / 17) | new false positives 61 rows / 61 events (false positives removed 12 / 11) | correct fraud damaged 40 rows / 40 events (to legit 38 / 38)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518912 |  0.976  0.998  0.987  518890 | -0.000 -0.000 -0.0001
+  mule_account            3448 |  0.734  0.256  0.380    1203 |  0.734  0.256  0.380    1203 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.841  0.312  0.455     968 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.753  0.415  0.535    1275 |  0.753  0.415  0.535    1275 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.630  0.261  0.369     578 |  0.630  0.261  0.369     578 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.603  0.245  0.349     542 |  0.603  0.245  0.349     542 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.742  0.331  0.457    1004 |  0.743  0.333  0.460    1009 | +0.001 +0.002 +0.0024
+  qr_swap                 2489 |  0.813  0.354  0.494    1085 |  0.779  0.346  0.479    1105 | -0.034 -0.008 -0.0144
+  refund_abuse            1115 |  0.843  0.370  0.514     489 |  0.845  0.370  0.515     489 | +0.002 +0.001 +0.0012
+  fake_cashback            811 |  0.603  0.224  0.327     302 |  0.603  0.224  0.327     302 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.803  0.247  0.378     203 |  0.803  0.247  0.378     203 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.818  0.259  0.393     291 |  0.823  0.258  0.393     288 | +0.005 -0.001 -0.0007
+
+N aug vac2f30 vs C [q] macro-F1 0.4971 vs 0.4980 = -0.0009 (event bootstrap 5-95 %: -0.0015, -0.0003) | mean of halves 0.4969 vs 0.4978
+  rows changed 142 corrected 35 newly wrong 99 | missed fraud recovered 15 rows / 15 events (flagged any fraud class 16 / 16) | new false positives 61 rows / 61 events (false positives removed 12 / 11) | correct fraud damaged 38 rows / 38 events (to legit 35 / 35)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518499 |  0.977  0.998  0.987  518474 | -0.000 -0.000 -0.0001
+  mule_account            3448 |  0.737  0.274  0.399    1283 |  0.737  0.274  0.399    1283 | +0.000 +0.000 +0.0000
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.762  0.434  0.553    1317 |  0.762  0.434  0.553    1317 | +0.000 +0.000 +0.0000
+  sim_swap                1393 |  0.684  0.377  0.486     767 |  0.684  0.377  0.486     767 | +0.000 +0.000 +0.0000
+  account_takeover        1333 |  0.825  0.259  0.394     418 |  0.825  0.259  0.394     418 | +0.000 +0.000 +0.0000
+  phishing_collect        2254 |  0.751  0.348  0.476    1045 |  0.752  0.350  0.478    1051 | +0.000 +0.002 +0.0022
+  qr_swap                 2489 |  0.814  0.376  0.514    1149 |  0.781  0.368  0.500    1171 | -0.032 -0.008 -0.0140
+  refund_abuse            1115 |  0.841  0.385  0.528     510 |  0.843  0.386  0.529     510 | +0.002 +0.001 +0.0012
+  fake_cashback            811 |  0.632  0.248  0.356     318 |  0.632  0.248  0.356     318 | +0.000 +0.000 +0.0000
+  loan_app_extortion       660 |  0.811  0.261  0.394     212 |  0.811  0.261  0.394     212 | +0.000 +0.000 +0.0000
+  merchant_collusion       919 |  0.826  0.274  0.412     305 |  0.831  0.273  0.411     302 | +0.005 -0.001 -0.0006

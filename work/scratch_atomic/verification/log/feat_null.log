@@ -1,0 +1,3 @@
+null N_f0: rows 1053917 (months [7, 8], test rows 0), columns ['va_null__u'], label permutation over all 1053917 rows: bit-identical | va_null__u non-null 1053917 mean 0.49980 (2s)
+null N_f1: rows 1564060 (months [7, 8, 9, 10], test rows 0), columns ['va_null__u'], label permutation over all 1564060 rows: bit-identical | va_null__u non-null 1564060 mean 0.49993 (3s)
+null ALL: rows 1824642 (months [7, 8, 9, 10, 11], test rows 260582), columns ['va_null__u'], label permutation over all 1824642 rows: bit-identical | va_null__u non-null 1824642 mean 0.49990 (4s)

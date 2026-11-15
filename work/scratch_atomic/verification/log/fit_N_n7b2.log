@@ -1,0 +1,6 @@
+N n7 fold0: added ['n7__snd_n7', 'n7__snd_out7', 'n7__snd_in7']
+N n7 fold0 gain share / rank of new columns (of 193): n7__snd_n7 0.0044 / 56, n7__snd_out7 0.0042 / 58, n7__snd_in7 0.0017 / 92
+N van7 fold0 done (167s) -> scratch_atomic/verification/PN_van7b2_aug.npy
+N n7 fold1: added ['n7__snd_n7', 'n7__snd_out7', 'n7__snd_in7']
+N n7 fold1 gain share / rank of new columns (of 193): n7__snd_n7 0.0029 / 75, n7__snd_out7 0.0024 / 89, n7__snd_in7 0.0018 / 100
+N van7 fold1 done (414s) -> scratch_atomic/verification/PN_van7b2_sep.npy

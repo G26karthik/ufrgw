@@ -1,0 +1,72 @@
+
+=== N jul: all rows (no decode exists) 527065, fraud-labelled rows 19513 in 14892 events, legit rows 507552, base fraud share 0.0370; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 31 / 19513 rows = 0.0016, events 31 / 14892 | legit flagged 545 / 507552 = 0.0011 | lift 1.48 | fraud share among flagged 0.0538 (base 0.0370)
+    flagged missed rows by class: mule_a 3/3422 veloci 1/2834 layeri 1/2325 sim_sw 0/1411 accoun 0/1435 phishi 3/2280 qr_swa 20/2421 refund 1/1041 fake_c 1/888 loan_a 1/678 mercha 0/778
+'va_c2__qr_any_amt = 1': missed fraud flagged 40 / 19513 rows = 0.0020, events 40 / 14892 | legit flagged 550 / 507552 = 0.0011 | lift 1.89 | fraud share among flagged 0.0678 (base 0.0370)
+    flagged missed rows by class: mule_a 3/3422 veloci 1/2834 layeri 1/2325 sim_sw 0/1411 accoun 0/1435 phishi 3/2280 qr_swa 28/2421 refund 1/1041 fake_c 1/888 loan_a 1/678 mercha 1/778
+'va_c2__collect = 1': missed fraud flagged 799 / 19513 rows = 0.0409, events 772 / 14892 | legit flagged 2173 / 507552 = 0.0043 | lift 9.56 | fraud share among flagged 0.2688 (base 0.0370)
+    flagged missed rows by class: mule_a 9/3422 veloci 12/2834 layeri 9/2325 sim_sw 4/1411 accoun 3/1435 phishi 608/2280 qr_swa 9/2421 refund 4/1041 fake_c 102/888 loan_a 31/678 mercha 8/778
+'va_c2__J = 1': missed fraud flagged 2218 / 19513 rows = 0.1137, events 1340 / 14892 | legit flagged 3605 / 507552 = 0.0071 | lift 16.00 | fraud share among flagged 0.3809 (base 0.0370)
+    flagged missed rows by class: mule_a 305/3422 veloci 369/2834 layeri 299/2325 sim_sw 171/1411 accoun 179/1435 phishi 278/2280 qr_swa 279/2421 refund 109/1041 fake_c 98/888 loan_a 68/678 mercha 63/778
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 3 / 19513 rows = 0.0002, events 3 / 14892 | legit flagged 3 / 507552 = 0.0000 | lift 26.01 | fraud share among flagged 0.5000 (base 0.0370)
+    flagged missed rows by class: mule_a 1/3422 veloci 0/2834 layeri 0/2325 sim_sw 0/1411 accoun 0/1435 phishi 0/2280 qr_swa 2/2421 refund 0/1041 fake_c 0/888 loan_a 0/678 mercha 0/778
+
+=== N aug: rows decoded legit by C after the decoder 518499, missed fraud rows 12014 in 11912 events, legit rows 506485, base fraud share 0.0232; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 30 / 12014 rows = 0.0025, events 30 / 11912 | legit flagged 495 / 506485 = 0.0010 | lift 2.56 | legit share matched on P(legit) 0.0013, matched lift 1.98 | fraud share among flagged 0.0571 (base 0.0232)
+    flagged missed rows by class: mule_a 4/2332 veloci 2/1580 layeri 1/1280 sim_sw 0/850 accoun 1/818 phishi 1/1365 qr_swa 18/1520 refund 1/664 fake_c 0/533 loan_a 1/439 mercha 1/633
+'va_c2__qr_any_amt = 1': missed fraud flagged 30 / 12014 rows = 0.0025, events 30 / 11912 | legit flagged 498 / 506485 = 0.0010 | lift 2.54 | legit share matched on P(legit) 0.0013, matched lift 1.97 | fraud share among flagged 0.0568 (base 0.0232)
+    flagged missed rows by class: mule_a 4/2332 veloci 2/1580 layeri 1/1280 sim_sw 0/850 accoun 1/818 phishi 1/1365 qr_swa 18/1520 refund 1/664 fake_c 0/533 loan_a 1/439 mercha 1/633
+'va_c2__collect = 1': missed fraud flagged 57 / 12014 rows = 0.0047, events 57 / 11912 | legit flagged 2006 / 506485 = 0.0040 | lift 1.20 | legit share matched on P(legit) 0.0042, matched lift 1.13 | fraud share among flagged 0.0276 (base 0.0232)
+    flagged missed rows by class: mule_a 14/2332 veloci 5/1580 layeri 2/1280 sim_sw 5/850 accoun 5/818 phishi 12/1365 qr_swa 8/1520 refund 3/664 fake_c 1/533 loan_a 1/439 mercha 1/633
+'va_c2__J = 1': missed fraud flagged 120 / 12014 rows = 0.0100, events 120 / 11912 | legit flagged 3383 / 506485 = 0.0067 | lift 1.50 | legit share matched on P(legit) 0.0067, matched lift 1.49 | fraud share among flagged 0.0343 (base 0.0232)
+    flagged missed rows by class: mule_a 20/2332 veloci 10/1580 layeri 3/1280 sim_sw 8/850 accoun 8/818 phishi 27/1365 qr_swa 20/1520 refund 8/664 fake_c 4/533 loan_a 5/439 mercha 7/633
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 3 / 12014 rows = 0.0002, events 3 / 11912 | legit flagged 1 / 506485 = 0.0000 | lift 126.47 | legit share matched on P(legit) 0.0000, matched lift 98.22 | fraud share among flagged 0.7500 (base 0.0232)
+    flagged missed rows by class: mule_a 0/2332 veloci 0/1580 layeri 0/1280 sim_sw 0/850 accoun 0/818 phishi 0/1365 qr_swa 3/1520 refund 0/664 fake_c 0/533 loan_a 0/439 mercha 0/633
+
+=== N sep: rows decoded legit by C after the decoder 501922, missed fraud rows 11596 in 11476 events, legit rows 490326, base fraud share 0.0231; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 30 / 11596 rows = 0.0026, events 30 / 11476 | legit flagged 537 / 490326 = 0.0011 | lift 2.36 | legit share matched on P(legit) 0.0013, matched lift 1.98 | fraud share among flagged 0.0529 (base 0.0231)
+    flagged missed rows by class: mule_a 5/2276 veloci 2/1561 layeri 3/1261 sim_sw 0/778 accoun 1/784 phishi 0/1318 qr_swa 15/1462 refund 0/633 fake_c 1/517 loan_a 3/431 mercha 0/575
+'va_c2__qr_any_amt = 1': missed fraud flagged 33 / 11596 rows = 0.0028, events 33 / 11476 | legit flagged 539 / 490326 = 0.0011 | lift 2.59 | legit share matched on P(legit) 0.0013, matched lift 2.17 | fraud share among flagged 0.0577 (base 0.0231)
+    flagged missed rows by class: mule_a 5/2276 veloci 2/1561 layeri 3/1261 sim_sw 0/778 accoun 1/784 phishi 0/1318 qr_swa 18/1462 refund 0/633 fake_c 1/517 loan_a 3/431 mercha 0/575
+'va_c2__collect = 1': missed fraud flagged 56 / 11596 rows = 0.0048, events 56 / 11476 | legit flagged 2095 / 490326 = 0.0043 | lift 1.13 | legit share matched on P(legit) 0.0045, matched lift 1.07 | fraud share among flagged 0.0260 (base 0.0231)
+    flagged missed rows by class: mule_a 9/2276 veloci 8/1561 layeri 2/1261 sim_sw 3/778 accoun 3/784 phishi 16/1318 qr_swa 8/1462 refund 3/633 fake_c 1/517 loan_a 3/431 mercha 0/575
+'va_c2__J = 1': missed fraud flagged 106 / 11596 rows = 0.0091, events 105 / 11476 | legit flagged 3202 / 490326 = 0.0065 | lift 1.40 | legit share matched on P(legit) 0.0065, matched lift 1.40 | fraud share among flagged 0.0320 (base 0.0231)
+    flagged missed rows by class: mule_a 17/2276 veloci 14/1561 layeri 9/1261 sim_sw 7/778 accoun 2/784 phishi 13/1318 qr_swa 26/1462 refund 2/633 fake_c 3/517 loan_a 2/431 mercha 11/575
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 7 / 11596 rows = 0.0006, events 7 / 11476 | legit flagged 4 / 490326 = 0.0000 | lift 74.00 | legit share matched on P(legit) 0.0000, matched lift 62.06 | fraud share among flagged 0.6364 (base 0.0231)
+    flagged missed rows by class: mule_a 0/2276 veloci 0/1561 layeri 0/1261 sim_sw 0/778 accoun 0/784 phishi 0/1318 qr_swa 6/1462 refund 0/633 fake_c 0/517 loan_a 1/431 mercha 0/575
+
+=== D jul: all rows (no decode exists) 527065, fraud-labelled rows 19513 in 14892 events, legit rows 507552, base fraud share 0.0370; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 31 / 19513 rows = 0.0016, events 31 / 14892 | legit flagged 545 / 507552 = 0.0011 | lift 1.48 | fraud share among flagged 0.0538 (base 0.0370)
+    flagged missed rows by class: mule_a 3/3422 veloci 1/2834 layeri 1/2325 sim_sw 0/1411 accoun 0/1435 phishi 3/2280 qr_swa 20/2421 refund 1/1041 fake_c 1/888 loan_a 1/678 mercha 0/778
+'va_c2__qr_any_amt = 1': missed fraud flagged 40 / 19513 rows = 0.0020, events 40 / 14892 | legit flagged 550 / 507552 = 0.0011 | lift 1.89 | fraud share among flagged 0.0678 (base 0.0370)
+    flagged missed rows by class: mule_a 3/3422 veloci 1/2834 layeri 1/2325 sim_sw 0/1411 accoun 0/1435 phishi 3/2280 qr_swa 28/2421 refund 1/1041 fake_c 1/888 loan_a 1/678 mercha 1/778
+'va_c2__collect = 1': missed fraud flagged 799 / 19513 rows = 0.0409, events 772 / 14892 | legit flagged 2173 / 507552 = 0.0043 | lift 9.56 | fraud share among flagged 0.2688 (base 0.0370)
+    flagged missed rows by class: mule_a 9/3422 veloci 12/2834 layeri 9/2325 sim_sw 4/1411 accoun 3/1435 phishi 608/2280 qr_swa 9/2421 refund 4/1041 fake_c 102/888 loan_a 31/678 mercha 8/778
+'va_c2__J = 1': missed fraud flagged 2218 / 19513 rows = 0.1137, events 1340 / 14892 | legit flagged 3605 / 507552 = 0.0071 | lift 16.00 | fraud share among flagged 0.3809 (base 0.0370)
+    flagged missed rows by class: mule_a 305/3422 veloci 369/2834 layeri 299/2325 sim_sw 171/1411 accoun 179/1435 phishi 278/2280 qr_swa 279/2421 refund 109/1041 fake_c 98/888 loan_a 68/678 mercha 63/778
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 3 / 19513 rows = 0.0002, events 3 / 14892 | legit flagged 3 / 507552 = 0.0000 | lift 26.01 | fraud share among flagged 0.5000 (base 0.0370)
+    flagged missed rows by class: mule_a 1/3422 veloci 0/2834 layeri 0/2325 sim_sw 0/1411 accoun 0/1435 phishi 0/2280 qr_swa 2/2421 refund 0/1041 fake_c 0/888 loan_a 0/678 mercha 0/778
+
+=== D aug: rows decoded legit by A_C after the decoder 518642, missed fraud rows 12019 in 11920 events, legit rows 506623, base fraud share 0.0232; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 31 / 12019 rows = 0.0026, events 31 / 11920 | legit flagged 505 / 506623 = 0.0010 | lift 2.59 | legit share matched on P(legit) 0.0013, matched lift 1.92 | fraud share among flagged 0.0578 (base 0.0232)
+    flagged missed rows by class: mule_a 4/2326 veloci 2/1580 layeri 1/1290 sim_sw 0/851 accoun 1/821 phishi 1/1353 qr_swa 19/1521 refund 1/672 fake_c 0/532 loan_a 1/440 mercha 1/633
+'va_c2__qr_any_amt = 1': missed fraud flagged 32 / 12019 rows = 0.0027, events 32 / 11920 | legit flagged 509 / 506623 = 0.0010 | lift 2.65 | legit share matched on P(legit) 0.0014, matched lift 1.97 | fraud share among flagged 0.0591 (base 0.0232)
+    flagged missed rows by class: mule_a 4/2326 veloci 2/1580 layeri 1/1290 sim_sw 0/851 accoun 1/821 phishi 1/1353 qr_swa 20/1521 refund 1/672 fake_c 0/532 loan_a 1/440 mercha 1/633
+'va_c2__collect = 1': missed fraud flagged 51 / 12019 rows = 0.0042, events 51 / 11920 | legit flagged 2002 / 506623 = 0.0040 | lift 1.07 | legit share matched on P(legit) 0.0042, matched lift 1.00 | fraud share among flagged 0.0248 (base 0.0232)
+    flagged missed rows by class: mule_a 14/2326 veloci 5/1580 layeri 2/1290 sim_sw 5/851 accoun 5/821 phishi 6/1353 qr_swa 8/1521 refund 3/672 fake_c 1/532 loan_a 1/440 mercha 1/633
+'va_c2__J = 1': missed fraud flagged 124 / 12019 rows = 0.0103, events 124 / 11920 | legit flagged 3419 / 506623 = 0.0067 | lift 1.53 | legit share matched on P(legit) 0.0068, matched lift 1.52 | fraud share among flagged 0.0350 (base 0.0232)
+    flagged missed rows by class: mule_a 21/2326 veloci 10/1580 layeri 9/1290 sim_sw 7/851 accoun 9/821 phishi 21/1353 qr_swa 21/1521 refund 8/672 fake_c 4/532 loan_a 7/440 mercha 7/633
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 4 / 12019 rows = 0.0003, events 4 / 11920 | legit flagged 1 / 506623 = 0.0000 | lift 168.61 | legit share matched on P(legit) 0.0000, matched lift 125.10 | fraud share among flagged 0.8000 (base 0.0232)
+    flagged missed rows by class: mule_a 0/2326 veloci 0/1580 layeri 0/1290 sim_sw 0/851 accoun 0/821 phishi 0/1353 qr_swa 4/1521 refund 0/672 fake_c 0/532 loan_a 0/440 mercha 0/633
+
+=== D sep: rows decoded legit by A_C after the decoder 502077, missed fraud rows 11626 in 11508 events, legit rows 490451, base fraud share 0.0232; feature rows missing (False, False, False, False) ===
+'va_c2__qr = 1': missed fraud flagged 32 / 11626 rows = 0.0028, events 32 / 11508 | legit flagged 535 / 490451 = 0.0011 | lift 2.52 | legit share matched on P(legit) 0.0014, matched lift 1.95 | fraud share among flagged 0.0564 (base 0.0232)
+    flagged missed rows by class: mule_a 5/2279 veloci 2/1561 layeri 3/1277 sim_sw 0/783 accoun 1/787 phishi 0/1321 qr_swa 17/1464 refund 0/635 fake_c 1/519 loan_a 3/434 mercha 0/566
+'va_c2__qr_any_amt = 1': missed fraud flagged 36 / 11626 rows = 0.0031, events 36 / 11508 | legit flagged 537 / 490451 = 0.0011 | lift 2.83 | legit share matched on P(legit) 0.0014, matched lift 2.18 | fraud share among flagged 0.0628 (base 0.0232)
+    flagged missed rows by class: mule_a 5/2279 veloci 2/1561 layeri 3/1277 sim_sw 0/783 accoun 1/787 phishi 0/1321 qr_swa 21/1464 refund 0/635 fake_c 1/519 loan_a 3/434 mercha 0/566
+'va_c2__collect = 1': missed fraud flagged 52 / 11626 rows = 0.0045, events 52 / 11508 | legit flagged 2095 / 490451 = 0.0043 | lift 1.05 | legit share matched on P(legit) 0.0046, matched lift 0.97 | fraud share among flagged 0.0242 (base 0.0232)
+    flagged missed rows by class: mule_a 9/2279 veloci 8/1561 layeri 2/1277 sim_sw 3/783 accoun 3/787 phishi 12/1321 qr_swa 8/1464 refund 3/635 fake_c 1/519 loan_a 3/434 mercha 0/566
+'va_c2__J = 1': missed fraud flagged 120 / 11626 rows = 0.0103, events 120 / 11508 | legit flagged 3237 / 490451 = 0.0066 | lift 1.56 | legit share matched on P(legit) 0.0066, matched lift 1.56 | fraud share among flagged 0.0357 (base 0.0232)
+    flagged missed rows by class: mule_a 19/2279 veloci 14/1561 layeri 16/1277 sim_sw 8/783 accoun 5/787 phishi 13/1321 qr_swa 26/1464 refund 6/635 fake_c 5/519 loan_a 3/434 mercha 5/566
+'va_c2__qr = 1 AND va_c2__J = 1': missed fraud flagged 8 / 11626 rows = 0.0007, events 8 / 11508 | legit flagged 4 / 490451 = 0.0000 | lift 84.37 | legit share matched on P(legit) 0.0000, matched lift 65.12 | fraud share among flagged 0.6667 (base 0.0232)
+    flagged missed rows by class: mule_a 0/2279 veloci 0/1561 layeri 0/1277 sim_sw 0/783 accoun 0/787 phishi 0/1321 qr_swa 7/1464 refund 0/635 fake_c 0/519 loan_a 1/434 mercha 0/566

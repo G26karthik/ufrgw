@@ -1,0 +1,4 @@
+N aug: cell rows decoded legit 525, qr_swap-labelled 18, any fraud label 30; cell rows decoded qr_swap 13 of which labelled qr_swap 3; top-k by P(qr_swap) -> qr_swap labels: k=10: 3, k=20: 6, k=50: 13, k=100: 16
+N sep: cell rows decoded legit 567, qr_swap-labelled 15, any fraud label 30; cell rows decoded qr_swap 3 of which labelled qr_swap 2; top-k by P(qr_swap) -> qr_swap labels: k=10: 1, k=20: 4, k=50: 8, k=100: 13
+D aug: cell rows decoded legit 536, qr_swap-labelled 19, any fraud label 31; cell rows decoded qr_swap 2 of which labelled qr_swap 2; top-k by P(qr_swap) -> qr_swap labels: k=10: 3, k=20: 6, k=50: 11, k=100: 13
+D sep: cell rows decoded legit 567, qr_swap-labelled 17, any fraud label 32; cell rows decoded qr_swap 3 of which labelled qr_swap 0; top-k by P(qr_swap) -> qr_swap labels: k=10: 4, k=20: 7, k=50: 10, k=100: 12

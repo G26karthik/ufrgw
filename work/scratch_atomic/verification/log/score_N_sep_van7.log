@@ -1,0 +1,36 @@
+
+=== benchmark N, September (August bias): rows 509996, fraud rows 18661, fraud events 14400; reference C ===
+reference C pre: macro-F1 0.4815 | missed fraud rows 11921 in 11797 events | legit called fraud 971
+reference C q: macro-F1 0.5070 | missed fraud rows 11596 in 11476 events | legit called fraud 1009
+
+N sep van7 vs C [pre] macro-F1 0.4830 vs 0.4815 = +0.0014 (event bootstrap 5-95 %: +0.0002, +0.0026)
+  rows changed 99 corrected 49 newly wrong 40 | missed fraud recovered 18 rows / 14 events (flagged any fraud class 20 / 16) | new false positives 14 rows / 14 events (false positives removed 16 / 16) | correct fraud damaged 26 rows / 25 events (to legit 18 / 18)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 491335 |  0.976  0.998  0.987  502285 |  0.976  0.998  0.987  502286 | +0.000 +0.000 +0.0000
+  mule_account            3367 |  0.752  0.271  0.399    1215 |  0.751  0.271  0.398    1215 | -0.002 -0.001 -0.0009
+  velocity_bot            2659 |  0.846  0.339  0.484    1066 |  0.846  0.339  0.484    1066 | +0.000 +0.000 +0.0000
+  layering_chain          2182 |  0.773  0.401  0.529    1133 |  0.769  0.403  0.529    1143 | -0.004 +0.001 +0.0002
+  sim_swap                1267 |  0.664  0.281  0.395     536 |  0.676  0.281  0.397     527 | +0.011 +0.000 +0.0020
+  account_takeover        1280 |  0.650  0.270  0.381     531 |  0.649  0.273  0.384     538 | -0.001 +0.003 +0.0029
+  phishing_collect        2162 |  0.735  0.329  0.454     967 |  0.742  0.325  0.452     946 | +0.007 -0.004 -0.0027
+  qr_swap                 2352 |  0.830  0.348  0.490     986 |  0.833  0.346  0.489     977 | +0.004 -0.002 -0.0011
+  refund_abuse            1075 |  0.804  0.373  0.510     499 |  0.804  0.378  0.514     505 | +0.000 +0.005 +0.0044
+  fake_cashback            831 |  0.639  0.254  0.363     330 |  0.650  0.255  0.366     326 | +0.011 +0.001 +0.0030
+  loan_app_extortion       645 |  0.867  0.262  0.402     195 |  0.862  0.262  0.402     196 | -0.004 +0.000 -0.0005
+  merchant_collusion       841 |  0.830  0.250  0.384     253 |  0.808  0.260  0.394     271 | -0.022 +0.011 +0.0100
+
+N sep van7 vs C [q] macro-F1 0.5082 vs 0.5070 = +0.0012 (event bootstrap 5-95 %: +0.0002, +0.0023)
+  rows changed 91 corrected 45 newly wrong 37 | missed fraud recovered 18 rows / 14 events (flagged any fraud class 20 / 16) | new false positives 13 rows / 13 events (false positives removed 16 / 16) | correct fraud damaged 24 rows / 23 events (to legit 17 / 17)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 491335 |  0.977  0.998  0.987  501922 |  0.977  0.998  0.987  501923 | +0.000 +0.000 +0.0000
+  mule_account            3367 |  0.760  0.290  0.419    1283 |  0.758  0.289  0.418    1283 | -0.002 -0.001 -0.0009
+  velocity_bot            2659 |  0.847  0.358  0.504    1125 |  0.847  0.358  0.504    1125 | +0.000 +0.000 +0.0000
+  layering_chain          2182 |  0.777  0.415  0.541    1166 |  0.773  0.417  0.541    1176 | -0.004 +0.001 +0.0002
+  sim_swap                1267 |  0.697  0.367  0.481     667 |  0.701  0.367  0.482     663 | +0.004 +0.000 +0.0010
+  account_takeover        1280 |  0.839  0.290  0.431     442 |  0.837  0.290  0.431     443 | -0.002 +0.000 -0.0003
+  phishing_collect        2162 |  0.748  0.348  0.475    1007 |  0.756  0.345  0.473     986 | +0.008 -0.004 -0.0019
+  qr_swap                 2352 |  0.830  0.365  0.507    1034 |  0.833  0.363  0.506    1025 | +0.003 -0.002 -0.0010
+  refund_abuse            1075 |  0.809  0.389  0.525     517 |  0.809  0.393  0.529     523 | +0.000 +0.005 +0.0043
+  fake_cashback            831 |  0.647  0.273  0.384     351 |  0.658  0.276  0.388     348 | +0.011 +0.002 +0.0044
+  loan_app_extortion       645 |  0.870  0.279  0.423     207 |  0.865  0.279  0.422     208 | -0.004 +0.000 -0.0005
+  merchant_collusion       841 |  0.825  0.270  0.407     275 |  0.805  0.281  0.416     293 | -0.020 +0.011 +0.0094

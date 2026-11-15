@@ -1,0 +1,6 @@
+N null fold0: added ['va_null__u']
+N null fold0 gain share / rank of new columns (of 191): va_null__u 0.0138 / 19
+N vanull fold0 done (237s) -> scratch_atomic/verification/PN_vanull_aug.npy
+N null fold1: added ['va_null__u']
+N null fold1 gain share / rank of new columns (of 191): va_null__u 0.0089 / 25
+N vanull fold1 done (208s) -> scratch_atomic/verification/PN_vanull_sep.npy

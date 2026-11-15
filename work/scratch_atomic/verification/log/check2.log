@@ -1,0 +1,4 @@
+N vaC vs C aug: shape (526852, 12) identical True max abs diff 0.000e+00
+N vaC vs C sep: shape (509996, 12) identical True max abs diff 0.000e+00
+D vaC vs A_C aug: shape (526852, 12) identical True max abs diff 0.000e+00
+D vaC vs A_C sep: shape (509996, 12) identical True max abs diff 0.000e+00

@@ -1,0 +1,68 @@
+
+== benchmark D month 8: decoded-legit rows 518652; J rate legit-labelled 0.00675, fraud label+decode 0.278; J rows among decoded legit 3547, expected 3502, excess 45 -> about 165 fraud-path rows decoded legit
+shape: (12, 13)
+┌──────────┬───────────────┬──────┬─────────┬───────┬───────┬─────┬───────────────┬───────────┬────────┬───────┬────────┬─────────┐
+│ txn_type ┆ receiver_type ┆ mm   ┆ int_amt ┆ np    ┆ n     ┆ J_n ┆ J_fraud_label ┆ J_top_cls ┆ J_home ┆ J_exp ┆ excess ┆ z       │
+│ ---      ┆ ---           ┆ ---  ┆ ---     ┆ ---   ┆ ---   ┆ --- ┆ ---           ┆ ---       ┆ ---    ┆ ---   ┆ ---    ┆ ---     │
+│ str      ┆ str           ┆ str  ┆ bool    ┆ bool  ┆ u32   ┆ u32 ┆ u32           ┆ i8        ┆ f64    ┆ f64   ┆ f64    ┆ f64     │
+╞══════════╪═══════════════╪══════╪═════════╪═══════╪═══════╪═════╪═══════════════╪═══════════╪════════╪═══════╪════════╪═════════╡
+│ PAY      ┆ P2P           ┆ null ┆ true    ┆ false ┆ 97018 ┆ 696 ┆ 25            ┆ 3         ┆ 0.93   ┆ 655.1 ┆ 40.9   ┆ 1.6     │
+│ PAY      ┆ P2P           ┆ null ┆ true    ┆ true  ┆ 22016 ┆ 172 ┆ 15            ┆ 6         ┆ 0.92   ┆ 148.7 ┆ 23.3   ┆ 1.9     │
+│ QR       ┆ MERCHANT      ┆ 0    ┆ false   ┆ true  ┆ 45706 ┆ 327 ┆ 5             ┆ 1         ┆ 0.94   ┆ 308.6 ┆ 18.4   ┆ 1.0     │
+│ PAY      ┆ MERCHANT      ┆ null ┆ false   ┆ true  ┆ 31314 ┆ 228 ┆ 8             ┆ 1         ┆ 0.9    ┆ 211.4 ┆ 16.6   ┆ 1.1     │
+│ PAY      ┆ P2P           ┆ 0    ┆ true    ┆ true  ┆ 29    ┆ 12  ┆ 1             ┆ 5         ┆ 1.0    ┆ 0.2   ┆ 11.8   ┆ 26.4    │
+│ COLLECT  ┆ P2P           ┆ null ┆ true    ┆ true  ┆ 2058  ┆ 21  ┆ 1             ┆ 10        ┆ 0.95   ┆ 13.9  ┆ 7.1    ┆ 1.9     │
+│ QR       ┆ MERCHANT      ┆ 0    ┆ true    ┆ false ┆ 1404  ┆ 16  ┆ 2             ┆ 7         ┆ 0.88   ┆ 9.5   ┆ 6.5    ┆ 2.1     │
+│ REFUND   ┆ MERCHANT      ┆ 0    ┆ false   ┆ false ┆ 8     ┆ 4   ┆ 3             ┆ 8         ┆ 1.0    ┆ 0.1   ┆ 3.9    ┆ 12.3    │
+│ COLLECT  ┆ P2P           ┆ null ┆ false   ┆ true  ┆ 925   ┆ 10  ┆ 0             ┆ null      ┆ 0.9    ┆ 6.2   ┆ 3.8    ┆ 1.5     │
+│ AUTOPAY  ┆ MERCHANT      ┆ null ┆ false   ┆ true  ┆ 4120  ┆ 31  ┆ 1             ┆ 9         ┆ 0.97   ┆ 27.8  ┆ 3.2    ┆ 0.6     │
+│ QR       ┆ MERCHANT      ┆ null ┆ true    ┆ false ┆ 6     ┆ 3   ┆ 1             ┆ 11        ┆ 1.0    ┆ 0.0   ┆ 3.0    ┆ 94868.3 │
+│ PAY      ┆ P2P           ┆ 0    ┆ true    ┆ false ┆ 12    ┆ 2   ┆ 2             ┆ 6         ┆ 1.0    ┆ 0.1   ┆ 1.9    ┆ 6.0     │
+└──────────┴───────────────┴──────┴─────────┴───────┴───────┴─────┴───────────────┴───────────┴────────┴───────┴────────┴─────────┘
+by supplied class of the decoded-legit rows (reading aid): class, n, J_n, expected, excess
+   legit                 506626  3421  3421.0     0.0
+   mule_account            2325    21    15.7     5.3
+   velocity_bot            1580    10    10.7    -0.7
+   layering_chain          1290     9     8.7     0.3
+   sim_swap                 849     6     5.7     0.3
+   account_takeover         822    10     5.6     4.4
+   phishing_collect        1358    22     9.2    12.8
+   qr_swap                 1521    21    10.3    10.7
+   refund_abuse             674     9     4.6     4.4
+   fake_cashback            533     4     3.6     0.4
+   loan_app_extortion       441     7     3.0     4.0
+   merchant_collusion       633     7     4.3     2.7
+
+== benchmark D month 9: decoded-legit rows 502076; J rate legit-labelled 0.00660, fraud label+decode 0.280; J rows among decoded legit 3355, expected 3313, excess 42 -> about 155 fraud-path rows decoded legit
+shape: (12, 13)
+┌──────────┬───────────────┬──────┬─────────┬───────┬───────┬─────┬───────────────┬───────────┬────────┬───────┬────────┬──────┐
+│ txn_type ┆ receiver_type ┆ mm   ┆ int_amt ┆ np    ┆ n     ┆ J_n ┆ J_fraud_label ┆ J_top_cls ┆ J_home ┆ J_exp ┆ excess ┆ z    │
+│ ---      ┆ ---           ┆ ---  ┆ ---     ┆ ---   ┆ ---   ┆ --- ┆ ---           ┆ ---       ┆ ---    ┆ ---   ┆ ---    ┆ ---  │
+│ str      ┆ str           ┆ str  ┆ bool    ┆ bool  ┆ u32   ┆ u32 ┆ u32           ┆ i8        ┆ f64    ┆ f64   ┆ f64    ┆ f64  │
+╞══════════╪═══════════════╪══════╪═════════╪═══════╪═══════╪═════╪═══════════════╪═══════════╪════════╪═══════╪════════╪══════╡
+│ PAY      ┆ P2P           ┆ null ┆ false   ┆ false ┆ 39796 ┆ 290 ┆ 11            ┆ 2         ┆ 0.9    ┆ 262.6 ┆ 27.4   ┆ 1.7  │
+│ PAY      ┆ P2P           ┆ 0    ┆ true    ┆ true  ┆ 29    ┆ 11  ┆ 2             ┆ 3         ┆ 1.0    ┆ 0.2   ┆ 10.8   ┆ 24.1 │
+│ PAY      ┆ P2P           ┆ null ┆ true    ┆ true  ┆ 21422 ┆ 151 ┆ 10            ┆ 6         ┆ 0.93   ┆ 141.3 ┆ 9.7    ┆ 0.8  │
+│ QR       ┆ MERCHANT      ┆ 1    ┆ false   ┆ false ┆ 397   ┆ 9   ┆ 5             ┆ 7         ┆ 1.0    ┆ 2.6   ┆ 6.4    ┆ 4.0  │
+│ PAY      ┆ P2P           ┆ null ┆ false   ┆ true  ┆ 9045  ┆ 66  ┆ 1             ┆ 3         ┆ 0.94   ┆ 59.7  ┆ 6.3    ┆ 0.8  │
+│ COLLECT  ┆ P2P           ┆ null ┆ false   ┆ false ┆ 3919  ┆ 32  ┆ 0             ┆ null      ┆ 0.91   ┆ 25.9  ┆ 6.1    ┆ 1.2  │
+│ PAY      ┆ P2P           ┆ 0    ┆ true    ┆ false ┆ 21    ┆ 6   ┆ 2             ┆ 4         ┆ 1.0    ┆ 0.1   ┆ 5.9    ┆ 18.7 │
+│ QR       ┆ MERCHANT      ┆ 0    ┆ true    ┆ false ┆ 1347  ┆ 13  ┆ 2             ┆ 7         ┆ 1.0    ┆ 8.9   ┆ 4.1    ┆ 1.4  │
+│ PAY      ┆ P2P           ┆ null ┆ true    ┆ false ┆ 94429 ┆ 626 ┆ 22            ┆ 3         ┆ 0.92   ┆ 623.0 ┆ 3.0    ┆ 0.1  │
+│ COLLECT  ┆ P2P           ┆ null ┆ true    ┆ true  ┆ 2146  ┆ 17  ┆ 3             ┆ 6         ┆ 0.82   ┆ 14.2  ┆ 2.8    ┆ 0.7  │
+│ REFUND   ┆ MERCHANT      ┆ null ┆ false   ┆ true  ┆ 750   ┆ 7   ┆ 0             ┆ null      ┆ 0.86   ┆ 4.9   ┆ 2.1    ┆ 0.9  │
+│ PAY      ┆ MERCHANT      ┆ null ┆ true    ┆ false ┆ 910   ┆ 8   ┆ 0             ┆ null      ┆ 1.0    ┆ 6.0   ┆ 2.0    ┆ 0.8  │
+└──────────┴───────────────┴──────┴─────────┴───────┴───────┴─────┴───────────────┴───────────┴────────┴───────┴────────┴──────┘
+by supplied class of the decoded-legit rows (reading aid): class, n, J_n, expected, excess
+   legit                 490452  3236  3236.0     0.0
+   mule_account            2275    17    15.0     2.0
+   velocity_bot            1561    14    10.3     3.7
+   layering_chain          1275    16     8.4     7.6
+   sim_swap                 783     8     5.2     2.8
+   account_takeover         787     5     5.2    -0.2
+   phishing_collect        1322    14     8.7     5.3
+   qr_swap                 1465    26     9.7    16.3
+   refund_abuse             634     5     4.2     0.8
+   fake_cashback            519     5     3.4     1.6
+   loan_app_extortion       437     4     2.9     1.1
+   merchant_collusion       566     5     3.7     1.3

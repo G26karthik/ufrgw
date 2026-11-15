@@ -1,0 +1,54 @@
+
+=== N jul: all rows (no decode exists) 527065, fraud-labelled rows 19513 in 14892 events, legit rows 507552, base fraud share 0.0370; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.5367 | per class: mule_a 0.514 veloci 0.534 layeri 0.548 sim_sw 0.571 accoun 0.584 phishi 0.514 qr_swa 0.489 refund 0.583 fake_c 0.555 loan_a 0.578 mercha 0.547
+'n7__snd_out7': AUC missed fraud vs legit 0.5220 | per class: mule_a 0.494 veloci 0.529 layeri 0.479 sim_sw 0.575 accoun 0.585 phishi 0.507 qr_swa 0.487 refund 0.586 fake_c 0.522 loan_a 0.579 mercha 0.547
+'n7__snd_in7': AUC missed fraud vs legit 0.5215 | per class: mule_a 0.524 veloci 0.508 layeri 0.600 sim_sw 0.499 accoun 0.497 phishi 0.513 qr_swa 0.502 refund 0.506 fake_c 0.551 loan_a 0.502 mercha 0.498
+'n7__snd_n7 >= 3': missed fraud flagged 2599 / 19513 rows = 0.1332, events 1849 / 14892 | legit flagged 51205 / 507552 = 0.1009 | lift 1.32 | fraud share among flagged 0.0483 (base 0.0370)
+    flagged missed rows by class: mule_a 379/3422 veloci 447/2834 layeri 261/2325 sim_sw 205/1411 accoun 234/1435 phishi 247/2280 qr_swa 251/2421 refund 210/1041 fake_c 114/888 loan_a 131/678 mercha 120/778
+'n7__snd_n7 >= 5': missed fraud flagged 1073 / 19513 rows = 0.0550, events 666 / 14892 | legit flagged 18089 / 507552 = 0.0356 | lift 1.54 | fraud share among flagged 0.0560 (base 0.0370)
+    flagged missed rows by class: mule_a 186/3422 veloci 287/2834 layeri 65/2325 sim_sw 58/1411 accoun 85/1435 phishi 83/2280 qr_swa 101/2421 refund 85/1041 fake_c 40/888 loan_a 45/678 mercha 38/778
+
+=== N aug: rows decoded legit by C after the decoder 518499, missed fraud rows 12014 in 11912 events, legit rows 506485, base fraud share 0.0232; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.5056 | matched on P(legit) (20 bins) 0.5051 | per class: mule_a 0.497 veloci 0.496 layeri 0.501 sim_sw 0.519 accoun 0.513 phishi 0.515 qr_swa 0.513 refund 0.507 fake_c 0.502 loan_a 0.486 mercha 0.520
+'n7__snd_out7': AUC missed fraud vs legit 0.5046 | matched on P(legit) (20 bins) 0.5041 | per class: mule_a 0.494 veloci 0.496 layeri 0.500 sim_sw 0.517 accoun 0.513 phishi 0.513 qr_swa 0.516 refund 0.503 fake_c 0.501 loan_a 0.491 mercha 0.513
+'n7__snd_in7': AUC missed fraud vs legit 0.5032 | matched on P(legit) (20 bins) 0.5030 | per class: mule_a 0.505 veloci 0.500 layeri 0.500 sim_sw 0.511 accoun 0.503 phishi 0.504 qr_swa 0.498 refund 0.513 fake_c 0.503 loan_a 0.494 mercha 0.506
+'n7__snd_n7 >= 3': missed fraud flagged 1553 / 12014 rows = 0.1293, events 1517 / 11912 | legit flagged 66001 / 506485 = 0.1303 | lift 0.99 | legit share matched on P(legit) 0.1310, matched lift 0.99 | fraud share among flagged 0.0230 (base 0.0232)
+    flagged missed rows by class: mule_a 285/2332 veloci 217/1580 layeri 153/1280 sim_sw 121/850 accoun 104/818 phishi 177/1365 qr_swa 204/1520 refund 94/664 fake_c 71/533 loan_a 50/439 mercha 77/633
+'n7__snd_n7 >= 5': missed fraud flagged 529 / 12014 rows = 0.0440, events 505 / 11912 | legit flagged 23103 / 506485 = 0.0456 | lift 0.97 | legit share matched on P(legit) 0.0461, matched lift 0.96 | fraud share among flagged 0.0224 (base 0.0232)
+    flagged missed rows by class: mule_a 101/2332 veloci 63/1580 layeri 42/1280 sim_sw 42/850 accoun 31/818 phishi 64/1365 qr_swa 87/1520 refund 30/664 fake_c 28/533 loan_a 16/439 mercha 25/633
+
+=== N sep: rows decoded legit by C after the decoder 501922, missed fraud rows 11596 in 11476 events, legit rows 490326, base fraud share 0.0231; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.4999 | matched on P(legit) (20 bins) 0.4995 | per class: mule_a 0.494 veloci 0.506 layeri 0.507 sim_sw 0.504 accoun 0.483 phishi 0.494 qr_swa 0.502 refund 0.512 fake_c 0.491 loan_a 0.503 mercha 0.509
+'n7__snd_out7': AUC missed fraud vs legit 0.4988 | matched on P(legit) (20 bins) 0.4983 | per class: mule_a 0.491 veloci 0.505 layeri 0.511 sim_sw 0.502 accoun 0.483 phishi 0.493 qr_swa 0.502 refund 0.510 fake_c 0.490 loan_a 0.498 mercha 0.505
+'n7__snd_in7': AUC missed fraud vs legit 0.5010 | matched on P(legit) (20 bins) 0.5008 | per class: mule_a 0.505 veloci 0.500 layeri 0.497 sim_sw 0.502 accoun 0.498 phishi 0.498 qr_swa 0.500 refund 0.505 fake_c 0.498 loan_a 0.502 mercha 0.509
+'n7__snd_n7 >= 3': missed fraud flagged 1531 / 11596 rows = 0.1320, events 1495 / 11476 | legit flagged 63646 / 490326 = 0.1298 | lift 1.02 | legit share matched on P(legit) 0.1305, matched lift 1.01 | fraud share among flagged 0.0235 (base 0.0231)
+    flagged missed rows by class: mule_a 292/2276 veloci 206/1561 layeri 171/1261 sim_sw 114/778 accoun 87/784 phishi 172/1318 qr_swa 191/1462 refund 98/633 fake_c 64/517 loan_a 51/431 mercha 85/575
+'n7__snd_n7 >= 5': missed fraud flagged 577 / 11596 rows = 0.0498, events 551 / 11476 | legit flagged 22285 / 490326 = 0.0454 | lift 1.09 | legit share matched on P(legit) 0.0459, matched lift 1.08 | fraud share among flagged 0.0252 (base 0.0231)
+    flagged missed rows by class: mule_a 115/2276 veloci 71/1561 layeri 72/1261 sim_sw 51/778 accoun 35/784 phishi 66/1318 qr_swa 63/1462 refund 39/633 fake_c 18/517 loan_a 15/431 mercha 32/575
+
+=== D jul: all rows (no decode exists) 527065, fraud-labelled rows 19513 in 14892 events, legit rows 507552, base fraud share 0.0370; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.5367 | per class: mule_a 0.514 veloci 0.534 layeri 0.548 sim_sw 0.571 accoun 0.584 phishi 0.514 qr_swa 0.489 refund 0.583 fake_c 0.555 loan_a 0.578 mercha 0.547
+'n7__snd_out7': AUC missed fraud vs legit 0.5220 | per class: mule_a 0.494 veloci 0.529 layeri 0.479 sim_sw 0.575 accoun 0.585 phishi 0.507 qr_swa 0.487 refund 0.586 fake_c 0.522 loan_a 0.579 mercha 0.547
+'n7__snd_in7': AUC missed fraud vs legit 0.5215 | per class: mule_a 0.524 veloci 0.508 layeri 0.600 sim_sw 0.499 accoun 0.497 phishi 0.513 qr_swa 0.502 refund 0.506 fake_c 0.551 loan_a 0.502 mercha 0.498
+'n7__snd_n7 >= 3': missed fraud flagged 2599 / 19513 rows = 0.1332, events 1849 / 14892 | legit flagged 51205 / 507552 = 0.1009 | lift 1.32 | fraud share among flagged 0.0483 (base 0.0370)
+    flagged missed rows by class: mule_a 379/3422 veloci 447/2834 layeri 261/2325 sim_sw 205/1411 accoun 234/1435 phishi 247/2280 qr_swa 251/2421 refund 210/1041 fake_c 114/888 loan_a 131/678 mercha 120/778
+'n7__snd_n7 >= 5': missed fraud flagged 1073 / 19513 rows = 0.0550, events 666 / 14892 | legit flagged 18089 / 507552 = 0.0356 | lift 1.54 | fraud share among flagged 0.0560 (base 0.0370)
+    flagged missed rows by class: mule_a 186/3422 veloci 287/2834 layeri 65/2325 sim_sw 58/1411 accoun 85/1435 phishi 83/2280 qr_swa 101/2421 refund 85/1041 fake_c 40/888 loan_a 45/678 mercha 38/778
+
+=== D aug: rows decoded legit by A_C after the decoder 518642, missed fraud rows 12019 in 11920 events, legit rows 506623, base fraud share 0.0232; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.5059 | matched on P(legit) (20 bins) 0.5051 | per class: mule_a 0.497 veloci 0.496 layeri 0.501 sim_sw 0.518 accoun 0.513 phishi 0.516 qr_swa 0.513 refund 0.511 fake_c 0.501 loan_a 0.488 mercha 0.520
+'n7__snd_out7': AUC missed fraud vs legit 0.5046 | matched on P(legit) (20 bins) 0.5039 | per class: mule_a 0.495 veloci 0.496 layeri 0.499 sim_sw 0.515 accoun 0.513 phishi 0.514 qr_swa 0.516 refund 0.506 fake_c 0.500 loan_a 0.493 mercha 0.513
+'n7__snd_in7': AUC missed fraud vs legit 0.5035 | matched on P(legit) (20 bins) 0.5031 | per class: mule_a 0.505 veloci 0.500 layeri 0.502 sim_sw 0.512 accoun 0.502 phishi 0.503 qr_swa 0.498 refund 0.514 fake_c 0.503 loan_a 0.494 mercha 0.506
+'n7__snd_n7 >= 3': missed fraud flagged 1558 / 12019 rows = 0.1296, events 1523 / 11920 | legit flagged 66032 / 506623 = 0.1303 | lift 0.99 | legit share matched on P(legit) 0.1314, matched lift 0.99 | fraud share among flagged 0.0231 (base 0.0232)
+    flagged missed rows by class: mule_a 285/2326 veloci 217/1580 layeri 155/1290 sim_sw 119/851 accoun 104/821 phishi 176/1353 qr_swa 204/1521 refund 100/672 fake_c 70/532 loan_a 51/440 mercha 77/633
+'n7__snd_n7 >= 5': missed fraud flagged 527 / 12019 rows = 0.0438, events 504 / 11920 | legit flagged 23119 / 506623 = 0.0456 | lift 0.96 | legit share matched on P(legit) 0.0463, matched lift 0.95 | fraud share among flagged 0.0223 (base 0.0232)
+    flagged missed rows by class: mule_a 101/2326 veloci 63/1580 layeri 42/1290 sim_sw 41/851 accoun 31/821 phishi 64/1353 qr_swa 87/1521 refund 30/672 fake_c 27/532 loan_a 16/440 mercha 25/633
+
+=== D sep: rows decoded legit by A_C after the decoder 502077, missed fraud rows 11626 in 11508 events, legit rows 490451, base fraud share 0.0232; feature rows missing (False, False, False) ===
+'n7__snd_n7': AUC missed fraud vs legit 0.5002 | matched on P(legit) (20 bins) 0.4991 | per class: mule_a 0.494 veloci 0.506 layeri 0.507 sim_sw 0.505 accoun 0.484 phishi 0.494 qr_swa 0.502 refund 0.513 fake_c 0.492 loan_a 0.505 mercha 0.509
+'n7__snd_out7': AUC missed fraud vs legit 0.4991 | matched on P(legit) (20 bins) 0.4981 | per class: mule_a 0.491 veloci 0.505 layeri 0.510 sim_sw 0.503 accoun 0.485 phishi 0.494 qr_swa 0.502 refund 0.511 fake_c 0.490 loan_a 0.500 mercha 0.504
+'n7__snd_in7': AUC missed fraud vs legit 0.5010 | matched on P(legit) (20 bins) 0.5005 | per class: mule_a 0.504 veloci 0.500 layeri 0.498 sim_sw 0.502 accoun 0.498 phishi 0.498 qr_swa 0.500 refund 0.503 fake_c 0.499 loan_a 0.503 mercha 0.508
+'n7__snd_n7 >= 3': missed fraud flagged 1536 / 11626 rows = 0.1321, events 1500 / 11508 | legit flagged 63696 / 490451 = 0.1299 | lift 1.02 | legit share matched on P(legit) 0.1314, matched lift 1.01 | fraud share among flagged 0.0235 (base 0.0232)
+    flagged missed rows by class: mule_a 291/2279 veloci 206/1561 layeri 172/1277 sim_sw 115/783 accoun 88/787 phishi 173/1321 qr_swa 191/1464 refund 98/635 fake_c 65/519 loan_a 52/434 mercha 85/566
+'n7__snd_n7 >= 5': missed fraud flagged 577 / 11626 rows = 0.0496, events 551 / 11508 | legit flagged 22308 / 490451 = 0.0455 | lift 1.09 | legit share matched on P(legit) 0.0464, matched lift 1.07 | fraud share among flagged 0.0252 (base 0.0232)
+    flagged missed rows by class: mule_a 114/2279 veloci 71/1561 layeri 72/1277 sim_sw 52/783 accoun 35/787 phishi 65/1321 qr_swa 63/1464 refund 39/635 fake_c 18/519 loan_a 16/434 mercha 32/566

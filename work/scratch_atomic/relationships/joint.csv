@@ -1,0 +1,57 @@
+cond,motif,pop,cls,n_ev,fraud_pct,ctrl_pct,diff,z
+ring/burst x n7,C5_snd_act_up,allfraud_m8,all,13247,14.38,14.21,0.17,0.7
+ring/burst x n7,C5_snd_act_up,allfraud_m8,single-row ev,12684,13.95,13.76,0.19,0.8
+ring/burst x n7,C5_snd_act_up,allfraud_m8,multi-row ev,563,24.16,24.33,-0.18,-0.1
+ring/burst x n7,C5_snd_act_up,allfraud_m8,layering_chain,1526,16.12,16.3,-0.18,-0.3
+ring/burst x n7,C5_snd_act_up,allfraud_m8,velocity_bot,1628,14.19,13.92,0.27,0.4
+ring/burst x n7,C5_snd_act_up,allfraud_m8,account_takeover,826,15.25,14.92,0.34,0.4
+ring/burst x n7,C5_snd_act_up,allfraud_m8,fake_cashback,604,13.58,13.18,0.4,0.4
+ring/burst x n7,C5_snd_act_up,allfraud_m8,refund_abuse,703,15.22,15.46,-0.24,-0.2
+ring/burst x n7,C5_snd_act_up,allfraud_m8,merchant_collusion,643,16.33,15.35,0.98,0.9
+ring/burst x n7,C5_snd_act_up,allfraud_m8,phishing_collect,1829,13.45,13.52,-0.07,-0.1
+ring/burst x n7,C5_snd_act_up,allfraud_m8,sim_swap,851,13.16,15.01,-1.85,-2.0
+ring/burst x n7,C5_snd_act_up,allfraud_m8,qr_swap,1783,14.02,12.98,1.04,1.6
+ring/burst x n7,C5_snd_act_up,allfraud_m8,loan_app_extortion,456,13.16,12.19,0.97,0.8
+ring/burst x n7,C5_snd_act_up,allfraud_m8,mule_account,2398,14.18,13.94,0.24,0.4
+ring/burst x n7,C5_snd_act_up,allfraud_m9,all,12763,13.72,13.75,-0.03,-0.1
+ring/burst x n7,C5_snd_act_up,allfraud_m9,single-row ev,12220,13.26,13.32,-0.07,-0.3
+ring/burst x n7,C5_snd_act_up,allfraud_m9,multi-row ev,543,24.13,23.34,0.78,0.5
+ring/burst x n7,C5_snd_act_up,allfraud_m9,layering_chain,1467,15.88,16.03,-0.15,-0.2
+ring/burst x n7,C5_snd_act_up,allfraud_m9,velocity_bot,1587,13.99,13.67,0.32,0.5
+ring/burst x n7,C5_snd_act_up,allfraud_m9,fake_cashback,601,14.14,13.92,0.22,0.2
+ring/burst x n7,C5_snd_act_up,allfraud_m9,account_takeover,792,14.52,13.04,1.48,1.5
+ring/burst x n7,C5_snd_act_up,allfraud_m9,phishing_collect,1749,12.35,12.52,-0.17,-0.3
+ring/burst x n7,C5_snd_act_up,allfraud_m9,merchant_collusion,583,13.72,14.09,-0.37,-0.3
+ring/burst x n7,C5_snd_act_up,allfraud_m9,refund_abuse,677,13.44,14.0,-0.56,-0.6
+ring/burst x n7,C5_snd_act_up,allfraud_m9,mule_account,2336,13.87,13.84,0.03,0.1
+ring/burst x n7,C5_snd_act_up,allfraud_m9,sim_swap,782,13.43,13.74,-0.31,-0.3
+ring/burst x n7,C5_snd_act_up,allfraud_m9,qr_swap,1737,12.38,12.81,-0.43,-0.7
+ring/burst x n7,C5_snd_act_up,allfraud_m9,loan_app_extortion,452,14.38,14.8,-0.42,-0.3
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,all,13247,21.64,21.93,-0.3,-1.0
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,single-row ev,12684,21.48,21.82,-0.33,-1.0
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,multi-row ev,563,25.04,24.56,0.49,0.3
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,fake_cashback,604,21.19,22.93,-1.73,-1.2
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,account_takeover,826,19.61,20.97,-1.36,-1.1
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,layering_chain,1526,22.8,22.94,-0.14,-0.1
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,velocity_bot,1628,21.68,22.18,-0.49,-0.6
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,merchant_collusion,643,23.17,21.36,1.81,1.3
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,phishing_collect,1829,20.94,22.96,-2.02,-2.4
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,refund_abuse,703,23.19,21.81,1.38,1.0
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,mule_account,2398,20.81,20.85,-0.04,-0.1
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,sim_swap,851,21.27,20.51,0.76,0.6
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,loan_app_extortion,456,23.25,22.31,0.93,0.6
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m8,qr_swap,1783,22.1,22.21,-0.11,-0.1
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,all,12763,21.8,22.17,-0.37,-1.2
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,single-row ev,12220,21.63,22.07,-0.44,-1.4
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,multi-row ev,543,25.6,24.37,1.23,0.7
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,velocity_bot,1587,22.12,21.22,0.9,1.0
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,account_takeover,792,23.11,22.14,0.97,0.8
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,fake_cashback,601,22.63,22.67,-0.04,-0.0
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,layering_chain,1467,22.02,22.64,-0.62,-0.7
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,merchant_collusion,583,21.78,20.71,1.08,0.7
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,phishing_collect,1749,22.24,23.42,-1.18,-1.3
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,refund_abuse,677,17.73,21.22,-3.49,-2.8
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,sim_swap,782,21.36,21.08,0.27,0.2
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,loan_app_extortion,452,21.9,22.64,-0.74,-0.4
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,mule_account,2336,21.53,22.23,-0.69,-0.9
+ring/burst x n7,C8_nP_zero(no events in prior 21 d),allfraud_m9,qr_swap,1737,22.11,22.38,-0.27,-0.3

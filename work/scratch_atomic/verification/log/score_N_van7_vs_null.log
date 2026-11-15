@@ -1,0 +1,74 @@
+
+=== benchmark N, August (out-of-half bias): rows 526852, fraud rows 19345, fraud events 15016; reference vanull ===
+reference vanull pre: macro-F1 0.4707 | missed fraud rows 12370 in 12266 events | legit called fraud 957
+reference vanull q: macro-F1 0.4985 | missed fraud rows 12007 in 11906 events | legit called fraud 1004
+reference vanull pre per half (aug_dec.py numbers): 0.4626, 0.4783
+reference vanull q per half (aug_dec.py numbers): 0.4918, 0.5048
+
+N aug van7 vs vanull [pre] macro-F1 0.4706 vs 0.4707 = -0.0001 (event bootstrap 5-95 %: -0.0013, +0.0010) | mean of halves 0.4703 vs 0.4704
+  rows changed 97 corrected 38 newly wrong 44 | missed fraud recovered 4 rows / 4 events (flagged any fraud class 7 / 6) | new false positives 1 rows / 1 events (false positives removed 13 / 13) | correct fraud damaged 43 rows / 39 events (to legit 25 / 24)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.976  0.998  0.987  518920 |  0.976  0.998  0.987  518953 | -0.000 +0.000 -0.0000
+  mule_account            3448 |  0.733  0.258  0.381    1213 |  0.734  0.257  0.381    1207 | +0.001 -0.001 -0.0008
+  velocity_bot            2612 |  0.841  0.312  0.455     968 |  0.841  0.312  0.455     968 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.755  0.416  0.537    1274 |  0.753  0.416  0.536    1277 | -0.003 -0.000 -0.0010
+  sim_swap                1393 |  0.629  0.262  0.370     580 |  0.627  0.257  0.365     571 | -0.002 -0.005 -0.0054
+  account_takeover        1333 |  0.599  0.245  0.348     546 |  0.607  0.246  0.350     540 | +0.009 +0.001 +0.0022
+  phishing_collect        2254 |  0.747  0.330  0.458     996 |  0.757  0.326  0.455     970 | +0.010 -0.004 -0.0025
+  qr_swap                 2489 |  0.824  0.355  0.496    1073 |  0.831  0.351  0.494    1052 | +0.007 -0.004 -0.0027
+  refund_abuse            1115 |  0.859  0.366  0.513     475 |  0.841  0.370  0.513     490 | -0.018 +0.004 +0.0002
+  fake_cashback            811 |  0.594  0.231  0.332     315 |  0.596  0.242  0.344     329 | +0.002 +0.011 +0.0117
+  loan_app_extortion       660 |  0.811  0.247  0.379     201 |  0.807  0.247  0.378     202 | -0.004 +0.000 -0.0004
+  merchant_collusion       919 |  0.814  0.258  0.392     291 |  0.805  0.257  0.389     293 | -0.009 -0.001 -0.0023
+
+N aug van7 vs vanull [q] macro-F1 0.4980 vs 0.4985 = -0.0005 (event bootstrap 5-95 %: -0.0015, +0.0005) | mean of halves 0.4978 vs 0.4983
+  rows changed 83 corrected 27 newly wrong 42 | missed fraud recovered 3 rows / 3 events (flagged any fraud class 6 / 5) | new false positives 1 rows / 1 events (false positives removed 6 / 6) | correct fraud damaged 41 rows / 37 events (to legit 23 / 22)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 507507 |  0.977  0.998  0.987  518510 |  0.977  0.998  0.987  518535 | -0.000 +0.000 -0.0000
+  mule_account            3448 |  0.735  0.276  0.401    1293 |  0.737  0.275  0.400    1287 | +0.001 -0.001 -0.0008
+  velocity_bot            2612 |  0.843  0.332  0.476    1029 |  0.843  0.332  0.476    1029 | +0.000 +0.000 +0.0000
+  layering_chain          2311 |  0.763  0.434  0.554    1315 |  0.761  0.434  0.553    1318 | -0.002 -0.000 -0.0010
+  sim_swap                1393 |  0.686  0.380  0.489     771 |  0.684  0.375  0.484     763 | -0.002 -0.005 -0.0047
+  account_takeover        1333 |  0.823  0.259  0.394     419 |  0.826  0.260  0.395     419 | +0.002 +0.001 +0.0011
+  phishing_collect        2254 |  0.754  0.348  0.476    1040 |  0.760  0.343  0.473    1018 | +0.006 -0.004 -0.0029
+  qr_swap                 2489 |  0.824  0.376  0.517    1137 |  0.831  0.373  0.515    1117 | +0.007 -0.004 -0.0021
+  refund_abuse            1115 |  0.857  0.381  0.528     496 |  0.840  0.385  0.528     511 | -0.017 +0.004 +0.0001
+  fake_cashback            811 |  0.618  0.249  0.355     327 |  0.617  0.256  0.362     337 | -0.001 +0.007 +0.0074
+  loan_app_extortion       660 |  0.819  0.261  0.395     210 |  0.815  0.261  0.395     211 | -0.004 +0.000 -0.0005
+  merchant_collusion       919 |  0.823  0.273  0.410     305 |  0.814  0.272  0.408     307 | -0.009 -0.001 -0.0023
+
+=== benchmark N, September (August bias): rows 509996, fraud rows 18661, fraud events 14400; reference vanull ===
+reference vanull pre: macro-F1 0.4823 | missed fraud rows 11910 in 11788 events | legit called fraud 985
+reference vanull q: macro-F1 0.5077 | missed fraud rows 11585 in 11467 events | legit called fraud 1021
+
+N sep van7 vs vanull [pre] macro-F1 0.4830 vs 0.4823 = +0.0007 (event bootstrap 5-95 %: -0.0006, +0.0019)
+  rows changed 124 corrected 62 newly wrong 49 | missed fraud recovered 18 rows / 15 events (flagged any fraud class 18 / 15) | new false positives 12 rows / 12 events (false positives removed 28 / 28) | correct fraud damaged 37 rows / 37 events (to legit 26 / 26)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 491335 |  0.976  0.998  0.987  502260 |  0.976  0.998  0.987  502286 | -0.000 +0.000 +0.0000
+  mule_account            3367 |  0.752  0.271  0.399    1216 |  0.751  0.271  0.398    1215 | -0.001 -0.001 -0.0008
+  velocity_bot            2659 |  0.846  0.339  0.484    1066 |  0.846  0.339  0.484    1066 | +0.000 +0.000 +0.0000
+  layering_chain          2182 |  0.770  0.402  0.529    1140 |  0.769  0.403  0.529    1143 | -0.001 +0.000 +0.0001
+  sim_swap                1267 |  0.667  0.280  0.395     532 |  0.676  0.281  0.397     527 | +0.008 +0.001 +0.0022
+  account_takeover        1280 |  0.648  0.270  0.381     532 |  0.649  0.273  0.384     538 | +0.000 +0.003 +0.0031
+  phishing_collect        2162 |  0.739  0.327  0.453     957 |  0.742  0.325  0.452     946 | +0.003 -0.002 -0.0016
+  qr_swap                 2352 |  0.828  0.349  0.491     990 |  0.833  0.346  0.489     977 | +0.005 -0.003 -0.0017
+  refund_abuse            1075 |  0.804  0.374  0.510     500 |  0.804  0.378  0.514     505 | -0.000 +0.004 +0.0034
+  fake_cashback            831 |  0.623  0.266  0.373     355 |  0.650  0.255  0.366     326 | +0.028 -0.011 -0.0062
+  loan_app_extortion       645 |  0.866  0.260  0.400     194 |  0.862  0.262  0.402     196 | -0.004 +0.002 +0.0014
+  merchant_collusion       841 |  0.831  0.251  0.385     254 |  0.808  0.260  0.394     271 | -0.023 +0.010 +0.0085
+
+N sep van7 vs vanull [q] macro-F1 0.5082 vs 0.5077 = +0.0006 (event bootstrap 5-95 %: -0.0005, +0.0018)
+  rows changed 115 corrected 57 newly wrong 46 | missed fraud recovered 17 rows / 14 events (flagged any fraud class 17 / 14) | new false positives 12 rows / 12 events (false positives removed 27 / 27) | correct fraud damaged 34 rows / 34 events (to legit 24 / 24)
+  class                      n |  ref P      R     F1   npred |  var P      R     F1   npred |     dP     dR     dF1
+  legit                 491335 |  0.977  0.998  0.987  501899 |  0.977  0.998  0.987  501923 | -0.000 +0.000 +0.0000
+  mule_account            3367 |  0.759  0.290  0.419    1284 |  0.758  0.289  0.418    1283 | -0.001 -0.001 -0.0008
+  velocity_bot            2659 |  0.847  0.358  0.504    1125 |  0.847  0.358  0.504    1125 | +0.000 +0.000 +0.0000
+  layering_chain          2182 |  0.774  0.416  0.541    1173 |  0.773  0.417  0.541    1176 | -0.001 +0.000 +0.0001
+  sim_swap                1267 |  0.700  0.367  0.482     664 |  0.701  0.367  0.482     663 | +0.001 +0.000 +0.0002
+  account_takeover        1280 |  0.839  0.289  0.430     441 |  0.837  0.290  0.431     443 | -0.002 +0.001 +0.0007
+  phishing_collect        2162 |  0.751  0.346  0.474     996 |  0.756  0.345  0.473     986 | +0.005 -0.001 -0.0004
+  qr_swap                 2352 |  0.829  0.366  0.507    1038 |  0.833  0.363  0.506    1025 | +0.005 -0.003 -0.0016
+  refund_abuse            1075 |  0.809  0.390  0.526     518 |  0.809  0.393  0.529     523 | -0.000 +0.004 +0.0034
+  fake_cashback            831 |  0.630  0.285  0.393     376 |  0.658  0.276  0.388     348 | +0.028 -0.010 -0.0042
+  loan_app_extortion       645 |  0.869  0.278  0.421     206 |  0.865  0.279  0.422     208 | -0.004 +0.002 +0.0014
+  merchant_collusion       841 |  0.826  0.271  0.408     276 |  0.805  0.281  0.416     293 | -0.021 +0.010 +0.0080

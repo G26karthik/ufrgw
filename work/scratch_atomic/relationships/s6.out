@@ -1,0 +1,195 @@
+
+===== C5_snd_act_up
+shape: (56, 4)
+┌────────────────────────────────────────────────┬────────────────────┬─────────────────────┬─────────────────────┐
+│ cond                                           ┆ cls                ┆ allfraud_m8         ┆ allfraud_m9         │
+│ ---                                            ┆ ---                ┆ ---                 ┆ ---                 │
+│ str                                            ┆ str                ┆ str                 ┆ str                 │
+╞════════════════════════════════════════════════╪════════════════════╪═════════════════════╪═════════════════════╡
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ account_takeover   ┆ 4.31 (3.5) n=1000   ┆ 4.44 (3.6) n=966    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ all                ┆ 1.91 (6.3) n=14570  ┆ 1.43 (4.7) n=13937  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ fake_cashback      ┆ 2.76 (1.9) n=658    ┆ 3.42 (2.4) n=676    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ layering_chain     ┆ 2.15 (2.3) n=1567   ┆ 2.07 (2.2) n=1503   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ loan_app_extortion ┆ 4.73 (2.9) n=552    ┆ 5.93 (3.5) n=535    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ merchant_collusion ┆ 5.91 (3.9) n=712    ┆ 2.55 (1.7) n=631    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ mule_account       ┆ 0.54 (0.8) n=2451   ┆ 0.44 (0.6) n=2394   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ multi-row ev       ┆ 18.4 (13.2) n=1184  ┆ 16.61 (11.8) n=1116 │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ phishing_collect   ┆ 1.04 (1.3) n=2047   ┆ 0.18 (0.2) n=1981   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ qr_swap            ┆ 0.88 (1.1) n=2069   ┆ 0.78 (1.0) n=1886   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ refund_abuse       ┆ 2.83 (2.1) n=835    ┆ 0.39 (0.3) n=805    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ sim_swap           ┆ 2.71 (2.3) n=1022   ┆ 1.23 (1.0) n=939    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ single-row ev      ┆ 0.45 (1.5) n=13386  ┆ 0.11 (0.4) n=12821  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ velocity_bot       ┆ 0.63 (0.7) n=1657   ┆ 0.66 (0.8) n=1621   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ account_takeover   ┆ 2.4 (2.6) n=1014    ┆ 3.25 (3.4) n=969    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ all                ┆ 0.97 (4.1) n=14335  ┆ 0.82 (3.4) n=13812  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ fake_cashback      ┆ 0.93 (0.9) n=661    ┆ 0.54 (0.5) n=659    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ layering_chain     ┆ -0.13 (-0.2) n=1549 ┆ 0.07 (0.1) n=1492   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ loan_app_extortion ┆ 3.17 (2.6) n=546    ┆ 2.45 (1.8) n=526    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ merchant_collusion ┆ 2.68 (2.4) n=702    ┆ 1.11 (0.9) n=629    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ mule_account       ┆ 0.22 (0.4) n=2439   ┆ 0.09 (0.2) n=2390   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ multi-row ev       ┆ 9.29 (8.7) n=1209   ┆ 9.33 (8.1) n=1131   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ phishing_collect   ┆ 0.03 (0.1) n=2022   ┆ 0.26 (0.4) n=1947   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ qr_swap            ┆ 1.08 (1.7) n=1856   ┆ -0.17 (-0.3) n=1807 │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ refund_abuse       ┆ 3.06 (2.9) n=853    ┆ 3.5 (3.5) n=816     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ sim_swap           ┆ 1.08 (1.2) n=1038   ┆ 1.26 (1.3) n=954    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ single-row ev      ┆ 0.2 (0.9) n=13126   ┆ 0.06 (0.3) n=12681  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ velocity_bot       ┆ 0.65 (1.0) n=1655   ┆ 0.76 (1.1) n=1623   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ account_takeover   ┆ 1.3 (1.0) n=855     ┆ 0.99 (0.8) n=817    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ all                ┆ 1.1 (3.6) n=13956   ┆ 0.72 (2.4) n=13366  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ fake_cashback      ┆ 2.44 (1.7) n=664    ┆ 3.24 (2.2) n=664    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ layering_chain     ┆ 2.19 (2.3) n=1563   ┆ 2.28 (2.4) n=1498   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ loan_app_extortion ┆ -0.76 (-0.5) n=492  ┆ 0.24 (0.1) n=476    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ merchant_collusion ┆ 3.49 (2.4) n=673    ┆ 0.38 (0.3) n=599    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ mule_account       ┆ 0.48 (0.7) n=2437   ┆ 0.46 (0.6) n=2373   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ multi-row ev       ┆ 13.35 (8.1) n=790   ┆ 11.89 (7.1) n=742   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ phishing_collect   ┆ 0.21 (0.3) n=2005   ┆ -0.1 (-0.1) n=1911  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ qr_swap            ┆ 0.94 (1.2) n=1940   ┆ 0.34 (0.4) n=1833   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ refund_abuse       ┆ 4.82 (3.5) n=793    ┆ 1.06 (0.8) n=771    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ sim_swap           ┆ -1.12 (-1.0) n=882  ┆ -0.38 (-0.3) n=813  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ single-row ev      ┆ 0.36 (1.2) n=13166  ┆ 0.06 (0.2) n=12624  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ velocity_bot       ┆ 0.58 (0.7) n=1652   ┆ 0.53 (0.6) n=1611   │
+│ base                                           ┆ account_takeover   ┆ 5.18 (4.2) n=1017   ┆ 5.03 (4.0) n=975    │
+│ base                                           ┆ all                ┆ 2.47 (8.1) n=14691  ┆ 2.06 (6.7) n=14033  │
+│ base                                           ┆ fake_cashback      ┆ 3.21 (2.2) n=676    ┆ 3.83 (2.6) n=681    │
+│ base                                           ┆ layering_chain     ┆ 2.17 (2.3) n=1567   ┆ 2.07 (2.2) n=1503   │
+│ base                                           ┆ loan_app_extortion ┆ 4.83 (2.9) n=552    ┆ 6.04 (3.5) n=535    │
+│ base                                           ┆ merchant_collusion ┆ 5.9 (3.9) n=712     ┆ 2.75 (1.9) n=632    │
+│ base                                           ┆ mule_account       ┆ 0.59 (0.8) n=2454   ┆ 0.46 (0.6) n=2395   │
+│ base                                           ┆ multi-row ev       ┆ 22.22 (16.4) n=1285 ┆ 21.37 (15.4) n=1195 │
+│ base                                           ┆ phishing_collect   ┆ 1.2 (1.5) n=2060    ┆ 0.38 (0.5) n=1995   │
+│ base                                           ┆ qr_swap            ┆ 0.9 (1.1) n=2072    ┆ 0.76 (0.9) n=1888   │
+│ base                                           ┆ refund_abuse       ┆ 8.59 (6.2) n=876    ┆ 7.32 (5.3) n=845    │
+│ base                                           ┆ sim_swap           ┆ 3.67 (3.1) n=1045   ┆ 2.41 (2.0) n=958    │
+│ base                                           ┆ single-row ev      ┆ 0.58 (1.9) n=13406  ┆ 0.27 (0.9) n=12838  │
+│ base                                           ┆ velocity_bot       ┆ 0.88 (1.0) n=1660   ┆ 0.99 (1.1) n=1626   │
+└────────────────────────────────────────────────┴────────────────────┴─────────────────────┴─────────────────────┘
+
+===== B4_co_rcv_edge
+shape: (56, 4)
+┌────────────────────────────────────────────────┬────────────────────┬──────────────────────┬─────────────────────┐
+│ cond                                           ┆ cls                ┆ allfraud_m8          ┆ allfraud_m9         │
+│ ---                                            ┆ ---                ┆ ---                  ┆ ---                 │
+│ str                                            ┆ str                ┆ str                  ┆ str                 │
+╞════════════════════════════════════════════════╪════════════════════╪══════════════════════╪═════════════════════╡
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ account_takeover   ┆ -0.12 (-30.9) n=1000 ┆ 0.04 (0.3) n=966    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ all                ┆ -0.07 (-3.5) n=14570 ┆ 0.05 (1.4) n=13937  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ fake_cashback      ┆ -0.12 (-25.2) n=658  ┆ 0.14 (0.7) n=676    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ layering_chain     ┆ 0.01 (0.1) n=1567    ┆ 0.16 (1.1) n=1503   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ loan_app_extortion ┆ 0.03 (0.2) n=552     ┆ -0.03 (-0.1) n=535  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ merchant_collusion ┆ -0.14 (-31.2) n=712  ┆ -0.05 (-0.3) n=631  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ mule_account       ┆ -0.05 (-0.9) n=2451  ┆ -0.02 (-0.3) n=2394 │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ multi-row ev       ┆ -0.05 (-0.6) n=1184  ┆ 0.08 (0.9) n=1116   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ phishing_collect   ┆ -0.1 (-36.4) n=2047  ┆ 0.12 (1.0) n=1981   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ qr_swap            ┆ -0.09 (-1.8) n=2069  ┆ -0.04 (-0.5) n=1886 │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ refund_abuse       ┆ -0.13 (-29.3) n=835  ┆ -0.18 (-29.9) n=805 │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ sim_swap           ┆ -0.02 (-0.2) n=1022  ┆ -0.06 (-0.5) n=939  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ single-row ev      ┆ -0.07 (-3.5) n=13386 ┆ 0.05 (1.2) n=12821  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ velocity_bot       ┆ -0.08 (-0.9) n=1657  ┆ 0.34 (1.9) n=1621   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ account_takeover   ┆ -0.13 (-24.3) n=1014 ┆ 0.03 (0.2) n=969    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ all                ┆ 0.07 (1.9) n=14335   ┆ 0.17 (3.2) n=13812  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ fake_cashback      ┆ -0.14 (-19.0) n=661  ┆ 0.12 (0.6) n=659    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ layering_chain     ┆ -0.01 (-0.1) n=1549  ┆ 0.13 (0.9) n=1492   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ loan_app_extortion ┆ 0.02 (0.1) n=546     ┆ 0.15 (0.6) n=526    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ merchant_collusion ┆ -0.16 (-24.8) n=702  ┆ -0.07 (-0.4) n=629  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ mule_account       ┆ -0.08 (-1.4) n=2439  ┆ -0.05 (-0.6) n=2390 │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ multi-row ev       ┆ 1.92 (4.8) n=1209    ┆ 1.77 (4.4) n=1131   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ phishing_collect   ┆ -0.12 (-28.4) n=2022 ┆ 0.1 (0.9) n=1947    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ qr_swap            ┆ -0.12 (-2.2) n=1856  ┆ -0.08 (-0.8) n=1807 │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ refund_abuse       ┆ -0.14 (-19.2) n=853  ┆ -0.21 (-20.3) n=816 │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ sim_swap           ┆ -0.05 (-0.5) n=1038  ┆ -0.1 (-0.9) n=954   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ single-row ev      ┆ -0.1 (-4.5) n=13126  ┆ 0.03 (0.6) n=12681  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ velocity_bot       ┆ 1.35 (4.5) n=1655    ┆ 1.43 (4.5) n=1623   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ account_takeover   ┆ -0.15 (-18.0) n=855  ┆ 0.04 (0.2) n=817    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ all                ┆ 0.03 (0.8) n=13956   ┆ 0.13 (2.7) n=13366  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ fake_cashback      ┆ -0.15 (-10.7) n=664  ┆ 0.13 (0.6) n=664    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ layering_chain     ┆ -0.01 (-0.1) n=1563  ┆ 0.16 (1.1) n=1498   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ loan_app_extortion ┆ 0.06 (0.3) n=492     ┆ 0.02 (0.1) n=476    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ merchant_collusion ┆ -0.16 (-12.5) n=673  ┆ -0.11 (-0.7) n=599  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ mule_account       ┆ -0.08 (-1.3) n=2437  ┆ -0.03 (-0.3) n=2373 │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ multi-row ev       ┆ 2.04 (3.8) n=790     ┆ 1.64 (3.4) n=742    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ phishing_collect   ┆ -0.11 (-22.2) n=2005 ┆ 0.1 (0.9) n=1911    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ qr_swap            ┆ -0.09 (-1.8) n=1940  ┆ -0.06 (-0.6) n=1833 │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ refund_abuse       ┆ -0.15 (-14.9) n=793  ┆ -0.18 (-16.2) n=771 │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ sim_swap           ┆ -0.04 (-0.3) n=882   ┆ -0.09 (-0.7) n=813  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ single-row ev      ┆ -0.09 (-4.2) n=13166 ┆ 0.04 (1.0) n=12624  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ velocity_bot       ┆ 0.89 (3.4) n=1652    ┆ 1.02 (3.7) n=1611   │
+│ base                                           ┆ account_takeover   ┆ -0.13 (-29.1) n=1017 ┆ 0.02 (0.2) n=975    │
+│ base                                           ┆ all                ┆ 0.07 (1.8) n=14691   ┆ 0.17 (3.3) n=14033  │
+│ base                                           ┆ fake_cashback      ┆ -0.14 (-23.7) n=676  ┆ 0.12 (0.6) n=681    │
+│ base                                           ┆ layering_chain     ┆ -0.01 (-0.1) n=1567  ┆ 0.14 (1.0) n=1503   │
+│ base                                           ┆ loan_app_extortion ┆ 0.01 (0.0) n=552     ┆ 0.13 (0.5) n=535    │
+│ base                                           ┆ merchant_collusion ┆ -0.17 (-29.9) n=712  ┆ -0.07 (-0.5) n=632  │
+│ base                                           ┆ mule_account       ┆ -0.08 (-1.4) n=2454  ┆ -0.05 (-0.6) n=2395 │
+│ base                                           ┆ multi-row ev       ┆ 1.8 (4.8) n=1285     ┆ 1.67 (4.4) n=1195   │
+│ base                                           ┆ phishing_collect   ┆ -0.11 (-35.0) n=2060 ┆ 0.1 (0.9) n=1995    │
+│ base                                           ┆ qr_swap            ┆ -0.11 (-2.2) n=2072  ┆ -0.06 (-0.7) n=1888 │
+│ base                                           ┆ refund_abuse       ┆ -0.17 (-18.6) n=876  ┆ -0.21 (-28.4) n=845 │
+│ base                                           ┆ sim_swap           ┆ -0.04 (-0.5) n=1045  ┆ -0.08 (-0.8) n=958  │
+│ base                                           ┆ single-row ev      ┆ -0.1 (-4.5) n=13406  ┆ 0.03 (0.7) n=12838  │
+│ base                                           ┆ velocity_bot       ┆ 1.34 (4.5) n=1660    ┆ 1.43 (4.5) n=1626   │
+└────────────────────────────────────────────────┴────────────────────┴──────────────────────┴─────────────────────┘
+
+===== C8_nP_zero(no events in prior 21 d)
+shape: (56, 4)
+┌────────────────────────────────────────────────┬────────────────────┬──────────────────────┬──────────────────────┐
+│ cond                                           ┆ cls                ┆ allfraud_m8          ┆ allfraud_m9          │
+│ ---                                            ┆ ---                ┆ ---                  ┆ ---                  │
+│ str                                            ┆ str                ┆ str                  ┆ str                  │
+╞════════════════════════════════════════════════╪════════════════════╪══════════════════════╪══════════════════════╡
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ account_takeover   ┆ 0.67 (0.6) n=1000    ┆ 2.71 (2.3) n=966     │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ all                ┆ 0.36 (1.2) n=14570   ┆ 0.18 (0.6) n=13937   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ fake_cashback      ┆ -0.42 (-0.3) n=658   ┆ 0.03 (0.0) n=676     │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ layering_chain     ┆ -0.08 (-0.1) n=1567  ┆ -0.78 (-0.8) n=1503  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ loan_app_extortion ┆ 3.2 (2.0) n=552      ┆ 1.5 (0.9) n=535      │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ merchant_collusion ┆ 2.36 (1.7) n=712     ┆ 2.26 (1.5) n=631     │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ mule_account       ┆ 0.04 (0.1) n=2451    ┆ -0.67 (-0.9) n=2394  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ multi-row ev       ┆ 6.42 (5.6) n=1184    ┆ 5.23 (4.4) n=1116    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ phishing_collect   ┆ -1.43 (-1.8) n=2047  ┆ -0.71 (-0.9) n=1981  │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ qr_swap            ┆ 0.65 (0.8) n=2069    ┆ 0.85 (1.0) n=1886    │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ refund_abuse       ┆ 1.06 (0.8) n=835     ┆ -3.14 (-2.6) n=805   │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ sim_swap           ┆ 2.68 (2.3) n=1022    ┆ 0.96 (0.8) n=939     │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ single-row ev      ┆ -0.18 (-0.6) n=13386 ┆ -0.25 (-0.8) n=12821 │
+│ +devrcv_c300,rs_n_device,ds_n_sender           ┆ velocity_bot       ┆ -0.41 (-0.5) n=1657  ┆ 1.17 (1.3) n=1621    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ account_takeover   ┆ 0.74 (0.7) n=1014    ┆ 2.86 (2.4) n=969     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ all                ┆ 0.42 (1.4) n=14335   ┆ 0.39 (1.3) n=13812   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ fake_cashback      ┆ -0.69 (-0.5) n=661   ┆ 0.14 (0.1) n=659     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ layering_chain     ┆ -0.33 (-0.4) n=1549  ┆ -0.67 (-0.7) n=1492  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ loan_app_extortion ┆ 3.18 (2.0) n=546     ┆ 0.76 (0.5) n=526     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ merchant_collusion ┆ 2.39 (1.8) n=702     ┆ 2.37 (1.6) n=629     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ mule_account       ┆ -0.08 (-0.1) n=2439  ┆ -0.67 (-0.9) n=2390  │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ multi-row ev       ┆ 7.02 (6.3) n=1209    ┆ 7.4 (6.2) n=1131     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ phishing_collect   ┆ -1.19 (-1.5) n=2022  ┆ -0.4 (-0.5) n=1947   │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ qr_swap            ┆ 0.54 (0.6) n=1856    ┆ 0.14 (0.2) n=1807    │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ refund_abuse       ┆ 2.84 (2.3) n=853     ┆ 0.5 (0.4) n=816      │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ sim_swap           ┆ 2.59 (2.3) n=1038    ┆ 1.36 (1.2) n=954     │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ single-row ev      ┆ -0.18 (-0.6) n=13126 ┆ -0.23 (-0.7) n=12681 │
+│ +n7 exact (absolute recent degree, cap 8)      ┆ velocity_bot       ┆ -0.38 (-0.4) n=1655  ┆ 1.28 (1.4) n=1623    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ account_takeover   ┆ -1.19 (-1.0) n=855   ┆ 1.06 (0.8) n=817     │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ all                ┆ -0.24 (-0.8) n=13956 ┆ -0.3 (-0.9) n=13366  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ fake_cashback      ┆ -0.94 (-0.7) n=664   ┆ -0.67 (-0.5) n=664   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ layering_chain     ┆ -0.02 (-0.0) n=1563  ┆ -0.69 (-0.7) n=1498  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ loan_app_extortion ┆ 0.66 (0.4) n=492     ┆ -0.86 (-0.5) n=476   │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ merchant_collusion ┆ 1.58 (1.1) n=673     ┆ 1.7 (1.1) n=599      │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ mule_account       ┆ 0.05 (0.1) n=2437    ┆ -0.69 (-0.9) n=2373  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ multi-row ev       ┆ 2.26 (1.7) n=790     ┆ 0.25 (0.2) n=742     │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ phishing_collect   ┆ -2.07 (-2.6) n=2005  ┆ -1.03 (-1.2) n=1911  │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ qr_swap            ┆ -0.1 (-0.1) n=1940   ┆ 0.53 (0.6) n=1833    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ refund_abuse       ┆ 1.56 (1.2) n=793     ┆ -3.9 (-3.2) n=771    │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ sim_swap           ┆ 0.77 (0.6) n=882     ┆ 0.28 (0.2) n=813     │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ single-row ev      ┆ -0.39 (-1.2) n=13166 ┆ -0.33 (-1.0) n=12624 │
+│ +sess_n,snd_c1800,ring__pair_n,ring__s4_np_int ┆ velocity_bot       ┆ -0.46 (-0.5) n=1652  ┆ 0.9 (1.0) n=1611     │
+│ base                                           ┆ account_takeover   ┆ 1.05 (1.0) n=1017    ┆ 3.06 (2.6) n=975     │
+│ base                                           ┆ all                ┆ 0.57 (1.9) n=14691   ┆ 0.5 (1.6) n=14033    │
+│ base                                           ┆ fake_cashback      ┆ -0.16 (-0.1) n=676   ┆ -0.24 (-0.2) n=681   │
+│ base                                           ┆ layering_chain     ┆ -0.06 (-0.1) n=1567  ┆ -0.78 (-0.8) n=1503  │
+│ base                                           ┆ loan_app_extortion ┆ 3.23 (2.0) n=552     ┆ 1.54 (1.0) n=535     │
+│ base                                           ┆ merchant_collusion ┆ 2.36 (1.7) n=712     ┆ 2.4 (1.6) n=632      │
+│ base                                           ┆ mule_account       ┆ 0.04 (0.1) n=2454    ┆ -0.67 (-0.9) n=2395  │
+│ base                                           ┆ multi-row ev       ┆ 7.86 (7.2) n=1285    ┆ 7.58 (6.5) n=1195    │
+│ base                                           ┆ phishing_collect   ┆ -1.23 (-1.6) n=2060  ┆ -0.61 (-0.7) n=1995  │
+│ base                                           ┆ qr_swap            ┆ 0.64 (0.8) n=2072    ┆ 0.87 (1.0) n=1888    │
+│ base                                           ┆ refund_abuse       ┆ 3.27 (2.6) n=876     ┆ 0.67 (0.5) n=845     │
+│ base                                           ┆ sim_swap           ┆ 2.67 (2.3) n=1045    ┆ 1.56 (1.4) n=958     │
+│ base                                           ┆ single-row ev      ┆ -0.13 (-0.4) n=13406 ┆ -0.16 (-0.5) n=12838 │
+│ base                                           ┆ velocity_bot       ┆ -0.33 (-0.4) n=1660  ┆ 1.28 (1.4) n=1626    │
+└────────────────────────────────────────────────┴────────────────────┴──────────────────────┴──────────────────────┘

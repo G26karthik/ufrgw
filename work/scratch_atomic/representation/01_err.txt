@@ -1,0 +1,4 @@
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\scratch_atomic\representation\01_missed.py:77: DeprecationWarning: `cut` is deprecated; use `bin_intervals` instead
+  c("amount").cut([100, 500, 1000, 2000, 5000, 10000]).cast(pl.String).alias("amt_band"),
+C:\Users\saita\Downloads\upi-fraud-rings-gradient-wars\work\scratch_atomic\representation\01_missed.py:78: DeprecationWarning: `cut` is deprecated; use `bin_intervals` instead
+  c("snd_n_month").cut([2, 5, 10, 20]).cast(pl.String).alias("act_band"),

@@ -77,6 +77,17 @@ No candidate file came from Track 2.
   measurably worse than the fixed blend on N. Fixed blend on N with four seeds: +.0008 (+.0001..+.0015).
 - No additional file exported (declared rule not met). Public scores were not used.
 
+## Forensic round on missed fraud (`notes/forensic_round.md`, `scratch_atomic/`)
+- Three agents: original fields against features, relationships and ordering, verification with whole-month scoring;
+  generator perspective added (labels only, no model output as ground truth).
+- Measured: per class, the fraud labels carrying a generation trace in the original data are the ones the pipeline
+  calls fraud (about 110 to 165 trace-carrying rows per month remain missed); the other fraud labels match legit rows
+  on every tested field, aggregate, relationship, ordering, entity and time statistic, and their placement is
+  statistically the same as independent per-row placement.
+- Two mechanisms scored on the whole held month with a bit-identical matched baseline: 7-day sender counts (no detected
+  difference against a noise-column control; one positive N reading), QR-merchant cell threshold (measurably worse on N).
+- No candidate file. Not a ceiling claim: the untested items are listed in the note.
+
 ## Earlier candidates still on file
 - `subs/alt_c2s6_dd_final.csv` (12 rows from dd_final): no detected difference, not uploaded (`notes/alt_c2s6.md`).
 - All evening tests of 14 Nov: `notes/final_comparison.md`.

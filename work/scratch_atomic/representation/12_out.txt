@@ -1,0 +1,60 @@
+all sender pairs per month: [(7, 229), (8, 215), (9, 183)]
+same-class sender pairs per month: [(7, 29), (8, 39), (9, 30)]
+shape: (48, 6)
+┌───────┬─────┬─────────────────┬───────────────┬─────┬────────────────────┐
+│ month ┆ y   ┆ cell2           ┆ same_receiver ┆ len ┆ class              │
+│ ---   ┆ --- ┆ ---             ┆ ---           ┆ --- ┆ ---                │
+│ i8    ┆ i8  ┆ str             ┆ bool          ┆ u32 ┆ str                │
+╞═══════╪═════╪═════════════════╪═══════════════╪═════╪════════════════════╡
+│ 7     ┆ 7   ┆ other           ┆ false         ┆ 4   ┆ qr_swap            │
+│ 7     ┆ 2   ┆ other           ┆ false         ┆ 4   ┆ velocity_bot       │
+│ 7     ┆ 1   ┆ QR-MERCHANT     ┆ false         ┆ 4   ┆ mule_account       │
+│ 7     ┆ 8   ┆ REFUND-MERCHANT ┆ false         ┆ 2   ┆ refund_abuse       │
+│ 7     ┆ 6   ┆ other           ┆ false         ┆ 2   ┆ phishing_collect   │
+│ 7     ┆ 5   ┆ other           ┆ false         ┆ 2   ┆ account_takeover   │
+│ 7     ┆ 8   ┆ REFUND-MERCHANT ┆ true          ┆ 2   ┆ refund_abuse       │
+│ 7     ┆ 7   ┆ QR-MERCHANT     ┆ false         ┆ 2   ┆ qr_swap            │
+│ 7     ┆ 2   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ velocity_bot       │
+│ 7     ┆ 8   ┆ other           ┆ false         ┆ 1   ┆ refund_abuse       │
+│ 7     ┆ 6   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ phishing_collect   │
+│ 7     ┆ 9   ┆ PAY-P2P         ┆ false         ┆ 1   ┆ fake_cashback      │
+│ 7     ┆ 3   ┆ other           ┆ false         ┆ 1   ┆ layering_chain     │
+│ 7     ┆ 1   ┆ PAY-P2P         ┆ false         ┆ 1   ┆ mule_account       │
+│ 7     ┆ 8   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ refund_abuse       │
+│ 8     ┆ 8   ┆ REFUND-MERCHANT ┆ true          ┆ 6   ┆ refund_abuse       │
+│ 8     ┆ 7   ┆ other           ┆ false         ┆ 6   ┆ qr_swap            │
+│ 8     ┆ 8   ┆ REFUND-MERCHANT ┆ false         ┆ 5   ┆ refund_abuse       │
+│ 8     ┆ 1   ┆ other           ┆ false         ┆ 3   ┆ mule_account       │
+│ 8     ┆ 2   ┆ other           ┆ false         ┆ 3   ┆ velocity_bot       │
+│ 8     ┆ 4   ┆ QR-MERCHANT     ┆ false         ┆ 2   ┆ sim_swap           │
+│ 8     ┆ 6   ┆ QR-MERCHANT     ┆ false         ┆ 2   ┆ phishing_collect   │
+│ 8     ┆ 5   ┆ other           ┆ false         ┆ 2   ┆ account_takeover   │
+│ 8     ┆ 2   ┆ PAY-MERCHANT    ┆ false         ┆ 2   ┆ velocity_bot       │
+│ 8     ┆ 5   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ account_takeover   │
+│ 8     ┆ 2   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ velocity_bot       │
+│ 8     ┆ 10  ┆ other           ┆ false         ┆ 1   ┆ loan_app_extortion │
+│ 8     ┆ 3   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ layering_chain     │
+│ 8     ┆ 6   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ phishing_collect   │
+│ 8     ┆ 7   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ qr_swap            │
+│ 8     ┆ 8   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ refund_abuse       │
+│ 8     ┆ 1   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ mule_account       │
+│ 9     ┆ 8   ┆ REFUND-MERCHANT ┆ true          ┆ 5   ┆ refund_abuse       │
+│ 9     ┆ 8   ┆ REFUND-MERCHANT ┆ false         ┆ 3   ┆ refund_abuse       │
+│ 9     ┆ 1   ┆ other           ┆ false         ┆ 3   ┆ mule_account       │
+│ 9     ┆ 7   ┆ other           ┆ false         ┆ 2   ┆ qr_swap            │
+│ 9     ┆ 6   ┆ other           ┆ false         ┆ 2   ┆ phishing_collect   │
+│ 9     ┆ 2   ┆ other           ┆ false         ┆ 2   ┆ velocity_bot       │
+│ 9     ┆ 6   ┆ QR-MERCHANT     ┆ false         ┆ 2   ┆ phishing_collect   │
+│ 9     ┆ 3   ┆ other           ┆ false         ┆ 2   ┆ layering_chain     │
+│ 9     ┆ 7   ┆ QR-MERCHANT     ┆ false         ┆ 2   ┆ qr_swap            │
+│ 9     ┆ 1   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ mule_account       │
+│ 9     ┆ 2   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ velocity_bot       │
+│ 9     ┆ 11  ┆ other           ┆ false         ┆ 1   ┆ merchant_collusion │
+│ 9     ┆ 3   ┆ PAY-P2P         ┆ false         ┆ 1   ┆ layering_chain     │
+│ 9     ┆ 9   ┆ other           ┆ false         ┆ 1   ┆ fake_cashback      │
+│ 9     ┆ 9   ┆ PAY-MERCHANT    ┆ false         ┆ 1   ┆ fake_cashback      │
+│ 9     ┆ 9   ┆ QR-MERCHANT     ┆ false         ┆ 1   ┆ fake_cashback      │
+└───────┴─────┴─────────────────┴───────────────┴─────┴────────────────────┘
+month 7: pairs 229, same-class observed 29, expected 26.0; without REFUND-MERCHANT and QR-P2P same-cell pairs: observed 25
+month 8: pairs 215, same-class observed 39, expected 24.2; without REFUND-MERCHANT and QR-P2P same-cell pairs: observed 28
+month 9: pairs 183, same-class observed 30, expected 21.1; without REFUND-MERCHANT and QR-P2P same-cell pairs: observed 22

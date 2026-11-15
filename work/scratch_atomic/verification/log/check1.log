@@ -1,0 +1,11 @@
+N vaC aug: control file not present yet
+N vaC sep: control file not present yet
+N C September decode vs dec_N_wt.npz: y equal True, pre identical True, q identical True
+N C August before decoder 0.4696 (0.4616, 0.4775)   (compare with scratch_gap/aug_dec_*.log)
+N C August after decoder 0.4978 (0.4920, 0.5036)   (compare with scratch_gap/aug_dec_*.log)
+D vaC vs A_C aug: shape (526852, 12) identical True max abs diff 0.000e+00
+D vaC sep: control file not present yet
+D A_C September decode vs dec_D_wt.npz: y equal True, pre identical True, q identical True
+D A_C August before decoder 0.4716 (0.4644, 0.4788)   (compare with scratch_gap/aug_dec_*.log)
+D A_C August after decoder 0.5004 (0.4950, 0.5058)   (compare with scratch_gap/aug_dec_*.log)
+Sun Nov 15 07:53:14 IST 2026

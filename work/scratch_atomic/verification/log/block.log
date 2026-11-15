@@ -1,0 +1,28 @@
+
+N aug (zone edges 423000..428455): device class | rows | fraud-labelled | decoded fraud pre / q | legit-labelled decoded fraud pre / q | fraud-labelled decoded legit q
+  own         484300  16686 |  5978 /  5982 |  726 /  730 |  11434
+  base_other   25421    856 |   320 /   321 |   34 /   35 |    570
+  pool           968    831 |   968 /   968 |  137 /  137 |      0
+  zone          1082    962 |   674 /  1082 |   75 /  120 |      0
+  fresh        15081     10 |     0 /     0 |    0 /    0 |     10
+
+N sep (zone edges 423000..428455): device class | rows | fraud-labelled | decoded fraud pre / q | legit-labelled decoded fraud pre / q | fraud-labelled decoded legit q
+  own         468453  15989 |  5687 /  5689 |  716 /  718 |  11018
+  base_other   24605    829 |   307 /   307 |   45 /   45 |    567
+  pool          1066    936 |  1066 /  1066 |  130 /  130 |      0
+  zone          1011    896 |   650 /  1011 |   79 /  115 |      0
+  fresh        14861     11 |     1 /     1 |    1 /    1 |     11
+
+D aug (zone edges 423000..428455): device class | rows | fraud-labelled | decoded fraud pre / q | legit-labelled decoded fraud pre / q | fraud-labelled decoded legit q
+  own         484300  16686 |  5843 /  5843 |  599 /  599 |  11442
+  base_other   25421    856 |   316 /   316 |   27 /   27 |    567
+  pool           968    831 |   963 /   968 |  132 /  137 |      0
+  zone          1082    962 |   648 /  1082 |   54 /  120 |      0
+  fresh        15081     10 |     1 /     1 |    1 /    1 |     10
+
+D sep (zone edges 423000..428455): device class | rows | fraud-labelled | decoded fraud pre / q | legit-labelled decoded fraud pre / q | fraud-labelled decoded legit q
+  own         468453  15989 |  5550 /  5550 |  605 /  605 |  11044
+  base_other   24605    829 |   292 /   292 |   34 /   34 |    571
+  pool          1066    936 |  1065 /  1066 |  129 /  130 |      0
+  zone          1011    896 |   603 /  1011 |   44 /  115 |      0
+  fresh        14861     11 |     0 /     0 |    0 /    0 |     11

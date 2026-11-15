@@ -1,0 +1,68 @@
+== (a) trace-free fraud rows on a sender-receiver pair with >= 2 such rows in the month: 43 rows
+shape: (8, 7)
+┌───────┬──────────┬───────────────┬──────┬──────┬─────────┬───────────┐
+│ month ┆ txn_type ┆ receiver_type ┆ mm   ┆ rows ┆ classes ┆ top_class │
+│ ---   ┆ ---      ┆ ---           ┆ ---  ┆ ---  ┆ ---     ┆ ---       │
+│ i8    ┆ str      ┆ str           ┆ str  ┆ u32  ┆ u32     ┆ i8        │
+╞═══════╪══════════╪═══════════════╪══════╪══════╪═════════╪═══════════╡
+│ 7     ┆ REFUND   ┆ MERCHANT      ┆ null ┆ 5    ┆ 2       ┆ 8         │
+│ 7     ┆ QR       ┆ MERCHANT      ┆ 0    ┆ 5    ┆ 5       ┆ 11        │
+│ 8     ┆ REFUND   ┆ MERCHANT      ┆ null ┆ 11   ┆ 2       ┆ 8         │
+│ 8     ┆ QR       ┆ MERCHANT      ┆ 0    ┆ 5    ┆ 5       ┆ 11        │
+│ 8     ┆ PAY      ┆ MERCHANT      ┆ null ┆ 1    ┆ 1       ┆ 1         │
+│ 9     ┆ REFUND   ┆ MERCHANT      ┆ null ┆ 10   ┆ 1       ┆ 8         │
+│ 9     ┆ PAY      ┆ MERCHANT      ┆ null ┆ 3    ┆ 3       ┆ 5         │
+│ 9     ┆ QR       ┆ MERCHANT      ┆ 0    ┆ 3    ┆ 3       ┆ 1         │
+└───────┴──────────┴───────────────┴──────┴──────┴─────────┴───────────┘
+
+######## (b) scope: ALL train rows
+
+== source months [7] -> month 8: flagged receivers 7793; predicate rows 5435, fraud-labelled 1351 (rate 0.2486); month base rate 0.0367 (lift 6.77), P2P base rate 0.0493 (lift 5.04); coverage of the month's fraud labels 0.0698, of P2P fraud labels 0.1428
+   predicate rows by txn_type: [('PAY', 4605, 956, 0.208), ('COLLECT', 616, 208, 0.338), ('QR', 214, 187, 0.874)]
+   fraud-labelled predicate rows by class: {'mule_account': 306, 'velocity_bot': 53, 'layering_chain': 267, 'sim_swap': 132, 'account_takeover': 123, 'phishing_collect': 211, 'qr_swap': 182, 'refund_abuse': 10, 'fake_cashback': 39, 'loan_app_extortion': 14, 'merchant_collusion': 14}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 73330, fraud rate 0.0427
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 3909), (False, True, 175), (True, False, 98), (True, True, 1253)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0245 (n 4007, fraud 98); control rows 0.0233 (n 71693); all P2P decoded-legit rows 0.0232 (n 186008)
+   trace-free home-device part: predicate rows 924, fraud-labelled 51 (rate 0.0552); all trace-free P2P rows rate 0.0266
+
+== source months [8] -> month 9: flagged receivers 7716; predicate rows 5190, fraud-labelled 1250 (rate 0.2408); month base rate 0.0366 (lift 6.58), P2P base rate 0.0483 (lift 4.98); coverage of the month's fraud labels 0.0670, of P2P fraud labels 0.1389
+   predicate rows by txn_type: [('PAY', 4457, 888, 0.199), ('COLLECT', 553, 200, 0.362), ('QR', 180, 162, 0.9)]
+   fraud-labelled predicate rows by class: {'mule_account': 271, 'velocity_bot': 26, 'layering_chain': 270, 'sim_swap': 116, 'account_takeover': 132, 'phishing_collect': 196, 'qr_swap': 163, 'refund_abuse': 4, 'fake_cashback': 48, 'loan_app_extortion': 15, 'merchant_collusion': 9}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 71512, fraud rate 0.0410
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 3801), (False, True, 139), (True, False, 97), (True, True, 1153)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0249 (n 3898, fraud 97); control rows 0.0234 (n 70026); all P2P decoded-legit rows 0.0231 (n 180690)
+   trace-free home-device part: predicate rows 869, fraud-labelled 38 (rate 0.0437); all trace-free P2P rows rate 0.0254
+
+== source months [7, 8] -> month 9: flagged receivers 14579; predicate rows 9712, fraud-labelled 2251 (rate 0.2318); month base rate 0.0366 (lift 6.33), P2P base rate 0.0483 (lift 4.80); coverage of the month's fraud labels 0.1206, of P2P fraud labels 0.2501
+   predicate rows by txn_type: [('PAY', 8367, 1620, 0.194), ('COLLECT', 1014, 344, 0.339), ('QR', 331, 287, 0.867)]
+   fraud-labelled predicate rows by class: {'mule_account': 501, 'velocity_bot': 78, 'layering_chain': 449, 'sim_swap': 218, 'account_takeover': 233, 'phishing_collect': 332, 'qr_swap': 286, 'refund_abuse': 8, 'fake_cashback': 101, 'loan_app_extortion': 24, 'merchant_collusion': 21}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 108252, fraud rate 0.0373
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 7181), (False, True, 280), (True, False, 172), (True, True, 2079)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0234 (n 7353, fraud 172); control rows 0.0231 (n 106450); all P2P decoded-legit rows 0.0231 (n 180690)
+   trace-free home-device part: predicate rows 1653, fraud-labelled 64 (rate 0.0387); all trace-free P2P rows rate 0.0254
+
+######## (b) scope: home-device rows
+
+== source months [7] -> month 8: flagged receivers 6905; predicate rows 4327, fraud-labelled 962 (rate 0.2223); month base rate 0.0345 (lift 6.45), P2P base rate 0.0471 (lift 4.72); coverage of the month's fraud labels 0.0577, of P2P fraud labels 0.1156
+   predicate rows by txn_type: [('PAY', 3634, 623, 0.171), ('COLLECT', 510, 180, 0.353), ('QR', 183, 159, 0.869)]
+   fraud-labelled predicate rows by class: {'mule_account': 225, 'velocity_bot': 46, 'layering_chain': 193, 'sim_swap': 69, 'account_takeover': 33, 'phishing_collect': 180, 'qr_swap': 153, 'refund_abuse': 7, 'fake_cashback': 31, 'loan_app_extortion': 12, 'merchant_collusion': 13}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 64059, fraud rate 0.0419
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 3241), (False, True, 124), (True, False, 80), (True, True, 882)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0241 (n 3321, fraud 80); control rows 0.0239 (n 62729); all P2P decoded-legit rows 0.0239 (n 171777)
+   trace-free home-device part: predicate rows 841, fraud-labelled 46 (rate 0.0547); all trace-free P2P rows rate 0.0266
+
+== source months [8] -> month 9: flagged receivers 6825; predicate rows 4108, fraud-labelled 889 (rate 0.2164); month base rate 0.0341 (lift 6.34), P2P base rate 0.0463 (lift 4.68); coverage of the month's fraud labels 0.0556, of P2P fraud labels 0.1122
+   predicate rows by txn_type: [('PAY', 3482, 576, 0.165), ('COLLECT', 472, 174, 0.369), ('QR', 154, 139, 0.903)]
+   fraud-labelled predicate rows by class: {'mule_account': 200, 'velocity_bot': 20, 'layering_chain': 201, 'sim_swap': 66, 'account_takeover': 32, 'phishing_collect': 168, 'qr_swap': 141, 'refund_abuse': 3, 'fake_cashback': 40, 'loan_app_extortion': 10, 'merchant_collusion': 8}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 62384, fraud rate 0.0403
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 3116), (False, True, 103), (True, False, 84), (True, True, 805)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0262 (n 3200, fraud 84); control rows 0.0245 (n 61228); all P2P decoded-legit rows 0.0237 (n 166645)
+   trace-free home-device part: predicate rows 753, fraud-labelled 31 (rate 0.0412); all trace-free P2P rows rate 0.0254
+
+== source months [7, 8] -> month 9: flagged receivers 13070; predicate rows 7807, fraud-labelled 1624 (rate 0.2080); month base rate 0.0341 (lift 6.09), P2P base rate 0.0463 (lift 4.50); coverage of the month's fraud labels 0.1016, of P2P fraud labels 0.2051
+   predicate rows by txn_type: [('PAY', 6636, 1068, 0.161), ('COLLECT', 883, 307, 0.348), ('QR', 288, 249, 0.865)]
+   fraud-labelled predicate rows by class: {'mule_account': 337, 'velocity_bot': 70, 'layering_chain': 355, 'sim_swap': 135, 'account_takeover': 61, 'phishing_collect': 290, 'qr_swap': 245, 'refund_abuse': 6, 'fake_cashback': 88, 'loan_app_extortion': 18, 'merchant_collusion': 19}
+   control: P2P rows to receivers seen in the source months without a fraud label there: rows 95924, fraud rate 0.0377
+   reading aid, benchmark-N final decode on predicate rows (fraud label, decoded fraud, rows): [(False, False, 5983), (False, True, 200), (True, False, 150), (True, True, 1474)]
+   reading aid: among decoded-LEGIT rows, fraud-label rate: predicate rows 0.0245 (n 6133, fraud 150); control rows 0.0241 (n 94386); all P2P decoded-legit rows 0.0237 (n 166645)
+   trace-free home-device part: predicate rows 1479, fraud-labelled 56 (rate 0.0379); all trace-free P2P rows rate 0.0254

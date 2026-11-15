@@ -1,0 +1,47 @@
+
+===== C5_snd_act_up
+shape: (14, 4)
+┌─────────────────┬────────────────────┬─────────────────────┬──────────────────────┐
+│ cond            ┆ cls                ┆ allfraud_m8         ┆ allfraud_m9          │
+│ ---             ┆ ---                ┆ ---                 ┆ ---                  │
+│ str             ┆ str                ┆ str                 ┆ str                  │
+╞═════════════════╪════════════════════╪═════════════════════╪══════════════════════╡
+│ ring/burst x n7 ┆ account_takeover   ┆ 0.34 (0.4) n=826    ┆ 1.48 (1.5) n=792     │
+│ ring/burst x n7 ┆ all                ┆ 0.17 (0.7) n=13247  ┆ -0.03 (-0.1) n=12763 │
+│ ring/burst x n7 ┆ fake_cashback      ┆ 0.4 (0.4) n=604     ┆ 0.22 (0.2) n=601     │
+│ ring/burst x n7 ┆ layering_chain     ┆ -0.18 (-0.3) n=1526 ┆ -0.15 (-0.2) n=1467  │
+│ ring/burst x n7 ┆ loan_app_extortion ┆ 0.97 (0.8) n=456    ┆ -0.42 (-0.3) n=452   │
+│ ring/burst x n7 ┆ merchant_collusion ┆ 0.98 (0.9) n=643    ┆ -0.37 (-0.3) n=583   │
+│ ring/burst x n7 ┆ mule_account       ┆ 0.24 (0.4) n=2398   ┆ 0.03 (0.1) n=2336    │
+│ ring/burst x n7 ┆ multi-row ev       ┆ -0.18 (-0.1) n=563  ┆ 0.78 (0.5) n=543     │
+│ ring/burst x n7 ┆ phishing_collect   ┆ -0.07 (-0.1) n=1829 ┆ -0.17 (-0.3) n=1749  │
+│ ring/burst x n7 ┆ qr_swap            ┆ 1.04 (1.6) n=1783   ┆ -0.43 (-0.7) n=1737  │
+│ ring/burst x n7 ┆ refund_abuse       ┆ -0.24 (-0.2) n=703  ┆ -0.56 (-0.6) n=677   │
+│ ring/burst x n7 ┆ sim_swap           ┆ -1.85 (-2.0) n=851  ┆ -0.31 (-0.3) n=782   │
+│ ring/burst x n7 ┆ single-row ev      ┆ 0.19 (0.8) n=12684  ┆ -0.07 (-0.3) n=12220 │
+│ ring/burst x n7 ┆ velocity_bot       ┆ 0.27 (0.4) n=1628   ┆ 0.32 (0.5) n=1587    │
+└─────────────────┴────────────────────┴─────────────────────┴──────────────────────┘
+
+===== C8_nP_zero(no events in prior 21 d)
+shape: (14, 4)
+┌─────────────────┬────────────────────┬──────────────────────┬──────────────────────┐
+│ cond            ┆ cls                ┆ allfraud_m8          ┆ allfraud_m9          │
+│ ---             ┆ ---                ┆ ---                  ┆ ---                  │
+│ str             ┆ str                ┆ str                  ┆ str                  │
+╞═════════════════╪════════════════════╪══════════════════════╪══════════════════════╡
+│ ring/burst x n7 ┆ account_takeover   ┆ -1.36 (-1.1) n=826   ┆ 0.97 (0.8) n=792     │
+│ ring/burst x n7 ┆ all                ┆ -0.3 (-1.0) n=13247  ┆ -0.37 (-1.2) n=12763 │
+│ ring/burst x n7 ┆ fake_cashback      ┆ -1.73 (-1.2) n=604   ┆ -0.04 (-0.0) n=601   │
+│ ring/burst x n7 ┆ layering_chain     ┆ -0.14 (-0.1) n=1526  ┆ -0.62 (-0.7) n=1467  │
+│ ring/burst x n7 ┆ loan_app_extortion ┆ 0.93 (0.6) n=456     ┆ -0.74 (-0.4) n=452   │
+│ ring/burst x n7 ┆ merchant_collusion ┆ 1.81 (1.3) n=643     ┆ 1.08 (0.7) n=583     │
+│ ring/burst x n7 ┆ mule_account       ┆ -0.04 (-0.1) n=2398  ┆ -0.69 (-0.9) n=2336  │
+│ ring/burst x n7 ┆ multi-row ev       ┆ 0.49 (0.3) n=563     ┆ 1.23 (0.7) n=543     │
+│ ring/burst x n7 ┆ phishing_collect   ┆ -2.02 (-2.4) n=1829  ┆ -1.18 (-1.3) n=1749  │
+│ ring/burst x n7 ┆ qr_swap            ┆ -0.11 (-0.1) n=1783  ┆ -0.27 (-0.3) n=1737  │
+│ ring/burst x n7 ┆ refund_abuse       ┆ 1.38 (1.0) n=703     ┆ -3.49 (-2.8) n=677   │
+│ ring/burst x n7 ┆ sim_swap           ┆ 0.76 (0.6) n=851     ┆ 0.27 (0.2) n=782     │
+│ ring/burst x n7 ┆ single-row ev      ┆ -0.33 (-1.0) n=12684 ┆ -0.44 (-1.4) n=12220 │
+│ ring/burst x n7 ┆ velocity_bot       ┆ -0.49 (-0.6) n=1628  ┆ 0.9 (1.0) n=1587     │
+└─────────────────┴────────────────────┴──────────────────────┴──────────────────────┘
+Sun Nov 15 08:20:32 IST 2026

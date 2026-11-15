@@ -1,0 +1,90 @@
+ids: [('AC146650', 'DV0146650', 'MR004102'), ('AC409807', 'DV0409807', 'AC013158')] home_dev share legit 0.921 fraud-labelled 0.855
+
+== month 7, home-device rows: legit 467388; trace rate among legit-labelled {'t_stamp': 0.0007, 't_app': 0.1504, 't_ip': 0.0442}; fraud-path reference rate {'t_app': 0.596, 't_ip': 0.463, 't_stamp': 0.144}
+shape: (11, 5)
+┌────────────────────┬──────┬─────────────┬───────────┬──────────┐
+│ cls                ┆ n    ┆ share_stamp ┆ share_app ┆ share_ip │
+│ ---                ┆ ---  ┆ ---         ┆ ---       ┆ ---      │
+│ str                ┆ i64  ┆ f64         ┆ f64       ┆ f64      │
+╞════════════════════╪══════╪═════════════╪═══════════╪══════════╡
+│ mule_account       ┆ 3149 ┆ 1.091       ┆ 0.31      ┆ 0.292    │
+│ velocity_bot       ┆ 1607 ┆ 0.134       ┆ 0.037     ┆ 0.027    │
+│ layering_chain     ┆ 2137 ┆ 1.353       ┆ 0.441     ┆ 0.452    │
+│ sim_swap           ┆ 1180 ┆ 1.126       ┆ 0.383     ┆ 0.315    │
+│ account_takeover   ┆ 998  ┆ 0.753       ┆ 0.166     ┆ 0.191    │
+│ phishing_collect   ┆ 2116 ┆ 1.153       ┆ 0.46      ┆ 0.392    │
+│ qr_swap            ┆ 2232 ┆ 0.246       ┆ 0.399     ┆ 0.374    │
+│ refund_abuse       ┆ 952  ┆ 1.068       ┆ 0.322     ┆ 0.373    │
+│ fake_cashback      ┆ 818  ┆ 1.102       ┆ 0.34      ┆ 0.347    │
+│ loan_app_extortion ┆ 603  ┆ 0.978       ┆ 0.317     ┆ 0.318    │
+│ merchant_collusion ┆ 721  ┆ 0.449       ┆ 0.251     ┆ 0.272    │
+└────────────────────┴──────┴─────────────┴───────────┴──────────┘
+
+== month 8, home-device rows: legit 467614; trace rate among legit-labelled {'t_stamp': 0.0007, 't_app': 0.1503, 't_ip': 0.0442}; fraud-path reference rate {'t_app': 0.644, 't_ip': 0.474, 't_stamp': 0.152}
+shape: (11, 11)
+┌────────────────────┬──────┬─────────────┬───────────┬──────────┬─────────────┬─────────────────┬────────────┬──────────┬──────────┬──────────────────────┐
+│ cls                ┆ n    ┆ share_stamp ┆ share_app ┆ share_ip ┆ n_dec_legit ┆ dec_fraud_share ┆ lost_stamp ┆ lost_app ┆ lost_ip  ┆ stamp_rows_dec_legit │
+│ ---                ┆ ---  ┆ ---         ┆ ---       ┆ ---      ┆ ---         ┆ ---             ┆ ---        ┆ ---      ┆ ---      ┆ ---                  │
+│ str                ┆ i64  ┆ f64         ┆ f64       ┆ f64      ┆ i64         ┆ f64             ┆ str        ┆ str      ┆ str      ┆ i64                  │
+╞════════════════════╪══════╪═════════════╪═══════════╪══════════╪═════════════╪═════════════════╪════════════╪══════════╪══════════╪══════════════════════╡
+│ mule_account       ┆ 3191 ┆ 0.91        ┆ 0.299     ┆ 0.295    ┆ 2231        ┆ 0.301           ┆ 14 +-23    ┆ 34 +-70  ┆ -25 +-43 ┆ 3                    │
+│ velocity_bot       ┆ 1643 ┆ 0.303       ┆ 0.085     ┆ 0.081    ┆ 1492        ┆ 0.092           ┆ -4 +-0     ┆ 8 +-56   ┆ -2 +-37  ┆ 0                    │
+│ layering_chain     ┆ 2135 ┆ 1.286       ┆ 0.389     ┆ 0.436    ┆ 1222        ┆ 0.428           ┆ 3 +-13     ┆ -70 +-46 ┆ -16 +-31 ┆ 1                    │
+│ sim_swap           ┆ 1154 ┆ 1.118       ┆ 0.31      ┆ 0.282    ┆ 809         ┆ 0.299           ┆ 11 +-19    ┆ 27 +-43  ┆ 12 +-29  ┆ 2                    │
+│ account_takeover   ┆ 966  ┆ 0.501       ┆ 0.193     ┆ 0.198    ┆ 781         ┆ 0.192           ┆ -2 +-0     ┆ 1 +-41   ┆ 10 +-28  ┆ 0                    │
+│ phishing_collect   ┆ 2081 ┆ 1.12        ┆ 0.393     ┆ 0.388    ┆ 1292        ┆ 0.379           ┆ 16 +-23    ┆ 18 +-53  ┆ 37 +-39  ┆ 3                    │
+│ qr_swap            ┆ 2302 ┆ 0.332       ┆ 0.359     ┆ 0.386    ┆ 1454        ┆ 0.368           ┆ -4 +-0     ┆ 52 +-58  ┆ 34 +-40  ┆ 0                    │
+│ refund_abuse       ┆ 1024 ┆ 1.05        ┆ 0.343     ┆ 0.358    ┆ 633         ┆ 0.382           ┆ 11 +-19    ┆ -39 +-33 ┆ -9 +-22  ┆ 2                    │
+│ fake_cashback      ┆ 740  ┆ 1.025       ┆ 0.251     ┆ 0.3      ┆ 506         ┆ 0.316           ┆ 5 +-13     ┆ -6 +-32  ┆ 1 +-22   ┆ 1                    │
+│ loan_app_extortion ┆ 592  ┆ 1.013       ┆ 0.294     ┆ 0.286    ┆ 410         ┆ 0.307           ┆ -1 +-0     ┆ -5 +-29  ┆ -3 +-19  ┆ 0                    │
+│ merchant_collusion ┆ 858  ┆ 0.61        ┆ 0.293     ┆ 0.323    ┆ 604         ┆ 0.296           ┆ -2 +-0     ┆ 11 +-36  ┆ 5 +-24   ┆ 0                    │
+└────────────────────┴──────┴─────────────┴───────────┴──────────┴─────────────┴─────────────────┴────────────┴──────────┴──────────┴──────────────────────┘
+legit-labelled home-device rows decoded legit that carry the stamp: 3 | decoded fraud: 193 | legit-labelled non-QR rows: 300050
+
+== month 9, home-device rows: legit 452464; trace rate among legit-labelled {'t_stamp': 0.0008, 't_app': 0.1503, 't_ip': 0.0442}; fraud-path reference rate {'t_app': 0.629, 't_ip': 0.482, 't_stamp': 0.155}
+shape: (11, 11)
+┌────────────────────┬──────┬─────────────┬───────────┬──────────┬─────────────┬─────────────────┬────────────┬──────────┬──────────┬──────────────────────┐
+│ cls                ┆ n    ┆ share_stamp ┆ share_app ┆ share_ip ┆ n_dec_legit ┆ dec_fraud_share ┆ lost_stamp ┆ lost_app ┆ lost_ip  ┆ stamp_rows_dec_legit │
+│ ---                ┆ ---  ┆ ---         ┆ ---       ┆ ---      ┆ ---         ┆ ---             ┆ ---        ┆ ---      ┆ ---      ┆ ---                  │
+│ str                ┆ i64  ┆ f64         ┆ f64       ┆ f64      ┆ i64         ┆ f64             ┆ str        ┆ str      ┆ str      ┆ i64                  │
+╞════════════════════╪══════╪═════════════╪═══════════╪══════════╪═════════════╪═════════════════╪════════════╪══════════╪══════════╪══════════════════════╡
+│ mule_account       ┆ 3123 ┆ 0.981       ┆ 0.319     ┆ 0.286    ┆ 2160        ┆ 0.308           ┆ 13 +-23    ┆ 7 +-70   ┆ -24 +-41 ┆ 3                    │
+│ velocity_bot       ┆ 1604 ┆ 0.283       ┆ 0.081     ┆ 0.088    ┆ 1473        ┆ 0.082           ┆ -5 +-0     ┆ 3 +-57   ┆ 11 +-37  ┆ 0                    │
+│ layering_chain     ┆ 1999 ┆ 1.117       ┆ 0.383     ┆ 0.413    ┆ 1190        ┆ 0.405           ┆ 3 +-13     ┆ -27 +-50 ┆ 1 +-32   ┆ 1                    │
+│ sim_swap           ┆ 1086 ┆ 0.976       ┆ 0.309     ┆ 0.301    ┆ 739         ┆ 0.32            ┆ -2 +-0     ┆ 2 +-41   ┆ -13 +-23 ┆ 0                    │
+│ account_takeover   ┆ 902  ┆ 0.491       ┆ 0.184     ┆ 0.18     ┆ 752         ┆ 0.166           ┆ -2 +-0     ┆ 19 +-42  ┆ -10 +-24 ┆ 0                    │
+│ phishing_collect   ┆ 1977 ┆ 1.027       ┆ 0.357     ┆ 0.349    ┆ 1254        ┆ 0.366           ┆ 22 +-26    ┆ -18 +-52 ┆ 3 +-34   ┆ 4                    │
+│ qr_swap            ┆ 2161 ┆ 0.306       ┆ 0.372     ┆ 0.362    ┆ 1385        ┆ 0.359           ┆ -4 +-0     ┆ 79 +-59  ┆ 43 +-40  ┆ 0                    │
+│ refund_abuse       ┆ 1013 ┆ 1.125       ┆ 0.426     ┆ 0.386    ┆ 616         ┆ 0.392           ┆ -2 +-0     ┆ 9 +-38   ┆ 2 +-24   ┆ 0                    │
+│ fake_cashback      ┆ 764  ┆ 1.168       ┆ 0.386     ┆ 0.332    ┆ 486         ┆ 0.364           ┆ -2 +-0     ┆ 10 +-34  ┆ -13 +-18 ┆ 0                    │
+│ loan_app_extortion ┆ 590  ┆ 0.808       ┆ 0.259     ┆ 0.286    ┆ 417         ┆ 0.293           ┆ -1 +-0     ┆ -4 +-30  ┆ 1 +-19   ┆ 0                    │
+│ merchant_collusion ┆ 770  ┆ 0.626       ┆ 0.326     ┆ 0.273    ┆ 546         ┆ 0.291           ┆ 5 +-13     ┆ 10 +-36  ┆ 4 +-23   ┆ 1                    │
+└────────────────────┴──────┴─────────────┴───────────┴──────────┴─────────────┴─────────────────┴────────────┴──────────┴──────────┴──────────────────────┘
+legit-labelled home-device rows decoded legit that carry the stamp: 2 | decoded fraud: 227 | legit-labelled non-QR rows: 291308
+
+== Part 2: trace-free rows (home device, no stamp, app_version >= 4, ip < July q95, non-integer amount): July fit 288197 rows, fraud-labelled 6870
+month 8: rows 288688, trace-free fraud labels 7023 (base rate 0.0243); AUC 0.5047; fraud-label rate in top 1% of scores 0.0752
+   mule_account         n  1324 AUC vs legit 0.4900
+   velocity_bot         n   873 AUC vs legit 0.4903
+   layering_chain       n   760 AUC vs legit 0.4997
+   sim_swap             n   492 AUC vs legit 0.4940
+   account_takeover     n   476 AUC vs legit 0.4847
+   phishing_collect     n   759 AUC vs legit 0.4931
+   qr_swap              n   955 AUC vs legit 0.5637
+   refund_abuse         n   453 AUC vs legit 0.5308
+   fake_cashback        n   316 AUC vs legit 0.5021
+   loan_app_extortion   n   248 AUC vs legit 0.4754
+   merchant_collusion   n   367 AUC vs legit 0.5034
+month 9: rows 278729, trace-free fraud labels 6706 (base rate 0.0241); AUC 0.5100; fraud-label rate in top 1% of scores 0.0632
+   mule_account         n  1304 AUC vs legit 0.4983
+   velocity_bot         n   890 AUC vs legit 0.5023
+   layering_chain       n   726 AUC vs legit 0.5032
+   sim_swap             n   443 AUC vs legit 0.5133
+   account_takeover     n   424 AUC vs legit 0.5206
+   phishing_collect     n   761 AUC vs legit 0.4869
+   qr_swap              n   892 AUC vs legit 0.5554
+   refund_abuse         n   405 AUC vs legit 0.5181
+   fake_cashback        n   280 AUC vs legit 0.5184
+   loan_app_extortion   n   262 AUC vs legit 0.4867
+   merchant_collusion   n   319 AUC vs legit 0.5067
+top gain: [('mer_age', 1770), ('qr_vpa_mismatch', 1650), ('device_age_days', 880), ('rcv_n_month', 852), ('amount', 783), ('balance_before', 757), ('rcv_age', 756), ('login_to_txn_sec', 730)]
